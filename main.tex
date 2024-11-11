@@ -4,15 +4,16 @@
 \usepackage{amsmath}
 \usepackage{pdflscape}
 \usepackage{siunitx}
+\usepackage{cite}
 
 \author{José Carlos González Martínez}
 \date{May 2024}
 
 \begin{document}
 
-\section*{Massive Black Holes Theory}
+\section{Massive Black Holes Theory}
 
-\subsection*{Massive Black Holes in Galactic Nuclei}
+\subsection{Massive Black Holes in Galactic Nuclei}
 
 Structure formation encompasses the description of cosmic structures, ranging from galaxies, up to clusters of galaxies, to large scale filaments. 
 Large scale structures formed at the time of inflation, from the gravitational growth of initial matter inhomogeneities. The evolution of these structures depends on the initial power spectrum of matter inhomogeneities, which have been now measured, and on the expansion of the universe, which depends on the Universe's content of dark matter, baryonic matter and dark energy. 
@@ -21,7 +22,7 @@ Much of the knowledge of cosmic structure that we have comes from cosmological s
 
 In this area, there are challenges that need to be worked out: The simulations need to cover a significant volume in order to represent the Universe in a statistically correct manner, but at the same time, they need to have the sufficient resolution to model the physics at galactic and sub-galactic scales. At present times, cosmological simulations have relied on models based on dark matter-only, missing out the part that astronomers actually observe, i.e. baryonic, ordinary matter. On the other hand, galaxy formation and evolution has a close connection with massive black holes, in that massive black holes are hosted at the center of most galaxies. Particularly, in hydrodynamic cosmological simulations, phenomena such as black hole physics, star formation, gravity and hydrodynamics are taken into account, so modelling at large and small scales is coupled consistently. In recent simulations the physics included is 1) Star formation and ISM modelling, 2)Gas-cooling and photoionisation, and 3) Stellar evolution and feedback.
 
-\subsection*{Massive Binary Black holes in Galactic Nuclei}
+\subsection{Massive Binary Black holes in Galactic Nuclei}
 
 Black Holes exist in two categories: Stellar black holes, with masses of 5 to 30 Msun, which form from the collapse of stars that undergo supernovae explosion. These can be detected through their X-Ray emission. On the other hand, there exist massive black holes with masses in the range of $\num{e5}$ to $\num{e9}$ which power QSOs and active galactic nuclei (AGN), and have been observed in nearby galaxy spheroids and certainly, our Milky Way galaxy host an almost inactive massive black hole. There is a gap between these two categories, called intermediate mass or middleweight black holes which has not been accurately constrained due to the lack of observations. Stellar black holes, on the other hand, can have masses as large as $\num{e2}$ Msun depending on the metallicity of the progenitor stars, and on radiation feedback.
 Through X-Ray observations, there is evidence that massive black holes have grown in mass through episodes of mergers and coalescences driven by galaxy mergers. This has led to the concept of black hole seeds, which masses are theoretically weakly constrained to this day.
@@ -31,11 +32,11 @@ At present, there is a debate in which this interpretation holds true to bulge-l
 
 According to the LCDM paradigm, galaxies form after the infall of baryonic matter into dark matter halos, leading to the formation of black hole seeds, which grow as a consequence of multiple mergers and coalescences. As part of the goal mission, LISA will be able to explore the formation and evolution of these black hole seed and by constraining the masses as early as z=10 (reference). The study of the formation and evolution of binary black holes inside galactic halos as the largest cosmic structures evole crosses boundaries between astrophysics and cosmology.
 
-\subsection*{Binary Black Holes in Stellar Environments}
+\subsection{Binary Black Holes in Stellar Environments}
 
 Begelman et al. (1980) listed three stages of the coalescence of two massive black holes in a galaxy merger: 1) Pairing, which is when the black holes orbit shrinks due to dynamical friction, 2) Hardening, in which the orbit further decreases due to energy lose by close encounters with sinlge stars, and 3) gravitational wave emission. After coalescence, there is a gravitational recoil upon the merged black holes which can be as large as 5000 km s-1.
 
-\subsection*{Populations of MBHBs}
+\subsection{Populations of MBHBs}
 
 MBHBs are ubiquitous in the universe and are thought to be at the center of a large fraction of galaxies. Up to date, our knowledge from MBHBs have come from electromagnetic observations, cosmological simulations, and theoretical tools, but there are still missing some pieces of the full puzzle regarding their formation and evolution. From the aggregation of galaxies through merger episodes, a single merger remnant is formed hosting two MBHs. The MBHs start a closer interaction formaing a bound binary. When the distance scale between them decrese below the kpc scale, they form a binary where gravitational wave emission takes place. 
 
@@ -45,14 +46,117 @@ Another question regarding the link of the formation of MBHBs with galaxy merger
 
 POPULATIONS (?)
 
-MBHB population studies allow us to know how MBHBs form and evolve, and what is the relation with the host galaxy and their environments. This is achieved by relating the physical mechanisms that are involved in the merging process to the GW observations of MBHBs. To connect these parts, MBHB population models are used, and they describe the distribution of the parameters of the MBHBs in the Universe along with the characterisation of MBHB systems with GW data analysis tools. MBHB population models are constructed, on the one hand, via cosmological simulations, where MBHs, galaxies, clusters of galaxies and dark matter are at play. Onth other hand, there are analytic and semi-analytic models which rely of physical assumptions about the mechanisms involved in the mergers.
+MBHB population studies allow us to know how MBHBs form and evolve, and what is the relation with the host galaxy and their environments. This is achieved by relating the physical mechanisms that are involved in the merging process to the GW observations of MBHBs. To connect these parts, MBHB population models are used, and they describe the distribution of the parameters of the MBHBs in the Universe along with the characterisation of MBHB systems with GW data analysis tools. MBHB population models are constructed, on the one hand, via cosmological simulations, where MBHs, galaxies, clusters of galaxies and dark matter are at play. On the other hand, there are analytic and semi-analytic models which rely of physical assumptions about the mechanisms involved in the mergers.
 
-\section*{Observations of MBHB with LISA and GWFish}
+\section{Observations of gravitational waves with space-based observatory LISA}
+When performing observations of compact binary objects with LISA, there are several aspects that are needed to account for: Noise properties of the detector, the type of waveform that is used for the analysis, and the data analysis techniques. The outcome of the observations are the foundation for astrophysical interpretation about the nature of the sources, i.e. their formation mechanisms and evolution through cosmic ages, which in turn let us know about their populations in the local and early universe. In this section we will explore these aspects.
 
-\subsection*{GWFish}
+\subsection{Sensitivity curves}
+Sensitivity curves are used when trying to grasp an idea of what GW sources are at the reach of a particular detector. Figure () shows the sensitivity curve for LISA dependent of the frequency. We can look at how loud will be a signal by looking how high is the signal curve above the sensitivity curve. The sensitivity curve for LISA can be expressed as \cite{robson2019construction},
+\begin{equation}
+S_{n}(f) = \frac{10}{3L^{2}}\bigg( P_{OMS}(f) + \frac{4P_{acc}(f)}{(2\pi f)^{4}}\bigg)\bigg( 1 + \frac{6}{10}\big( \frac{f}{f_{\ast}}^{2} \big)\bigg) + S_{c}(f),
+\label{eq:sensitivityLISA}
+\end{equation}
+where $L = 2.5 \text{Gm}$, and $f_{\ast} = c/(2 \pi L) = 19.09 \text{mHz}$ and is called the transfer frequency. $P_{OMS}$, $P_{acc}$ and $S_{c}$ will be explained in the next lines. $S_{n}(f)$ is computed with
+\begin{equation}
+S_{n}(f) = \frac{P_{n}(f)}{\mathcal{R}(f)},
+\label{eq:SnLISA}
+\end{equation}
+where $P_{n}(f)$ is the noise power spectral density of the detector and is expressed as \cite{cornish2001detecting}
+\begin{equation}
+P_{n}(f) = \frac{P_{OMS}}{L^{2}} + 2(1 + \text{cos}^2({f/f_{\ast}}))\frac{P_{acc}}{(2\pi f)^{4}L^{2}},
+\label{eq:noiseLISA}
+\end{equation}
+and $\mathcal{R}(f)$ is the detector response function which relates the power spectral density of the signal to the power spectral density of the signal as recorded by the detector. The gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals are related through \cite{robson2019construction},
+\begin{equation}
+\Tilde{h}(f) = F^{+}(f) \Tilde{h}_{+}(f) + F^{\times}(f)\Tilde{h}_{\times}(f),
+\label{eq:strain_plus_crossLISA}
+\end{equation}
+where $F^{+}(\theta,\phi, \psi,f)$ and $F^{\times}(\theta,\phi, \psi,f)$ are the detector response functions. $\mathcal{R}(f)$ is calculated from the spectral power of the signal at the detector $\langle \Tilde{h} | \Tilde{h}^{\ast}\rangle$ and the spectral power of the raw signal $|\Tilde{h}^{2}_{+}| + |\Tilde{h}^{2}_{\times}|$ through \cite{robson2019construction},
+\begin{subequations}
+\begin{align}
+\langle \Tilde{h} | \Tilde{h}^{\ast}\rangle &=  \langle F^{+}(f) F^{+ \ast}(f) \rangle |\Tilde{h}_{+}(f)|^{2} + \langle F^{\times}(f) F^{\times \ast}(f) \rangle |\Tilde{h}_{\times}(f)|^{2} \\
+&= \mathcal{R}(f)\big(|\Tilde{h}_{+}(f)|^{2} + |\Tilde{h}_{\times}(f)|^{2} \big)
+\label{eq:response_spectralpower}
+\end{align}
+\end{subequations}
+where $\mathcal{R}(f)$ = $\langle F^{+}(f) F^{+ \ast}(f) \rangle = \langle F^{\times}(f) F^{\times \ast}(f) \rangle$, and the angular brackets represent sky/polarisation average with the convention,
+\begin{equation}
+\langle X \rangle = \frac{1}{4 \pi^{2}} \int^{\pi}_{0} d \psi \int^{2\pi}_{0} d \phi \int^{\pi}_{0} X \text{sin} \theta d\theta,
+\label{eq:average}
+\end{equation}
+The full expressions for $F^{+}(f)$ and $F^{\ast}(f)$ can be found in eqs. (16) and (17) from \cite{cornish2001detecting}. To leading order $\mathcal{R}(f)$ is,
+\begin{equation}
+\mathcal{R}(f) = \frac{3}{10} - \frac{507}{5040} \bigg( \frac{f}{f_{\ast}} \bigg) + ...
+\label{eq:transferfunction}
+\end{equation}
+The transfer function is numerically computed in \cite{larson2000sensitivity} and fitted with the curve,
+\begin{equation}
+\mathcal{R}(f) = \frac{3}{10} \frac{1}{(1 + 0.6(f/f_{\ast})^{2})},
+\label{eq:transferfunction}
+\end{equation}
+in \cite{robson2019construction}. LISA operates as a network of detectors instead as a single one, so there are multiple independent channels which combined give the total observational sensitivity. When $f < f_{\ast}$, channels A and E come into play, when $f > f_{\ast}$, channels A, E and T work together to yield the total SNR \cite{prince2002lisa}.
+Having defined $P_{n}$ and $\mathcal{R}(f)$, the general expression for $S_{n}$ is,
+\begin{equation}
+S_{n}(f) = \frac{10}{3L^{2}}\bigg( P_{OMS}(f) + 2 (1 + \text{cos}^{2}(f/f_{\ast})\frac{P_{acc}(f)}{(2\pi f)^{4}}\bigg)\bigg( 1 + \frac{6}{10}\big( \frac{f}{f_{\ast}}^{2} \big)\bigg) + S_{c}(f).
+\label{eq:gralsensitivityLISA}
+\end{equation}
+$P_{OMS}$ is the optical metrology system noise and has value of \cite{babak2021lisa},
+\begin{equation}
+\sqrt{P_{OMS}(f)} = 15 \bigg[ \frac{\text{pm}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{2\times10^{-3}}{f} \bigg)^{4}}, 
+\label{eq:poms}
+\end{equation}
+and $P_{acc}$ is the test mass acceleration noise,
+\begin{equation}
+\sqrt{P_{acc}(f)} = 3 \bigg[ \frac{\text{fm.s}^{-2}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{0.4\times10^{-3}}{f} \bigg)^{4}} \sqrt{1 + \bigg( \frac{f}{ 8\times10^{-3}} \bigg)^{4}}, 
+\label{eq:pacc}
+\end{equation}
+For the case where test mass acceleration noise dominates over the optical path noise, $\text{cos}^{2}(f/f_{\ast})$ approaches unity giving the form of (\ref{eq:sensitivityLISA}). $S_{c}$ is the galactic confusion noise which accounts for the binaries that exist it the Milky Way galaxy and enter the LISA band as foreground noise. As the time of the mission progresses, $S_{c}$ diminishes following the expression, \cite{robson2019construction} 
+\begin{equation}
+S_{c}(f) = A f^{-7/3} e^{-f^{\alpha} + \beta f \sin(\kappa f)} \left[1 + \tanh(\gamma(f_{k} - f))\right] \,\text{Hz}^{-1}.
+\label{eq:galacticconfusionnoise}
+\end{equation}
+where $\alpha$, $\beta$, $\kappa$, $\gamma$ and $f_{k}$ are fitting parameters where $f_{k}$ decreases with observation time and $\gamma$ increases with observation time, leading to a overall decrease of the galactic noise with observation time. 
 
-\subsubsection*{Overview}
-There exist a whole network of GW ground-based observatories: LIGO, Virgo, KAGRA, which cover the same range of GW sources but also with capabilities of observing different frequency bands by combining observations of the same GW sources. The advanced ground-based detectors like Einstein telescope and Cosmic Explorer will extend the observational capabilities of this ground-based network. Proposed space-based observatory LISA on the other hand will cover a brand new territory in the GW spectrum. Apart from developing detection infrastructure, the GW comunity has put effort in developing computational tools to explore the capabilities of the current and future detectors. One of these tools consist in building software capable of simulate GW observations, however, there are challenges when tackling this problem. 
+\subsection{Waveforms}
+After the advancements in numerical relativity (NR) in mid 2000's \cite{campanelli2006accurate,pretorius2005evolution,baker2006gravitational}
+regarding the modelling of gravitational wave signals, or gravitational waveforms, waveforms suited for data analysis applications were needed. While highly accurate, NR waveforms are known to be computationally very expensive to obtain since it involves solving the full highly non-linear Einstein's field equations, not very well suited for data analysis purposes. Phenomenological waveforms were developed for this necessity. They resemble approximately the waveforms generated through NR with the advantage of being less computationally expensive than the ones from NR. The requirements were (and still are) that the phenomenological waveforms, tuned up to NR waveforms, approximate the properties of the gravitational waves to its NR counterpart, ranging from the inspiral to the ring down stage. The advantages of the phenomenological waveforms are, among others, that they are computationally efficient, and they cover a broad parameter space, so that they cover a wide range of data analysis applications. The GW community has developed the LALsuite (reference), a library with phenomenological waveforms for use on data analysis, and gave the family of waveforms the name of IMRPhenom.
+
+The construction of IMRPhenom waveforms come in three stages (LISAWaveforms).
+Firstly, an anzats for simple functions containing the amplitude and phase of spherical or spheroidal harmonics is defined. This anzats is divided into inspiral, merger and ring down. For the inspiral stage, a post-Newtonian description is used, and black hole perturbation theory for the ringdown stage. Then, generalized coefficients are obtained which describe the waveform. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit. Finally, the coefficients of the waveform are interpolated across parameter space in a process called "parameter space fit".
+
+The evolution of IMRPhenom waveforms range from the modelling of the dominant harmonic non-precessing binaries, to more complex multimode precessing waveforms. Challenges regarding the construction of waveforms for LISA involve the necessity in accuracy improvement in the waveforms due to the high SNR sources and challenges in the data input from NR for calibration. Four generations of frequency domain IMRPhenom waveforms have been developed, and a first generation of time domain (LISAWaveforms):
+\begin{enumerate}
+    \item The first generation involved PhenomA which accounted for a dominant harmonic $l=|m|=2$, non-precessing binaries. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit.
+    \item PhenomB and PhenomC non-precessing spins with single effective spin to account for the two spin degrees of freedom. PhenomP was developed from PhenomC where the "twsting"-up approximation to account for spin precession was included.
+    \item PhenomD with a dominant $l=|m|=2$ harmonic, incorporated improvements in the phenomenological anzats and better fits to NR. Several waveforms were derived from PhenomD:
+	\begin{enumerate} 
+        \item PhenomPv2 which is an iteration of PhenomP with improved precession. 
+        \item PhenomHM adds higher than $l=|m|=2$ harmonics.
+        \item PhenomPv3 updates the single spin of PhenomP for a two spin prescription.
+        \item PhenomPv3HM includes higher harmonics with twsiting up precession approach.
+        \item Phenom XAS upgrades from PhenomD with imporvements in the dominant harmonic.
+        \item Phenom XHM add higher harmonics to PhenomX, and, in turn, PhenomXPHM add spin precession.
+    \end{enumerate}
+\end{enumerate}
+
+Fourth generation models have been calibrated to non-precessing quasi-circular orbit NR. Precession has been included by using the twisting approximation (reference): In the inspiral stage, the precession time scale is much smaller than the orbit time scale, so precession averages out over one orbital period, hence, being neglected in the total contribution of the signal, and non-precessing dynamics dominates the inspiral evolution. Then to map from non-precessing to precessing binaries, rotation of the orbital plane described by the Euler angles is used to resemble the precession of the binary. A shortcoming of the use of the twisting approximation is that the use of the stationary phase approximation (SPA) is not valid for the late inspiral, merger and ringdown stages. 
+
+A feature of fourth generation waveforms is that have achieved a reduction in computational cost. This has been due to the use of "multibanding method" (reference) which consist in determining the interpolation spacing from a coarse grid based on the analytical error estimates, and the use of a standard iterative scheme to compute the complex exponentials involved in the waveform properties such as the amplitude, phase, and the Euler angles used in the twisting up.
+Challenges that phenom waveforms face, for comparable mass binaries:
+\begin{enumerate}
+    \item The addition of analytical prescriptions for precession and eccentricity.
+    \item The addition of closed-form anzats which include precession and eccentricity in a large parameter space without compromising computational efficiency.
+    \item Development of a overall data analysis strategies and concrete code framework, in which phenom waveforms are exploited by exploring models with tradeoff of accuracy versus computational cost, or accuracy versus the extent to which the parameter space covers.
+    \item Since LISA's detector response is much more complicated that the ones for ground-based detectros, the development of phenom models that are well coupled to the LISA's detector response that resolves tradeoff of accuracy versus computational cost is another challenge.   
+\end{enumerate}
+
+\section{LISA simulated observations of MBHBs with software GWFish}
+
+\subsection{GWFish}
+
+\subsubsection{Overview}
+There exist a whole network of GW ground-based observatories: LIGO, Virgo, KAGRA, which cover the same range of GW sources but also with capabilities of observing different frequency bands by combining observations of the same GW sources. The advanced ground-based detectors like Einstein telescope and Cosmic Explorer will extend the observational capabilities of this ground-based network. Proposed space-based observatory LISA on the other hand will cover a brand new territory in the GW spectrum. Apart from developing detection infrastructure, the GW community has put effort in developing computational tools to explore the capabilities of the current and future detectors. One of these tools consist in building software capable of simulate GW observations, however, there are challenges when tackling this problem. 
 
 GWFish is a simulation software intended for estimating parameter estimation uncertainties. It makes use of Fisher matrices in the high SNR regime and Gaussian likelihood approximation. This is performed with time domain GW models and frequency domain of detector network's  response. With this framework, it is possible to carry out parameter estimation studies where the position and orientation of the network of detectors changes with time, which has an important impact mainly in sky localization.
 
@@ -60,7 +164,7 @@ GWFish can perform multiband simulated observations as well. This is possible si
 
 The main challenges when estimating parameter estimation uncertainties involve the computation of the waveform derivatives, and the inversion of the Fisher matrices. GWFish takes an hybrid approach for the waveform derivatives with both analytical and numerical differentiation, the latter tuned up to the waveform parameters to reduce numerical errors. Regarding the inversion of the Fisher matrices, in general, the main issue is that Fisher matrices are close to singular, meaning that the Fisher matrices eigenvalues span a huge range, leading to signal-model degeneracies. To be able to estimate parameter uncertainties, at least of the parameters not involved in the degeneracy, one needs to deal with matrix singularity by means of techniques like Singular Value Decomposition (SVD). 
 
-\subsubsection*{Waveform analytical and numerical derivatives.}
+\subsubsection{Waveform analytical and numerical derivatives.}
 
 GWFish computes the derivatives of the waveform in a hybrid analytical-numerical fashion. The analytical derivatives of the waveform $\Tilde{h}_{k}(\theta^{j},f)$ with respect to the waveform phase $\varphi_{c}$, the luminosity distance $d_{L}$ and merger time $t_{m}$ computed by GWFish are,
 
@@ -83,7 +187,7 @@ The derivatives for the other parameters (component masses, spins, sky localisat
 \label{numderiv}
 \end{equation}
 where $\epsilon$ is the step size of the derivatives.
-\subsubsection*{Fisher matrix inversion. Singular Value Decomposition.}
+\subsubsection{Fisher matrix inversion. Singular Value Decomposition.}
 Given that the Fisher matrices we are dealing with are close to singular, i.e. matrices with small or zero eigenvalues, its inversion is prone to numerical instabilities or inaccurate estimations. For these type of cases the Singular Value Decomposition (SVD) technique is used. It ensures that the inversion of the Fisher matrix is performed free of eigenvalues close to zero. In order to apply SVD, the original matrix is normalized by dividing it by the outer product of the root-squared elements of the diagonalised matrix. Then SVD is applied following the expression,
 
 \begin{equation}
@@ -92,7 +196,7 @@ A = U S V^{h},
 \end{equation}
 where $A$ is the original matrix, $U$ and $V^{h}$ are orthogonal matrices, and $S$ is the matrix with the singular values. Threshold value for any entry in $S$ is set to $1 \times 10^{-10}$, so values below this threshold are ignored. Then the matrix is inverted in a process called pseudo-inversion as this avoids values below the threshold. The remaining matrix is then denormalised by multiplying back by the normalisation factor to provide a new Fisher matrix without values close to zero.  
 
-\subsubsection*{Detector-Network Simulation}
+\subsubsection{Detector-Network Simulation}
 There are several aspects that GWFish takes into account when simulating the network of detectors:
 \begin{itemize}
     \item Component. For the case of LISA, the component is the TDI interferometry and includes the noise model, the duty cycle and  
@@ -112,11 +216,11 @@ t(f) = \frac{1}{2\pi} \frac{d \phi (f)}{d f}.
 In general, the early inspiral part of a binary system is the most important part for the detector motion simulation, so $\phi (f)$ can be approximated to lowest order.
 GWFish simulates LISA's response by considering the TDI interferometry; in this technique, the main building blocks are the readouts $y_{ij}$ of every spacecraft link $j \longleftarrow i$, and by applying a time delay, it reduces laser noise. Indeed, every spacecraft acts as the vertix of a triangular network where each of them is a laser interferometer. Since the noise is correlated, the noise-correlated matrix needs to be diagonalised. This leads to three separate channels: A, E, and T channels. GWFish simulates these three channels and also applies the breathing motion approximation where the fluctuations in the arm lengths of the detector over the curse of a year are neglected.
 
-\subsubsection*{Setup}
+\subsubsection{Setup}
 GWFish requires setting up a range of parameters which describe the systems to be simulated, the response of the detector, the network of detectors, and details regarding the GW signal such as the waveform approximant, the SNR threshold... 
 
 
-\subsection*{Transformation of variables}
+\subsection{Transformation of variables}
 
 When estimating the pdf $p(X,Y|I)$ where $X$ and $Y$ are the constrained parameters and $I$ is the background information, we might be interested in the posterior $p(Z|I)$, where $Z$ is derived from $X$ and $Y$, $Z=f(X,Y)$. This what error-propagation is about, and is performed by means of variable transformation (Sivia). In the case of one variable, we might ask how $p(X|I)$ is related to $p(Y|I)$ if $Y=f(X)$?. Let's say that $\delta X$ is a very small interval about $X=X^{\ast}$, the probability that $X$ lies in the range between $X^{\ast}-\delta X/2$ and $X^{\ast} + \delta X/2$, is
 
@@ -195,7 +299,7 @@ where
 \end{equation}
 
 
-\subsection*{Simulations}
+\subsection{Simulations}
 
 This work consists in analysing the uncertainties associated to the observations of MBHBs with space-based observatory LISA. The parameters that we are going to study are the component masses $m_1$ and $m_2$, chirp mass $\mathcal{M}$, and mass ratio $q$. Our analyses rely on the computation of the Fisher matrices for a rapid statistical inference, rather than a full Bayesian parameter estimation, which is computational more expensive. In this process, we use the Gaussian approximation which allows us to assume the likelihoods, so as the posteriors, to have Gaussian behaviour. The Gaussian pdf for the component masses $m_1$ and $m_2$ is,
 
@@ -225,12 +329,12 @@ p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \math
 \Big],
 \label{eq:gaussianm1m2}
 \end{equation}
-where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in section X. We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
+where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in section X. We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
 
-One important feature that we are going to delve into is the slope of these contour plots and the global behaviour these have across chirp mass. For each PDF contour plot, the slope is calculated from the quotient of the $y$ component and the $x$ component of the eigenvector of the major principal component axis of the ellipse,
+One feature that we are going to delve into is the slope of these contour plots and the global behaviour these have across chirp mass. For each PDF contour plot, the slope is calculated from the quotient of the $y$ component and the $x$ component of the eigenvector of the major principal axis of the ellipse,
 
 \begin{equation}
-\text{slope} \ p(\cdot| \cdot) = \frac{y}{x},
+\text{slope} \ p(\cdot , \cdot) = \frac{y}{x},
 \label{eq:slopepdfs}
 \end{equation}
 
@@ -291,8 +395,12 @@ and $\mathbf{J}$ is the Jacobian matrix,
 \end{bmatrix},
 \label{jacobianmatrix}
 \end{equation}
-As a sanity check on the covariance matrix $\Sigma_{\mathcal{M},q}$ obtained with eq. ($\ref{eq:covmchirpq}$), we computed eq. $p(\mathcal{M},q)$ by assuming Gaussian behavior with covariance matrix given given by eq. (\ref{eq:covmchirpq}).
-
+We verified the covariance matrix $\Sigma_{\mathcal{M},q}$ obtained with eq. ($\ref{eq:transfmchirpq_m1m2}$) by computing $p(\mathcal{M},q)$ assuming Gaussian behavior with covariance matrix given by eq. (\ref{eq:transfmchirpq_m1m2}). This is shown in Fig. \ref{pchirpMqtwoapproaches} on the right-hand side, and on the left-hand side, $p(\mathcal{M},q)$ computed using the Jacobian transformation, eq.(\ref{eq:m1m2tochirpMq}), with Jacobian determinant eq.(\ref{eq:jacobianm1m2chirpMq}).
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{Figures/p_Mc_q_subplot_normalized_jacobian_0.pdf}
+\caption{$p(\mathcal{M},q)$ computed via eq.(\ref{eq:m1m2tochirpMq}) using the Jacobian determinant, eq. (\ref{eq:jacobianm1m2chirpMq}), on the left-hand side, and using the Gaussian formula with covariance matrix of eq.(\ref{eq:transfmchirpq_m1m2}) on the right-hand side.}
+\label{pchirpMqtwoapproaches}
+\end{figure}
 
 
 It is of our interest to compare our results with the ones in the literature. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat et al. (2020). The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat et al. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish.
@@ -333,7 +441,7 @@ It is of our interest to compare our results with the ones in the literature. We
 \label{t:MBDvalues}
 \end{table}
 
-In order to have a consistent setting for the comparison, we implement the PSD curve prescription provided in Marsat et al (2020). The noise spectral sensitivity for the TDI channels a, e, and t, $S^{a,e,t}_n(f)$, are
+In order to have a consistent setting for the comparison, we implement the PSD curve prescription provided in Marsat et al (2020). The noise spectral sensitivities for the TDI channels a, e, and t, $S^{a,e,t}_n(f)$, are
 
 \begin{subequations}
 \begin{align}
@@ -368,9 +476,9 @@ which is the noise spectral sensitivity with a rescaling factor to simplify comp
 The characteristic noise PSD for the TDI channels a, e, and t, $S^{a,e,t}_c(f)$ is
 \begin{equation}
 S^{a,e,t}_c(f) = f S^{a,e,t}_h(f),
-\label{charPSD}
+\label{eq:charPSD}
 \end{equation}
-and it is the strain-like noise PSD with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{psdcurves} shows the PSD curve used in our study. We have plotted the PSD curve used in Marsat et al paper in Figure X as well, noticing there is a slight difference between the one computed with eq. X and the one shown in Marsat's paper.
+and it is the strain-like noise PSD with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{psdcurves} shows the PSD curve used in our study as well as the PSD curve used in Marsat et al, noticing there is a slight difference between the one computed with eq.(\ref{eq:charPSD}) and the one shown in Marsat's paper.
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/Sc_Curves_Marsat.pdf}
@@ -378,7 +486,8 @@ and it is the strain-like noise PSD with a rescaling factor so that it is expres
 \label{psdcurves}
 \end{figure}
 
-To reproduce the results of Marsat from our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat et al. Since the paper does not explicitly show the detector position, we follow another way around: We set out the same SNR as in Marsat by running a simulation to compute the SNR for a range of geocentric times, and track the geocentric time which yields the SNR of interest. Figure \ref{snrgeocentric} shows the SNR versus geocentric time.
+To reproduce the results of Marsat from our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat et al. Since the paper does not explicitly show the detector position at the merger time, we follow another way around: We set out the same SNR as in Marsat by running a simulation to compute the SNR for a range of geocentric merger times, and track the geocentric time which yields the SNR of interest. Figure \ref{snrgeocentric} shows the SNR versus geocentric time.
+During our investigation, we noticed the importance of the derivative step size $\epsilon$ in the numerical derivatives. We performed a series of simulations for 4 different systems where we varied $\epsilon$.
 
 
 \begin{figure}[htbp]
@@ -389,7 +498,7 @@ To reproduce the results of Marsat from our simulation, we need to consider the 
 
 
 
-\subsection*{Results}
+\subsection{Results}
 
 
 
@@ -505,5 +614,7 @@ Figures \ref{slopespm1m2}, \ref{slopespMchirpq} and \ref{slopespMtotalq} show pl
 \label{slopespMtotalq}
 \end{figure}
 
+\bibliographystyle{elsarticle-num}
+\bibliography{Thesis_references}
 
 \end{document}
