@@ -5,6 +5,7 @@
 \usepackage{pdflscape}
 \usepackage{siunitx}
 \usepackage{cite}
+\usepackage{enumitem}
 
 \usepackage{titlesec}
 
@@ -29,7 +30,7 @@ Astrophysical systems that involve accelerated masses produce tiny fluctuations 
 When studying them, the GW community refers to BHBs according to their mass in three ranges: 1) stellar-mass BHBs (SBHBs) in the range $1 - ~10^{2} 
 \text{M}_{\odot}$, 2) intermediate-mass BHBs (IBHBs) with range $~10^{2}-10^{3} \text{M}_{\odot}$, and 3) massive BBHs (MBHBs) with masses $>~10^{4} \text{M}_{\odot}$. In this project we are more interested in MBHBs. MBHBs are interesting because they, alongside with massive BHs (MBHs), are believed to be at the centers of galaxies, sometimes as active galactic nuclei (AGNs) and quasars, and to be the progenitors of most of the galaxies we see today \cite{mortlock2011luminous,banados2016pan}. Indeed, the evolution of MBHs are closely related to the evolution of their host galaxies, and they entail one of the open fundamental questions in modern astrophysics. But not only we might be able to confirm the existence of MBHBs at the centers of galaxies. By studying MBHBs at different redshifts we will get to know their populations and demographics, therefore having a full picture of the different stages of the coalescing process of their host galaxies themselves. These processes have further impact on the formation and evolution of large scale structure and cosmology.
 
-Because MBHBs produce low-frequency GWs in the millihertz regime, ground-based GW detectors such as LIGO and Virgo are unable to observe them. The European Space Agency (ESA), and NASA \footnote{with reduced involvement at the time of writing, 2025} proposed the LISA mission \cite{amaro2017laser} to address this endeavour, among others. LISA is a space-based GW observatory still in development \footnote{by the time of writing, 2025} and will be based on laser interferometry and will comprise three spacecrafts that form a triangular constellation in a heliocentric orbit, trailing the Earth by about $20^{\circ}$ with $10^{6}$ km-scale arms with six active laser links. With these features, LISA will be able to observe GWs produced by MBHBs which lie within the LISA frequency spectrum from a few $10^{-5}$ Hz to $10^{-1}$ Hz.
+Because MBHBs produce low-frequency GWs in the millihertz regime, ground-based GW detectors such as LIGO and Virgo are unable to observe them. The European Space Agency (ESA), and NASA \footnote{with reduced involvement at the time of writing, 2025} proposed the LISA mission \cite{amaro2017laser} to address this endeavour, among others. LISA is a space-based GW observatory still in development \footnote{by the time of writing, 2025} and will be based on laser interferometry and will comprise three spacecrafts that form a triangular constellation in a heliocentric orbit, trailing the Earth by about $20^{\circ}$ with $10^{6}$ km-scale arms with six active laser links. With these features, LISA will be able to observe GWs produced by MBHBs which lie within the LISA frequency spectrum from a few $10^{-5}$~Hz to $10^{-1}$ Hz.
 
 One of the open questions in modern astrophysics is the formation, evolution and assembly of MBHs \cite{amaro2023astrophysics}. This is tied to the formation of their host galaxies and the galaxy mergers. With LISA we will be able to unveil some of these mysteries. However, to tackle this problem, we need to have a robust knowledge about the processes preceding the inspiral and merging of the MBHs. This includes their environments within their host galaxies and the galactic nuclei, the stellar dynamical processes and the interstellar medium around the galactic nuclei. Also, the understanding of the physics of accretion and feedback processes after the galaxy merger is crucial to understand the growth of the MBHs. These aspects reflect the multidisciplinary nature of MBH studies, encompassing galactic and extragalactic astrophysics.
 
@@ -62,11 +63,11 @@ According to the $\Lambda$CDM paradigm, galaxies form after the infall of baryon
 
 One of the scenarios for MBH seeds origins is when they form from Population III (PopIII) stars. PopIII stars formed from dark matter minihalos of masses $~10^5-10^6 M_{\odot}$ which cooled down through $\text{H}_{2}$ \cite{abel2002formation}. In this scenario, light MBH seeds with masses of $10-10^3 M_{\odot}$ were formed \cite{hirano2014one} PopIII stars with mass $<260 M_{\odot}$ when collapse into a BH, they retained most of their mass due to the weak stellar wind associated to free-metal stars. Less massive PopIII stars collapsed and exploded as SNae, metal-enriching the surroundings, leading the way to Population II star formation in the later universe \cite{o2015probing}, \cite{xu2016late}. Nonetheless, the first generation on BHs from PopIII stars might be the precursors for seeds of later MBHs \cite{madau2001massive}, \cite{hirano2014one}. This leads to the question, relevant for investigations with LISA, is whether these light seeds from Pop III stars can grow up to be the MBHs observed today at high redshifts, and the merger predictions that LISA is expected to observe.
 
-Another scenario of MBH seed formation involves super massive stars (SMS). These were invoked originally to explain the observed quasars as formed from accretion of material onto MBHs. SMSs are being "reinvoked" to account for the seeds of MBHs \cite{amaro2023astrophysics}. SMSs are thought to form from rapid accumulation of gas during the early stages of stellar evolution \cite{amaro2023astrophysics} with accretion rates of $10^{-3} \text{M}_{\odot}~\text{yr}^{-1}$ (reference). When this accretion rate is maintained, temperatures of $T_{\mathrm{eff}} \sim 5000~\mathrm{K}$ can be achieved providing the ideal conditions for SMS formation \cite{amaro2023astrophysics}. One scenario for achieving this is in atomic cooling halos \cite{tanaka2009assembly} where atomic hydrogen cools the environment to $T_{vir} \sim 8000K$ so that gas condenses to form SMS stars \cite{amaro2023astrophysics}. One requirement for this scenario is to have a high steady inflow of gas into the stellar surface. Fragmentation needs to be avoided so the environment needs to be sufficiently metal-poor, not exceeding $\text{Z} \approx 10^{-3} \text{Z}_{\odot}$ \cite{regan2020massive}, \cite{chon2020supermassive}, \cite{tagawa2020making}, and not tidally disrupted \cite{chon2018radiation}. Another scenario for SMS formation might be through dynamically heating the gas through galaxy collisions and minor and major mergers. This scenario comes naturally from dark matter structure formation and the number density of MBH seed formation looks promising \cite{regan2020emergence}. Finally, the direct collapse of billions of solar masses of gas can form MBH seeds from the collisions of massive galaxies at high redshifts $(z \sim 8-10)$ with exceeding $1000 \text{M}_{\odot}/yr$ \cite{mayer2010direct, mayer2015direct}. Models of direct collapse show that this mechanism can yield more massive MBHs $(>10^7 \text{M}_{\odot})$ than in the case of atomic cooling halos \cite{haemmerle2021maximum}. 
+Another scenario of MBH seed formation involves super massive stars (SMS). These were invoked originally to explain the observed quasars as formed from accretion of material onto MBHs. SMSs are being "reinvoked" to account for the seeds of MBHs \cite{amaro2023astrophysics}. SMSs are thought to form from rapid accumulation of gas during the early stages of stellar evolution \cite{amaro2023astrophysics} with accretion rates of $10^{-3} \text{M}_{\odot}~\text{yr}^{-1}$ (reference). When this accretion rate is maintained, temperatures of $T_{\mathrm{eff}} \sim 5000~\mathrm{K}$ can be achieved providing the ideal conditions for SMS formation \cite{amaro2023astrophysics}. One scenario for achieving this is in atomic cooling halos \cite{tanaka2009assembly} where atomic hydrogen cools the environment to $T_{\mathrm{vir}} \sim 8000~\mathrm{K}$ so that gas condenses to form SMS stars \cite{amaro2023astrophysics}. One requirement for this scenario is to have a high steady inflow of gas into the stellar surface. Fragmentation needs to be avoided so the environment needs to be sufficiently metal-poor, not exceeding $Z \approx 10^{-3} ~\mathrm{Z}_{\odot}$ \cite{regan2020massive}, \cite{chon2020supermassive}, \cite{tagawa2020making}, and not tidally disrupted \cite{chon2018radiation}. Another scenario for SMS formation might be through dynamically heating the gas through galaxy collisions and minor and major mergers. This scenario comes naturally from dark matter structure formation and the number density of MBH seed formation looks promising \cite{regan2020emergence}. Finally, the direct collapse of billions of solar masses of gas can form MBH seeds from the collisions of massive galaxies at high redshifts $(z \sim 8-10)$ with exceeding $1000 ~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{mayer2010direct, mayer2015direct}. Models of direct collapse show that this mechanism can yield more massive MBHs $(>10^7 ~\mathrm{M}_{\odot})$ than in the case of atomic cooling halos \cite{haemmerle2021maximum}. 
 
-Another scenario for MBH seed formation is inside stellar clusters. MBH seed of $10^{2}-10^{4} \text{M}_{\odot}$ can form in stellar clusters of $>10^{5} \text{M}_{\odot}$ through dynamical interactions \cite{omukai2008can, devecchi2009formation, reinoso2018collisions}. In these environments, massive stars can segregate to the cluster center via dynamical friction, resulting in very massive stars with masses $10^{2}-10^{3} \text{M}_{\odot}$ \cite{zwart2002runaway,portegies2004formation, gurkan2004formation,freitag2006runaway}. Another possibility is that, within dense star clusters, stellar mass BHs experiment runaway mergers, provided their natal velocity kicks are low or are embedded in a dense gaseous halo \cite{belczynski2002comprehensive} to keep the stellar mass BH within the cluster. Another requirement for this scenario is that the velocity of the BH remnant due to the GW recoil is lower than the escape velocity of the system so that it is not ejected from the cluster \cite{holley2008gravitational, davies2011supermassive, miller2012upper, sesana2014linking}. The scenario involving accretion of gas inside the stellar cluster might be another possibility for MBH seed formation \cite{leigh2013gas, natarajan2021new}. In this scenario BHs of $10^{2-3} \text{M}_{\odot}$ can growth as massive as $10^{5} \text{M}_{\odot}$ \cite{rosswog2009tidal, macleod2016optical, sakurai2019growth}.
+Another scenario for MBH seed formation is inside stellar clusters. MBH seed of $10^{2}-10^{4}~\mathrm{M}_{\odot}$ can form in stellar clusters of $>10^{5} \text{M}_{\odot}$ through dynamical interactions \cite{omukai2008can, devecchi2009formation, reinoso2018collisions}. In these environments, massive stars can segregate to the cluster center via dynamical friction, resulting in very massive stars with masses $10^{2}-10^{3}~\mathrm{M}_{\odot}$ \cite{zwart2002runaway,portegies2004formation, gurkan2004formation,freitag2006runaway}. Another possibility is that, within dense star clusters, stellar mass BHs experiment runaway mergers, provided their natal velocity kicks are low or are embedded in a dense gaseous halo \cite{belczynski2002comprehensive} to keep the stellar mass BH within the cluster. Another requirement for this scenario is that the velocity of the BH remnant due to the GW recoil is lower than the escape velocity of the system so that it is not ejected from the cluster \cite{holley2008gravitational, davies2011supermassive, miller2012upper, sesana2014linking}. The scenario involving accretion of gas inside the stellar cluster might be another possibility for MBH seed formation \cite{leigh2013gas, natarajan2021new}. In this scenario BHs of $10^{2}-10^{3} \mathrm{M}_{\odot}$ can growth as massive as $10^{5} \mathrm{M}_{\odot}$ \cite{rosswog2009tidal, macleod2016optical, sakurai2019growth}.
 
-Primordial BHs (PBHs) is another MBH seed model candidate. These are hypothesized to form from dark matter halos at various mass scales \cite{carr2021constraints} ranging from $1-10^{2} \text{M}_{\odot}$ \cite{bird2016did, sasaki2016primordial}  to $10^{-13}-10^{-11} \text{M}_{\odot}$ \cite{saito2009gravitational, garcia2017gravitational} and form PBHs in the early universe (before recombination) with masses in the range $10 - 10^{5} \text{M}_{\odot}$ \cite{duechting2004supermassive, belotsky2014signatures, clesse2015massive, garcia2016gravitational}. At the tail of the mass function, PBHs can range from hundreds or thousands solar masses to grow up to $10^{5} \text{M}_{\odot}$ via mergers and accretion \cite{mack2007growth,ali2017merger,serpico2020cosmic}.	
+Primordial BHs (PBHs) is another MBH seed model candidate. These are hypothesized to form from dark matter halos at various mass scales \cite{carr2021constraints} ranging from $1-10^{2} \mathrm{M}_{\odot}$ \cite{bird2016did, sasaki2016primordial}  to $10^{-13}-10^{-11} \mathrm{M}_{\odot}$ \cite{saito2009gravitational, garcia2017gravitational} and form PBHs in the early universe (before recombination) with masses in the range $10 - 10^{5} \mathrm{M}_{\odot}$ \cite{duechting2004supermassive, belotsky2014signatures, clesse2015massive, garcia2016gravitational}. At the tail of the mass function, PBHs can range from hundreds or thousands solar masses to grow up to $10^{5} \mathrm{M}_{\odot}$ via mergers and accretion \cite{mack2007growth,ali2017merger,serpico2020cosmic}.	
 PBHs can form from overdensities produced at the time on inflation as well. Signatures of these overdensities can be tracked down on the cosmic microwave background (CMB) with amplitudes in the order of $10^{-5}$ \cite{amaro2023astrophysics}, however, in the smaller scales these amplitudes can be larger. Another probe to detect overdensity signatures is through secondary stochastic GWs that enter the radiation (or matter) dominated era, which leaves behind fluctuations of order $1-10^{4}$ which can form PBHs \cite{inomata2017inflationary, garcia2017gravitational,vaskonen2021did}. This stochastic GWs background would be at reach of of the next generation of Pulsar Timing Arrays (PTAs) \cite{byrnes2019steepest,inomata2019gravitational}.
 
 \subsubsection{Massive black hole growth}\\
@@ -74,38 +75,109 @@ PBHs can form from overdensities produced at the time on inflation as well. Sign
 \textit{MBH light seeds}\\
 There are two hurdles for PopIII MBH light seeds for growing up as massive as the quasars we observe at $z\sim6-7$ \cite{amaro2023astrophysics}: 1) If the seeds do not form at the center of the galaxies, they need to reach it efficiently, and 2) The process of accretion of gas needs to be efficient as well, with accretion rates reaching Eddington rates, or even super-Eddington rates, for which more complex mechanisms of accretion and energy transport would need to be involved. Moreover, these high accretion rates imply high radiative feedback from the accretion flow decreasing the efficiency of accretion.
 
-There is numerical and theoretical backup for light seeds not reaching higher masses\cite{omukai2002upper,oh2003fossil,whalen2004radiation}. \cite{smith2018growth} studied the growth of more than 15,000 light seeds and found that they do not grow more than $10\%$ in a time span of 300 Myrs, i.e. in a significant fraction of the Hubble time. The semi-analytical approach taken in \cite{valiante2016first} showed that light seeds struggle to have significant growth.
+There is numerical and theoretical backup for light seeds not reaching higher masses\cite{omukai2002upper,oh2003fossil,whalen2004radiation}. \cite{smith2018growth} studied the growth of more than 15,000 light seeds and found that they do not grow more than $10\%$ in a time span of $300~ \mathrm{Myrs}$, i.e. in a significant fraction of the Hubble time. The semi-analytical approach taken in \cite{valiante2016first} showed that light seeds struggle to have significant growth.
 
 \textit{Accretion versus MBH mergers}\\
-Most of the MBHs in cosmic time grew by accretion, where the more massive BHs with $M>10^8 \text{M}_{\odot}$ grew earlier in cosmic times at $z>6$, and lighter MBHs with $\text{M}<10^{5}$ at $z<5.5$ \cite{soƚtan1982masses,marconi2004local,merloni2008synthesis}. There is evidence that the most massive MBHs spent a large fraction of the cosmic times, $z<8-9$, growing and more specific, for systems with $M>10^6$ at $z<8$. This implies an anti-hierarchical evolution of MBH, where the more massive ones grew earlier than the lighter ones \cite{merloni2008synthesis}.
+Most of the MBHs in cosmic time grew by accretion, where the more massive BHs with $M>10^8~\mathrm{M}_{\odot}$ grew earlier in cosmic times at $z>6$, and lighter MBHs with $\mathrm{M}<10^{5}~\mathrm{M}_{\odot}$ at $z<5.5$ \cite{soƚtan1982masses,marconi2004local,merloni2008synthesis}. There is evidence that the most massive MBHs spent a large fraction of the cosmic times, $z<8-9$, growing and more specific, for systems with $M>10^6~\mathrm{M}_{\odot}$ at $z<8$. This implies an anti-hierarchical evolution of MBH, where the more massive ones grew earlier than the lighter ones \cite{merloni2008synthesis}.
 
-On the other hand, merger mechanisms dominated the growth of MBHs in light systems with $M<10^{4-5}$ at $z<6$ \cite{dayal2019hierarchical,piana2021mass} and $M>10^8~\text{M}_{\odot}$ at $z<2$ \cite{pacucci2020separating}. There are two main scenarios where mergers dominate the growth of MBHs\cite{amaro2023astrophysics}. One is when the number density of MBHs is high so that the interaction between MBH is higher, prone to pair and merge. The second requirement is that the surrounding environment is gas-poor given that the efficiency of gas accretion depends on the richness of the environment.
+On the other hand, merger mechanisms dominated the growth of MBHs in light systems with $M<10^{4}-10^{5}~\mathrm{M}_{\odot}$ at $z<6$ \cite{dayal2019hierarchical,piana2021mass} and $M>10^8~\mathrm{M}_{\odot}$ at $z<2$ \cite{pacucci2020separating}. There are two main scenarios where mergers dominate the growth of MBHs\cite{amaro2023astrophysics}. One is when the number density of MBHs is high so that the interaction between MBH is higher, prone to pair and merge. The second requirement is that the surrounding environment is gas-poor given that the efficiency of gas accretion depends on the richness of the environment.
 
 \subsubsection{Massive Black Holes and Galaxy Coevolution}
 
-One of the fundamental questions in astrophysics is the formation and evolution of galaxies. The demography of local galaxies suggest that the properties of MBHs are correlated to the ones of the host galaxy. Specifically, the mass of the MBH can be correlated empirically with the velocity dispersion of the stellar environment in the bulge of the host galaxy (reference) and with the mass of the galaxy bulge (reference).  However, there are large uncertainties regarding the validity of these correlations at high redshift, and if they evolve with cosmic time (volonteri).
+One of the fundamental questions in astrophysics is the formation and evolution of galaxies. The demography of local galaxies suggest that the properties of MBHs are correlated to the ones of the host galaxy. Specifically, the mass of the MBH can be correlated empirically with the velocity dispersion of the stellar environment in the bulge of the host galaxy (reference) and with the mass of the galaxy bulge (reference).  However, there are large uncertainties regarding the validity of these correlations at high redshift, and if they evolve with cosmic time \cite{volonteri2012formation}.
 
-Satisfying MBH-host galaxy correlations depends on the MBH seed models. For lighter seeds formed from PopIII stars, MBHs lie below the MBH-galaxy correlation, whereas, heavy seeds formed from direct collapse, MBHs are more massive than the correlations predict (volonteri). However, the correlations can be fulfilled at all times if accretion is continuous in major mergers, i.e. mergers of galaxies with comparable mass.
+Satisfying MBH-host galaxy correlations depends on the MBH seed models. For lighter seeds formed from PopIII stars, MBHs lie below the MBH-galaxy correlation, whereas, heavy seeds formed from direct collapse, MBHs are more massive than the correlations predict \cite{volonteri2012formation}. However, the correlations can be fulfilled at all times if accretion is continuous in major mergers, i.e. mergers of galaxies with comparable mass.
 
-Analyses of the correlations raised three interconnected questions regarding the relationship between dark matter, baryonic matter and MBHs and their importance for understanding the formation and evolution of MBHs in a cosmological context (volonteri). 
+Analyses of the correlations raised three interconnected questions regarding the relationship between dark matter, baryonic matter and MBHs and their importance for understanding the formation and evolution of MBHs in a cosmological context \cite{booth2011towards}. In the next we will explore these questions based on what can be found on \cite{volonteri2012formation}. 
 
-1. What galaxy property do MBHs really correlate with? Some correlations have been proposed in the past, such as the luminosity, mass, velocity dispersion of the bulge to the binding energy of the galaxy, the number of globular clusters, and the total mass of the dark matter halo, and questions about whether the mass of the MBH is correlated to the bulge component of the galaxy, or to the entirety of the galaxy (reference). The correlations of the MBH to the bulge are tighter, suggesting the same mechanisms of bulge assembly were the same for MBH growth (volonteri). In this respect, bulge formation is associated to episodes of galaxy mergers, but at the same time, these mergers are constrained by the dark matter distribution (volonteri). The dark matter distribution is, therefore, what determines the MBH growth, along with the dynamics of the gas and stars (reference, volonteri). 
+1. What galaxy property do MBHs really correlate with? Some correlations have been proposed in the past, such as the luminosity, mass, velocity dispersion of the bulge to the binding energy of the galaxy, the number of globular clusters, and the total mass of the dark matter halo, and questions about whether the mass of the MBH is correlated to the bulge component of the galaxy, or to the entirety of the galaxy \cite{kormendy2011supermassive}. The correlations of the MBH to the bulge are tighter, suggesting the same mechanisms of bulge assembly were the same for MBH growth. In this respect, bulge formation is associated to episodes of galaxy mergers, but at the same time, these mergers are constrained by the dark matter distribution. The dark matter distribution is, therefore, what determines the MBH growth, along with the dynamics of the gas and stars \cite{volonteri2011important}. 
 
-2. Is the correlation regulated by the galaxy or by the MBH? There are divided opinions on what regulates the correlation. The MBH-regulated hypothesis argue that MBH regulates the galaxy through feedback from the active galactic nuclei. In this scenario, when reaching a limiting mass and luminosity, the MBH sweeps away the surrounding gas, regulating the MBH growth. On the other hand, the galaxy-regultaed hypothesis argues that the galaxy regulates the amount of gas that trickles to the MBH. Hence, the role of MBH mergers on the MBH and bulge growth is still an open questions, as is the issue of whether feeding or feedback sets the link between MBH and its host galaxy. 
+2. Is the correlation regulated by the galaxy or by the MBH? There are divided opinions on what regulates the correlation. The MBH-regulated hypothesis argue that MBH regulates the galaxy through feedback from the active galactic nuclei. In this scenario, when reaching a limiting mass and luminosity, the MBH sweeps away the surrounding gas, regulating the MBH growth. On the other hand, the galaxy-regulated hypothesis argues that the galaxy regulates the amount of gas that trickles to the MBH. Hence, the role of MBH mergers on the MBH and bulge growth is still an open questions, as is the issue of whether feeding or feedback sets the link between MBH and its host galaxy. 
 
-3. When is the correlation established? There are three possibilities 1) MBHs grow symbiotically with host galaxy, 2) MBH dominate the process, 3) the galaxy grew first, and the MBH adjusted to the host. When fixing the galaxy properties, MBHs in distant active galactic nuclei seemed "overmassive" (reference), suggesting that MBH establishes the correlation.
+3. When is the correlation established? There are three possibilities 1) MBHs grow symbiotically with host galaxy, 2) MBH dominate the process, 3) the galaxy grew first, and the MBH adjusted to the host. When fixing the galaxy properties, MBHs in distant active galactic nuclei seemed "overmassive" \cite{merloni2009cosmic}, suggesting that MBH establishes the correlation.
 
 \subsection{Massive Black Hole Binaries}
 
-MBHs are ubiquitous in the universe and are thought to be at the center of most galaxies \cite{kormendy2013coevolution}. So far, our knowledge from MBHBs have come from electromagnetic observations, cosmological simulations, and theoretical tools, but there are still missing some pieces of the full puzzle regarding their formation and evolution. From the aggregation of galaxies through a series of mergers, or merger episodes, a single galaxy merger remnant is formed hosting two MBHs. The MBHs start a closer interaction forming a bound binary. When the distance scale between them decrease below the kiloparsec (kpc) scale, they form a binary where gravitational wave emission takes place. 
+Observational evidence supports the idea of MBHs being in the center of most galaxies \cite{kormendy2013coevolution}. There is also evidence that a growth channel of galaxies is through episodes of mergers \cite{fakhouri2010merger,o2021emerge}. This points to the conclusion that there should exist populations of MBH binaries in the universe and that their mergers could be detected through their emission of GWs by LISA \cite{klein2016science,dayal2019hierarchical,chen2020dynamical}.
 
-One of the fundamental questions that arise from the picture described above is about MBHBs formation and mass acrettion through cosmic history. Current MBHB formation and evolution theories suggest that MBHBs, apart from primordial MBHBs, are formed from light seeds and heavy seeds. On the one hand, light seeds are composed from population III, metal-free star remnants. On the other hand, haevy seeds are formed  from the collapse of super massive stars or by the dynamic interaction of stellar mass clusters, respectively (reference). Observations of unusually massive quasars at high redshift suggest that MBHBs have their origins largely from heavy seeds or at least dominate it (reference).
+So far, our knowledge of MBHBs have come from EM observations, cosmological simulations, and theoretical tools, but there are still missing some pieces of the full puzzle regarding their formation and evolution. The number of mergers detected by LISA will help us to address these unknowns by providing precious information about the MBH seeding mechanism and their growth through cosmic ages, as well as the galaxy properties and its environment. For this endeavour, two questions need to be addressed \cite{amaro2023astrophysics}: 1) What are the mechanisms that bring together two MBHs at kiloparsec (kpc) scales down to the scales where GW emission takes place at $\sim10^{-6} \mathrm{pc}?$ and 2) Are these mechanisms always efficient enough so that a galaxy merger ends up with a MBH binary merger? 
 
-Another question regarding the link of the formation of MBHBs with galaxy mergers is how two MBHs at kpc distances inside a galaxy merger remnant get closer so that gravitational wave emission dominates the evolution of the binary. Three evolutionary stages have been proposed in this regard \cite{begelman1980massive}: 1) Pairing, 2) hardening, 3) gravitational wave emission. During the first stage, pairing, the interaction of the two MBHs with the background of stars, gas and dark matter is dominated by dynamical friction which generates a drag force, shrinking the distance between the two MBHs to a point where a binary is formed. During the second stage, hardening,...(reference MBHBs galactic nuclei theory papers) the MBH binary (MBHB) loses energy and angular momentum due to three-body encounters with stars in the surroundings shrinking the orbit to parsec scales. At this point the final parsec problem arises reflecting the challenges involved in understanding how the MBHB reaches closer distance scales where gravitational wave emission dominates the interaction (reference). The final stage  corresponds to gravitational wave emission. Here, the space-based GW observatory LISA will observe MBHBs with masses between $10^{4}$ and $10^{7}$ Msun up to z~20 with an expected observation rate from a few to a few hundreds of MBHBs per year (reference)...(expand with more papers)
+The mechanisms that bring an MBH pair close enough to become a binary and merge were first explored by Begelman et al \cite{begelman1980massive}. They highlighted three main stages of the evolution of the two MBHs: 1) Pairing, 2) binary hardening and 3) GW-driven coalescense. In this section we will describe these stages largely based on what can be found in \cite{amaro2023astrophysics}. 
 
-\subsection{Populations of Massive Black Hole Binaries}
+\subsubsection{Dynamical friction at kpc scales}
 
-MBHB population studies allow us to know how MBHBs form and evolve, and what is the relation with the host galaxy and their environments. This is achieved by relating the physical mechanisms that are involved in the merging process to the GW observations of MBHBs. To connect these parts, MBHB population models are used, and they describe the distribution of the parameters of the MBHBs in the Universe along with the characterisation of MBHB systems with GW data analysis tools. MBHB population models are constructed, on the one hand, via cosmological simulations, where MBHs, galaxies, clusters of galaxies and dark matter are at play. On the other hand, there are analytic and semi-analytic models which rely of physical assumptions about the mechanisms involved in the mergers.
+After two galaxies merge, the process of pairing takes place where the two MBHs experience a drag force with the background of stars, gas and dark matter, losing orbital energy and angular momentum until they form a binary. Chandrasekhar \cite{chandrasekhar1943dynamical} derived the expression for the force acting on a perturbing body, in this case a MBH with mass $M_{\mathrm{MBH}}$, due to a background medium, in this case the background of stars, gas and dark matter. Under the assumption of an infinite homogeneous medium with density $\rho$, if the background is characterized by an isotropic Maxwellian velocity distribution with velocity dispersion $\sigma$, the force acting on the perturbing body is,
+\begin{equation}
+\Vec{F}_{\mathrm{DF}} \propto -M^{2}_{\mathrm{BH}}\rho\mathcal{G}\Big(\frac{v}{\sigma}\Big)\mathrm{ln}\Lambda\frac{\Vec{v}}{v^{3}},
+\label{eq:dynamicalforce}
+\end{equation}
+where $v$ is the perturber velocity relative to the background, $\mathrm{ln}\Lambda\sim10$ is the coulomb logarithm, and the function $\mathcal{G}(x)$ with $x = v/\sigma$ depends on the underlying velocity distribution. When applying eq.~\eqref{eq:dynamicalforce} to the case of a MBH moving in a circular orbit of radius $r$ in the stellar background of a singular isothermal sphere ($\rho \propto \sigma^{2} r^{-2}$), the orbital decay of MBH occurs on a time scale:
+\begin{equation}
+\tau_{\mathrm{DF}} \approx \frac{8~\mathrm{Gyr}}{\mathrm{ln}\Lambda} \Big(\frac{r}{\mathrm{kpc}} \Big)^{2} \frac{\sigma}{200~\mathrm{km/s}} \frac{10^7\mathrm{M}_{\odot}}{M_{\mathrm{BH}}}.
+\label{eq:dynamicaltimescale}
+\end{equation}
+
+For MBHs at kpc scale separations and $M_{\mathrm{MBH}} \sim 10^{6}~\mathrm{M}_{\odot}$ in a galaxy of $\sigma=100\mathrm{km/s}$, dynamical friction causes a rapid sinking of MBHs in the LISA band in less than a Hubble time.
+
+\subsubsection{Binary Hardening}
+
+After dynamical friction drives the orbital decay to pc separations, the two MBHs arrive to each others' sphere of influence (note) forming a binary. Further shrinking depends on the properties of the environment. Two classes of physical processes have been proposed for this: 1) Gas-poor stellar environments, and 2) environments with consistent reservoir of gas. Even though these two classes have been studied individually, they can both operate at the same time \cite{kelley2017massive,bortolas2021competing}.MBHBs in stellar environments experience further lose of orbital energy and angular momentum due to three-body encounters with individual stars. There is a transition point at which the self-gravity of the MBHs overcome the dragging froce of the individual stars, so that the binary orbital velocity exceeds the characteristic speed of the background. This is reached at the hard binary separation, $a_{\mathrm{h}}$ \cite{merritt2004massive}: 
+\begin{equation}
+a_{\mathrm{h}} \leq \frac{G\mu}{4\sigma^{2}}.
+\label{eq:hardbinarysep}
+\end{equation}
+where $\mu$ is the reduced mass of the binary and $\sigma$ the local velocity of the surrounding distribution. At this point, individual stars are ejected from the MBHB neighbour, decreasing its number density. Once the binary hardening regime is reached, the expected orbital shrinking rate is
+\begin{equation}
+\frac{d}{dt} \bigg(\frac{1}{a} \bigg)=\frac{G\rho}{\sigma} H,
+\label{eq:shrinkrate}
+\end{equation}
+for a stellar populated neighbour with stellar density background $\rho$, velocity dispersion $\sigma$, binary keplerian semi-major axis $a$ and a numerical coefficient weakly dependent on the properties of the binary (mass, mass ratio, and eccentricity \cite{mikkola1992evolution,quinlan1996dynamical}) $H$. However, since the MBHB surrounding is depleted of stars within a typical stellar orbital period at the beginning of the hardening phase, the possibility of the MBHB stalling at pc scales has been put forward in both numerical \cite{makino2004evolution,berczik2005long} and theoretical \cite{begelman1980massive} grounds. This has been referred to as the final parsec problem.
+		
+\subsubsection{GW emission}
+
+As the binary loses orbital energy and angular momentum through interaction with the environment, it eventually reaches the GW-driven stage. 
+
+The acceleration of each of the binary components can be expressed by the Newtonian acceleration plus Post-Newtonian corrections to include relativistic effects \cite{kupi2006dynamics,damour1981radiation},
+\begin{equation}
+\textbf{a}=\underbrace{\textbf{a}_{\mathrm{N}}}_{\mathrm{Newt.}}+\underbrace{\textbf{a}_{\mathrm{1PN}}+\textbf{a}_{\mathrm{2PN}}}_{\mathrm{periastron~shift}}+\underbrace{\textbf{a}_{\mathrm{2.5PN}}}_{\mathrm{grav. w}}+...,
+\label{eq:PNacceleration}
+\end{equation}
+where the Newtonian acceleration $\textbf{a}_{\mathrm{N}}$ is computed considering interaction with the stellar environment, whereas post-Newtonian terms are proportional to the formal PN expansion parameters $\epsilon_{\mathrm{PN}}$, i.e.
+\begin{equation}
+|\textbf{a}_{i\mathrm{PN}}| \propto \epsilon^{i}_{\mathrm{PN}}~\Big(\frac{v}{c}\Big)^{2i} \sim \Big(\frac{r_{g}}{R}\Big)^{i},
+\label{eq:PNepsilon}
+\end{equation}
+where $v$ and $R$ are the relative velocity and separation of the binary, $r_{g}=GM/c^{2}$ is the gravitational radius, $c$ is the speed of light in vacuum, $G$ is the gravitational constant, and $M$ the binary total mass. PN gravitational wave corrections are still small at $a\sim a_{\mathrm{h}}$, but they become important at  $a\sim a_{\mathrm{GW}}\sim0.01 \times a_\mathrm{h}$\cite{rantala2018formation,quinlan1996dynamical}, which is at $a_{\mathrm{GW}}\sim10^{-4}-10^{-3}$ for equal-mass binaries with individual MBH masses of $M_{\mathrm{MBH}}\sim10^{6}-10^{7} \mathrm{M}_{\odot}$ \cite{amaro2023astrophysics}.
+
+The GW-driven evolution of the binary can be described by the seminal work of Peters \cite{peters1964gravitational}. The evolution of the keplerian parameters $a$, the semi-major axis of the orbit, and $e$, the eccentricity, can be tracked down when assuming a slow variation. This is the case when the orbital period scales as $t\sim(a/r_{g})^{3/2}$ and the radiation reaction time-scale scales as $t_{RR}~(a/r_{g})^{4}$. Noting that $a\gg r_{g}$ implies $t_{orb}\ll t_{RR}$, the orbit is Keplerian, and the paramters a and e vary slowly. The orbit average of the evolution of the binary's semi-major axis is described by \cite{peters1964gravitational}
+\begin{equation}
+\Big\langle \frac{da}{dt}\Big\rangle_{\mathrm{GW}} = -\frac{64}{5}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{3}(1-e^{2})^{7/2}}\Big(1+\frac{73}{24}e^{2}+\frac{37}{96}e^{4}\Big) = -\frac{64}{5}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{3}}f(e),
+\label{eq:dadt}
+\end{equation} 
+and the evolution of the eccentricity $e$ is expressed by
+\begin{equation}
+\Big\langle \frac{de}{dt}\Big\rangle_{\mathrm{GW}} = -\frac{304}{15}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{4}(1-e^{2})^{5/2}}\Big(1+\frac{121}{304}e^{2}\Big),
+\label{eq:dedt}
+\end{equation}
+When considering PN coefficients up to order 3.5, or higher, the dynamics of the orbit is not constant anymore, but rather oscilate (reference). When including spins, they also participate on shaping the dynamics of the binaries (references) as well as the GWs emitted.
+The time a binary takes to merge was by Peters \cite{peters1964gravitational}, but we include here the time-scale found in \cite{amaro2023astrophysics}, i.e.
+\begin{equation}
+t_{p} = \frac{5c^{5}(1+q)^{2}}{256G^{3}M^{3}q}\frac{a^{4}_{0}}{f(e_{0})}\approx0.32\frac{(1+q)^{2}}{qf(e_{0})}\bigg(\frac{a_{0}}{\mathrm{AU}}^{4}\bigg)\bigg(\frac{M}{10^{6}\mathrm{M}_{\odot}}\Big)^{-3}\mathrm{yr},
+\label{eq:peterstimescale}
+\end{equation}
+Peters formula, eq.\eqref{eq:peterstimescale}, assumes orbit decay only through GW emission and Keplerian orbits, i.e. where $a$ and $e$ vary slowly. A corrected formula proposed was Zwick et al. \cite{zwick2020improved} which relaxes these assumptions while adding a new spin-dependent correction. We show here this corrected formula as found in \cite{amaro2023astrophysics},
+\begin{equation}
+t_{\mathrm{PN}}(a_{0},e_{0},s_{1}) = \frac{5c^{5}(1+q)^{2}a^{4}}{256G^{3}M^{3}qf(e_{0})} R(e_{0})\mathrm{exp}\Bigg(\frac{2.8r_{S}}{p_{0}}+s_{1}\frac{0.3r_{S}}{p_{0}}+|s_{1}|^{3/2}\bigg(\frac{1.1r_{S}}{p_{0}}\bigg)^{5/2}\Bigg),
+\label{eq:peterstimescalecorr}
+\end{equation}
+where $p_{0}=a_{0}(1-e_{0})$, $r_{\mathrm{S}}2G
+M/c^{2}$, $R(e_{0})=8^{(1-\sqrt{1-e_{0}})}$, and $s_{1}\equiv S_{1}\mathrm{cos}\theta$, with $S_{1}$ being the spin magnitude of the more massive MBH and $\theta$ the angle between the MBH spin vector and the orbital total angular momentum vector. 
+
+\subsubsection{MBH merger and GW recoil}
+When MBHB merges, there is a positive net linear momentum that is abruptly released in the form a recoil or a "kick" in the MBHB remnant \cite{bonnor1961transport,peres1962classical,bekenstein1973black}, reaching velocities as high as $\sim 5000 \mathrm{km/s}$. When the recoil velocity reaches $\sim1000 \mathrm{km/s}$, the MBHB remnant can be ejected from the host galaxy as this might exceed its escape velocity \cite{redmount1989gravitational,merritt2004consequences,gerosa2015missing}. There are implications for this phenomena: Since MBHB are ejected from the host galaxy, many galaxies would be MBH-less affecting the correlation between MBH and galaxy hosts, also the merger rates would be affected, and the formation of quasars with MBHs with masses $>10^{6}$ at high redshifts would be prevented \cite{haiman2004constraints,boylan2004core,sesana2007extreme,gualandris2008ejection}. 
+Trails of GW recoil could be accessible to electromagnetic (EM) observations through the shining of the gas surrounding the MBHB remnant, which in this case would shine as off-nuclear AGNs.
+There are GW signatures of GW recoils such as a relative Doppler shift between inspiral and ringdown\cite{gerosa2016black}, different higher-order mode content\cite{calderon2018tracking}, statistical correlation with the spin properties\cite{varma2020extracting}. \cite{gerosa2016black,calderon2018tracking,varma2020extracting} agree that GW recoil signatures are at the reach of LISA.
+
 
 \subsection{Multimessenger observations of single MBHBs}
 
@@ -183,30 +255,171 @@ With radio facilities such as the Very Long Baseline Interferotmeter (VLBI) all 
 
 \subsection{Configuration of the detector}
 
-\subsection{Time-Delay Interferometry}
+The objective of observing MBHBs with LISA is to know their parameters such as mass and spins, so that astrophysical interpretation can be made and implications can be known. LISA relies on the same principle all laser interferometers are based on to detect tiny strains in spacetime produced by GWs from astrophysical sources: It measures passing GWs by measuring time-dependent length changes in the laserpath between two free-falling test masses.
 
-\subsection{Noise Sources}
+Laser interferometers measure differences in length directly $\delta L$, and from this measurement, the strain $\delta L/L$ is the value used in GW studies. Sources of GWs can generate signals with strains of order $10^{-24}$ \cite{prince2011lisa}. Space-based GW observatories like LISA allow to achieve these strains because arm lengths are not constrained as much as their ground-based counterparts. Moreover, laser interferometry in the only technique for detecting GWs that allows reaching these strains because of the lengths the arms, consequently, the sensitivity they achieve.  
+
+LISA is composed by three spacecrafts (s/c) each of them housing two test masses. s/c and test masses are set to free-fall orbiting the Sun. In order for them to experience a free-fall state, s/c and test masses need to be exempt from external non-gravitational forces. Space is a suitable environment to set s/c and test masses in this setting since it is quiet enough from non-gravitational forces such as solar radiation pressure or cosmic particles. The importance of (???) s/c and test masses in this environment is evident since spurious non-gravitational forces can be mistaken as real strains from passing GWs. Broadly speaking, laser interferometry relies on two key aspects \cite{prince2011lisa}: 1) Measurement of length changes between two test masses, and 2) A measurement system that processes these measurements. Non-gravitational strains need to reduced as much as possible and to be smaller than the GW strain so that they do not have significant influence on the length change measurement from GWs. 
+
+The LISA detector comprises three s/c trailing the Earth orbiting the sun Fig. ~\ref{fig:LISAobs}. There are three key aspects behind the LISA design concept. 1) A set of three s/c with unique orbits. LISA is comprised by three s/c arranged in a triangular shape, or constellation. Each s/c orbit the Sun in a unique manner, so that the whole constellation orbits the sun resembling a cart-wheel motion. The constellation orbits the Sun trailing the Earth at an angle of $20^{\circ}$. The plane of the constellation is tilted 60º relative to the plane of the ecliptic. At each vertex of the constellation lies a s/c. The spacecrafts house the test masses, as well as measurement equipment, Fig~\ref{fig:LISAdetail}, which are in free-fall state. Measurements are made monitoring the length change between test masses.
+The length change due to passing GWs between two test masses in one arm are partitioned in three measurements: The measurement between s/c and the measurement between test mass and the s/c for each end-point of the arm, Fig.~\ref{fig:LISAarm}. By combining these three measurements, the length change between test masses at each end-point of each arm can be done. Additionally, the noise induced by each partition is considered negligible for LISA \cite{prince2011lisa} so it does not affect the test mass length change significantly.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/LISAobs.png}
+    \caption{LISA observatory. Picture taken from \cite{prince2011lisa}.}
+    \label{fig:LISAobs}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/LISAdetail.png}
+    \caption{LISA detail. Picture taken from \cite{prince2011lisa}.}
+    \label{fig:LISAdetail}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/LISAarm.png}
+    \caption{LISA arm. Picture taken from \cite{prince2011lisa}.}
+    \label{fig:LISAarm}
+\end{figure}
+
+2) The implementation of "drag-free" operation on the s/c and test masses. Each s/c electrostatically houses a test mass for each arm and play the role of shielding the test mass against non-gravitational effects. As the test mass is kept in free-fall, the s/c needs to maintain its position relative to the test mass. This is done by sensors that measure the position of the s/c relative to the test mass and thrusters to correct its position if needed. The test masses posses sensors that monitor any disturbances in their free-fall motion as well, and corrections are made by means of small electrostatic forces imparted by the electrostatic housing if needed. 3) Distance measurement system. Classic laser interferometry relies on mirrors to send a laser beam forward and back to measure length strains. This approach is not feasible for LISA due to the much larger arms. Instead, the lasers in LISA work in a "transponder" fashion \cite{prince2011lisa}: For each arm, one s/c sends a laser beam to the other end's s/c. When the laser reaches the opposite end, the laser is "locked-down", i.e. its phase is measured and stored at the arriving point to be replicated. At this end, a laser with the replicated phase is send back to the original end. When the laser is received by the original end, its phase is compared with the phase of the original end. Differences in the phase of the forward and back lasers are compared determining whether a length change has occurred.
+
+
+\subsection{Laser Noise and Time-Delay Interferometry}
+
+LISA's arms are $\sim10^{6}$ kilometer long, and will experience fluctuations in their length due to orbital motion around the Sun, and to its cart-wheel motion, of the order of a few percent \cite{tinto2014time}. This induces a residual laser frequency when the lasers of two arms reach the photodetectors of destination, introducing what is known as \textit{laser frequency noise}. Equal-arm interferometers, but not parallel, like the ground-based GW detectors LIGO and Virgo don't experience this issue since the frequency residual in their lasers cancels out as the delay of both lasers are the same. Unequal-arm detectors such as LISA don't cancel these frequency differences so it needs to be accounted for. In this section, we will discuss why laser frequency noise cancelation is essential and how TDI addresses this issue. The content of this section is a summarized treatment of what can be found in \cite{tinto2014time}.
+
+Suppose an interferometer has non-parallel arms of length $L_{1}$ and $L_{2}$ where $L_{1} \neq L_{2}$. If a laser beam, with frequency fluctuations $C(t)$, is made to travel along each arm, there will be a difference in the frequency fluctuations of both lasers when they are read back in the photo detector at the source point. This is expressed by
+\begin{equation}
+\Delta C(t) = C(t - 2L_{1})-C(t-2L_{2}).
+\label{eq:freqfluctdiff}
+\end{equation}
+In the case of LISA, the difference in the fluctuations will be of order $\sim10^{-13}/\sqrt{Hz}$. Let's express eq. \eqref{eq:freqfluctdiff} in its frequency domain by means of a Fourier transform,
+\begin{equation}
+|\Tilde{\Delta C(f)}| \simeq |\Tilde{C}(f)|4\pi f|(L_1-L_2)|.
+\label{eq:freqfluctdiffFourier}
+\end{equation}
+Assuming a laser frequency of $10^{-3} \mathrm{Hz}$  and $|L_{1}-L_{2}| = 0.5~\mathrm{s}$, the uncanceled fluctuations from the laser are equal to $6.3 \times 10^{-16}/\sqrt{Hz}$ \cite{tinto2014time} If the expected sensitivity of LISA is $~10^{-20}/\sqrt{Hz}$, we can see that the laser frequency noise induced by the unequal arms needs to be canceled.
+
+The solution to this problem was proposed by Faller et al \cite{faller1984possible,faller1989antenna}. Suppose an unequal-arm interferometer has laser beams not interfering at a common point, but made to interfere with the incoming light from the laser at a photo detector, \ref{fig:UnequalArmsDet}. With this configuration, two Doppler measurements, $y_{1}(t)$ and $y_{2}(t)$, can be made and the task left to do is to find an algorithm to digitally cancel the laser frequency fluctuations from a new data combination. If $h_{1}(t)$ and $h_{2}(t)$ are the GW strain signals, $n_{1}(t)$ and $n_{2}(t)$ are the detector noises other than laser frequency noise, the Doppler observables in the frequency domain can be written as
+\begin{equation}
+y_1(t) = C(t - 2L_1) - C(t) + h_1(t) + n_1(t),
+\label{eq:dopplerdata1}
+\end{equation}
+\begin{equation}
+y_2(t) = C(t - 2L_2) - C(t) + h_2(t) + n_2(t).
+\label{eq:dopplerdata2}
+\end{equation}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/UnequalArmsDet.png}
+    \caption{Unequal arm detector. Picture taken from \cite{tinto2014time}.}
+    \label{fig:UnequalArmsDet}
+\end{figure}
+
+A procedure to calculate the laser frequency noise was suggested by \cite{faller1984possible}. If we take an infinitely long Fourier transform of the data $y_{1}$, the expression of $y_{1}$ in the frequency domain is,
+\begin{equation}
+\tilde{y}_1(f) = \tilde{C}(f) \big[ e^{4\pi i f L_1} - 1 \big] + \tilde{h}_1(f) + \tilde{n}_1(f).
+\label{eq:freqdomainy1}
+\end{equation}
+Now, by relaxing the assumption of infinite-length Fourier transform and constraining it to finite-length Fourier transform, eq.\eqref{eq:freqdomainy1} takes the form
+\begin{equation}
+\tilde{y}^{T}_{1} \equiv \int y_1(t) e^{2\pi i f t} \, dt = \int y_1(t) H(t) e^{2\pi i f t} \, dt,
+\label{eq:freqdomainy1finite}
+\end{equation}
+However, in order to suppress the laser noise fluctuations below the LISA sensitivity, the integration time needed would amount to six months. A solution to this was proposed by \cite{tinto1999cancellation} which works in the time domain. By using the new data set, the difference of $y_{1}$ and $y_{2}$ from eq. \eqref{eq:dopplerdata1} and eq. \eqref{eq:dopplerdata2} is
+\begin{equation}
+y_1(t) - y_2(t) = C(t - 2L_1) - C(t - 2L_2) + h_1(t) - h_2(t) + n_1(t) - n_2(t).
+\label{eq:y1y2_1}
+\end{equation}
+Using eqs. \eqref{eq:dopplerdata1},\eqref{eq:dopplerdata2} and \eqref{eq:y1y2_1}, we can write
+\begin{align}
+y_1(t - 2L_2) - y_2(t - 2L_1) &= C(t - 2L_1) - C(t - 2L_2) + h_1(t - 2L_2) - h_2(t - 2L_1) \notag \\
+&\quad + n_1(t - 2L_2) - n_2(t - 2L_1).
+\label{eq:y1y2_2}
+\end{align}
+which is obtained from time-shifting the data $y_{1}$ by the round trip light time in arm 2, $y_{1}(t-L_{2})$, and subtract from it the data $y_{2}$ after it has been time-shifted by the round trip light time in arm 1.
+By subtracting eq. \eqref{eq:y1y2_1} from eq. \eqref{eq:y1y2_2} we generate new data that does not contain the laser frequency fluctuations $c(t)$:
+\begin{equation}
+X \equiv [y_1(t) - y_2(t)] - [y_1(t - 2L_2) - y_2(t - 2L_1)],
+\label{combinationX}
+\end{equation}
+which encapsulates the concept of time-delay interferometry (TDI): Laser frequency noise in the time domain can be canceled by properly time-shifting and linearly combining Doppler measurements recorded by different Doppler readouts.
+
+
+\subsection{Additional Noise Sources}
+
+\textit{Acceleration Noise}
+
+As we mentioned in earlier sections, test masses and s/c operate under a drag-free conditions, where the s/c act as "shielding" for the test mass together with the Gravitational Reference System (GRS) to account for deviations from free-fall. There exist several noise sources for these deviations and can be attributed to both local and external disturbances \cite{colpiand2023lisa}. Moreover, these noise sources compare in strain magnitude to GW signals that could be detected, and are roughly at all frequencies below $4 \mathrm{mHz}$. At milihertz frequencies, Brownian force from residual gas impacts is the dominant noise. At lower frequencies, actuation voltages used to align test masses to the interferometer, stray electrostatic forces due to test mass charge and stray surface "patch" potentials. External coupled disturbances include magnetic forces on the test mass bulk due to the interplanetary field, forces of thermal origin relevant at and below $100~\mu\mathrm{Hz}$ lower band edge as well as fluctuations in the local gravitational field due to any motion or deformation in the spacecraft mass distribution.	
+
+\textit{Interferometer noise}
+
+Noises intrinsic to the interferometer include \cite{colpiand2023lisa}: Shot noise which arise from the interferometric measurements where the low power received beam which carries the gravitational wave information, is beat against a local oscillator beam. Another source of noise is the optical path-length noise which include phase noise arising from the thermo-mechanics of the optical elements that comprise the optical system (telescope and interferometers). Control of this type of noise is done through careful design of the optical system and selection of components and coating, as well as by placing stringent requirements on the thermal stability of the optical system. The angular and lateral stability of the components of the optical system couples with misalignments in the optical system to produce spurious path-length changes.
+
+\section{Observations of MBHBs with LISA and Data Analysis}
+
+When MBHBs reach the GW emission stage, space-based GW observatories like LISA are expected to detect these GWs, to subsequently estimate the parameters of their sources, i.e. masses, spins, sky positions, and distances from Earth. In this chapter we will discuss the elements that are involved in the detection as well as in the parameter estimation. 
+
+To know when a GW has been detected we need a model for the expected signal, this model is called the waveform, and is compared with the data that the detector has obtained. A popular technique to perform this operation is the \textit{matched filtering} which uses the noise model of the detector, known as the Power Spectral Density (PSD), to weight the degree of match between the waveform and the data. The result of this process is the computation of the signal-to-noise ratio (SNR), a measure of the strength of the signal as detected by the detector. Once a signal has been detected with some level of confidence, parameter estimation of the source can be performed. GW makes extensive use of Bayesian statistics, which is based on estimating the probability distribution of the source true values, i.e. their true values and their uncertainties, based on the data and prior assumptions of the parameter values. Under some specific scenarios, approximations can be used to estimate the uncertainties that are computationally less expensive than Bayesian estimates, such as the Fisher Information Matrix, providing **decent** results. In the next few sections, we will discuss all these concepts.
+
+\subsection{Waveforms}
+After the advancements in numerical relativity (NR) in mid 2000's \cite{campanelli2006accurate,pretorius2005evolution,baker2006gravitational}
+regarding the modelling of gravitational wave signals, or gravitational waveforms, waveforms suited for data analysis applications were needed. While highly accurate, NR waveforms are known to be computationally very expensive to obtain since it involves solving the full highly non-linear Einstein's field equations, not very well suited for data analysis purposes. Phenomenological waveforms were developed for this necessity. They resemble approximately the waveforms generated through NR with the advantage of being less computationally expensive than the ones from NR. The requirements were (and still are) that the phenomenological waveforms, tuned up to NR waveforms, approximate the properties of the gravitational waves to its NR counterpart, ranging from the inspiral to the ringdown stage. The advantages of the phenomenological waveforms are, among others, that they are computationally efficient, and they cover a broad parameter space, so that they cover a wide range of data analysis applications. The GW community has developed the LALsuite \cite{veitch2015parameter}, a library with phenomenological waveforms for use on data analysis, and gave the family of waveforms the name of IMRPhenom.
+
+The construction of IMRPhenom waveforms come in three stages \cite{afshordi2023waveform}.
+Firstly, an anzats for simple functions containing the amplitude and phase of spherical or spheroidal harmonics is defined. This anzats is divided into inspiral, merger and ringdown. For the inspiral stage, a post-Newtonian description is used, and black hole perturbation theory for the ringdown stage. Then, generalized coefficients are obtained which describe the waveform. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit. Finally, the coefficients of the waveform are interpolated across parameter space in a process called "parameter space fit".
+
+The evolution of IMRPhenom waveforms range from the modelling of the dominant harmonic non-precessing binaries, to more complex multimode precessing waveforms. Challenges regarding the construction of waveforms for LISA involve the necessity in accuracy improvement in the waveforms due to the high SNR sources and challenges in the data input from NR for calibration. Four generations of frequency domain IMRPhenom waveforms have been developed, and a first generation of time domain \cite{afshordi2023waveform}:
+\begin{enumerate}
+    \item The first generation involved PhenomA which accounted for a dominant harmonic $l=|m|=2$, non-precessing binaries. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit.
+    \item PhenomB and PhenomC non-precessing spins with single effective spin to account for the two spin degrees of freedom. PhenomP was developed from PhenomC where the "twisting"-up approximation to account for spin precession was included.
+    \item PhenomD with a dominant $l=|m|=2$ harmonic, incorporated improvements in the phenomenological anzats and better fits to NR. Several waveforms were derived from PhenomD:
+	\begin{enumerate} 
+        \item PhenomPv2 which is an iteration of PhenomP with improved precession. 
+        \item PhenomHM adds higher than $l=|m|=2$ harmonics.
+        \item PhenomPv3 updates the single spin of PhenomP for a two spin prescription.
+        \item PhenomPv3HM includes higher harmonics with twisting up precession approach.
+        \item PhenomXAS upgrades from PhenomD with improvements in the dominant harmonic.
+        \item Phenom XHM add higher harmonics to PhenomXAS, and, in turn, PhenomXPHM add spin precession.
+    \end{enumerate}
+\end{enumerate}
+
+Fourth generation models have been calibrated to non-precessing quasi-circular orbit NR. Precession has been included by using the twisting approximation \cite{afshordi2023waveform}: In the inspiral stage, the precession time scale is much smaller than the orbit time scale, so precession averages out over one orbital period, hence, being neglected in the total contribution of the signal, and non-precessing dynamics dominates the inspiral evolution. Then to map from non-precessing to precessing binaries, rotation of the orbital plane described by the Euler angles is used to resemble the precession of the binary. A shortcoming of the use of the twisting approximation is that the use of the stationary phase approximation (SPA) is not valid for the late inspiral, merger and ringdown stages. 
+
+A feature of fourth generation waveforms is that have achieved a reduction in computational cost. This has been due to the use of "multibanding method" (reference) which consist in determining the interpolation spacing from a coarse grid based on the analytical error estimates, and the use of a standard iterative scheme to compute the complex exponentials involved in the waveform properties such as the amplitude, phase, and the Euler angles used in the twisting up.
+Challenges that phenom waveforms face, for comparable mass binaries:
+\begin{enumerate}
+    \item The addition of analytical prescriptions for precession and eccentricity.
+    \item The addition of closed-form ansatzes which include precession and eccentricity in a large parameter space without compromising computational efficiency.
+    \item Development of a overall data analysis strategies and concrete code framework, in which phenom waveforms are exploited by exploring models with tradeoff of accuracy versus computational cost, or accuracy versus the extent to which the parameter space covers.
+    \item Since LISA's detector response is much more complicated that the ones for ground-based detectros, the development of phenom models that are well coupled to the LISA's detector response that resolves tradeoff of accuracy versus computational cost is another challenge.   
+\end{enumerate}
 
 \subsection{Detector Noise PSD and Sensitivity curve}
 
 When carrying out observations of compact binary objects with LISA, there are several aspects that are needed to be accounted for such as the noise properties of the detector, the type of waveform that is used for the analysis, and the data analysis techniques. The outcome of the observations are the foundation for astrophysical interpretation about the nature of the sources, i.e.\ their formation mechanisms and evolution through cosmic ages, which in turn let us know about their populations in the local and early universe. In this section we will explore these aspects.
 
-Sensitivity curves are used when trying to grasp an idea of what GW sources are at the reach of a particular detector. Figure () shows the sensitivity curve for LISA dependent on the frequency. We can look at how loud will be a signal by looking how high is the signal curve above the sensitivity curve. The sensitivity curve for LISA can be expressed as \cite{robson2019construction},
+In general, sensitivity curves of GW detectors show the strain (or amplitude) sensitivity of the detector, in units of $1/\sqrt{\mathrm{Hz}}$ in the frequency domain, to detect spacetime fluctuations, due to noise and passing GWs. This is the curve typically shown when compared with GWs signal strains in a strain vs frequency space. Other names for the sensitivity curve are amplitude spectral density (ASD), spectral strain sensitivity and spectral amplitude. The sensitivity curve is obtained from the noise power spectral density (PSD) which is a measure of the noise strength as a function of frequency. The noise PSD can be expressed by \cite{robson2019construction},
 \begin{equation}
-S_{n}(f) = \frac{10}{3L^{2}}\bigg( P_{OMS}(f) + \frac{4P_{acc}(f)}{(2\pi f)^{4}}\bigg)\bigg( 1 + \frac{6}{10}\big( \frac{f}{f_{\ast}}^{2} \big)\bigg) + S_{c}(f),
-\label{eq:sensitivityLISA}
+S_{n}(f) = \frac{10}{3L^{2}}\left[ P_{\mathrm{OMS}}(f) + \frac{4P_{\mathrm{acc}}(f)}{(2\pi f)^{4}}\right] \left[ 1 + \frac{6}{10}\left( \frac{f}{f_{\ast}}^{2} \right)\right] + S_{c}(f),
+\label{eq:psdLISA}
 \end{equation}
-where $L = 2.5~\text{Gm}$, and $f_{\ast} = c/(2 \pi L) = 19.09~\text{mHz}$ and is called the transfer frequency. $P_{OMS}$, $P_{acc}$ and $S_{c}$ will be explained in the next lines. $S_{n}(f)$ is computed with
+where $L = 2.5~\mathrm{Gm}$, and $f_{\ast} = c/(2 \pi L) = 19.09~\mathrm{mHz}$ and is called the transfer frequency. The noise sources that affect LISA are included in the terms $P_{\mathrm{OMS}}$, $P_{\mathrm{acc}}$ and $S_{c}$, which are the noise associated with the optical metrology system, the noise due to test masses acceleration fluctuations and the confusion noise that comes from unresolved sources in the galaxy, respectively. In the next lines we will show how to compute the noise PSD in eq. \eqref{eq:psdLISA}. In treatment presented here, the noise PSD is expressed by both $S_n$ and $P_n$. 
+However, $P_n$ does not include the detector response function which relates the PSD of the signal to the PSD of the signal as recorded by the detector. We combine the detector response function and $P_n$ to obtain $S_n$ with the expression,
 \begin{equation}
 S_{n}(f) = \frac{P_{n}(f)}{\mathcal{R}(f)},
 \label{eq:SnLISA}
 \end{equation}
-where $P_{n}(f)$ is the noise power spectral density of the detector and is expressed as \cite{cornish2001detecting}
+where $P_{n}(f)$ is the noise PSD of the detector and is expressed as \cite{cornish2001detecting}
 \begin{equation}
 P_{n}(f) = \frac{P_{OMS}}{L^{2}} + 2(1 + \text{cos}^2({f/f_{\ast}}))\frac{P_{acc}}{(2\pi f)^{4}L^{2}},
 \label{eq:noiseLISA}
 \end{equation}
-and $\mathcal{R}(f)$ is the detector response function which relates the power spectral density of the signal to the power spectral density of the signal as recorded by the detector. The gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals are related through \cite{robson2019construction},
+and $\mathcal{R}(f)$ is the detector response function. The gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals are related through \cite{robson2019construction},
 \begin{equation}
 \Tilde{h}(f) = F^{+}(f) \Tilde{h}_{+}(f) + F^{\times}(f)\Tilde{h}_{\times}(f),
 \label{eq:strain_plus_crossLISA}
@@ -247,7 +460,7 @@ $P_{OMS}$ is the optical metrology system noise and has value of \cite{babak2021
 \end{equation}
 and $P_{acc}$ is the test mass acceleration noise,
 \begin{equation}
-\sqrt{P_{acc}(f)} = 3 \bigg[ \frac{\text{fm\,s}^{-2}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{0.4\times10^{-3}}{f} \bigg)^{4}} \sqrt{1 + \bigg( \frac{f}{ 8\times10^{-3}} \bigg)^{4}}, 
+\sqrt{P_{acc}(f)} = 3 \bigg[ \frac{\text{fm.s}^{-2}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{0.4\times10^{-3}}{f} \bigg)^{4}} \sqrt{1 + \bigg( \frac{f}{ 8\times10^{-3}} \bigg)^{4}}, 
 \label{eq:pacc}
 \end{equation}
 For the case where test mass acceleration noise dominates over the optical path noise, $\text{cos}^{2}(f/f_{\ast})$ approaches unity giving the form of (\ref{eq:sensitivityLISA}). $S_{c}$ is the galactic confusion noise which accounts for the binaries that exist it the Milky Way galaxy and enter the LISA band as foreground noise. As the time of the mission progresses, $S_{c}$ diminishes following the expression, \cite{robson2019construction} 
@@ -257,40 +470,101 @@ S_{c}(f) = A f^{-7/3} e^{-f^{\alpha} + \beta f \sin(\kappa f)} \left[1 + \tanh(\
 \end{equation}
 where $\alpha$, $\beta$, $\kappa$, $\gamma$ and $f_{k}$ are fitting parameters where $f_{k}$ decreases with observation time and $\gamma$ increases with observation time, leading to a overall decrease of the galactic noise with observation time. 
 
-\section{Observations of MBHBs with LISA and Data Analysis}
+\subsection{Detection of GWs}
 
-\subsection{Waveforms}
-After the advancements in numerical relativity (NR) in mid 2000's \cite{campanelli2006accurate,pretorius2005evolution,baker2006gravitational}
-regarding the modelling of gravitational wave signals, or gravitational waveforms, waveforms suited for data analysis applications were needed. While highly accurate, NR waveforms are known to be computationally very expensive to obtain since it involves solving the full highly non-linear Einstein's field equations, not very well suited for data analysis purposes. Phenomenological waveforms were developed for this necessity. They resemble approximately the waveforms generated through NR with the advantage of being less computationally expensive than the ones from NR. The requirements were (and still are) that the phenomenological waveforms, tuned up to NR waveforms, approximate the properties of the gravitational waves to its NR counterpart, ranging from the inspiral to the ringdown stage. The advantages of the phenomenological waveforms are, among others, that they are computationally efficient, and they cover a broad parameter space, so that they cover a wide range of data analysis applications. The GW community has developed the LALsuite \cite{veitch2015parameter}, a library with phenomenological waveforms for use on data analysis, and gave the family of waveforms the name of IMRPhenom.
+GW detection consists in computing 1) the probability of observing the data $d$ under the hypothesis that what's in the data is only noise $\mathcal{H}_0$, $p(d|\mathcal{H}_0)$, and 2) the probability of observing the data given the hypothesis that the data is comprised by noise and a GW signal $\mathcal{H}_1$, $p(d|\mathcal{H}_1)$. The likelihoods of observing the data under these two hypotheses are expressed by,
+\begin{equation}
+p(\mathbf{d}|\mathcal{H}_0) = p_0(\mathbf{d}) \quad \text{and} \quad p(\mathbf{d}|\mathcal{H}_1) = p_1(\mathbf{d})
+\label{eq:hypotheses}
+\end{equation}
+The quantity of interest is the posterior probability of $\mathcal{H}_1$, which provides the probability distribution of $\mathcal{H}_1$ given the observed data. This is expressed by the Bayes' theorem  
+\begin{equation}
+p(\mathcal{H}_{1}|\mathbf{d}) = \frac{p(\mathcal{H}_1)p_{1}(\mathbf{d})}{p(\mathcal{H}_{0})p_{0}(\mathbf{d})+p(\mathcal{H}_{1})p_{1}(\mathbf{d})} =  \frac{p_{1}(\mathbf{d})}{p_{0}(\mathbf{d})}\bigg[\frac{p_{1}(\mathbf{d})}{p_{0}(\mathbf{d})}+\frac{p(\mathcal{H}_{0})}{p(\mathcal{H}_{1})}\bigg]^{-1}
+\label{eq:BayesH0H1}
+\end{equation}
+We define the likelihood ratio as
+\begin{equation}
+\Lambda (\mathbf{d}|\boldsymbol{\theta}) = \frac{p(\mathbf{d}|\mathcal{H}_0)}{p(\mathbf{d}|\mathcal{H}_1)} = \frac{p_1(\mathbf{d})}{p_0(\mathbf{d})},
+\label{eq:likelihoodratio}
+\end{equation}
+where $\boldsymbol{\theta}$ are the parameters characterising the GW signal such as the signal amplitude $A$ observed by the detector, $\phi$ the phase of the signal, arrival time $t$ which is typically defined as the time at which the peak GW amplitude reaches the detector, and $\boldsymbol{\mu}$ which includes the masses of the sources and spins. 
 
-The construction of IMRPhenom waveforms come in three stages \cite{afshordi2023waveform}.
-Firstly, an anzats for simple functions containing the amplitude and phase of spherical or spheroidal harmonics is defined. This anzats is divided into inspiral, merger and ringdown. For the inspiral stage, a post-Newtonian description is used, and black hole perturbation theory for the ringdown stage. Then, generalized coefficients are obtained which describe the waveform. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit. Finally, the coefficients of the waveform are interpolated across parameter space in a process called "parameter space fit".
+The posterior probability is monotonic in the likelihood ratio so $\Lambda (\mathbf{d}|\boldsymbol{\theta})$ is said to be the optimal test statistic. Instead of working with the likelihood ratio, we work with the log likelihood instead. If noise is assumed to be Gaussian, the log of the likelihood ratio is
+\begin{equation}    \mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = (\mathbf{d}|\mathbf{h}(\boldsymbol{\theta}))-\frac{1}{2}(\mathbf{h}(\boldsymbol{\theta})|\mathbf{h}(\boldsymbol{\theta}))
+\label{eq:loglikelihoodratio}
+\end{equation}
+where the quantity $(\mathbf{d}|\mathbf{h}(\boldsymbol{\theta}))$ is known as the \textit{matched filter} and is expressed using the inner product defined by
+\begin{equation}    
+(\boldsymbol{\mathrm{a}}|\boldsymbol{\mathrm{b}})= 2\int^{\infty}_{0}\frac{\tilde{a}(f)b^{*}(f)+\tilde{a}^{*}(f)b(f)}{S_{n}(f)}df.
+\label{eq:innerproduct}
+\end{equation}
+Since the parameters $\boldsymbol{\theta}$ are unknown on a matched-filter search for GWs, we are interested in obtaining the marginalised likelihood ratio, i.e. the likelihood ratio obtained by integrating over all the parameters. Since the log likelihood ratio varies linearly with the GW signal, the likelihood ratio itself will reach the peak at its maximum. This means that we can approximate the marginalised likelihood ratio by maximizing the likelihood ratio. This is as follows: We write the likelihood ratio as 
+\begin{equation}    \mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = -\frac{1}{2}(\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})|\mathbf{d}-\mathbf{h}(\boldsymbol{\theta}))+\frac{1}{2}(\mathbf{d}|\mathbf{d})
+\label{eq:loglikelihoodratio2}
+\end{equation}
+From this expression we see that the maximum likelihood ratio can be obtained by minimising the residual $\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})$. The observed GW strain can be expressed by
+\begin{equation}    
+\mathbf{h}(\boldsymbol{\theta}) = A \mathbf{p}(t,\boldsymbol{\mu}) \cos\phi + A \mathbf{q}(t,\boldsymbol{\mu}) \sin\phi
+\label{eq:strainparameters}
+\end{equation}
+where $\mathbf{p}(t,\boldsymbol{\mu})$ and $\mathbf{q}(t,\boldsymbol{\mu})$ are in-phase (cosine) and quadrature-phase (sine) waveforms. To minimise the residual $\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})$ we follow the procedure found in \cite{abbott2020guide}. We combine \eqref{eq:loglikelihoodratio2} and \eqref{eq:strainparameters},
+\begin{equation}    
+\mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = A \rho (t,\boldsymbol{\mu}) \cos (\phi - \varphi) - \frac{1}{2}A^{2}
+\label{eq:loglikelihoodratio3}
+\end{equation}
+where
+\begin{equation}    
+\varphi \equiv \mathrm{arctan}\frac{(\mathbf{d}|\mathbf{q}(t,\boldsymbol{\mu}))}{(\mathbf{d}|\mathbf{p}(t,\boldsymbol{\mu}))}
+\label{eq:varphi}
+\end{equation}
+and
+\begin{equation}    
+\rho (t,\boldsymbol{\mu}) \equiv \sqrt{(\mathbf{d}|\mathbf{p}(t,\boldsymbol{\mu}))^{2}+(\mathbf{d}|\mathbf{q}(t,\boldsymbol{\mu}))^{2}}
+\label{eq:SNRtimeseries}
+\end{equation}
+The log-likelihood is maximal for amplitude $\tilde{A}=\rho$ and phase $\tilde{\phi} = \varphi$ with
+\begin{equation}    
+\underset{A,\phi}{\mathrm{max}} \equiv \mathrm{log}\Lambda(t,\hat{A},\hat{\phi},\boldsymbol{\mu}) = \frac{1}{2} \rho^{2}(t,\boldsymbol{\mu}).
+\label{eq:maxloglikelihood}
+\end{equation}
 
-The evolution of IMRPhenom waveforms range from the modelling of the dominant harmonic non-precessing binaries, to more complex multimode precessing waveforms. Challenges regarding the construction of waveforms for LISA involve the necessity in accuracy improvement in the waveforms due to the high SNR sources and challenges in the data input from NR for calibration. Four generations of frequency domain IMRPhenom waveforms have been developed, and a first generation of time domain \cite{afshordi2023waveform}:
+\subsection{Parameter Estimation of GW Sources}
+
+To perform parameter estimation, as in the case of detection of GWs, we need to know the generic shape of the signal we are looking for as well as the noise structure. Moreover, GW signal are weak compared to the noise strenght yielding large uncertainties, and the prior assumptions of the parameters have an important impact on the reconstructured waveforms. Bayesian inference takes into account all these elements, making it suitable for parameter estimation of GWs.
+
+Bayesian inference is encapsulated in the Bayes' theorem,
+\begin{equation}    
+p(\boldsymbol{\theta}|\mathbf{d},M,I) = p(\boldsymbol{\theta}|M,I)\frac{p(\mathbf{d}|\boldsymbol{\theta},M,I)}{p(\mathbf{d}|M,I)}
+\label{eq:Bayesianposterior}
+\end{equation}
+where $M$ is the waveform model dependent on the parameters $\boldsymbol{\theta}$, $I$ is the background information, $d$ is the data collected by the detector. In the left-hand side of equation \eqref{eq:Bayesianposterior} is the \textit{posterior probability density function} (PDF) of $\boldsymbol{\theta}$. On the right-hand side,  $p(\mathbf{d}|\boldsymbol{\theta},M,I)$ is the \textit{likelihood function}, and $p(\mathbf{d}|M,I)$ is \textit{the prior probability density function}. Also in the right-hand side of eq. \eqref{eq:Bayesianposterior} is the \textit{evidence} defined as,
+\begin{equation}    
+p(\boldsymbol{\theta}|M,I) = \int d\boldsymbol{\theta} p(\boldsymbol{\theta}|M,I) p(\mathbf{d}|\theta,M,I).
+\label{eq:evidence}
+\end{equation}
+Within the framework of Bayesian inference, the quantity of interest that reflects the inferred parameters' values and their uncertainties is the posterior PDF. 
+
+\subsubsection{Prior Distributions}
+
+Prior distributions express the assumed functional form of the distributions for all parameters that characterise the waveform model. For a compact binary system with quasi-circular orbits, the waveform parameters are:
 \begin{enumerate}
-    \item The first generation involved PhenomA which accounted for a dominant harmonic $l=|m|=2$, non-precessing binaries. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit.
-    \item PhenomB and PhenomC non-precessing spins with single effective spin to account for the two spin degrees of freedom. PhenomP was developed from PhenomC where the "twisting"-up approximation to account for spin precession was included.
-    \item PhenomD with a dominant $l=|m|=2$ harmonic, incorporated improvements in the phenomenological anzats and better fits to NR. Several waveforms were derived from PhenomD:
-	\begin{enumerate} 
-        \item PhenomPv2 which is an iteration of PhenomP with improved precession. 
-        \item PhenomHM adds higher than $l=|m|=2$ harmonics.
-        \item PhenomPv3 updates the single spin of PhenomP for a two spin prescription.
-        \item PhenomPv3HM includes higher harmonics with twisting up precession approach.
-        \item PhenomXAS upgrades from PhenomD with improvements in the dominant harmonic.
-        \item Phenom XHM add higher harmonics to PhenomXAS, and, in turn, PhenomXPHM add spin precession.
-    \end{enumerate}
+    \item the component masses $m_1$ and $m_2$;
+    \item the spin vectors $\Vec{S}_{1}$ and $\Vec{S}_{2}$;
+    \item the polarisation angle $\psi$ and the angle $\theta_{jn}$ between the total angular momentum $\Vec{J}$ and the propagation direction of the gravitational wave $\hat{n}$;
+    \item the source luminosity distance $D_{L}$;
+    \item the source right ascension $\alpha$ and declination $\delta$;
+    \item a reference phase $\varphi_{0}$ and reference time $t_{0}$.
 \end{enumerate}
+Possible priors can be based on invariance (symmetry) properties of the parameter space \cite{lindstrom2017spaces}. For example, according to the Friedmann-Lema\^itre-Robertson-Walker cosmological model, the number density of sources in the Universe is uniform; thus, we can use the prior $p(D_{L},\alpha, \delta) \propto dV$ \cite{abbott2020guide}. Other simpler priors, where the invariance argument does not apply, can be used. For example, priors for the spin vectors $\Vec{S}_{1}$ and $\Vec{S}_{2}$ and orientation angles for the source can be assumed to be uniform over the azimuthal angles ranging between $0$ and $2\pi$, as well as uniform in the cosine of the polar angles ranging between $-1$ and $1$ \cite{abbott2020guide}.
 
-Fourth generation models have been calibrated to non-precessing quasi-circular orbit NR. Precession has been included by using the twisting approximation \cite{afshordi2023waveform}: In the inspiral stage, the precession time scale is much smaller than the orbit time scale, so precession averages out over one orbital period, hence, being neglected in the total contribution of the signal, and non-precessing dynamics dominates the inspiral evolution. Then to map from non-precessing to precessing binaries, rotation of the orbital plane described by the Euler angles is used to resemble the precession of the binary. A shortcoming of the use of the twisting approximation is that the use of the stationary phase approximation (SPA) is not valid for the late inspiral, merger and ringdown stages. 
+\subsubsection{Numerical Methods}
 
-A feature of fourth generation waveforms is that have achieved a reduction in computational cost. This has been due to the use of "multibanding method" (reference) which consist in determining the interpolation spacing from a coarse grid based on the analytical error estimates, and the use of a standard iterative scheme to compute the complex exponentials involved in the waveform properties such as the amplitude, phase, and the Euler angles used in the twisting up.
-Challenges that phenom waveforms face, for comparable mass binaries:
-\begin{enumerate}
-    \item The addition of analytical prescriptions for precession and eccentricity.
-    \item The addition of closed-form ansatzes which include precession and eccentricity in a large parameter space without compromising computational efficiency.
-    \item Development of a overall data analysis strategies and concrete code framework, in which phenom waveforms are exploited by exploring models with tradeoff of accuracy versus computational cost, or accuracy versus the extent to which the parameter space covers.
-    \item Since LISA's detector response is much more complicated that the ones for ground-based detectros, the development of phenom models that are well coupled to the LISA's detector response that resolves tradeoff of accuracy versus computational cost is another challenge.   
-\end{enumerate}
+There exist many software programs or \textit{pipelines} in GW astronomy that calculate the posterior PDF of the GW parameters. One popular pipeline is \textit{LALinference}, which was used to detect GW150914 \cite{abbott2016observing}, the first detection of GWs. 
+\textit{LALinference} is based on parallel tempering Markov Chain Monte Carlo \cite{rover2007coherent}, which generates posterior samples in a multi-dimensional parameter space, and nested sampling  which calculates the evidence, and the posterior as a by-product \cite{skilling2006nested}. \textit{LALinference} output's are posterior samples for all parameters that characterise the GW signal. Other \textit{pipeplines} used in GW astronomy are rapidPE \cite{lange2018rapid} and BILBY \cite{ashton2019bilby} that incorporate Bayesian methods as well.
+
+\subsubsection{Posterior Distributions}
+
+GW parameter estimation pipelines' output are posteriors in a multidimensional parameter space for all parameters. This means that these posteriors include the correlations between parameters as well as the posteriors for each parameter. An example of this is shown in fig.  where the $2-\mathrm{dimensional}$ \textit{joint} posterior for the component masses of a BHB has been computed, showing the correlations between the two parameters. The other two panels show $1-\mathrm{dimensional}$ \textit{marginalised} posteriors for each of the parameters.
 
 \subsection{The Fisher Information Matrix and the high SNR approximation}
 
@@ -355,10 +629,7 @@ At leading order,
 \boldsymbol{\Sigma} = \boldsymbol{\Gamma}^{-1} .
 \label{eq:vecscovfisher}
 \end{equation}
-
-\subsection{Parameter estimation of a single MBHB}
-
-\subsection{MBHB population inference}
+We have arrived to the result that in the high SNR limit, the covariance matrix can be approximated to the Fisher matrix shown in eq.\eqref{eq:vecscovfisher}.
 
 \section{Simulations of MBHB LISA observations with GWFish}
 
