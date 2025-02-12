@@ -36,6 +36,15 @@ One of the open questions in modern astrophysics is the formation, evolution and
 
 In the present work we study the capabilities of LISA of observing MBHBs in the range $10^{5}-10^{7}$ at high redshifts. In order to delve into this, we will introduce the reader to the theory of massive black holes, their properties, and the astrophysics involved in their formation and evolution in chapter 2. In chapter 3 we will describe the LISA detector; the configuration of the detector, the physical principles and the techniques used to detect GWs. In chapter 4 we delve into the elements that are involved in observations and analysis of MBHBs with LISA; the noise properties of the detector, the waveform models used in data analysis and the data analysis techniques. Chapter 5 we introduce the GWFish code which is used to carry out the simulations of the LISA observations we analyze. We describe the physical systems under study, and present our results and conclusions at the end of chapter 5. 
 
+\textbf{Incorporate this block}
+The present work consists in analysing the uncertainties associated to the observations of MBHBs with space-based observatory LISA. The parameters that we are going to study are the component masses $m_1$ and $m_2$, chirp mass $\mathcal{M}$, and mass ratio $q$. Our analyses rely on the computation of the Fisher matrices for a rapid statistical inference, rather than a full Bayesian parameter estimation, which is computational more expensive. In this process, we use the Gaussian approximation which allows us to assume the likelihoods, so as the posteriors, to have Gaussian behaviour
+
+\textbf{Incorporate this:}
+
+There exist a whole network of GW ground-based observatories: LIGO, LIGO India, Virgo and KAGRA, which cover about the same range of GW sources, but also with capabilities of observing different frequency bands by combining observations of the same GW sources. Next generation ground-based detectors like Einstein Telescope and Cosmic Explorer will extend the observational capabilities of this ground-based network. Proposed space-based observatory LISA on the other hand will cover a brand new territory in the GW spectrum in the milihertz regime, from $10^{-5}~\mathrm{Hz}$ to $10^{-1}~\mathrm{Hz}$). 
+
+In addition to developing detection infrastructure, the GW community has put effort into developing computational tools to explore the capabilities of current and future detectors. One of these tools consist in building software capable of simulate GW observations, however, there are challenges when tackling this problem. 
+
 Questions to address in the introduction:
 \begin{enumerate}
     \item Why do we want to study GWs? (already written)
@@ -259,10 +268,10 @@ The objective of observing MBHBs with LISA is to know their parameters such as m
 
 Laser interferometers measure differences in length directly $\delta L$, and from this measurement, the strain $\delta L/L$ is the value used in GW studies. Sources of GWs can generate signals with strains of order $10^{-24}$ \cite{prince2011lisa}. Space-based GW observatories like LISA allow to achieve these strains because arm lengths are not constrained as much as their ground-based counterparts. Moreover, laser interferometry in the only technique for detecting GWs that allows reaching these strains because of the lengths the arms, consequently, the sensitivity they achieve.  
 
-LISA is composed by three spacecrafts (s/c) each of them housing two test masses. s/c and test masses are set to free-fall orbiting the Sun. In order for them to experience a free-fall state, s/c and test masses need to be exempt from external non-gravitational forces. Space is a suitable environment to set s/c and test masses in this setting since it is quiet enough from non-gravitational forces such as solar radiation pressure or cosmic particles. The importance of (???) s/c and test masses in this environment is evident since spurious non-gravitational forces can be mistaken as real strains from passing GWs. Broadly speaking, laser interferometry relies on two key aspects \cite{prince2011lisa}: 1) Measurement of length changes between two test masses, and 2) A measurement system that processes these measurements. Non-gravitational strains need to reduced as much as possible and to be smaller than the GW strain so that they do not have significant influence on the length change measurement from GWs. 
+LISA is composed by three spacecrafts each of them housing two test masses. Spacecrafts and test masses are set to free-fall orbiting the Sun. In order for them to experience a free-fall state, spacecrafts and test masses need to be exempt from external non-gravitational forces. Space is a suitable environment for positioning spacecrafts and test masses as it is relatively free from non-gravitational forces such as solar radiation pressure or cosmic particles. This is crucial because spurious non-gravitational forces could otherwise be misinterpreted as genuine perturbations caused by passing GWs. Broadly speaking, laser interferometry relies on two key aspects \cite{prince2011lisa}: 1) Measurement of length changes between two test masses, and 2) A measurement system that processes these measurements. Non-gravitational strains need to reduced as much as possible and to be smaller than the GW strain so that they do not have significant influence on the length change measurement from GWs. 
 
-The LISA detector comprises three s/c trailing the Earth orbiting the sun Fig. ~\ref{fig:LISAobs}. There are three key aspects behind the LISA design concept. 1) A set of three s/c with unique orbits. LISA is comprised by three s/c arranged in a triangular shape, or constellation. Each s/c orbit the Sun in a unique manner, so that the whole constellation orbits the sun resembling a cart-wheel motion. The constellation orbits the Sun trailing the Earth at an angle of $20^{\circ}$. The plane of the constellation is tilted 60º relative to the plane of the ecliptic. At each vertex of the constellation lies a s/c. The spacecrafts house the test masses, as well as measurement equipment, Fig~\ref{fig:LISAdetail}, which are in free-fall state. Measurements are made monitoring the length change between test masses.
-The length change due to passing GWs between two test masses in one arm are partitioned in three measurements: The measurement between s/c and the measurement between test mass and the s/c for each end-point of the arm, Fig.~\ref{fig:LISAarm}. By combining these three measurements, the length change between test masses at each end-point of each arm can be done. Additionally, the noise induced by each partition is considered negligible for LISA \cite{prince2011lisa} so it does not affect the test mass length change significantly.
+The LISA detector comprises three spacecrafts trailing the Earth orbiting the sun Fig. ~\ref{fig:LISAobs}. There are three key aspects behind the LISA design concept. 1) A set of three spacecrafts with unique orbits. LISA is comprised by three spacecrafts arranged in a triangular shape, or constellation. Each spacecraft uniquely orbits the Sun, so that the whole constellation orbits the sun resembling a cart-wheel motion. The constellation orbits the Sun trailing the Earth at an angle of $20^{\circ}$. The plane of the constellation is tilted 60º relative to the plane of the ecliptic. At each vertex of the constellation lies a spacecraft. The spacecrafts house the test masses, as well as measurement equipment, Fig~\ref{fig:LISAdetail}, which are in free-fall state. Measurements are made monitoring the length change between test masses.
+The length change due to passing GWs between two test masses in one arm are splitted in three measurements: The measurement between spacecrafts and the measurement between test mass and the spacecrafts for each end-point of the arm, Fig.~\ref{fig:LISAarm}. By combining these three measurements, the length change between test masses at each end-point of each arm can be done. Additionally, the noise induced by each partition is considered negligible for LISA \cite{prince2011lisa} so it does not affect the test mass length change significantly.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/LISAobs.png}
@@ -284,7 +293,7 @@ The length change due to passing GWs between two test masses in one arm are part
     \label{fig:LISAarm}
 \end{figure}
 
-2) The implementation of "drag-free" operation on the s/c and test masses. Each s/c electrostatically houses a test mass for each arm and play the role of shielding the test mass against non-gravitational effects. As the test mass is kept in free-fall, the s/c needs to maintain its position relative to the test mass. This is done by sensors that measure the position of the s/c relative to the test mass and thrusters to correct its position if needed. The test masses posses sensors that monitor any disturbances in their free-fall motion as well, and corrections are made by means of small electrostatic forces imparted by the electrostatic housing if needed. 3) Distance measurement system. Classic laser interferometry relies on mirrors to send a laser beam forward and back to measure length strains. This approach is not feasible for LISA due to the much larger arms. Instead, the lasers in LISA work in a "transponder" fashion \cite{prince2011lisa}: For each arm, one s/c sends a laser beam to the other end's s/c. When the laser reaches the opposite end, the laser is "locked-down", i.e. its phase is measured and stored at the arriving point to be replicated. At this end, a laser with the replicated phase is send back to the original end. When the laser is received by the original end, its phase is compared with the phase of the original end. Differences in the phase of the forward and back lasers are compared determining whether a length change has occurred.
+2) The implementation of "drag-free" operation on the spacecrafts and test masses. Each spacecraft electrostatically houses a test mass for each arm and play the role of shielding the test mass against non-gravitational effects. As the test mass is kept in free-fall, the spacecraft needs to maintain its position relative to the test mass. This is done by sensors that measure the position of the spacecraft relative to the test mass and thrusters to correct its position if needed. The test masses possess sensors that monitor any disturbances in their free-fall motion as well, and corrections are made through small electrostatic forces imparted by the electrostatic housing if needed. 3) Distance measurement system. Classic laser interferometry relies on mirrors to send a laser beam forward and back to measure length strains. This approach is not feasible for LISA due to the much larger arms. Instead, the lasers in LISA work in a "transponder" fashion \cite{prince2011lisa}: For each arm, one spacecraft sends a laser beam to the other end's spacecraft. When the laser reaches the opposite end, the laser is "locked-down", i.e. its phase is measured and stored at the arriving point to be replicated. At this end, a laser with the replicated phase is sent back to the original end. When the laser is received by the original end, its phase is compared with the phase of the original end. Differences in the phase of the forward and back lasers are compared determining whether a length change has occurred.
 
 
 \subsection{Laser Noise and Time-Delay Interferometry}
@@ -354,7 +363,7 @@ which encapsulates the concept of time-delay interferometry (TDI): Laser frequen
 
 \textit{Acceleration Noise}
 
-As we mentioned in earlier sections, test masses and s/c operate under a drag-free conditions, where the s/c act as "shielding" for the test mass together with the Gravitational Reference System (GRS) to account for deviations from free-fall. There exist several noise sources for these deviations and can be attributed to both local and external disturbances \cite{colpiand2023lisa}. Moreover, these noise sources compare in strain magnitude to GW signals that could be detected, and are roughly at all frequencies below $4 \mathrm{mHz}$. At milihertz frequencies, Brownian force from residual gas impacts is the dominant noise. At lower frequencies, actuation voltages used to align test masses to the interferometer, stray electrostatic forces due to test mass charge and stray surface "patch" potentials. External coupled disturbances include magnetic forces on the test mass bulk due to the interplanetary field, forces of thermal origin relevant at and below $100~\mu\mathrm{Hz}$ lower band edge as well as fluctuations in the local gravitational field due to any motion or deformation in the spacecraft mass distribution.	
+As we mentioned in earlier sections, test masses and spacecrafts operate under a drag-free conditions, where the spacecrafts act as "shielding" for the test mass together with the Gravitational Reference System (GRS) to account for deviations from free-fall. There exist several noise sources for these deviations and can be attributed to both local and external disturbances \cite{colpiand2023lisa}. Moreover, these noise sources compare in strain magnitude to GW signals that could be detected, and are roughly at all frequencies below $4 \mathrm{mHz}$. At milihertz frequencies, Brownian force from residual gas impacts is the dominant noise. At lower frequencies, actuation voltages used to align test masses to the interferometer, stray electrostatic forces due to test mass charge and stray surface "patch" potentials. External coupled disturbances include magnetic forces on the test mass bulk due to the interplanetary field, forces of thermal origin relevant at and below $100~\mu\mathrm{Hz}$ lower band edge as well as fluctuations in the local gravitational field due to any motion or deformation in the spacecraft mass distribution.	
 
 \textit{Interferometer noise}
 
@@ -364,14 +373,14 @@ Noises intrinsic to the interferometer include \cite{colpiand2023lisa}: Shot noi
 
 When MBHBs reach the GW emission stage, space-based GW observatories like LISA are expected to detect these GWs, to subsequently estimate the parameters of their sources, i.e. masses, spins, sky positions, and distances from Earth. In this chapter we will discuss the elements that are involved in the detection as well as in the parameter estimation. 
 
-To know when a GW has been detected we need a model for the expected signal, this model is called the waveform, and is compared with the data that the detector has obtained. A popular technique to perform this operation is the \textit{matched filtering} which uses the noise model of the detector, known as the Power Spectral Density (PSD), to weight the degree of match between the waveform and the data. The result of this process is the computation of the signal-to-noise ratio (SNR), a measure of the strength of the signal as detected by the detector. Once a signal has been detected with some level of confidence, parameter estimation of the source can be performed. GW makes extensive use of Bayesian statistics, which is based on estimating the probability distribution of the source true values, i.e. their true values and their uncertainties, based on the data and prior assumptions of the parameter values. Under some specific scenarios, approximations can be used to estimate the uncertainties that are computationally less expensive than Bayesian estimates, such as the Fisher Information Matrix, providing **decent** results. In the next few sections, we will discuss all these concepts.
+To know when a GW has been detected we need a model for the expected signal, this model is called the waveform, and is compared with the data that the detector has obtained. A popular technique to perform this operation is the \textit{matched filtering} which uses the noise model of the detector, known as the Power Spectral Density (PSD), to weight the degree of match between the waveform and the data. The result of this process is the computation of the signal-to-noise ratio (SNR), a measure of the strength of the signal as detected by the detector. Once a signal has been detected with some level of confidence, parameter estimation of the source can be performed. GW makes extensive use of Bayesian statistics, which is based on estimating the probability distribution of the source true values, i.e. their true values and their uncertainties, based on the data and prior assumptions of the parameter values. Under some specific scenarios, approximations can be used to estimate the uncertainties that are computationally less expensive than Bayesian estimates, such as the Fisher Information Matrix, providing accurate results. In the next few sections, we will discuss all these concepts.
 
 \subsection{Waveforms}
 After the advancements in numerical relativity (NR) in mid 2000's \cite{campanelli2006accurate,pretorius2005evolution,baker2006gravitational}
 regarding the modelling of gravitational wave signals, or gravitational waveforms, waveforms suited for data analysis applications were needed. While highly accurate, NR waveforms are known to be computationally very expensive to obtain since it involves solving the full highly non-linear Einstein's field equations, not very well suited for data analysis purposes. Phenomenological waveforms were developed for this necessity. They resemble approximately the waveforms generated through NR with the advantage of being less computationally expensive than the ones from NR. The requirements were (and still are) that the phenomenological waveforms, tuned up to NR waveforms, approximate the properties of the gravitational waves to its NR counterpart, ranging from the inspiral to the ringdown stage. The advantages of the phenomenological waveforms are, among others, that they are computationally efficient, and they cover a broad parameter space, so that they cover a wide range of data analysis applications. The GW community has developed the LALsuite \cite{veitch2015parameter}, a library with phenomenological waveforms for use on data analysis, and gave the family of waveforms the name of IMRPhenom.
 
 The construction of IMRPhenom waveforms come in three stages \cite{afshordi2023waveform}.
-Firstly, an anzats for simple functions containing the amplitude and phase of spherical or spheroidal harmonics is defined. This anzats is divided into inspiral, merger and ringdown. For the inspiral stage, a post-Newtonian description is used, and black hole perturbation theory for the ringdown stage. Then, generalized coefficients are obtained which describe the waveform. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit. Finally, the coefficients of the waveform are interpolated across parameter space in a process called "parameter space fit".
+Firstly, an anzats for simple functions containing the amplitude and phase of spherical or spheroidal harmonics is defined. This anzats is divided into inspiral, merger and ringdown. For the inspiral stage, a post-Newtonian description is used, and black hole perturbation theory for the ringdown stage. Then, generalized coefficients are obtained which describe the waveform. The anzats is then fitted to calibration data sets that come from NR. This stage is known as direct fit. Finally, the coefficients of the waveform are interpolated across parameter space in a process called parameter space fit.
 
 The evolution of IMRPhenom waveforms range from the modelling of the dominant harmonic non-precessing binaries, to more complex multimode precessing waveforms. Challenges regarding the construction of waveforms for LISA involve the necessity in accuracy improvement in the waveforms due to the high SNR sources and challenges in the data input from NR for calibration. Four generations of frequency domain IMRPhenom waveforms have been developed, and a first generation of time domain \cite{afshordi2023waveform}:
 \begin{enumerate}
@@ -396,30 +405,36 @@ Challenges that phenom waveforms face, for comparable mass binaries:
     \item The addition of analytical prescriptions for precession and eccentricity.
     \item The addition of closed-form ansatzes which include precession and eccentricity in a large parameter space without compromising computational efficiency.
     \item Development of a overall data analysis strategies and concrete code framework, in which phenom waveforms are exploited by exploring models with tradeoff of accuracy versus computational cost, or accuracy versus the extent to which the parameter space covers.
-    \item Since LISA's detector response is much more complicated that the ones for ground-based detectros, the development of phenom models that are well coupled to the LISA's detector response that resolves tradeoff of accuracy versus computational cost is another challenge.   
+    \item Since LISA's detector response is much more complicated that the ones for ground-based detectors, the development of phenom models that are well coupled to the LISA's detector response that resolves tradeoff of accuracy versus computational cost is another challenge.   
 \end{enumerate}
 
 \subsection{Detector Noise PSD and Sensitivity curve}
 
 When carrying out observations of compact binary objects with LISA, there are several aspects that are needed to be accounted for such as the noise properties of the detector, the type of waveform that is used for the analysis, and the data analysis techniques. The outcome of the observations are the foundation for astrophysical interpretation about the nature of the sources, i.e.\ their formation mechanisms and evolution through cosmic ages, which in turn let us know about their populations in the local and early universe. In this section we will explore these aspects.
 
-In general, sensitivity curves of GW detectors show the strain (or amplitude) sensitivity of the detector, in units of $1/\sqrt{\mathrm{Hz}}$ in the frequency domain, to detect spacetime fluctuations, due to noise and passing GWs. This is the curve typically shown when compared with GWs signal strains in a strain vs frequency space. Other names for the sensitivity curve are amplitude spectral density (ASD), spectral strain sensitivity and spectral amplitude. The sensitivity curve is obtained from the noise power spectral density (PSD) which is a measure of the noise strength as a function of frequency. The noise PSD can be expressed by \cite{robson2019construction},
+In general, the sensitivity curve $S_n$ expresses the noise strength of the detector as a function of frequency, and the amplitude spectral density (ASD) of the sensitivity curve $\sqrt{S_n}$ shows the ability of the detector to detect spacetime distortions due to passing GWs. The ASD of the sensitivity curve, $\sqrt{S_n}$ is the curve that is typically shown when compared with GWs signal strains in a strain $vs$ frequency space, fig. \ref{fig:LISAcurve}. The sensitivity curve is obtained from noise power spectral density (PSD) and the detector response function $R(f)$ which relates the PSD of the signal itself to the PSD of the signal as recorded by the detector. The sensitivity curve can be expressed by \cite{robson2019construction},
 \begin{equation}
 S_{n}(f) = \frac{10}{3L^{2}}\left[ P_{\mathrm{OMS}}(f) + \frac{4P_{\mathrm{acc}}(f)}{(2\pi f)^{4}}\right] \left[ 1 + \frac{6}{10}\left( \frac{f}{f_{\ast}}^{2} \right)\right] + S_{c}(f),
 \label{eq:psdLISA}
 \end{equation}
-where $L = 2.5~\mathrm{Gm}$, and $f_{\ast} = c/(2 \pi L) = 19.09~\mathrm{mHz}$ and is called the transfer frequency. The noise sources that affect LISA are included in the terms $P_{\mathrm{OMS}}$, $P_{\mathrm{acc}}$ and $S_{c}$, which are the noise associated with the optical metrology system, the noise due to test masses acceleration fluctuations and the confusion noise that comes from unresolved sources in the galaxy, respectively. In the next lines we will show how to compute the noise PSD in eq. \eqref{eq:psdLISA}. In treatment presented here, the noise PSD is expressed by both $S_n$ and $P_n$. 
-However, $P_n$ does not include the detector response function which relates the PSD of the signal to the PSD of the signal as recorded by the detector. We combine the detector response function and $P_n$ to obtain $S_n$ with the expression,
+where $L = 2.5~\mathrm{Gm}$ for LISA's arm length, and $f_{\ast} = c/(2 \pi L) = 19.09~\mathrm{mHz}$ and is called the transfer frequency. The noise sources that affect LISA are included in the terms $P_{\mathrm{OMS}}$, $P_{\mathrm{acc}}$ and $S_{c}$, which are the noise associated with the optical metrology system, the noise due to test masses acceleration fluctuations and the confusion noise that comes from unresolved sources in the galaxy, respectively. In the next lines we will show how to compute the sensitivity curve in eq. \eqref{eq:psdLISA}.  
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/LISA_ASDcurve.png}
+    \caption{LISA ASD of the sensitivity curve which shows the strain spectral density }
+    \label{fig:LISAcurve}
+\end{figure}
+We start by defining $S_n$ as,
 \begin{equation}
 S_{n}(f) = \frac{P_{n}(f)}{\mathcal{R}(f)},
 \label{eq:SnLISA}
 \end{equation}
 where $P_{n}(f)$ is the noise PSD of the detector and is expressed as \cite{cornish2001detecting}
 \begin{equation}
-P_{n}(f) = \frac{P_{OMS}}{L^{2}} + 2(1 + \text{cos}^2({f/f_{\ast}}))\frac{P_{acc}}{(2\pi f)^{4}L^{2}},
+P_{n}(f) = \frac{P_{\mathrm{OMS}}}{L^{2}} + 2(1 + \text{cos}^2({f/f_{\ast}}))\frac{P_{\mathrm{acc}}}{(2\pi f)^{4}L^{2}},
 \label{eq:noiseLISA}
 \end{equation}
-and $\mathcal{R}(f)$ is the detector response function. The gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals are related through \cite{robson2019construction},
+and $\mathcal{R}(f)$ is the detector response function. $R(f)$ is obtained by combining the gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals $\Tilde{h}_{+}(f)$ and $\Tilde{h}_{\times}(f)$ using the expression, \cite{robson2019construction},
 \begin{equation}
 \Tilde{h}(f) = F^{+}(f) \Tilde{h}_{+}(f) + F^{\times}(f)\Tilde{h}_{\times}(f),
 \label{eq:strain_plus_crossLISA}
@@ -442,28 +457,28 @@ The full expressions for $F^{+}(f)$ and $F^{\ast}(f)$ can be found in eqs. (16) 
 \mathcal{R}(f) = \frac{3}{10} - \frac{507}{5040} \bigg( \frac{f}{f_{\ast}} \bigg) + ...
 \label{eq:transferfunction}
 \end{equation}
-The transfer function is numerically computed in \cite{larson2000sensitivity} and fitted with the curve,
+The transfer function is numerically computed in \cite{larson2000sensitivity} and fitted with the curve\cite{robson2019construction},
 \begin{equation}
-\mathcal{R}(f) = \frac{3}{10} \frac{1}{(1 + 0.6(f/f_{\ast})^{2})},
+\mathcal{R}(f) = \frac{3}{10} \frac{1}{(1 + 0.6(f/f_{\ast})^{2})}.
 \label{eq:transferfunction}
 \end{equation}
-in \cite{robson2019construction}. LISA operates as a network of detectors instead as a single one, so there are multiple independent channels which combined give the total observational sensitivity. When $f < f_{\ast}$, channels A and E come into play, when $f > f_{\ast}$, channels A, E and T work together to yield the total SNR \cite{prince2002lisa}.
+LISA operates as a network of detectors instead as a single one, so there are multiple independent channels which combined give the total observational sensitivity. When $f < f_{\ast}$, channels $A$ and $E$ come into play, when $f > f_{\ast}$, channels $A$, $E$ and $T$ work together to yield the total SNR \cite{prince2002lisa}.
 Having defined $P_{n}$ and $\mathcal{R}(f)$, the general expression for $S_{n}$ is,
 \begin{equation}
-S_{n}(f) = \frac{10}{3L^{2}}\bigg( P_{OMS}(f) + 2 (1 + \text{cos}^{2}(f/f_{\ast})\frac{P_{acc}(f)}{(2\pi f)^{4}}\bigg)\bigg( 1 + \frac{6}{10}\big( \frac{f}{f_{\ast}}^{2} \big)\bigg) + S_{c}(f).
-\label{eq:gralsensitivityLISA}
+S_{n}(f) = \frac{10}{3L^{2}}\bigg( P_{\mathrm{OMS}}(f) + 2 (1 + \text{cos}^{2}(f/f_{\ast})\frac{P_{\mathrm{acc}}(f)}{(2\pi f)^{4}}\bigg)\bigg( 1 + \frac{6}{10}\big( \frac{f}{f_{\ast}}^{2} \big)\bigg) + S_{c}(f).
+\label{eq:gralpsdLISA}
 \end{equation}
-$P_{OMS}$ is the optical metrology system noise and has value of \cite{babak2021lisa},
+The optical metrology system noise is expressed by $P_{\mathrm{OMS}}$ and has value of \cite{babak2021lisa},
 \begin{equation}
-\sqrt{P_{OMS}(f)} = 15 \bigg[ \frac{\text{pm}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{2\times10^{-3}}{f} \bigg)^{4}}, 
+\sqrt{P_{\mathrm{OMS}}(f)} = 15 \bigg[ \frac{\text{pm}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{2\times10^{-3}}{f} \bigg)^{4}}, 
 \label{eq:poms}
 \end{equation}
-and $P_{acc}$ is the test mass acceleration noise,
+and $P_{\mathrm{acc}}$ is the test mass acceleration noise,
 \begin{equation}
-\sqrt{P_{acc}(f)} = 3 \bigg[ \frac{\text{fm.s}^{-2}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{0.4\times10^{-3}}{f} \bigg)^{4}} \sqrt{1 + \bigg( \frac{f}{ 8\times10^{-3}} \bigg)^{4}}, 
+\sqrt{P_{\mathrm{acc}}(f)} = 3 \bigg[ \frac{\text{fm.s}^{-2}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{0.4\times10^{-3}}{f} \bigg)^{4}} \sqrt{1 + \bigg( \frac{f}{ 8\times10^{-3}} \bigg)^{4}}, 
 \label{eq:pacc}
 \end{equation}
-For the case where test mass acceleration noise dominates over the optical path noise, $\text{cos}^{2}(f/f_{\ast})$ approaches unity giving the form of (\ref{eq:sensitivityLISA}). $S_{c}$ is the galactic confusion noise which accounts for the binaries that exist it the Milky Way galaxy and enter the LISA band as foreground noise. As the time of the mission progresses, $S_{c}$ diminishes following the expression, \cite{robson2019construction} 
+For the case where test mass acceleration noise dominates over the optical path noise, $\text{cos}^{2}(f/f_{\ast})$ approaches unity. In this case eq.\eqref{eq:gralpsdLISA}  takes the form of eq.\eqref{eq:psdLISA}. $S_{c}$ is the galactic confusion noise which accounts for the binaries that exist it the Milky Way galaxy and enter the LISA band as foreground noise. As the time of the mission progresses, $S_{c}$ diminishes following the expression, \cite{robson2019construction} 
 \begin{equation}
 S_{c}(f) = A f^{-7/3} e^{-f^{\alpha} + \beta f \sin(\kappa f)} \left[1 + \tanh(\gamma(f_{k} - f))\right] \,\text{Hz}^{-1}.
 \label{eq:galacticconfusionnoise}
@@ -558,24 +573,33 @@ Prior distributions express the assumed functional form of the distributions for
 Possible priors can be based on invariance (symmetry) properties of the parameter space \cite{lindstrom2017spaces}. For example, according to the Friedmann-Lema\^itre-Robertson-Walker cosmological model, the number density of sources in the Universe is uniform; thus, we can use the prior $p(D_{L},\alpha, \delta) \propto dV$ \cite{abbott2020guide}. Other simpler priors, where the invariance argument does not apply, can be used. For example, priors for the spin vectors $\Vec{S}_{1}$ and $\Vec{S}_{2}$ and orientation angles for the source can be assumed to be uniform over the azimuthal angles ranging between $0$ and $2\pi$, as well as uniform in the cosine of the polar angles ranging between $-1$ and $1$ \cite{abbott2020guide}.
 
 \subsubsection{Numerical Methods}
+\label{subsec:numethods}
 
-There exist many software programs or \textit{pipelines} in GW astronomy that calculate the posterior PDF of the GW parameters. One popular pipeline is \textit{LALinference}, which was used to detect GW150914 \cite{abbott2016observing}, the first detection of GWs. 
-\textit{LALinference} is based on parallel tempering Markov Chain Monte Carlo \cite{rover2007coherent}, which generates posterior samples in a multi-dimensional parameter space, and nested sampling  which calculates the evidence, and the posterior as a by-product \cite{skilling2006nested}. \textit{LALinference} output's are posterior samples for all parameters that characterise the GW signal. Other \textit{pipeplines} used in GW astronomy are rapidPE \cite{lange2018rapid} and BILBY \cite{ashton2019bilby} that incorporate Bayesian methods as well.
+There exist many software programs or \textit{pipelines} in GW astronomy that calculate the posterior PDF of the GW parameters. One popular pipeline is \texttt{LALinference}, which was used to detect GW150914 \cite{abbott2016observing}, the first detection of GWs. 
+\texttt{LALinference} is based on parallel tempering Markov Chain Monte Carlo \cite{rover2007coherent}, which generates posterior samples in a multi-dimensional parameter space, and nested sampling  which calculates the evidence, and the posterior as a by-product \cite{skilling2006nested}. \texttt{LALinference} output's are posterior samples for all parameters that characterise the GW signal. Other \textit{pipeplines} used in GW astronomy are \texttt{rapidPE} \cite{lange2018rapid} and \texttt{BILBY} \cite{ashton2019bilby} that incorporate Bayesian methods as well.
 
 \subsubsection{Posterior Distributions}
+\label{subsec:postdist}
 
-GW parameter estimation pipelines' output are posteriors in a multidimensional parameter space for all parameters. This means that these posteriors include the correlations between parameters as well as the posteriors for each parameter. An example of this is shown in fig.  where the $2-\mathrm{dimensional}$ \textit{joint} posterior for the component masses of a BHB has been computed, showing the correlations between the two parameters. The other two panels show $1-\mathrm{dimensional}$ \textit{marginalised} posteriors for each of the parameters.
+GW parameter estimation pipelines' output are posteriors in a multidimensional parameter space for all parameters. This means that these posteriors include the correlations between parameters as well as the posteriors for each parameter. An example of this is shown in fig. \ref{fig:ParEstcornerplot} where the $2-\mathrm{dimensional}$ \textit{joint} posterior for the component masses of a BHB has been computed, showing the correlations between the two parameters. The other two panels show $1-\mathrm{dimensional}$ \textit{marginalised} posteriors for each of the parameters.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/MBHB_corner_plot_m1m2.png}
+    \caption{$1-\mathrm{dimensional}$ and $2-\mathrm{dimensional}$ posteriors for the component masses $m_1$ and $m_2$ of an MBHB. The three panels show i) $2-\mathrm{dimensional}$ joint posterior for $m_1$ and $m_2$ showing correlations between them (bottom-left panel), ii) $1-\mathrm{dimensional}$ marginalised posterior for $m_1$ (top panel), and iii) $1-\mathrm{dimensional}$ marginalised posterior for $m_2$ (bottom-right panel).}
+    \label{fig:ParEstcornerplot}
+\end{figure}
 
 \subsection{The Fisher Information Matrix and the high SNR approximation}
+\label{subsec:Fisherapprox}
 
-When estimating the parameters of a gravitational wave source, there are mainly two approaches to compute their probability distributions, frequentist and Bayesian. The main feature of the former is that an experiment needs to be performed multiple times, ideally an infinite number of times, the true values of the parameters are fixed and the uncertainty comes from the different noise realizations among the realizations of the experiment. On the other hand, Bayesian inference makes use of prior informed knowledge about the parameter's values, and updated by means of the likelihood function. Now, observations of MBHBs with LISA will yield high SNRs, so the inference relies mostly on the data collected by the observations, and less from the prior information, so both inference approaches will yield same results. In this section we will show that, at the high SNR limit, the likelihood function obtained from the observed data, can be approximated to a Gaussian PDF where the variance-covariance matrix can be approximated at leading order, to the inverse of the Fisher matrix, independently of the statistical approach.
+It is well known that Bayesian inference is computationally expensive if the full parameter space is considered (references). In this section we will show that, when the GW signals are sufficiently strong, formally known as the \textit{high SNR limit}, the likelihood function obtained from the observed data, can be approximated to a Gaussian PDF where the variance-covariance matrix can be approximated at leading order, to the inverse of the Fisher matrix.
 
 In the presence of a GW signal, the output of a GW detector in the time domain $\boldsymbol{s}(t)$ is expressed as,
 \begin{equation}
 s(t)=h(t;\Tilde{\theta})+n(t)
 \label{eq:signaldef}
 \end{equation}
-where $h(t;\Tilde{\theta})$ is the theoretical waveform with parameters $\Tilde{\theta}$, and $n(t)$ is the noise of the detector. If noise is assumed to be Gaussian, the probability of $n$ to take a particular value $n_{0}$ is given by,
+where $h(t;\Tilde{\theta})$ is the theoretical waveform with parameters $\Tilde{\theta}$, and $n(t)$ is the noise of the detector. If noise is assumed to be Gaussian, the probability of $n(t)$ to take a particular value $n_{0}$ is given by,
 \begin{equation}
 p[n=n_{0}] \propto e^{-(n_{0}|n_{0})/2}
 \label{eq:gaussnoise}
@@ -632,51 +656,60 @@ At leading order,
 We have arrived to the result that in the high SNR limit, the covariance matrix can be approximated to the Fisher matrix shown in eq.\eqref{eq:vecscovfisher}.
 
 \section{Simulations of MBHB LISA observations with GWFish}
+\label{sec:simLISAGWFish}
 
 \subsection{GWFish}
+Currently, the GW community is developing science cases and computational tools that will enable observations of GW sources with future GW observatories such as Einstein Telescope, Cosmic Explorer and space-based observatory LISA, as well as improving the current ground-based observatories like LIGO, LIGO India, Virgo and KAGRA. The development of infrastructure capable of simulating observational scenarios with future space-based observatory LISA is part of these science cases. In this section, we introduce GWFish, a software tool designed to simulate observations of compact binary systems, such as BHBs and BNSs, by modeling the detector's response to GW signals using various waveform models. The outcome of the simulations is the computation of the Fisher matrices and the estimation of the parameter uncertainties. This section begins with an overview of GWFish, followed by a discussion of how it computes waveform derivatives—the core process of Fisher analysis—how it incorporates the detector response, and how is configured to run simulations.
 
 \subsubsection{Overview}
-There exist a whole network of GW ground-based observatories: LIGO, Virgo, KAGRA, which cover the same range of GW sources but also with capabilities of observing different frequency bands by combining observations of the same GW sources. The advanced ground-based detectors like Einstein Telescope and Cosmic Explorer will extend the observational capabilities of this ground-based network. Proposed space-based observatory LISA on the other hand will cover a brand new territory in the GW spectrum. Apart from developing detection infrastructure, the GW community has put effort in developing computational tools to explore the capabilities of the current and future detectors. One of these tools consist in building software capable of simulate GW observations, however, there are challenges when tackling this problem. 
+\label{subsec:Fisheroverview}
 
-GWFish is a simulation software intended for estimating parameter estimation uncertainties. It makes use of Fisher matrices in the high SNR regime and Gaussian likelihood approximation. This is performed with time domain GW models and frequency domain of detector network's  response. With this framework, it is possible to carry out parameter estimation studies where the position and orientation of the network of detectors changes with time, which has an important impact mainly in sky localization.
+GWFish is a simulation software intended for estimating parameter estimation uncertainties. It computes the Fisher matrix of a GW signal, Section~\ref{subsec:Fisherapprox}, which involves the derivatives of the waveform model with respect to the waveform parameters. With this information, the covariance matrix and the uncertainties can be obtained. This is performed with time domain GW models and frequency domain of detector network's  response. With this framework, it is possible to carry out parameter estimation studies where the position and orientation of the network of detectors changes with time, which has an important impact mainly in sky localization.
 
-GWFish can perform multiband simulated observations as well. This is possible since Fisher matrix uncertainties from different detectors can be added to the overall estimation irrespective of the frequency band that provided the signal information. This also applies to the time delay interferometry (TDI) used by detectors like LISA.
+Additionally, GWFish can perform multi-band simulated observations, where detectors among a network can observe the same astrophysical event in different frequencies, giving insight into different phenomena of the same source. This is possible since Fisher matrix uncertainties from different detectors can be added to the overall estimation irrespective of the frequency band that provided the signal information. This also applies to the time delay interferometry (TDI) (reference) used by detectors like LISA.
 
-The main challenges when estimating parameter estimation uncertainties involve the computation of the waveform derivatives, and the inversion of the Fisher matrices. GWFish takes an hybrid approach for the waveform derivatives with both analytical and numerical differentiation, the latter tuned up to the waveform parameters to reduce numerical errors. Regarding the inversion of the Fisher matrices, in general, the main issue is that Fisher matrices are close to singular, meaning that the Fisher matrices eigenvalues span a huge range, leading to signal-model degeneracies. To be able to estimate parameter uncertainties, at least of the parameters not involved in the degeneracy, one needs to deal with matrix singularity by means of techniques like singular value decomposition (SVD). 
+The main challenges when estimating parameter estimation uncertainties involve the computation of the waveform derivatives and the inversion of the Fisher matrices. GWFish takes a hybrid approach for the waveform derivatives with both analytical and numerical differentiation, the latter tuned up to the waveform parameters to reduce numerical errors. 
+In this regard, one of the key aspects to obtain reliable results for the simulations was to tune up the derivative step sizes. Regarding the inversion of the Fisher matrices, in general, the main issue is that Fisher matrices are close to singular, meaning that the Fisher matrices' eigenvalues span a huge range, leading to signal-model degeneracies. To be able to estimate parameter uncertainties, at least of the parameters not involved in the degeneracy, one needs to deal with matrix singularity through techniques like singular value decomposition (SVD). 
 
 \subsubsection{Waveform analytical and numerical derivatives.}
+\label{subsec:waveformannumderiv}
 
-GWFish computes the derivatives of the waveform in a hybrid analytical-numerical fashion. The analytical derivatives of the waveform $\Tilde{h}_{k}(\theta^{j},f)$ with respect to the waveform phase $\varphi_\mathrm{c}$, the luminosity distance $d_\mathrm{L}$ and merger time $t_\mathrm{m}$ computed by GWFish are,
+GWFish computes the derivatives of the waveform in a hybrid analytical-numerical fashion. The analytical derivatives of the waveform $\Tilde{h}(\theta^{j},f)$, where $\theta^{j}$ is the $j^{\mathrm{th}}$ parameter of the waveform and $f$ is the frequency, with respect to the waveform phase $\varphi_\mathrm{c}$, the luminosity distance $d_\mathrm{L}$ and merger time $t_\mathrm{m}$ computed by GWFish are,
 \begin{equation}
-\frac{\partial \Tilde{h}_{k}(\theta^{j},f)}{\partial \varphi_{c}} = -i \Tilde{h}_{k}(\theta^{j},f),
+\frac{\partial \Tilde{h}(\theta^{j},f)}{\partial \varphi_{c}} = -i \Tilde{h}(\theta^{j},f),
 \label{phasederiv}
 \end{equation}
 \begin{equation}
-\frac{\partial \Tilde{h}_{k}(\theta^{j},f)}{\partial d_{L}} = -\frac{\Tilde{h}_{k}(\theta^{j},f)}{d_{L}},
+\frac{\partial \Tilde{h}(\theta^{j},f)}{\partial d_{L}} = -\frac{\Tilde{h}(\theta^{j},f)}{d_{L}},
 \label{lumdistderiv}
 \end{equation}
 \begin{equation}
-\frac{\partial \Tilde{h}_{k}(\theta^{j},f)}{\partial t_{m}} = 2\pi i f \Tilde{h}_{k}(\theta^{j},f).
+\frac{\partial \Tilde{h}(\theta^{j},f)}{\partial t_{m}} = 2\pi i f \Tilde{h}(\theta^{j},f).
 \label{timecderiv}
 \end{equation}
+
+Full derivation of the analytical derivatives in Appendix~\ref{app:AnDerivWaveform}.
 
 The derivatives for the other parameters (component masses, spins, sky localisation, inclination, polarisation angle) are computed numerically using the expression,
 \begin{equation}
 \frac{\partial \Tilde{h}_{k}(\theta^{j},f)}{\partial \theta^{i}} \approx \frac{\Tilde{h}_{k}(\theta^{j} +\epsilon^{ij}/2,f) - (\theta^{j} -\epsilon^{ij}/2,f)}{\epsilon},
 \label{numderiv}
 \end{equation}
-where $\epsilon$ is the step size of the derivatives.
+where $\epsilon$ is the step size of the derivatives. The step size can be tuned up in GWFish. This allows a balance between computational cost and derivative precision. A smaller step size improves the accuracy of the derivatives but increases the computational cost. Conversely, a larger step size reduces computational cost but decreases the accuracy of derivative computation. The stability of the derivative computation also depends on the step size. A rule of thumb for the choice of $\epsilon$ is $\epsilon=1\times 10^{-5}$, which follows the simple "cube root of numerical precision" recommendation, which is $1\times 10^{-16}$ for double (reference).
 
 \subsubsection{Fisher matrix inversion. Singular Value Decomposition.}
+\label{subsec:Fisherinversion}
 
 Given that the Fisher matrices we are dealing with are close to singular, i.e.\ matrices with small or zero eigenvalues, its inversion is prone to numerical instabilities or inaccurate estimations. For these type of cases the singular value decomposition (SVD) technique is used. It ensures that the inversion of the Fisher matrix is performed free of eigenvalues close to zero. In order to apply SVD, the original matrix is normalized by dividing it by the outer product of the root-squared elements of the diagonalised matrix. Then SVD is applied following the expression,
 \begin{equation}
 A = U S V^{h},
 \label{SVD}
 \end{equation}
-where $A$ is the original matrix, $U$ and $V^{h}$ are orthogonal matrices, and $S$ is the matrix with the singular values. Threshold value for any entry in $S$ is set to $1 \times 10^{-10}$, so values below this threshold are ignored. Then the matrix is inverted in a process called pseudo-inversion as this avoids values below the threshold. The remaining matrix is then denormalised by multiplying back by the normalisation factor to provide a new Fisher matrix without values close to zero.  
+where $A$ is the original matrix, $U$ and $V^{h}$ are orthogonal matrices, and $S$ is the matrix with the singular values. Threshold value for any entry in $S$ is set to $1 \times 10^{-10}$, so values below this threshold are ignored. Then the matrix is inverted in a process called pseudo-inversion as this avoids values below the threshold. The remaining matrix is then denormalized by multiplying back by the normalisation factor to provide a new Fisher matrix without values close to zero.  
 
 \subsubsection{Detector-Network Simulation}
+\label{subsec:detnetworksim}
+
 There are several aspects that GWFish takes into account when simulating the network of detectors:
 \begin{itemize}
     \item Component. For the case of LISA, the component is the TDI interferometry and includes the noise model, the duty cycle and  
@@ -697,10 +730,13 @@ In general, the early inspiral part of a binary system is the most important par
 GWFish simulates LISA's response by considering the TDI interferometry; in this technique, the main building blocks are the readouts $y_{ij}$ of every spacecraft link $j \longleftarrow i$, and by applying a time delay, it reduces laser noise. Indeed, every spacecraft acts as the vertiex of a triangular network where each of them is a laser interferometer. Since the noise is correlated, the noise-correlated matrix needs to be diagonalised. This leads to three separate channels: $A$, $E$, and $T$ channels. GWFish simulates these three channels and also applies the breathing motion approximation where the fluctuations in the arm lengths of the detector over the curse of a year are neglected.
 
 \subsubsection{Setup}
+\label{subsec:gwfishsetup}
+
 GWFish requires setting up a range of parameters which describe the systems to be simulated, the response of the detector, the network of detectors, and details regarding the GW signal such as the waveform approximant, the SNR threshold... 
 
 
 \subsection{Transformation of variables}
+\label{subsec:transfvariables}
 
 When estimating the PDF $p(X,Y|I)$ where $X$ and $Y$ are the constrained parameters and $I$ is the background information, we might be interested in the posterior $p(Z|I)$, where $Z$ is derived from $X$ and $Y$, $Z=f(X,Y)$. This what error-propagation is about, and is performed by means of variable transformation (Sivia). In the case of one variable, we might ask how $p(X|I)$ is related to $p(Y|I)$ if $Y=f(X)$?. Let's say that $\delta X$ is a very small interval about $X=X^{\ast}$, the probability that $X$ lies in the range between $X^{\ast}-\delta X/2$ and $X^{\ast} + \delta X/2$, is
 \begin{equation}
@@ -739,7 +775,7 @@ In our study we are interested in computing $p(m_1,m_2)$, $p(\mathcal{M},q)$ and
 p(m_1,m_2)\bigg|\frac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)}\bigg|=p(\mathcal{M},q),
 \label{eq:m1m2tochirpMq}
 \end{equation}
-where
+where $\big| \frac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)} \big|$ the Jacobian and is calculated as,
 \begin{equation}
 \begin{split}
 \bigg| \frac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)} \bigg| &=
@@ -749,34 +785,35 @@ where
      \frac{\partial m_2}{\partial \mathcal{M}} & 
      \frac{\partial m_2}{\partial q}   
 \end{vmatrix} \\
-&= \frac{1}{5} \mathcal{M}\bigg[ \bigg( \frac{1}{q^{2}}+\frac{1}{q^{3}} \bigg)^{\frac{1}{5}} \frac{3 q^{2} + 2 q}{(q^{3} + q^{2})^{\frac{4}{5}}} + (q^{3} + q^{2})^{\frac{1}{5}} \frac{(\frac{2}{q^{3}} + \frac{3}{q^{4}})}{(\frac{1}{q^{2}} + \frac{1}{q^{3}})^{\frac{4}{5}}}\bigg].
+&= \frac{1}{5} \mathcal{M}\bigg[ \bigg( \frac{1}{q^{2}}+\frac{1}{q^{3}} \bigg)^{1/5} \frac{3 q^{2} + 2 q}{(q^{3} + q^{2})^{4/5}} + (q^{3} + q^{2})^{1/5} \frac{(\frac{2}{q^{3}} + \frac{3}{q^{4}})}{(\frac{1}{q^{2}} + \frac{1}{q^{3}})^{4/5}}\bigg].
 \label{eq:jacobianm1m2chirpMq}
 \end{split}
 \end{equation}
 We follow the same procedure to map $p(m_1,m_2)$ to $p(M_{total},q)$,
 \begin{equation}
-p(m_1,m_2)\bigg|\frac{\partial(m_1,m_2)}{\partial(\text{M}_{total},q)}\bigg|=p(\text{M}_{total},q),
+p(m_1,m_2)\bigg|\frac{\partial(m_1,m_2)}{\partial(M_{total},q)}\bigg|=p(M_{total},q),
 \label{eq:m1m2toMtotalq}
 \end{equation}
 where
 \begin{equation}
 \begin{split}
-\bigg| \frac{\partial(m_1,m_2)}{\partial(\text{M}_{total},q)} \bigg| &=
+\bigg| \frac{\partial(m_1,m_2)}{\partial(M_{total},q)} \bigg| &=
 \begin{vmatrix}
      \frac{\partial m_1}{\partial\text{M}_{total}} &
      \frac{\partial m_1}{\partial q} \\ \\
      \frac{\partial m_2}{\partial \text{M}_{total}} & 
      \frac{\partial m_2}{\partial q}   
 \end{vmatrix} \\
-&= \frac{\text{M}_{total}}{1 + q} \bigg[ \frac{1}{1 + q} - \frac{q}{(1 + q)^{2}} \bigg] + \frac{1}{1 + \frac{1}{q}} \bigg[ \frac{\text{M}_{total}}{(1 + q)^{2}} \bigg] .
+&= \frac{\text{M}_{total}}{1 + q} \bigg[ \frac{1}{1 + q} - \frac{q}{(1 + q)^{2}} \bigg] + \frac{1}{1 + \frac{1}{q}} \bigg[ \frac{M_{total}}{(1 + q)^{2}} \bigg] .
 \label{eq:jacobianm1m2toMtotalq}
 \end{split}
 \end{equation}
 
 
 \subsection{Simulations}
+\label{subsec:simulations}
 
-This work consists in analysing the uncertainties associated to the observations of MBHBs with space-based observatory LISA. The parameters that we are going to study are the component masses $m_1$ and $m_2$, chirp mass $\mathcal{M}$, and mass ratio $q$. Our analyses rely on the computation of the Fisher matrices for a rapid statistical inference, rather than a full Bayesian parameter estimation, which is computational more expensive. In this process, we use the Gaussian approximation which allows us to assume the likelihoods, so as the posteriors, to have Gaussian behaviour. The Gaussian pdf for the component masses $m_1$ and $m_2$ is,
+The Gaussian PDF for the component masses $m_1$ and $m_2$ is,
 \begin{equation}
 p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \exp \Big[-\frac{1}{2}\bigg( 
 \begin{bmatrix}     
@@ -803,7 +840,7 @@ p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \exp 
 \Big],
 \label{eq:gaussianm1m2}
 \end{equation}
-where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in section X. We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.~(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
+where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in Section~\ref{subsec:Fisherapprox}. We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.~(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
 
 One feature that we are going to delve into is the slope of these contour plots and the global behaviour these have across chirp mass. For each PDF contour plot, the slope is calculated from the quotient of the $y$ component and the $x$ component of the eigenvector of the major principal axis of the ellipse,
 \begin{equation}
@@ -874,7 +911,7 @@ We verified the covariance matrix $\Sigma_{\mathcal{M},q}$ obtained with eq. ($\
 \end{figure}
 
 
-It is of our interest to compare our results with the ones in the literature. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat et al. \cite{marsat2021exploring}. The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat et al. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish.
+It is of our interest to compare our results with the ones in the literature to test the performance of GWFish in simulating MBHB observations with LISA. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat~\textit{et al}. \cite{marsat2021exploring}. The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat~\textit{et al}. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish.
 
 \begin{table}[!h]
 \centering
@@ -908,11 +945,11 @@ It is of our interest to compare our results with the ones in the literature. We
 	\hline 
     \hline\hline    
 \end{tabular}
-\caption{Parameters and values used in the simulation for comparison with Marsat et al \cite{marsat2021exploring}. We use source-frame injected masses. The sky localisation parameters are in equatorial coordinates in Earth's frame which were converted from ecliptic coordinates as used in Marsat et al. Conversion from the Earth's-frame to the SSB-frame still needs to be accounted for.}
+\caption{Parameters and values used in the simulation for comparison with Marsat~\textit{et al} \cite{marsat2021exploring}. We use source-frame injected masses. The sky localisation parameters are in equatorial coordinates in Earth's frame which were converted from ecliptic coordinates as used in Marsat~\textit{et al}. Conversion from the Earth's-frame to the SSB-frame still needs to be accounted for.}
 \label{t:MBDvalues}
 \end{table}
 
-In order to have a consistent setting for the comparison, we implement the PSD curve prescription provided in Marsat et al \cite{marsat2021exploring}. The noise spectral sensitivities for the TDI channels a, e, and t, $S^{a,e,t}_n(f)$, are
+In order to have a consistent setting for the comparison, we implement the PSD curve prescription provided in Marsat~\textit{et al} \cite{marsat2021exploring}. The noise spectral sensitivities for the TDI channels a, e, and t, $S^{a,e,t}_n(f)$, are
 \begin{subequations}
 \begin{align}
 S^{a}_n = S^{e}_n 
@@ -947,17 +984,28 @@ The characteristic noise PSD for the TDI channels a, e, and t, $S^{a,e,t}_c(f)$ 
 S^{a,e,t}_c(f) = f S^{a,e,t}_h(f),
 \label{eq:charPSD}
 \end{equation}
-and it is the strain-like noise PSD with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{psdcurves} shows the PSD curve used in our study as well as the PSD curve used in Marsat et al, noticing there is a slight difference between the one computed with eq.(\ref{eq:charPSD}) and the one shown in Marsat's paper.
+and it is the strain-like noise PSD with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{psdcurves} shows the PSD curve used in our study as well as the PSD curve used in Marsat~\textit{et al}, noticing there is a slight difference between the one computed with eq.(\ref{eq:charPSD}) and the one shown in Marsat's paper.
 
 \begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{Figures/Sc_Curves_Marsat.pdf}
-\caption{PSD curve computed with eq. \ref{redPSDa}}
-\label{psdcurves}
+\includegraphics[width=.7\textwidth]{Figures/Sc_Curves_Marsat_GWFishPSD.pdf}
+\caption{Default sensitivity curve $S_c$ of GWFish shown on top of Marsat \textit{et al} $S_c$ curve in red dots.}
+\label{originalScGWFish}
 \end{figure}
 
-To reproduce the results of Marsat from our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat et al. Since the paper does not explicitly show the detector position at the merger time, we follow another way around: We set out the same SNR as in Marsat by running a simulation to compute the SNR for a range of geocentric merger times, and track the geocentric time which yields the SNR of interest. Figure \ref{snrgeocentric} shows the SNR versus geocentric time.
-During our investigation, we noticed the importance of the derivative step size $\epsilon$ in the numerical derivatives. We performed a series of simulations for 4 different systems where we varied $\epsilon$.
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Figures/Sc_Curves_Marsat_GWFishSoptSpm.pdf}
+\caption{Sensitivity curve $S_c$ using Marsat \textit{et al} eq. (58) with noise data from GWFish.}
+\label{MarsatScnoiseGWFish}
+\end{figure}
 
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Figures/Sc_Curves_MarsatSoptSpm.pdf}
+\caption{Sensitivity curve $S_c$ using Marsat \textit{et al}'s eq. (58b) with noise data from Marsat \textit{et al}. Noise due to white dwarfs is not considered our computation of the $S_c$ curve.}
+\label{ScMarsat}
+\end{figure}
+
+To reproduce the results of Marsat from our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat~\textit{et al}. Since the paper does not explicitly show the detector position at the merger time, we follow another way around: We set out the same SNR as in Marsat by running a simulation to compute the SNR for a range of geocentric merger times, and track the geocentric time which yields the SNR of interest. Figure \ref{snrgeocentric} shows the SNR versus geocentric time.
+During our investigation, we noticed the importance of the derivative step size $\epsilon$ in the numerical derivatives. We performed a series of simulations for 4 different systems where we varied $\epsilon$.
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/SNR_GeocentTime.png}
@@ -965,16 +1013,69 @@ During our investigation, we noticed the importance of the derivative step size 
 \label{snrgeocentric}
 \end{figure}
 
-
-
 \subsection{Results}
+\label{subsec:results}
 
+The first study carried out in this project was to constrain MBHB instrinsic parameters such as $m_1$, $m_2$, $\mathcal{M}$, $M_{\mathrm{total}}$ and $q$ through the computation of the PDFs $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$. Additionally we wanted to study the correlations between these parameters. We used the study carried out by Marsat~\textit{et al}~\cite{marsat2021exploring} as a guide and to compare our results with. A direct comparison of our result for $p(m_1,m_2)$ to the one obtained by Marsat~\textit{et al} is shown in fig. ~\ref{fig:Marsatcomparison}. The results for $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M_{\mathrm{total}},q)$ are shown in fig~\ref{fig:PDFsMarsat}. 
 
+\begin{figure}[ht]
+    \centering
+    % First subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/pm1m2_nospins_MarsatComparison.pdf}
+        \caption{$p(m_1,m_2)$ from GWFish.}
+        \label{fig:pm1m2}
+    \end{subfigure}
+    \hfill
+    % Second subfigure
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/Marsatpm1m2.png}
+        \caption{$p(m_1,m_2)$ from Marsat~\textit{et al}.}
+        \label{fig:Marsatpm1m2}
+    \end{subfigure}    
+    \hfill    
+    \caption{PDF contour plot of $p(m_1,m_2)$ computed by GWFish in (a). In (b) the original PDF taken from Marsat~\textit{et al}~\cite{marsat2021exploring}. Also in (a), the shape of the PDF contour plot of Marsat~\textit{et al} is shown in red dots for direct comparison in the same plot with the one from GWFish.}
+    \label{fig:Marsatcomparison}
+\end{figure}
 
-We performed 40 simulated LISA observations of MBHBs. We specify a chirp mass $\mathcal{M}$ in the range of $(3\times10^{5},3.5\times10^{5})$ and $q=\{0.25,0.50,0.75\}$. These values were chosen so that they cover the typical total mass values for MBHBs in the range of $10^{4}$ to $10^{7}$. With these values, we obtain the component masses $m_1$ and $m_2$ that we inject into GWFish. The rest of the injected parameters, i.e, redshift, luminosity distance, inclination $\theta_{JN}$, right ascension $\alpha$, declination $\delta$ and polarisation angle are fixed to the predetermined GWFish values and are consistent with (reference).
-Figures \ref{fig:PDFsq025}, \ref{fig:PDFsq050} and \ref{fig:PDFsq075} show PDFs contour plots for $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{total},q)$ for $q=0.25,0.50$, and  $0.75$ respectively. In Figure \ref{fig:pm1m2q025} shows a $p(m_1,m_2)$ with negative correlation. This is because since the total mass is the observed mass parameter from a detection, $m_2$ needs to decrease as $m_1$ increases so that the observed total mass remains constant. On the other hand, Figure \ref{fig:pMchirpqq025} shows positive correlation in which $\mathcal{M}$ increases with $q$. This has to do with regions of the sensitivity curve on which the observed signal lays. 
+\begin{figure}[ht]
+    \centering
+    % First subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepm1m2_PhenomXPHM_case1_allparameters_nospins_thesis.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:pm1m2Marsat}
+    \end{subfigure}
+    \hfill
+    % Second subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepMq_PhenomXPHM_geocentrictime_thesis.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:pMchirpqMarsat}
+    \end{subfigure}
+    % Third subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singleptotalMq_PhenomXPHM_geocentrictime_thesis.pdf}
+        \caption{$p(M_{\mathrm{total}},q)$}
+        \label{fig:pMtotalqMarsat}
+    \end{subfigure}
+    \hfill    
+    \caption{PDF contour plots for the observation of an MBHB with detector-frame masses of $m_1=1.5\times10^{6}~\mathrm{M}_{\odot}$ and $m_2=0.5\times10^{6}~\mathrm{M}_{\odot}$ for comparison with Marsat~\textit{et al}~\cite{marsat2021exploring}.}
+    \label{fig:PDFsMarsat}
+\end{figure}
 
-Figures \ref{slopespm1m2}, \ref{slopespMchirpq} and \ref{slopespMtotalq} show plots of the slopes of $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M_{total},q)$ versus $\mathcal{M}$, respectively, for the 40 observations. In Figure \ref{slopespm1m2}, we can see the constant trend the slope of $p(m_1,m_2)$ versus $\mathcal{M}$ follows for $q=0.50$ and $0.75$, not the same for $q=0.25$ which shows some scatter. This scatter reflects a behaviour of the slopes, and consequently the correlations, where they go from negative from positive. 
+The second study in this project involved conducting 40 simulated LISA observations of MBHBs to analyze the correlation between intrinsic parameters and the overall behavior of the PDFs across the parameter space.
+We specified a chirp mass $\mathcal{M}$ in the range between $3\times10^5~{\mathrm{M_{\odot}}}$ and $3.5\times10^{5}~{\mathrm{M_{\odot}}}$ and $q=\{0.25,0.50,0.75\}$. These values were chosen so that they cover the typical total mass values for MBHBs in the range of $10^{4}~{\mathrm{M_{\odot}}}$ to $10^{7}~{\mathrm{M_{\odot}}}$. The rest of the injected parameters, i.e, redshift $z$, luminosity distance $d_{L}$, inclination $\theta_{JN}$, right ascension $\alpha$, declination $\delta$ and polarisation angle are fixed to the predetermined GWFish values and are consistent with (reference). We used the waveform model \texttt{IMRPhenomXPHM} which includes higher harmonics and spin precession.
+Figures \ref{fig:PDFsq025}, \ref{fig:PDFsq050} and \ref{fig:PDFsq075} show PDFs contour plots for $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ for $q=0.25$, $0.50$, and  $0.75$ respectively of one of the set of observations. 
+
+The slopes of the contour plots of $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ of the 40 observations are shown in figures~\ref{fig:slopespm1m2}, \ref{fig:slopespMchirpq}, and \ref{fig:slopespMtotalq}. From the slopes plots, a scattered behavior for each of the PDFs for different values of $q$ can be noticed, i.e. the slopes across parameter space do not follow a clear and defined trend. One possible reason for this is that the Fisher matrices are not being computed correctly by GWFish. To explore this possibility, we tried other waveform models: \texttt{IMRPhenomPv2}, \texttt{IMRPhenomXAS}, \texttt{IMRPhenomD}, \texttt{IMRPhenomXP}. The test consisted in computing $\sigma^{2}_{m_1}$ and $\sigma^{2}_{m_2}$ directly from the inverse Fisher matrix of $(m_1,m_2)$ for different values of the derivative step size $\epsilon$. The results of these tests are shown in figures~\ref{fig:testXPHM},~\ref{fig:testD}, and~\ref{fig:testPv2}. We can see that \texttt{IMRPhenomXPHM} yields scattered results for $\sigma^{2}_{m_1}$ for different values of $\epsilon$, showing an unstable performance on the derivative computations. On the other hand, waveforms \texttt{IMRPhenomD} which does not include spin precession nor higher harmonics, and \texttt{IMRPhenomPv2}, which includes spin precession and no higher harmonics, were more stable in their computations with $\epsilon$ values from $~1\times10^{-8}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomD} and $~3\times10^{-6}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomPv2}. We chose to change waveform from \texttt{IMRPhenomXPHM} to \texttt{IMRPhenomPv2}. The outcome for the slopes plots for $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ with \texttt{IMRPhenomPv2} is shown in figures~\ref{fig:slopespm1m2Pv2},~\ref{fig:slopespMcqPv2}, and~\ref{fig:slopespMtotalqPv2}. 
+
+To simulate the capabilities of LISA to observe MBHBs, we used a more approximate parameter space to what LISA is expected to observe with $M_{\mathrm{total}}$ in the range from $1\times10^{5}$ to $5\times10^{6}$ \cite{mangiagli2020observing}(add more refs). PDF contour plots for these are shown in figures~\ref{fig:q025Pv2realmass},~\ref{fig:q050Pv2realmass}, and~\ref{fig:q075Pv2realmass} and the slopes plots in figures~\ref{fig:slopespm1m2Pv2realmass},~\ref{fig:slopespMcqPv2realmass}, and~\ref{fig:slopespMtotalqPv2realmass}.
 
 \begin{figure}[ht]
     \centering
@@ -997,11 +1098,11 @@ Figures \ref{slopespm1m2}, \ref{slopespMchirpq} and \ref{slopespMtotalq} show pl
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figs_q025/ptotalMq_0.pdf}
-        \caption{$p(M_{total},q)$}
+        \caption{$p(M_{\mathrm{total}},q)$}
         \label{fig:pMtotalqq025}
     \end{subfigure}
     \hfill    
-    \caption{PDFs for $q=0.25$}
+    \caption{PDF contour plots for the observation of an MBHB with $m_1=7.21\times10^{5}~\mathrm{M}_{\odot}$, $m_2=1.80\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=9.00\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.25$.}
     \label{fig:PDFsq025}
 \end{figure}
 
@@ -1026,11 +1127,11 @@ Figures \ref{slopespm1m2}, \ref{slopespMchirpq} and \ref{slopespMtotalq} show pl
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figs_q050/ptotalMq_0.pdf}
-        \caption{$p(M_{total},q)$}
+        \caption{$p(M_{\mathrm{total}},q)$}
         \label{fig:pMtotalqq050}
     \end{subfigure}
     \hfill    
-    \caption{PDFs for $q=0.50$}
+    \caption{PDF contour plots for the observation of an MBHB with $m_1=4.93\times10^{5}~\mathrm{M}_{\odot}$, $m_2=2.46\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=7.39\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.50$.}
     \label{fig:PDFsq050}
 \end{figure}
 
@@ -1055,11 +1156,11 @@ Figures \ref{slopespm1m2}, \ref{slopespMchirpq} and \ref{slopespMtotalq} show pl
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{figs_q075/ptotalMq_0.pdf}
-        \caption{$p(M_{total},q)$}
+        \caption{$p(M_{\mathrm{total}},q)$}
         \label{fig:pMtotalqq075}
     \end{subfigure}
     \hfill    
-    \caption{PDFs for $q=0.75$}
+    \caption{PDF contour plots for the observation of an MBHB with $m_1=3.9\times10^{5}~\mathrm{M}_{\odot}$, $m_2=2.99\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=6.97\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.75$.}
     \label{fig:PDFsq075}
 \end{figure}
 \hfill \break
@@ -1067,21 +1168,328 @@ Figures \ref{slopespm1m2}, \ref{slopespMchirpq} and \ref{slopespMtotalq} show pl
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes/chirpM_slope_m1m2_qs.pdf}
-\caption{Plot of slopes of $p(m_1,m_2)$ versus $\mathcal{M}$ for the 40 MBHB observations.}
-\label{slopespm1m2}
+\caption{Plot of slopes of $p(m_1,m_2)$ versus $\mathcal{M}$ for the set of 40 MBHB observations.}
+\label{fig:slopespm1m2}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes/chirpM_slope_chirpMq_qs.pdf}
-\caption{Plot of slopes of $p(\mathcal{M},q)$ versus $\mathcal{M}$ for the 40 MBHB observations.}
-\label{slopespMchirpq}
+\caption{Plot of slopes of $p(\mathcal{M},q)$ versus $\mathcal{M}$ for the set of 40 MBHB observations.}
+\label{fig:slopespMchirpq}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes/chirpM_slope_totalMq_qs.pdf}
-\caption{Plot of slopes of $p(M_{total},q)$ versus $\mathcal{M}$ for the 40 MBHB observations.}
-\label{slopespMtotalq}
+\caption{Plot of slopes of $p(M_{\mathrm{total}},q)$ versus $\mathcal{M}$ for the set of 40 MBHB observations.}
+\label{fig:slopespMtotalq}
 \end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{Figures/variancem1_PhenomXPHM_stepsize_spins.pdf}
+\caption{Plot to show the stability of the waveform derivatives with \texttt{IMRPhenomXPHM}.}
+\label{fig:testXPHM}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/variancem1_PhenomD_stepsize.pdf}
+        \caption{}
+        \label{fig:testDm1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/variancem2_PhenomD_stepsize.pdf}
+        \caption{Second plot}
+        \label{fig:testDm2}
+    \end{subfigure}    
+    \caption{Plots to show the stability of the waveform derivatives with \texttt{IMRPhenomD} waveform.}
+    \label{fig:testD}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/covm1m2_stepsize_PhenomPv2_spintilt.pdf}
+        \caption{First plot}
+        \label{fig:testPv2m1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_PhenomPv2_spintilt.pdf}
+        \caption{Second plot}
+        \label{fig:testPv2m2}
+    \end{subfigure}    
+    \caption{Plots to show the stability of the waveform derivatives with \texttt{IMRPhenomPv2} waveform.}
+    \label{fig:testPv2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2/pm1m2_0_m1_720700.0_m2_180200.0.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:pm1m2q025Pv2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2/pchirpMq_0_Mc_300033.85897310276_q_0.2500346884972943.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:pMcqq025Pv2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2/ptotalMq_0.pdf}
+        \caption{$p(M_{\mathrm{total}},q)$}
+        \label{fig:pMqq025Pv2}
+    \end{subfigure}    
+    \caption{PDF contour plots for the observation of an MBHB with $m_1=7.20\times10^{5}~\mathrm{M}_{\odot}$, $m_2=1.80\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=9.00\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.25$ with \texttt{IMRPhenomPv2}.}
+    \label{fig:q025Pv2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2/pm1m2_0.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:pm1m2q050Pv2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2/pchirpMq_0.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:pMcqq050Pv2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2/ptotalMq_0.pdf}
+        \caption{$p(M_{\mathrm{total}},q)$}
+        \label{fig:pMqq050}
+    \end{subfigure}    
+    \caption{PDF contour plots for the observation of an MBHB with $m_1=4.93\times10^{5}~\mathrm{M}_{\odot}$, $m_2=2.46\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=7.39\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.50$ with \texttt{IMRPhenomPv2}.}
+    \label{fig:q050Pv2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2/pm1m2_0.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:pm1m2q075Pv2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2/pchirpMq_0.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:pMcqq075Pv2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2/ptotalMq_0.pdf}
+        \caption{$p(M_{\mathrm{total}},q)$}
+        \label{fig:pMtqq075Pv2}
+    \end{subfigure}    
+    \caption{PDF contour plots for the observation of an MBHB with $m_1=3.98\times10^{5}~\mathrm{M}_{\odot}$, $m_2=2.99\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=6.97\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.75$ with \texttt{IMRPhenomPv2}.}
+    \label{fig:q075Pv2}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_PhenomPv2/chirpM_slope_m1m2_qs.pdf}
+\caption{Slopes of $p(m_1,m_2)$ versus $\mathcal{M}$ for different $q$ for a set of 50 observations with \texttt{IMRPhenomPv2}.}
+\label{fig:slopespm1m2Pv2}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_PhenomPv2/chirpM_slope_chirpMq_qs.pdf}
+\caption{Slopes of $p(\mathcal{M},q)$ versus $\mathcal{M}$ for different $q$ for a set of 50 observations with \texttt{IMRPhenomPv2}.}
+\label{fig:slopespMcqPv2}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_PhenomPv2/chirpM_slope_totalMq_qs.pdf}
+\caption{Slopes of $p(M_{\mathrm{total}},q)$ versus $\mathcal{M}$ for different $q$ for a set of 50 observations with \texttt{IMRPhenomPv2}.}
+\label{fig:slopespMtotalqPv2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pm1m2_8_m1_720000.0_m2_180000.0.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:plot1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pchirpMq_8_Mc_299719.15466467413_q_0.25.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:plot2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/ptotalMq_8.pdf}
+        \caption{$p(M_{\mathrm{total}},q)$}
+        \label{fig:plot1}
+    \end{subfigure}    
+    \caption{PDFs for q=0.25 with \texttt{IMRPhenomPv2} for a real mass range.}
+    \label{fig:q025Pv2realmass}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pm1m2_6.pdf}
+        \caption{First plot}
+        \label{fig:plot1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pchirpMq_6.pdf}
+        \caption{Second plot}
+        \label{fig:plot2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/ptotalMq_6.pdf}
+        \caption{First plot}
+        \label{fig:plot1}
+    \end{subfigure}    
+    \caption{PDFs for q=0.50 with \texttt{IMRPhenomPv2} for a real mass range.}
+    \label{fig:q050Pv2realmass}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pm1m2_6.pdf}
+        \caption{First plot}
+        \label{fig:plot1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pchirpMq_6.pdf}
+        \caption{Second plot}
+        \label{fig:plot2}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/ptotalMq_6.pdf}
+        \caption{First plot}
+        \label{fig:plot1}
+    \end{subfigure}    
+    \caption{PDFs for q=0.75 with \texttt{IMRPhenomPv2} for a real mass range.}
+    \label{fig:q075Pv2realmass}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_m1m2_qs.pdf}
+\caption{Plot of slopes of $p(m_1,m_2)$ with \texttt{IMRPhenomPv2} with real mass range.}
+\label{fig:slopespm1m2Pv2realmass}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_chirpMq_qs_Zoomin.pdf}
+\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} with real mass range.}
+\label{fig:slopespMcqPv2realmass}
+\end{figure}
+
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_totalMq_qs.pdf}
+\caption{Slopes for $p(M_{\mathrm{total}},q)$ with \texttt{IMRPhenomPv2} with real mass range.}
+\label{fig:slopespMtotalqPv2realmass}
+\end{figure}
+
+\section{Discussion}
+
+We notice a difference in our result for $p(m_1,m_2)$ against the one obtained in Marsat~\textit{et al} in fig~\ref{fig:Marsatcomparison}. This is probably due to different prescriptions of the noise PSD for $S_{\mathrm{opt}}$ and $S_{\mathrm{pm}}$ in GWFish and Marsat~\textit{et al}. Improvements in this respect can be done by using updated data for these noise PSD curves in GWFish. On the other hand, the results for the PDFs, shown in fig.~\ref{fig:PDFsMarsat}, are consistent with what is expected from the correlations of the involved parameters: Component masses $(m_1,m_2)$ are negatively correlated where one parameter increases as the other decreases for a fixed measured $M_{\mathrm{total}}$. The PDF for $(\mathcal{M},q)$ shows positive correlation as expected. The positive correlation between $\mathcal{M}$ and $q$ is shown mathematically in Appendix B. The PDF for $(M_{\mathrm{total}},q)$ shows negative correlation. This is also expected for an MBHB with total mass $M_{\mathrm{total}}=\mathcal{O}(10^6)$: Since the merger happens in the region of the sensitivity curve where the slope is positive, an increasing perturbation in $M_{\mathrm{total}}$ shifts the signal to lower frequencies. In order to compensate this frequency decrease, the mass ratio $q$ must be decreased so that the higher harmonics associated with lower $q$s, or more unequal mass binaries, power back the signal to higher frequencies.
+
+Regarding the set of 40 observations, for one observation of the set, the contour plots of $p(m_1,m_2)$ and $p(\mathcal{M},q)$, shown in figures~\ref{fig:PDFsq025},~\ref{fig:PDFsq050},~\ref{fig:PDFsq075} for different values of $q$, follow negative and positive correlations respectively, which agrees with our expectations. We notice less correlation in $p(m_1,m_2)$ for more unequal masses and more correlation for more equal mass binaries. This is unexpected; the more equal the masses of the binary are, the less correlated $m_1$ and $m_2$ should be. This can be seen when $q$ tends to 1. In this case, $m_1$ and $m_2$ approximate each other, making them easier to determine from $\mathcal{M}$ and $M_{\mathrm{total}}$. In the case of $p(\mathcal{M},q,)$ we can see a positive correlation with less correlation on more equal mass binaries as the total mass $M_{\mathrm{total}}$ dominates the inspiral in this configuration. This is further explained in Appendix B. The contour plot for $p(M_{\mathrm{total}},q)$ shows a positive correlation with less correlation at lower $q$s. We expect this correlation to be negative based on the same arguments presented in the first part of this section. 
+
+The slope plots of $p(m_1,m_2)$ $p(\mathcal{M},q,)$ and $p(M_{\mathrm{total}},q)$ are shown in figures~\ref{fig:slopespm1m2},~\ref{fig:slopespMchirpq}, and~\ref{fig:slopespMtotalq} respectively. On the slope of $p(m_1,m_2)$ plot we can notice a clear trend for $q=0.50$ and $0.75$, consistent with a negative slope, which indicates negative correlation. We notice some scattering for $q=0.25$. The slope of $p(\mathcal{M},q,)$ plot shows uniform positive slope on the PDF contour plots across parameter space for $q=0.25$. We can see a bit more scatter but still a clear trend for $q=0.50$. There is a lot of scatter for $q=0.75$. For the $p(M_{\mathrm{total}},q)$ slopes a lot more of scatter on the three cases for $q$, but still on the positive slope (correlation) side in general.
+
+The scattering seen in the slopes plots tells us that the PDF computations are not converging. As explained in section~\ref{subsec:results}, this might be due to flaws in the Fisher matrix computations. We tried different waveforms to see if this could be fixed. We found that \texttt{IMRPhenomPv2} performed the best among the set of waveforms tested. The PDF contour plots for different $q$s using the \texttt{IMRPhenomPv2} waveform, are shown in figures~\ref{fig:q025Pv2},~\ref{fig:q050Pv2}, and~\ref{fig:q075Pv2} and the slopes plots in figures~\ref{fig:slopespm1m2Pv2},~\ref{fig:slopespMcqPv2}, and~\ref{fig:slopespMtotalqPv2}. We increased the number of observations to 50 for this set of simulations. In the slopes plot of $p(m_1,m_2)$ we can see now clear trends in the slopes. The three cases of $q$ show negative slope, with $q=0.25$ showing steeper slopes in general and larger slope change across parameter space compared to $q=0.50$ and $0.75$. One general feature of this plot is that for $q=0.25$, the set of 50 observations shows less slope indicating less correlation. On the other hand, $q=0.75$ shows larger negative slopes, which translates to larger correlations. This contradicts the fact that the more equal the masses of the binary are, the less correlated $m_1$ and $m_2$ should be. The slopes plot of $p(\mathcal{M},q,)$ shows in general positive slopes as expected, with higher steeper slopes for $q=0.75$ and lower shallower slopes for $q=0.25$, which contradicts the fact that on more equal mass binaries, $M_{\mathrm{total}}$ dominates the inspiral and the correlation between $\mathcal{M}$ and $q$ is weak. It seems also that $q$ affects in different levels the correlations across parameter space. Slopes plots of $p(M_{\mathrm{total}},q)$ show negative slopes, i.e. negative correlations, which agrees with what should be expected from the same arguments as discussed before: The merger occurs in the positive slope part of the sensitivity curve so in order to compensate a $M_{\mathrm{total}}$ increment, $q$ needs to drop for the higher harmonics to power back the signal to match the sensitivity curve. Slopes for all $q$s have similar steepness evolution across parameter space, $q=0.75$ shows steepest slope and $q=0.25$ shows shallower slopes. Weaker correlations are found at $q=0.25$ and stronger correlations at $q=0.75$, an unexpected result.
+
+Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$ range between $1\times10^5~\mathrm{M}_{\odot}$ and $5\times10^6~\mathrm{M}_{\odot}$, for $p(m_1,m_2)$ in figure~\ref{fig:slopespm1m2Pv2realmass} we can notice a varying trend in the slopes for all $q$s: A peak at lower $\mathcal{M}$ followed by a steep drop, and then a smooth transition to even more negative slopes. We can still see some scattering at higher $\mathcal{M}$ for $q=0.25$. Some general features of this plot is that lower values of $\mathcal{M}$ show slope values closer to zero compared to higher values of $\mathcal{M}$, and that lower $q$s show slopes values closer to zero than high $q$s in this low $\mathcal{M}$ region. If these slopes close to zero indicate weak correlation, then, this plot is in disagreement with the fact that component masses are weakly correlated in more equal mass binaries. At intermediate values of $\mathcal{M}$, on the other hand, $q=0.25$ shows more negative values of slope than $q=0.50$ and $0.75$, indicating weaker correlation of $m_1$ and $m_2$ for more equal masses as expected. At higher values of $\mathcal{M}$, $q=0.25$ shows weak correlation, and the slightly stronger correlation can be seen for $q=0.50$ compared to $q=0.75$. Regarding the slopes for $p(\mathcal{M},q)$, all $q$s show positive slope as expected. For $q=0.75$, the slope is relatively high in general which is not the expected. It has a peak a low $\mathcal{M}$ and drops gradually, indicating less correlation at higher $\mathcal{M}$. For $q=0.25$, the slope stays almost the same across parameter space closer to zero, indicating weak correlation, which is not the expected. The slopes plot of $p(M_{\mathrm{total}},q)$ shows a shift in slopes from positive to negative across parameter space. This has to do with the region on the sensitivity curve where the merger happens. Apparently, the shift from negative to positive slopes for all $q$s happens close to $7.5\times10^5~\mathrm{M}_{\odot}$. Binaries with $q=0.25$ seem closer to zero value slope and for $q=0.75$ with more positive and negative slopes.
+
+
+
+\section{Conclusions}
+
+\appendix
+\section{Derivation of analytical derivatives of $\Tilde{h}(\theta^{j},f)$}
+\label{app:AnDerivWaveform}
+
+To derive these expressions, we express the waveform as,
+\begin{equation}
+\Tilde{h}(\theta^{j}, f) = \mathcal{A}(f)e^{i\varphi(f)},
+\label{waveformAphase}
+\end{equation}
+where $\mathcal{A}(f)$ is the amplitude, and $\varphi$ is the phase of the waveform. The derivation of eq. \eqref{phasederiv} is as follows:
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial \Tilde{h}(\theta^{j},f)}{\partial \varphi_{c}} &= \frac{\partial \mathcal{A}(f)e^{i\varphi(f)}}{\partial \varphi_{c}} \\
+        &= \mathcal{A}(f)\frac{\partial}{\partial \varphi} e^{i\varphi(f)} \\
+        &= \mathcal{A}(f) ie^{i\varphi(f)} \\
+        &= -i\Tilde{h}(\theta,f)
+    \end{aligned}
+\label{phasederiv2}
+\end{equation}
+where the last \textit{minus} sign accounts for the convention that an increase in phase in the frequency domain shifts the waveform backwards in the time domain\footnote{An intuitive explanation of this is when considering a simple sinusoidal wave $h(t)=A \mathrm{cos}(\omega t+\phi)$. If $\phi=0$, the wave starts at $t=0$ with $\mathrm{cos}(0)=1$. If $\phi$ increases, say, $\pi/2$, the wave now starts at $\mathrm{cos}(\pi/2)=0$. This means the waveform has been shifted to the left. This is why increasing $\phi$ shifts the waveform backward (earlier in time).}. To derive eq. \eqref{lumdistderiv} we use the relation,
+\begin{equation}
+\mathcal{A}(f) \propto \frac{1}{d_L}, 
+\label{eq:A_lumdist}
+\end{equation}
+where the amplitude of the waveform is inversely proportional to the luminosity distance to the source is stated. The derivation of eq. \eqref{lumdistderiv} is then,
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial \Tilde{h}(\theta^{j},f)}{\partial d_L} &= e^{i\varphi(f)} \frac{\partial \mathcal{A}(f)}{\partial d_L} \\
+        &= e^{i\varphi(f)} \left[-\frac{\mathcal{A}(f)}{d^{2}_L}\right] \\
+        &= -\frac{\mathcal{A}(f)}{d_L}e^{i\varphi}(f) \\
+        &= -\frac{\Tilde{h}(\theta^{j},f)}{d_L}
+    \end{aligned}
+\label{lumdistderiv2}
+\end{equation}
+To derive eq. \eqref{timecderiv} we invoke the dependence of the phase on the merger time:
+\begin{equation}
+    \varphi(f)=\varphi_{0}(f)-2\pi ft_c,
+\end{equation}
+where the term $-2\pi ft_c$ comes from the fact that shifting the signal in time corresponds to a linear phase shift in the frequency domain. The derivation of eq. \eqref{timecderiv} proceeds as follows:
+
+\begin{equation}
+\frac{\partial \tilde{h}(\theta^{j},f)}{\partial t_m} = \frac{\partial}{\partial t_m} \left[ A(f) e^{i (\varphi_0(f) - 2\pi f t_m)} \right]
+\end{equation}
+Using the chain rule:
+\begin{equation}
+\frac{\partial}{\partial t_m} e^{i (\varphi_0(f) - 2\pi f t_m)} = i e^{i (\varphi_0(f) - 2\pi f t_m)} \frac{\partial}{\partial t_m} (\varphi_0(f) - 2\pi f t_m)
+\end{equation}
+Since:
+\begin{equation}
+\frac{\partial}{\partial t_m} \left(\varphi_0(f) - 2\pi f t_m\right) = -2\pi f,
+\end{equation}
+We obtain:
+\begin{equation}    
+\frac{\partial \tilde{h}(\theta^{j},f)}{\partial t_m} = A(f) \frac{\partial}{\partial t_m} e^{i (\Psi_0(f) - 2\pi f t_m)},
+\end{equation}
+Rewriting in terms of the original waveform:
+\begin{equation}
+\frac{\partial \tilde{h}(\theta^{j},f)}{\partial t_m} = 2i \pi f \tilde{h}(\theta^{j},f).
+\end{equation}
+
 
 \bibliographystyle{elsarticle-num}
 \bibliography{Thesis_references}
