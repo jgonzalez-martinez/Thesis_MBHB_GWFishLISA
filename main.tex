@@ -809,11 +809,10 @@ where
 \end{split}
 \end{equation}
 
-
 \subsection{Simulations}
 \label{subsec:simulations}
 
-The Gaussian PDF for the component masses $m_1$ and $m_2$ is,
+Our first study consists in constraining MBHB intrinsic parameters such as $m_1$, $m_2$, $\mathcal{M}$, $M_{\mathrm{total}}$ and $q$ through the computation of the PDFs $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$. The Gaussian PDF for the component masses $m_1$ and $m_2$ is,
 \begin{equation}
 p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \exp \Big[-\frac{1}{2}\bigg( 
 \begin{bmatrix}     
@@ -840,7 +839,7 @@ p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \exp 
 \Big],
 \label{eq:gaussianm1m2}
 \end{equation}
-where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in Section~\ref{subsec:Fisherapprox}. We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.~(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
+where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in Section~\ref{subsec:Fisherapprox}. Additionally, we want to study the orientations of the PDF contour plots, i.e. the uncertainties of each parameter pair, and how parameters are correlated.  We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.~(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
 
 One feature that we are going to delve into is the slope of these contour plots and the global behaviour these have across chirp mass. For each PDF contour plot, the slope is calculated from the quotient of the $y$ component and the $x$ component of the eigenvector of the major principal axis of the ellipse,
 \begin{equation}
@@ -910,8 +909,7 @@ We verified the covariance matrix $\Sigma_{\mathcal{M},q}$ obtained with eq. ($\
 \label{pchirpMqtwoapproaches}
 \end{figure}
 
-
-It is of our interest to compare our results with the ones in the literature to test the performance of GWFish in simulating MBHB observations with LISA. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat~\textit{et al}. \cite{marsat2021exploring}. The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat~\textit{et al}. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish.
+It is of our interest to compare our results with the ones in the literature to test the performance of GWFish in simulating MBHB observations with LISA. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat~\textit{et al}. \cite{marsat2021exploring}. The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat~\textit{et al}. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish. In their study, Marsat~\textit{et al.} use the waveform XXX which includes higher harmonics. We used the waveform \texttt{IMRPhenomXPHM} which includes spin precession and higher harmonics.
 
 \begin{table}[!h]
 \centering
@@ -1005,7 +1003,6 @@ and it is the strain-like noise PSD with a rescaling factor so that it is expres
 \end{figure}
 
 To reproduce the results of Marsat from our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat~\textit{et al}. Since the paper does not explicitly show the detector position at the merger time, we follow another way around: We set out the same SNR as in Marsat by running a simulation to compute the SNR for a range of geocentric merger times, and track the geocentric time which yields the SNR of interest. Figure \ref{snrgeocentric} shows the SNR versus geocentric time.
-During our investigation, we noticed the importance of the derivative step size $\epsilon$ in the numerical derivatives. We performed a series of simulations for 4 different systems where we varied $\epsilon$.
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/SNR_GeocentTime.png}
@@ -1013,31 +1010,12 @@ During our investigation, we noticed the importance of the derivative step size 
 \label{snrgeocentric}
 \end{figure}
 
-\subsection{Results}
-\label{subsec:results}
+We used the study carried out by Marsat~\textit{et al}~\cite{marsat2021exploring} as a guide and to compare our results with. A direct comparison of our result for $p(m_1,m_2)$ to the one obtained by Marsat~\textit{et al} is shown in fig. ~\ref{fig:Marsatcomparison}. The results for $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M_{\mathrm{total}},q)$ are shown in fig~\ref{fig:PDFsMarsat}. 
 
-The first study carried out in this project was to constrain MBHB instrinsic parameters such as $m_1$, $m_2$, $\mathcal{M}$, $M_{\mathrm{total}}$ and $q$ through the computation of the PDFs $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$. Additionally we wanted to study the correlations between these parameters. We used the study carried out by Marsat~\textit{et al}~\cite{marsat2021exploring} as a guide and to compare our results with. A direct comparison of our result for $p(m_1,m_2)$ to the one obtained by Marsat~\textit{et al} is shown in fig. ~\ref{fig:Marsatcomparison}. The results for $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M_{\mathrm{total}},q)$ are shown in fig~\ref{fig:PDFsMarsat}. 
-
-\begin{figure}[ht]
-    \centering
-    % First subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/pm1m2_nospins_MarsatComparison.pdf}
-        \caption{$p(m_1,m_2)$ from GWFish.}
-        \label{fig:pm1m2}
-    \end{subfigure}
-    \hfill
-    % Second subfigure
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/Marsatpm1m2.png}
-        \caption{$p(m_1,m_2)$ from Marsat~\textit{et al}.}
-        \label{fig:Marsatpm1m2}
-    \end{subfigure}    
-    \hfill    
-    \caption{PDF contour plot of $p(m_1,m_2)$ computed by GWFish in (a). In (b) the original PDF taken from Marsat~\textit{et al}~\cite{marsat2021exploring}. Also in (a), the shape of the PDF contour plot of Marsat~\textit{et al} is shown in red dots for direct comparison in the same plot with the one from GWFish.}
-    \label{fig:Marsatcomparison}
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/pm1m2_nospins_MarsatComparison.pdf}
+\caption{PDF contour plot of $p(m_1,m_2)$ computed by GWFish. The shape of the PDF contour plot of Marsat~\textit{et al} is shown in red dots for direct comparison with the one from GWFish.}
+\label{fig:Marsatcomparison}
 \end{figure}
 
 \begin{figure}[ht]
@@ -1067,104 +1045,12 @@ The first study carried out in this project was to constrain MBHB instrinsic par
     \hfill    
     \caption{PDF contour plots for the observation of an MBHB with detector-frame masses of $m_1=1.5\times10^{6}~\mathrm{M}_{\odot}$ and $m_2=0.5\times10^{6}~\mathrm{M}_{\odot}$ for comparison with Marsat~\textit{et al}~\cite{marsat2021exploring}.}
     \label{fig:PDFsMarsat}
-\end{figure}
+\end{figure} 
 
-The second study in this project involved conducting 40 simulated LISA observations of MBHBs to analyze the correlation between intrinsic parameters and the overall behavior of the PDFs across the parameter space.
-We specified a chirp mass $\mathcal{M}$ in the range between $3\times10^5~{\mathrm{M_{\odot}}}$ and $3.5\times10^{5}~{\mathrm{M_{\odot}}}$ and $q=\{0.25,0.50,0.75\}$. These values were chosen so that they cover the typical total mass values for MBHBs in the range of $10^{4}~{\mathrm{M_{\odot}}}$ to $10^{7}~{\mathrm{M_{\odot}}}$. The rest of the injected parameters, i.e, redshift $z$, luminosity distance $d_{L}$, inclination $\theta_{JN}$, right ascension $\alpha$, declination $\delta$ and polarisation angle are fixed to the predetermined GWFish values and are consistent with (reference). We used the waveform model \texttt{IMRPhenomXPHM} which includes higher harmonics and spin precession.
-Figures \ref{fig:PDFsq025}, \ref{fig:PDFsq050} and \ref{fig:PDFsq075} show PDFs contour plots for $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ for $q=0.25$, $0.50$, and  $0.75$ respectively of one of the set of observations. 
+We notice a difference in our result for $p(m_1,m_2)$ against the one obtained in Marsat~\textit{et al} in fig~\ref{fig:Marsatcomparison}. This is due to different prescriptions of the noise PSD for $S_{\mathrm{opt}}$ and $S_{\mathrm{pm}}$ in GWFish and Marsat~\textit{et al}. Improvements in this respect can be done by using updated data for these noise PSD curves in GWFish. On the other hand, the results for the PDFs, shown in fig.~\ref{fig:PDFsMarsat}, are consistent with what is expected from the correlations of the involved parameters: Component masses $(m_1,m_2)$ are negatively correlated where one parameter increases as the other decreases for a fixed measured $M_{\mathrm{total}}$. The PDF for $(\mathcal{M},q)$ shows positive correlation as expected. The positive correlation between $\mathcal{M}$ and $q$ is shown mathematically in Appendix B. The PDF for $(M_{\mathrm{total}},q)$ shows negative correlation. This is also expected for an MBHB with total mass $M_{\mathrm{total}}=\mathcal{O}(10^6)$: Since the merger happens in the region of the sensitivity curve where the slope is positive, an increasing perturbation in $M_{\mathrm{total}}$ shifts the signal to lower frequencies. In order to compensate this frequency decrease, the mass ratio $q$ must be decreased so that the higher harmonics associated with lower $q$s, or more unequal mass binaries, power back the signal to higher frequencies.
 
-The slopes of the contour plots of $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ of the 40 observations are shown in figures~\ref{fig:slopespm1m2}, \ref{fig:slopespMchirpq}, and \ref{fig:slopespMtotalq}. From the slopes plots, a scattered behavior for each of the PDFs for different values of $q$ can be noticed, i.e. the slopes across parameter space do not follow a clear and defined trend. One possible reason for this is that the Fisher matrices are not being computed correctly by GWFish. To explore this possibility, we tried other waveform models: \texttt{IMRPhenomPv2}, \texttt{IMRPhenomXAS}, \texttt{IMRPhenomD}, \texttt{IMRPhenomXP}. The test consisted in computing $\sigma^{2}_{m_1}$ and $\sigma^{2}_{m_2}$ directly from the inverse Fisher matrix of $(m_1,m_2)$ for different values of the derivative step size $\epsilon$. The results of these tests are shown in figures~\ref{fig:testXPHM},~\ref{fig:testD}, and~\ref{fig:testPv2}. We can see that \texttt{IMRPhenomXPHM} yields scattered results for $\sigma^{2}_{m_1}$ for different values of $\epsilon$, showing an unstable performance on the derivative computations. On the other hand, waveforms \texttt{IMRPhenomD} which does not include spin precession nor higher harmonics, and \texttt{IMRPhenomPv2}, which includes spin precession and no higher harmonics, were more stable in their computations with $\epsilon$ values from $~1\times10^{-8}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomD} and $~3\times10^{-6}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomPv2}. We chose to change waveform from \texttt{IMRPhenomXPHM} to \texttt{IMRPhenomPv2}. The outcome for the slopes plots for $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ with \texttt{IMRPhenomPv2} is shown in figures~\ref{fig:slopespm1m2Pv2},~\ref{fig:slopespMcqPv2}, and~\ref{fig:slopespMtotalqPv2}. 
-
-To simulate the capabilities of LISA to observe MBHBs, we used a more approximate parameter space to what LISA is expected to observe with $M_{\mathrm{total}}$ in the range from $1\times10^{5}$ to $5\times10^{6}$ \cite{mangiagli2020observing}(add more refs). PDF contour plots for these are shown in figures~\ref{fig:q025Pv2realmass},~\ref{fig:q050Pv2realmass}, and~\ref{fig:q075Pv2realmass} and the slopes plots in figures~\ref{fig:slopespm1m2Pv2realmass},~\ref{fig:slopespMcqPv2realmass}, and~\ref{fig:slopespMtotalqPv2realmass}.
-
-\begin{figure}[ht]
-    \centering
-    % First subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q025/pm1m2_0_m1_720700.0_m2_180200.0.pdf}
-        \caption{$p(m_1,m_2)$}
-        \label{fig:pm1m2q025}
-    \end{subfigure}
-    \hfill
-    % Second subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q025/pchirpMq_0_Mc_300033.85897310276_q_0.2500346884972943.pdf}
-        \caption{$p(\mathcal{M},q)$}
-        \label{fig:pMchirpqq025}
-    \end{subfigure}
-    % Third subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q025/ptotalMq_0.pdf}
-        \caption{$p(M_{\mathrm{total}},q)$}
-        \label{fig:pMtotalqq025}
-    \end{subfigure}
-    \hfill    
-    \caption{PDF contour plots for the observation of an MBHB with $m_1=7.21\times10^{5}~\mathrm{M}_{\odot}$, $m_2=1.80\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=9.00\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.25$.}
-    \label{fig:PDFsq025}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    % First subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q050/pm1m2_0.pdf}
-        \caption{$p(m_1,m_2)$}
-        \label{fig:pm1m2q050}
-    \end{subfigure}
-    \hfill
-    % Second subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q050/pchirpMq_0.pdf}
-        \caption{$p(\mathcal{M},q)$}
-        \label{fig:pMchirpqq050}
-    \end{subfigure}
-    % Third subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q050/ptotalMq_0.pdf}
-        \caption{$p(M_{\mathrm{total}},q)$}
-        \label{fig:pMtotalqq050}
-    \end{subfigure}
-    \hfill    
-    \caption{PDF contour plots for the observation of an MBHB with $m_1=4.93\times10^{5}~\mathrm{M}_{\odot}$, $m_2=2.46\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=7.39\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.50$.}
-    \label{fig:PDFsq050}
-\end{figure}
-
-\begin{figure}[ht]
-    \centering
-    % First subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q075/pm1m2_0.pdf}
-        \caption{$p(m_1,m_2)$}
-        \label{fig:pm1m2q075}
-    \end{subfigure}
-    \hfill
-    % Second subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q075/pchirpMq_0.pdf}
-        \caption{$p(\mathcal{M},q)$}
-        \label{fig:pMchirpqq075}
-    \end{subfigure}
-    % Third subfigure
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_q075/ptotalMq_0.pdf}
-        \caption{$p(M_{\mathrm{total}},q)$}
-        \label{fig:pMtotalqq075}
-    \end{subfigure}
-    \hfill    
-    \caption{PDF contour plots for the observation of an MBHB with $m_1=3.9\times10^{5}~\mathrm{M}_{\odot}$, $m_2=2.99\times10^{5}~\mathrm{M}_{\odot}$, $M_{\mathrm{total}}=6.97\times10^{5}~\mathrm{M}_{\odot}$, $\mathcal{M}=3.00\times10^{5}~\mathrm{M}_{\odot}$, and $q=0.75$.}
-    \label{fig:PDFsq075}
-\end{figure}
-\hfill \break
-\clearpage
+Once we have set up the simulation software, now we can perform a mock study which consists in studying the PDF contour plots $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ and their orientations for a set of 40 observations of MBHBs with LISA. 
+In this mock study we use an arbitrary parameter space in the range between $3\times10^5~{\mathrm{M_{\odot}}}$ and $3.5\times10^{5}~{\mathrm{M_{\odot}}}$ with $q=\{0.25,0.50,0.75\}$ so that they are within the typical $M$ values in the range of $10^{4}~{\mathrm{M_{\odot}}}$ to $10^{7}~{\mathrm{M_{\odot}}}$. The rest of the injected parameters, i.e, redshift $z$, luminosity distance $d_{L}$, inclination $\theta_{JN}$, right ascension $\alpha$, declination $\delta$ and polarisation angle are fixed to the predetermined GWFish values and are consistent with (reference). We used the waveform model \texttt{IMRPhenomXPHM} which includes higher harmonics and spin precession. The slopes of the contour plots of $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ of the 40 observations are shown in figures~\ref{fig:slopespm1m2}, \ref{fig:slopespMchirpq}, and \ref{fig:slopespMtotalq}. 
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes/chirpM_slope_m1m2_qs.pdf}
@@ -1183,6 +1069,8 @@ To simulate the capabilities of LISA to observe MBHBs, we used a more approximat
 \caption{Plot of slopes of $p(M_{\mathrm{total}},q)$ versus $\mathcal{M}$ for the set of 40 MBHB observations.}
 \label{fig:slopespMtotalq}
 \end{figure}
+
+From the slopes plots, a scattered behavior for each of the PDFs for different values of $q$ can be noticed, i.e. the slopes across parameter space do not follow a clear and defined trend. One possible reason for this is that the Fisher matrices are not being computed correctly by GWFish. To explore this possibility, we tried other waveform models: \texttt{IMRPhenomPv2}, \texttt{IMRPhenomXAS}, \texttt{IMRPhenomD}, \texttt{IMRPhenomXP}. The test consisted in computing $\sigma^{2}_{m_1}$ and $\sigma^{2}_{m_2}$ directly from the inverse Fisher matrix of $(m_1,m_2)$ for different values of the derivative step size $\epsilon$. The results of these tests are shown in figures~\ref{fig:testXPHM},~\ref{fig:testD}, and~\ref{fig:testPv2}. 
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/variancem1_PhenomXPHM_stepsize_spins.pdf}
@@ -1227,6 +1115,8 @@ To simulate the capabilities of LISA to observe MBHBs, we used a more approximat
     \caption{Plots to show the stability of the waveform derivatives with \texttt{IMRPhenomPv2} waveform.}
     \label{fig:testPv2}
 \end{figure}
+
+We can see that \texttt{IMRPhenomXPHM} yields scattered results for $\sigma^{2}_{m_1}$ for different values of $\epsilon$, showing an unstable performance on the derivative computations. On the other hand, waveforms \texttt{IMRPhenomD} which does not include spin precession nor higher harmonics, and \texttt{IMRPhenomPv2}, which includes spin precession and no higher harmonics, were more stable in their computations with $\epsilon$ values from $~1\times10^{-8}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomD} and $~3\times10^{-6}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomPv2}. We chose to change waveform from \texttt{IMRPhenomXPHM} to \texttt{IMRPhenomPv2}. The PDF contour plots for different $q$s using the \texttt{IMRPhenomPv2} waveform, are shown in figures~\ref{fig:q025Pv2},~\ref{fig:q050Pv2}, and~\ref{fig:q075Pv2} and the slopes plots for $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$ with \texttt{IMRPhenomPv2} is shown in figures~\ref{fig:slopespm1m2Pv2},~\ref{fig:slopespMcqPv2}, and~\ref{fig:slopespMtotalqPv2}. We increased the number of observations to 50 for this set of simulations. 
 
 \begin{figure}
     \centering
@@ -1320,6 +1210,15 @@ To simulate the capabilities of LISA to observe MBHBs, we used a more approximat
 \caption{Slopes of $p(M_{\mathrm{total}},q)$ versus $\mathcal{M}$ for different $q$ for a set of 50 observations with \texttt{IMRPhenomPv2}.}
 \label{fig:slopespMtotalqPv2}
 \end{figure}
+
+In the slopes plot of $p(m_1,m_2)$ we can see now clear trends in the slopes. The three cases of $q$ show negative slope, with $q=0.25$ showing steeper slopes in general and larger slope change across parameter space compared to $q=0.50$ and $0.75$. One general feature of this plot is that for $q=0.25$, the set of 50 observations shows less slope indicating less correlation. On the other hand, $q=0.75$ shows larger negative slopes, which translates to larger correlations. This contradicts the fact that the more equal the masses of the binary are, the less correlated $m_1$ and $m_2$ should be. The slopes plot of $p(\mathcal{M},q,)$ shows in general positive slopes as expected, with higher steeper slopes for $q=0.75$ and lower shallower slopes for $q=0.25$, which contradicts the fact that on more equal mass binaries, $M_{\mathrm{total}}$ dominates the inspiral and the correlation between $\mathcal{M}$ and $q$ is weak. It seems also that $q$ affects in different levels the correlations across parameter space. Slopes plots of $p(M_{\mathrm{total}},q)$ show negative slopes, i.e. negative correlations, which agrees with what should be expected from the same arguments as discussed before: The merger occurs in the positive slope part of the sensitivity curve so in order to compensate a $M_{\mathrm{total}}$ increment, $q$ needs to drop for the higher harmonics to power back the signal to match the sensitivity curve. Slopes for all $q$s have similar steepness evolution across parameter space, $q=0.75$ shows steepest slope and $q=0.25$ shows shallower slopes. Weaker correlations are found at $q=0.25$ and stronger correlations at $q=0.75$, an unexpected result.
+
+Now that we have the simulation software set up with a waveform, we can set a realistic parameter space which LISA is expected to observe with $M_{\mathrm{total}}$ in the range from $1\times10^{5}$ to $5\times10^{6}$ \cite{mangiagli2020observing}(add more refs). PDF contour plots for these are shown in figures~\ref{fig:q025Pv2realmass},~\ref{fig:q050Pv2realmass}, and~\ref{fig:q075Pv2realmass} and the slopes plots in figures~\ref{fig:slopespm1m2Pv2realmass},~\ref{fig:slopespMcqPv2realmass}, and~\ref{fig:slopespMtotalqPv2realmass}.
+
+\section{Results}
+\label{sec:results}
+
+Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$ range between $1\times10^5~\mathrm{M}_{\odot}$ and $5\times10^6~\mathrm{M}_{\odot}$, for $p(m_1,m_2)$ in figure~\ref{fig:slopespm1m2Pv2realmass} we can notice a varying trend in the slopes for all $q$s: A peak at lower $\mathcal{M}$ followed by a steep drop, and then a smooth transition to even more negative slopes. We can still see some scattering at higher $\mathcal{M}$ for $q=0.25$. Some general features of this plot is that lower values of $\mathcal{M}$ show slope values closer to zero compared to higher values of $\mathcal{M}$, and that lower $q$s show slopes values closer to zero than high $q$s in this low $\mathcal{M}$ region. If these slopes close to zero indicate weak correlation, then, this plot is in disagreement with the fact that component masses are weakly correlated in more equal mass binaries. At intermediate values of $\mathcal{M}$, on the other hand, $q=0.25$ shows more negative values of slope than $q=0.50$ and $0.75$, indicating weaker correlation of $m_1$ and $m_2$ for more equal masses as expected. At higher values of $\mathcal{M}$, $q=0.25$ shows weak correlation, and the slightly stronger correlation can be seen for $q=0.50$ compared to $q=0.75$. Regarding the slopes for $p(\mathcal{M},q)$, all $q$s show positive slope as expected. For $q=0.75$, the slope is relatively high in general which is not the expected. It has a peak a low $\mathcal{M}$ and drops gradually, indicating less correlation at higher $\mathcal{M}$. For $q=0.25$, the slope stays almost the same across parameter space closer to zero, indicating weak correlation, which is not the expected. The slopes plot of $p(M_{\mathrm{total}},q)$ shows a shift in slopes from positive to negative across parameter space. This has to do with the region on the sensitivity curve where the merger happens. Apparently, the shift from negative to positive slopes for all $q$s happens close to $7.5\times10^5~\mathrm{M}_{\odot}$. Binaries with $q=0.25$ seem closer to zero value slope and for $q=0.75$ with more positive and negative slopes.
 
 \begin{figure}
     \centering
@@ -1415,18 +1314,6 @@ To simulate the capabilities of LISA to observe MBHBs, we used a more approximat
 \end{figure}
 
 \section{Discussion}
-
-We notice a difference in our result for $p(m_1,m_2)$ against the one obtained in Marsat~\textit{et al} in fig~\ref{fig:Marsatcomparison}. This is probably due to different prescriptions of the noise PSD for $S_{\mathrm{opt}}$ and $S_{\mathrm{pm}}$ in GWFish and Marsat~\textit{et al}. Improvements in this respect can be done by using updated data for these noise PSD curves in GWFish. On the other hand, the results for the PDFs, shown in fig.~\ref{fig:PDFsMarsat}, are consistent with what is expected from the correlations of the involved parameters: Component masses $(m_1,m_2)$ are negatively correlated where one parameter increases as the other decreases for a fixed measured $M_{\mathrm{total}}$. The PDF for $(\mathcal{M},q)$ shows positive correlation as expected. The positive correlation between $\mathcal{M}$ and $q$ is shown mathematically in Appendix B. The PDF for $(M_{\mathrm{total}},q)$ shows negative correlation. This is also expected for an MBHB with total mass $M_{\mathrm{total}}=\mathcal{O}(10^6)$: Since the merger happens in the region of the sensitivity curve where the slope is positive, an increasing perturbation in $M_{\mathrm{total}}$ shifts the signal to lower frequencies. In order to compensate this frequency decrease, the mass ratio $q$ must be decreased so that the higher harmonics associated with lower $q$s, or more unequal mass binaries, power back the signal to higher frequencies.
-
-Regarding the set of 40 observations, for one observation of the set, the contour plots of $p(m_1,m_2)$ and $p(\mathcal{M},q)$, shown in figures~\ref{fig:PDFsq025},~\ref{fig:PDFsq050},~\ref{fig:PDFsq075} for different values of $q$, follow negative and positive correlations respectively, which agrees with our expectations. We notice less correlation in $p(m_1,m_2)$ for more unequal masses and more correlation for more equal mass binaries. This is unexpected; the more equal the masses of the binary are, the less correlated $m_1$ and $m_2$ should be. This can be seen when $q$ tends to 1. In this case, $m_1$ and $m_2$ approximate each other, making them easier to determine from $\mathcal{M}$ and $M_{\mathrm{total}}$. In the case of $p(\mathcal{M},q,)$ we can see a positive correlation with less correlation on more equal mass binaries as the total mass $M_{\mathrm{total}}$ dominates the inspiral in this configuration. This is further explained in Appendix B. The contour plot for $p(M_{\mathrm{total}},q)$ shows a positive correlation with less correlation at lower $q$s. We expect this correlation to be negative based on the same arguments presented in the first part of this section. 
-
-The slope plots of $p(m_1,m_2)$ $p(\mathcal{M},q,)$ and $p(M_{\mathrm{total}},q)$ are shown in figures~\ref{fig:slopespm1m2},~\ref{fig:slopespMchirpq}, and~\ref{fig:slopespMtotalq} respectively. On the slope of $p(m_1,m_2)$ plot we can notice a clear trend for $q=0.50$ and $0.75$, consistent with a negative slope, which indicates negative correlation. We notice some scattering for $q=0.25$. The slope of $p(\mathcal{M},q,)$ plot shows uniform positive slope on the PDF contour plots across parameter space for $q=0.25$. We can see a bit more scatter but still a clear trend for $q=0.50$. There is a lot of scatter for $q=0.75$. For the $p(M_{\mathrm{total}},q)$ slopes a lot more of scatter on the three cases for $q$, but still on the positive slope (correlation) side in general.
-
-The scattering seen in the slopes plots tells us that the PDF computations are not converging. As explained in section~\ref{subsec:results}, this might be due to flaws in the Fisher matrix computations. We tried different waveforms to see if this could be fixed. We found that \texttt{IMRPhenomPv2} performed the best among the set of waveforms tested. The PDF contour plots for different $q$s using the \texttt{IMRPhenomPv2} waveform, are shown in figures~\ref{fig:q025Pv2},~\ref{fig:q050Pv2}, and~\ref{fig:q075Pv2} and the slopes plots in figures~\ref{fig:slopespm1m2Pv2},~\ref{fig:slopespMcqPv2}, and~\ref{fig:slopespMtotalqPv2}. We increased the number of observations to 50 for this set of simulations. In the slopes plot of $p(m_1,m_2)$ we can see now clear trends in the slopes. The three cases of $q$ show negative slope, with $q=0.25$ showing steeper slopes in general and larger slope change across parameter space compared to $q=0.50$ and $0.75$. One general feature of this plot is that for $q=0.25$, the set of 50 observations shows less slope indicating less correlation. On the other hand, $q=0.75$ shows larger negative slopes, which translates to larger correlations. This contradicts the fact that the more equal the masses of the binary are, the less correlated $m_1$ and $m_2$ should be. The slopes plot of $p(\mathcal{M},q,)$ shows in general positive slopes as expected, with higher steeper slopes for $q=0.75$ and lower shallower slopes for $q=0.25$, which contradicts the fact that on more equal mass binaries, $M_{\mathrm{total}}$ dominates the inspiral and the correlation between $\mathcal{M}$ and $q$ is weak. It seems also that $q$ affects in different levels the correlations across parameter space. Slopes plots of $p(M_{\mathrm{total}},q)$ show negative slopes, i.e. negative correlations, which agrees with what should be expected from the same arguments as discussed before: The merger occurs in the positive slope part of the sensitivity curve so in order to compensate a $M_{\mathrm{total}}$ increment, $q$ needs to drop for the higher harmonics to power back the signal to match the sensitivity curve. Slopes for all $q$s have similar steepness evolution across parameter space, $q=0.75$ shows steepest slope and $q=0.25$ shows shallower slopes. Weaker correlations are found at $q=0.25$ and stronger correlations at $q=0.75$, an unexpected result.
-
-Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$ range between $1\times10^5~\mathrm{M}_{\odot}$ and $5\times10^6~\mathrm{M}_{\odot}$, for $p(m_1,m_2)$ in figure~\ref{fig:slopespm1m2Pv2realmass} we can notice a varying trend in the slopes for all $q$s: A peak at lower $\mathcal{M}$ followed by a steep drop, and then a smooth transition to even more negative slopes. We can still see some scattering at higher $\mathcal{M}$ for $q=0.25$. Some general features of this plot is that lower values of $\mathcal{M}$ show slope values closer to zero compared to higher values of $\mathcal{M}$, and that lower $q$s show slopes values closer to zero than high $q$s in this low $\mathcal{M}$ region. If these slopes close to zero indicate weak correlation, then, this plot is in disagreement with the fact that component masses are weakly correlated in more equal mass binaries. At intermediate values of $\mathcal{M}$, on the other hand, $q=0.25$ shows more negative values of slope than $q=0.50$ and $0.75$, indicating weaker correlation of $m_1$ and $m_2$ for more equal masses as expected. At higher values of $\mathcal{M}$, $q=0.25$ shows weak correlation, and the slightly stronger correlation can be seen for $q=0.50$ compared to $q=0.75$. Regarding the slopes for $p(\mathcal{M},q)$, all $q$s show positive slope as expected. For $q=0.75$, the slope is relatively high in general which is not the expected. It has a peak a low $\mathcal{M}$ and drops gradually, indicating less correlation at higher $\mathcal{M}$. For $q=0.25$, the slope stays almost the same across parameter space closer to zero, indicating weak correlation, which is not the expected. The slopes plot of $p(M_{\mathrm{total}},q)$ shows a shift in slopes from positive to negative across parameter space. This has to do with the region on the sensitivity curve where the merger happens. Apparently, the shift from negative to positive slopes for all $q$s happens close to $7.5\times10^5~\mathrm{M}_{\odot}$. Binaries with $q=0.25$ seem closer to zero value slope and for $q=0.75$ with more positive and negative slopes.
-
-
 
 \section{Conclusions}
 
