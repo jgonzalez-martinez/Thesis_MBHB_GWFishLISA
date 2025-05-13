@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{subcaption}
 \usepackage{amsmath}
@@ -17,7 +17,7 @@
   {} % No additional formatting for the title
 
 \author{José Carlos González Martínez}
-\date{May 2024}
+\date{May 2025}
 
 \begin{document}
 
@@ -25,68 +25,54 @@
 \clearpage
 
 \section{Introduction}
-Astrophysical systems that involve accelerated masses produce tiny fluctuations in the spacetime fabric that propagate in the form of radiation or waves, giving the appropriate name of gravitational waves (GWs). The universe is full of sources of gravitational waves in the form of compact binaries like binary neutron stars (BNSs), binary black holes (BBHs), and dwarf star binaries. GW studies allow us to know the evolution of compact binaries from the time they form a binary where they start the so-called inspiral phase, as far to the coalescence, which is the merger phase, followed by the ringdown phase where the remnant of the binary stabilizes and the production of gravitational waves ceases. Moreover, GW observations combined with traditional electromagnetic (EM) observations, allow us to know about the environments where the formation and evolution of the sources occur. The first observation of a stellar-mass BBH by LIGO and Virgo \cite{abbott2016observing} represented an important advancement in the astrophysics of BHs because it directly confirmed the existence of gravitational waves and the existence of black holes in binaries, starting an era for many discoveries in astrophysics. For instance, the observations of stellar-mass BBHs in the range of 6-95 $\text{M}_{\odot}$ extended the mass range predicted by models of stellar-mass BBHs formation \cite{abbott2021gwtc}. The observation of a 142 M$_{\odot}$ BBH was the first observed in the intermediate mass range \cite{abbott2020gw190521}. The observation of a BNS with GWs and EM facilities represented the beginning of multimessenger astronomy with GWs. These discoveries have helped to confirm already established theories about the astrophysics of BHs and also represent the huge potential of GW astronomy to continue shaping our understanding these mysterious objects and beyond.
+\label{sec:intro}
 
-When studying them, the GW community refers to BHBs according to their mass in three ranges: 1) stellar-mass BHBs (SBHBs) in the range $1 - ~10^{2} 
-\text{M}_{\odot}$, 2) intermediate-mass BHBs (IBHBs) with range $~10^{2}-10^{3} \text{M}_{\odot}$, and 3) massive BBHs (MBHBs) with masses $>~10^{4} \text{M}_{\odot}$. In this project we are more interested in MBHBs. MBHBs are interesting because they, alongside with massive BHs (MBHs), are believed to be at the centers of galaxies, sometimes as active galactic nuclei (AGNs) and quasars, and to be the progenitors of most of the galaxies we see today \cite{mortlock2011luminous,banados2016pan}. Indeed, the evolution of MBHs are closely related to the evolution of their host galaxies, and they entail one of the open fundamental questions in modern astrophysics. But not only we might be able to confirm the existence of MBHBs at the centers of galaxies. By studying MBHBs at different redshifts we will get to know their populations and demographics, therefore having a full picture of the different stages of the coalescing process of their host galaxies themselves. These processes have further impact on the formation and evolution of large scale structure and cosmology.
+Astrophysical systems that involve accelerated masses produce tiny fluctuations in the spacetime fabric that propagate in the form of radiation or waves, giving the appropriate name of gravitational waves (GWs). The Universe is full of sources of gravitational waves in the form of compact binaries like binary neutron stars (BNSs), binary black holes (BBHs), and dwarf star binaries. GW studies allow us to understand the evolution of compact binaries from the time they form a binary, where they start the inspiral phase, up to the coalescence, which is the merger phase, followed by the ringdown phase where the remnant of the binary stabilizes and the production of gravitational waves ceases. Moreover, GW observations combined with traditional electromagnetic (EM) observations, allow us to know about the environments where the formation and evolution of the sources occur. 
 
-Because MBHBs produce low-frequency GWs in the millihertz regime, ground-based GW detectors such as LIGO and Virgo are unable to observe them. The European Space Agency (ESA), and NASA \footnote{with reduced involvement at the time of writing, 2025} proposed the LISA mission \cite{amaro2017laser} to address this endeavour, among others. LISA is a space-based GW observatory still in development \footnote{by the time of writing, 2025} and will be based on laser interferometry and will comprise three spacecrafts that form a triangular constellation in a heliocentric orbit, trailing the Earth by about $20^{\circ}$ with $10^{6}$ km-scale arms with six active laser links. With these features, LISA will be able to observe GWs produced by MBHBs which lie within the LISA frequency spectrum from a few $10^{-5}$~Hz to $10^{-1}$ Hz.
+The first observation of a stellar-mass BBH by LIGO and Virgo \cite{abbott2016observing} represented an important advancement in the astrophysics of BHs because it directly confirmed the existence of gravitational waves and the existence of black holes in binaries, starting an era for many discoveries in astrophysics. For instance, the observations of stellar-mass BBHs in the range of $6-95~\mathrm{M}_{\odot}$ extended the mass range predicted by models of stellar-mass BBHs formation \cite{abbott2021gwtc}. The observation of a $142~\mathrm{M}_{\odot}$ BBH was the first observed in the intermediate mass range \cite{abbott2020gw190521}. The observation of a BNS with GWs and EM facilities represented the beginning of multimessenger astronomy with GWs. These discoveries have helped to confirm already established theories about the astrophysics of BHs and also represent the huge potential of GW astronomy to continue shaping our understanding these mysterious objects and beyond.
+
+When studying them, the GW community refers to BBHs according to their mass in three ranges: 1) stellar-mass BBHs (SBBHs) in the range $1 - ~10^{2} 
+\text{M}_{\odot}$, 2) intermediate-mass BBHs (IBBHs) with range $~10^{2}-10^{3} \text{M}_{\odot}$, and 3) massive BBHs (MBHBs) with masses $>~10^{4} \text{M}_{\odot}$. MBHBs are of interest to us because they, alongside with massive BHs (MBHs), are believed to be at the centers of galaxies, sometimes as active galactic nuclei (AGNs) and quasars, and to be the progenitors of most of the galaxies we see today \cite{mortlock2011luminous,banados2016pan}. Indeed, the evolution of MBHs are closely related to the evolution of their host galaxies, and they entail one of the open fundamental questions in modern astrophysics. But not only we might be able to confirm the existence of MBHBs at the centers of galaxies. By studying MBHBs at different redshifts we will get to know their populations and demographics, therefore having a full picture of the different stages of the coalescing process of their host galaxies themselves. These processes have further impact on the formation and evolution of large scale structure and cosmology.
+
+Because MBHBs produce low-frequency GWs in the millihertz regime, ground-based GW detectors such as LIGO and Virgo are unable to observe them. The European Space Agency (ESA), and NASA\footnote{with reduced involvement at the time of writing, 2025} proposed the Laser Interferometer Space Antenna (LISA) mission \cite{amaro2017laser} to address this endeavour, among others. LISA is a space-based GW observatory, still in development, based on laser interferometry. It will comprise three spacecrafts that form a triangular constellation in a heliocentric orbit, trailing the Earth by about $20^{\circ}$ with $10^{6}$ km-scale arms with six active laser links. With these features, LISA will be able to observe GWs produced by MBHBs which lie within the LISA frequency spectrum from a few $10^{-5}$~Hz to $10^{-1}$ Hz.
 
 One of the open questions in modern astrophysics is the formation, evolution and assembly of MBHs \cite{amaro2023astrophysics}. This is tied to the formation of their host galaxies and the galaxy mergers. With LISA we will be able to unveil some of these mysteries. However, to tackle this problem, we need to have a robust knowledge about the processes preceding the inspiral and merging of the MBHs. This includes their environments within their host galaxies and the galactic nuclei, the stellar dynamical processes and the interstellar medium around the galactic nuclei. Also, the understanding of the physics of accretion and feedback processes after the galaxy merger is crucial to understand the growth of the MBHs. These aspects reflect the multidisciplinary nature of MBH studies, encompassing galactic and extragalactic astrophysics.
 
-In the present work we study the capabilities of LISA of observing MBHBs in the range $10^{5}-10^{7}$ at high redshifts. In order to delve into this, we will introduce the reader to the theory of massive black holes, their properties, and the astrophysics involved in their formation and evolution in chapter 2. In chapter 3 we will describe the LISA detector; the configuration of the detector, the physical principles and the techniques used to detect GWs. In chapter 4 we delve into the elements that are involved in observations and analysis of MBHBs with LISA; the noise properties of the detector, the waveform models used in data analysis and the data analysis techniques. Chapter 5 we introduce the GWFish code which is used to carry out the simulations of the LISA observations we analyze. We describe the physical systems under study, and present our results and conclusions at the end of chapter 5. 
+In the present work we study the capabilities of LISA of observing MBHBs in the range $10^{5}-10^{7}~\mathrm{M}_{\odot}$. We do this by analysing the uncertainties of parameters such as the component masses $m_1$ and $m_2$, chirp mass $\mathcal{M}$, total mass $M$, and mass ratio $q$ as well as their correlations. Our analyses rely on the computation of the Fisher matrices from which the uncertainties are extracted. In this process, we use the Gaussian approximation which allows us to assume the likelihoods, so as the posteriors, to have Gaussian behaviour, which makes the computations less expensive than full Bayesian parameter estimation, which is the most widely used parameter estimation method in GW data analysis. We use the software GWFish to compute the Fisher matrices.
 
-\textbf{Incorporate this block}
-The present work consists in analysing the uncertainties associated to the observations of MBHBs with space-based observatory LISA. The parameters that we are going to study are the component masses $m_1$ and $m_2$, chirp mass $\mathcal{M}$, and mass ratio $q$. Our analyses rely on the computation of the Fisher matrices for a rapid statistical inference, rather than a full Bayesian parameter estimation, which is computational more expensive. In this process, we use the Gaussian approximation which allows us to assume the likelihoods, so as the posteriors, to have Gaussian behaviour
-
-\textbf{Incorporate this:}
-
-There exist a whole network of GW ground-based observatories: LIGO, LIGO India, Virgo and KAGRA, which cover about the same range of GW sources, but also with capabilities of observing different frequency bands by combining observations of the same GW sources. Next generation ground-based detectors like Einstein Telescope and Cosmic Explorer will extend the observational capabilities of this ground-based network. Proposed space-based observatory LISA on the other hand will cover a brand new territory in the GW spectrum in the milihertz regime, from $10^{-5}~\mathrm{Hz}$ to $10^{-1}~\mathrm{Hz}$). 
-
-In addition to developing detection infrastructure, the GW community has put effort into developing computational tools to explore the capabilities of current and future detectors. One of these tools consist in building software capable of simulate GW observations, however, there are challenges when tackling this problem. 
-
-Questions to address in the introduction:
-\begin{enumerate}
-    \item Why do we want to study GWs? (already written)
-    \item Why do we want to study MBHs/MBHBs? (written)
-    \item Why with LISA? (written)
-    \item Implications for Astrophysics? (written)
-    \item This project and outline
-\end{enumerate} (written)
+The content of the present work is as follows. We will introduce the reader to the theory of massive black holes, their properties, and the astrophysics involved in their formation and evolution in chapter 2. In chapter 3 we will describe the LISA detector; the configuration of the detector, the physical principles and the techniques used to detect GWs. In chapter 4 we delve into the elements that are involved in observations and analysis of MBHBs with LISA; the noise properties of the detector, the waveform models used in data analysis and the data analysis techniques. Chapter 5 we introduce the GWFish code which is used to carry out the simulations of the LISA observations we analyze and describe the physical systems under study. Chapter 6 we present our results, the discussion of our results in Chapter 7, conclusions in Chapter 8, and future work in Chapter 9. 
 
 \section{Massive Black Hole Binaries. Theory and Observations}
+\label{sec:MBHBTheoObs}
 
-\textbf{This block to be improved}
+The GW community distinguishes black holes basically in three categories: Stellar black holes, with masses of 6 to 80$~\mathrm{M}_{\odot}$ \cite{amaro2023astrophysics}, which form from the collapse of stars that undergo supernovae explosion. These can be detected through their X-ray, infrared and optical emissions, and certainly by their GW emission when they come in binaries. On the other hand, there exist massive black holes with masses in the range of $\num{e5}$ to $\num{e9}~\mathrm{M}_{\odot}$ which power quasars and active galactic nuclei (AGN), and have been observed in nearby galaxy spheroids and certainly, our Milky Way galaxy host an almost inactive massive black hole. There is a gap between these two categories, called intermediate mass black holes which has not been accurately constrained due to the lack of observations. Stellar black holes, on the other hand, can have masses as large as $\num{e2}$ M$_{\odot}$ depending on the metallicity of the progenitor stars, and on radiation feedback. Through X-Ray observations, there is evidence that massive black holes have grown in mass through episodes of mergers and coalescences driven by galaxy mergers. This has led to the concept of black hole seeds, which masses are theoretically weakly constrained to this day. 
 
-Black holes exist in two categories: Stellar black holes, with masses of 6 to 80 (LISA astrophysics, add more references) Msun, which form from the collapse of stars that undergo supernovae explosion. These can be detected through their X-ray, infrared and optical emissions (references),and certainly by their GW emission when they come in binaries. On the other hand, there exist massive black holes with masses in the range of $\num{e5}$ to $\num{e9}$ which power QSOs and active galactic nuclei (AGN), and have been observed in nearby galaxy spheroids and certainly, our Milky Way galaxy host an almost inactive massive black hole. There is a gap between these two categories, called intermediate mass or middleweight black holes which has not been accurately constrained due to the lack of observations. Stellar black holes, on the other hand, can have masses as large as $\num{e2}$ M$_{\odot}$ depending on the metallicity of the progenitor stars, and on radiation feedback.
-Through X-Ray observations, there is evidence that massive black holes have grown in mass through episodes of mergers and coalescences driven by galaxy mergers. This has led to the concept of black hole seeds, which masses are theoretically weakly constrained to this day.
-The discovery of the correlations between the black hole mass and the stellar velocity dispersion, and the black hole mass and the stellar mass of the spheroid, indicate a coupled evolution between the massive black hole and its host galaxy.
+In this chapter we will delve into the formation of massive black hole from seeds, their growth and the influence they have in their host galaxies. We then introduce massive black holes in binaries, their formation after a galaxy merger, evolution and their detectability through the emission of GWs by LISA.
 
-At present, there is a debate in which this interpretation holds true to bulge-less disc galaxies, or if it holds in general to lower-mass galaxies (reference). If the latter case is true, intermediate mass black holes are could be hosted in low-mass galaxies (reference). In 75$\%$ of the observed galaxies, there is a Nuclear Star Cluster inhabiting their center. It has been observed that intermediate mass black holes inhabit there nuclear star clusters. As another mean to explore this possibility, space-based gravitational wave observatory LISA is expected to search and detect low frequency gravitational waves from binary black holes from merging galaxies, thus exploring the coevolution of massive black holes and its host galaxy. 
-
-According to the $\Lambda$CDM paradigm, galaxies form after the infall of baryonic matter into dark matter halos, leading to the formation of black hole seeds, which grow as a consequence of multiple mergers and coalescences. As part of the goal mission, LISA will be able to explore the formation and evolution of these black hole seed and by constraining the masses as early as $z=10$ (reference). The study of the formation and evolution of binary black holes inside galactic halos as the largest cosmic structures evolve crosses boundaries between astrophysics and cosmology.
 
 \subsection{Massive Black Hole Formation and Evolution}
+\label{sec:MBHFormEv}
 
-\subsubsection{Massive black hole seeds}\\
+\subsubsection{Massive black hole seeds}
+\label{subsec:MBHseeds}
 
-One of the scenarios for MBH seeds origins is when they form from Population III (PopIII) stars. PopIII stars formed from dark matter minihalos of masses $~10^5-10^6 M_{\odot}$ which cooled down through $\text{H}_{2}$ \cite{abel2002formation}. In this scenario, light MBH seeds with masses of $10-10^3 M_{\odot}$ were formed \cite{hirano2014one} PopIII stars with mass $<260 M_{\odot}$ when collapse into a BH, they retained most of their mass due to the weak stellar wind associated to free-metal stars. Less massive PopIII stars collapsed and exploded as SNae, metal-enriching the surroundings, leading the way to Population II star formation in the later universe \cite{o2015probing}, \cite{xu2016late}. Nonetheless, the first generation on BHs from PopIII stars might be the precursors for seeds of later MBHs \cite{madau2001massive}, \cite{hirano2014one}. This leads to the question, relevant for investigations with LISA, is whether these light seeds from Pop III stars can grow up to be the MBHs observed today at high redshifts, and the merger predictions that LISA is expected to observe.
+One of the scenarios for MBH seeds origins is when they form from Population III (PopIII) stars. PopIII stars formed from dark matter minihalos of masses $~10^5-10^6~\mathrm{M}_{\odot}$ which cooled down through $\text{H}_{2}$ \cite{abel2002formation}. In this scenario, light MBH seeds with masses of $10-10^3~\mathrm{M}_{\odot}$ were formed \cite{hirano2014one} PopIII stars with mass $<260~\mathrm{M}_{\odot}$ when collapse into a BH, they retained most of their mass due to the weak stellar wind associated to free-metal stars. Less massive PopIII stars collapsed and exploded as SNe, metal-enriching the surroundings, leading the way to Population II star formation in the later universe \cite{o2015probing,xu2016late}. Nonetheless, the first generation on BHs from PopIII stars might be the precursors for seeds of later MBHs \cite{madau2001massive,hirano2014one}. This leads to the question, relevant for investigations with LISA, is whether these light seeds from Pop III stars can grow up to be the MBHs observed today at high redshifts, and the merger predictions that LISA is expected to observe.
 
-Another scenario of MBH seed formation involves super massive stars (SMS). These were invoked originally to explain the observed quasars as formed from accretion of material onto MBHs. SMSs are being "reinvoked" to account for the seeds of MBHs \cite{amaro2023astrophysics}. SMSs are thought to form from rapid accumulation of gas during the early stages of stellar evolution \cite{amaro2023astrophysics} with accretion rates of $10^{-3} \text{M}_{\odot}~\text{yr}^{-1}$ (reference). When this accretion rate is maintained, temperatures of $T_{\mathrm{eff}} \sim 5000~\mathrm{K}$ can be achieved providing the ideal conditions for SMS formation \cite{amaro2023astrophysics}. One scenario for achieving this is in atomic cooling halos \cite{tanaka2009assembly} where atomic hydrogen cools the environment to $T_{\mathrm{vir}} \sim 8000~\mathrm{K}$ so that gas condenses to form SMS stars \cite{amaro2023astrophysics}. One requirement for this scenario is to have a high steady inflow of gas into the stellar surface. Fragmentation needs to be avoided so the environment needs to be sufficiently metal-poor, not exceeding $Z \approx 10^{-3} ~\mathrm{Z}_{\odot}$ \cite{regan2020massive}, \cite{chon2020supermassive}, \cite{tagawa2020making}, and not tidally disrupted \cite{chon2018radiation}. Another scenario for SMS formation might be through dynamically heating the gas through galaxy collisions and minor and major mergers. This scenario comes naturally from dark matter structure formation and the number density of MBH seed formation looks promising \cite{regan2020emergence}. Finally, the direct collapse of billions of solar masses of gas can form MBH seeds from the collisions of massive galaxies at high redshifts $(z \sim 8-10)$ with exceeding $1000 ~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{mayer2010direct, mayer2015direct}. Models of direct collapse show that this mechanism can yield more massive MBHs $(>10^7 ~\mathrm{M}_{\odot})$ than in the case of atomic cooling halos \cite{haemmerle2021maximum}. 
+Another scenario of MBH seed formation involves super massive stars (SMS). These were invoked originally to explain the observed quasars as formed from accretion of material onto MBHs. SMSs are being reinvoked to account for the seeds of MBHs \cite{amaro2023astrophysics}. SMSs are thought to form from rapid accumulation of gas during the early stages of stellar evolution \cite{amaro2023astrophysics} with accretion rates of $10^{-3} \text{M}_{\odot}~\text{yr}^{-1}$ (reference). When this accretion rate is maintained, temperatures of $T_{\mathrm{eff}} \sim 5000~\mathrm{K}$ can be achieved providing the ideal conditions for SMS formation \cite{amaro2023astrophysics}. One scenario for achieving this is in atomic cooling halos \cite{tanaka2009assembly} where atomic hydrogen cools the environment to $T_{\mathrm{vir}} \sim 8000~\mathrm{K}$ so that gas condenses to form SMS stars \cite{amaro2023astrophysics}. One requirement for this scenario is to have a high steady inflow of gas into the stellar surface. Fragmentation needs to be avoided so the environment needs to be sufficiently metal-poor, not exceeding $Z \approx 10^{-3} ~\mathrm{Z}_{\odot}$ \cite{regan2020massive,chon2020supermassive,tagawa2020making}, and not tidally disrupted \cite{chon2018radiation}. Another scenario for SMS formation might be through dynamically heating the gas through galaxy collisions and minor and major mergers. This scenario comes naturally from dark matter structure formation and the number density of MBH seed formation looks promising \cite{regan2020emergence}. Finally, the direct collapse of billions of solar masses of gas can form MBH seeds from the collisions of massive galaxies at high redshifts $(z \sim 8-10)$ with exceeding $1000 ~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{mayer2010direct, mayer2015direct}. Models of direct collapse show that this mechanism can yield more massive MBHs $(>10^7 ~\mathrm{M}_{\odot})$ than in the case of atomic cooling halos \cite{haemmerle2021maximum}. 
 
-Another scenario for MBH seed formation is inside stellar clusters. MBH seed of $10^{2}-10^{4}~\mathrm{M}_{\odot}$ can form in stellar clusters of $>10^{5} \text{M}_{\odot}$ through dynamical interactions \cite{omukai2008can, devecchi2009formation, reinoso2018collisions}. In these environments, massive stars can segregate to the cluster center via dynamical friction, resulting in very massive stars with masses $10^{2}-10^{3}~\mathrm{M}_{\odot}$ \cite{zwart2002runaway,portegies2004formation, gurkan2004formation,freitag2006runaway}. Another possibility is that, within dense star clusters, stellar mass BHs experiment runaway mergers, provided their natal velocity kicks are low or are embedded in a dense gaseous halo \cite{belczynski2002comprehensive} to keep the stellar mass BH within the cluster. Another requirement for this scenario is that the velocity of the BH remnant due to the GW recoil is lower than the escape velocity of the system so that it is not ejected from the cluster \cite{holley2008gravitational, davies2011supermassive, miller2012upper, sesana2014linking}. The scenario involving accretion of gas inside the stellar cluster might be another possibility for MBH seed formation \cite{leigh2013gas, natarajan2021new}. In this scenario BHs of $10^{2}-10^{3} \mathrm{M}_{\odot}$ can growth as massive as $10^{5} \mathrm{M}_{\odot}$ \cite{rosswog2009tidal, macleod2016optical, sakurai2019growth}.
+Another scenario for MBH seed formation is inside stellar clusters. MBH seed of $10^{2}-10^{4}~\mathrm{M}_{\odot}$ can form in stellar clusters of $>10^{5} \text{M}_{\odot}$ through dynamical interactions \cite{omukai2008can, devecchi2009formation, reinoso2018collisions}. In these environments, massive stars can segregate to the cluster center via dynamical friction, resulting in very massive stars with masses $10^{2}-10^{3}~\mathrm{M}_{\odot}$ \cite{zwart2002runaway,portegies2004formation, gurkan2004formation,freitag2006runaway}. Another possibility is that, within dense star clusters, stellar mass BHs experiment runaway mergers, provided their natal velocity kicks are low or are embedded in a dense gaseous halo \cite{belczynski2002comprehensive} to keep the stellar mass BH within the cluster. Another requirement for this scenario is that the velocity of the BH remnant due to the GW recoil is lower than the escape velocity of the system so that it is not ejected from the cluster \cite{holley2008gravitational, davies2011supermassive, miller2012upper, sesana2014linking}. The scenario involving accretion of gas inside the stellar cluster might be another possibility for MBH seed formation \cite{leigh2013gas, natarajan2021new}. In this scenario BHs of $10^{2}-10^{3} ~\mathrm{M}_{\odot}$ can growth as massive as $10^{5}~\mathrm{M}_{\odot}$ \cite{rosswog2009tidal, macleod2016optical, sakurai2019growth}.
 
-Primordial BHs (PBHs) is another MBH seed model candidate. These are hypothesized to form from dark matter halos at various mass scales \cite{carr2021constraints} ranging from $1-10^{2} \mathrm{M}_{\odot}$ \cite{bird2016did, sasaki2016primordial}  to $10^{-13}-10^{-11} \mathrm{M}_{\odot}$ \cite{saito2009gravitational, garcia2017gravitational} and form PBHs in the early universe (before recombination) with masses in the range $10 - 10^{5} \mathrm{M}_{\odot}$ \cite{duechting2004supermassive, belotsky2014signatures, clesse2015massive, garcia2016gravitational}. At the tail of the mass function, PBHs can range from hundreds or thousands solar masses to grow up to $10^{5} \mathrm{M}_{\odot}$ via mergers and accretion \cite{mack2007growth,ali2017merger,serpico2020cosmic}.	
+Primordial BHs (PBHs) is another MBH seed model candidate. These are hypothesized to form from dark matter halos at various mass scales \cite{carr2021constraints} ranging from $1-10^{2}~\mathrm{M}_{\odot}$ \cite{bird2016did, sasaki2016primordial}  to $10^{-13}-10^{-11}~\mathrm{M}_{\odot}$ \cite{saito2009gravitational, garcia2017gravitational} and form PBHs in the early universe (before recombination) with masses in the range $10 - 10^{5}~\mathrm{M}_{\odot}$ \cite{duechting2004supermassive, belotsky2014signatures, clesse2015massive, garcia2016gravitational}. At the tail of the mass function, PBHs can range from hundreds or thousands solar masses to grow up to $10^{5}~\mathrm{M}_{\odot}$ via mergers and accretion \cite{mack2007growth,ali2017merger,serpico2020cosmic}.	
 PBHs can form from overdensities produced at the time on inflation as well. Signatures of these overdensities can be tracked down on the cosmic microwave background (CMB) with amplitudes in the order of $10^{-5}$ \cite{amaro2023astrophysics}, however, in the smaller scales these amplitudes can be larger. Another probe to detect overdensity signatures is through secondary stochastic GWs that enter the radiation (or matter) dominated era, which leaves behind fluctuations of order $1-10^{4}$ which can form PBHs \cite{inomata2017inflationary, garcia2017gravitational,vaskonen2021did}. This stochastic GWs background would be at reach of of the next generation of Pulsar Timing Arrays (PTAs) \cite{byrnes2019steepest,inomata2019gravitational}.
 
 \subsubsection{Massive black hole growth}\\
 
-\textit{MBH light seeds}\\
+\paragraph{MBH light seeds}
 There are two hurdles for PopIII MBH light seeds for growing up as massive as the quasars we observe at $z\sim6-7$ \cite{amaro2023astrophysics}: 1) If the seeds do not form at the center of the galaxies, they need to reach it efficiently, and 2) The process of accretion of gas needs to be efficient as well, with accretion rates reaching Eddington rates, or even super-Eddington rates, for which more complex mechanisms of accretion and energy transport would need to be involved. Moreover, these high accretion rates imply high radiative feedback from the accretion flow decreasing the efficiency of accretion.
 
 There is numerical and theoretical backup for light seeds not reaching higher masses\cite{omukai2002upper,oh2003fossil,whalen2004radiation}. \cite{smith2018growth} studied the growth of more than 15,000 light seeds and found that they do not grow more than $10\%$ in a time span of $300~ \mathrm{Myrs}$, i.e. in a significant fraction of the Hubble time. The semi-analytical approach taken in \cite{valiante2016first} showed that light seeds struggle to have significant growth.
 
-\textit{Accretion versus MBH mergers}\\
+\paragraph{Accretion versus MBH mergers}
 Most of the MBHs in cosmic time grew by accretion, where the more massive BHs with $M>10^8~\mathrm{M}_{\odot}$ grew earlier in cosmic times at $z>6$, and lighter MBHs with $\mathrm{M}<10^{5}~\mathrm{M}_{\odot}$ at $z<5.5$ \cite{soƚtan1982masses,marconi2004local,merloni2008synthesis}. There is evidence that the most massive MBHs spent a large fraction of the cosmic times, $z<8-9$, growing and more specific, for systems with $M>10^6~\mathrm{M}_{\odot}$ at $z<8$. This implies an anti-hierarchical evolution of MBH, where the more massive ones grew earlier than the lighter ones \cite{merloni2008synthesis}.
 
 On the other hand, merger mechanisms dominated the growth of MBHs in light systems with $M<10^{4}-10^{5}~\mathrm{M}_{\odot}$ at $z<6$ \cite{dayal2019hierarchical,piana2021mass} and $M>10^8~\mathrm{M}_{\odot}$ at $z<2$ \cite{pacucci2020separating}. There are two main scenarios where mergers dominate the growth of MBHs\cite{amaro2023astrophysics}. One is when the number density of MBHs is high so that the interaction between MBH is higher, prone to pair and merge. The second requirement is that the surrounding environment is gas-poor given that the efficiency of gas accretion depends on the richness of the environment.
@@ -106,10 +92,11 @@ Analyses of the correlations raised three interconnected questions regarding the
 3. When is the correlation established? There are three possibilities 1) MBHs grow symbiotically with host galaxy, 2) MBH dominate the process, 3) the galaxy grew first, and the MBH adjusted to the host. When fixing the galaxy properties, MBHs in distant active galactic nuclei seemed "overmassive" \cite{merloni2009cosmic}, suggesting that MBH establishes the correlation.
 
 \subsection{Massive Black Hole Binaries}
+\label{subsec:MBHBs}
 
-Observational evidence supports the idea of MBHs being in the center of most galaxies \cite{kormendy2013coevolution}. There is also evidence that a growth channel of galaxies is through episodes of mergers \cite{fakhouri2010merger,o2021emerge}. This points to the conclusion that there should exist populations of MBH binaries in the universe and that their mergers could be detected through their emission of GWs by LISA \cite{klein2016science,dayal2019hierarchical,chen2020dynamical}.
+Observational evidence supports the idea of MBHs being in the center of most galaxies \cite{kormendy2013coevolution}. There is also evidence that a growth channel of galaxies is through episodes of mergers \cite{fakhouri2010merger,o2021emerge}. This points to the conclusion that there should exist populations of MBH binaries in the Universe and that their mergers could be detected through their emission of GWs by LISA \cite{klein2016science,dayal2019hierarchical,chen2020dynamical}.
 
-So far, our knowledge of MBHBs have come from EM observations, cosmological simulations, and theoretical tools, but there are still missing some pieces of the full puzzle regarding their formation and evolution. The number of mergers detected by LISA will help us to address these unknowns by providing precious information about the MBH seeding mechanism and their growth through cosmic ages, as well as the galaxy properties and its environment. For this endeavour, two questions need to be addressed \cite{amaro2023astrophysics}: 1) What are the mechanisms that bring together two MBHs at kiloparsec (kpc) scales down to the scales where GW emission takes place at $\sim10^{-6} \mathrm{pc}?$ and 2) Are these mechanisms always efficient enough so that a galaxy merger ends up with a MBH binary merger? 
+So far, our knowledge of MBHBs have come from EM observations, cosmological simulations, and theoretical tools, but there are still missing some pieces of the full puzzle regarding their formation and evolution. The number of mergers detected by LISA will help us to address these unknowns by providing precious information about the MBH seeding mechanism and their growth through cosmic ages, as well as the galaxy properties and its environment. For this endeavour, two questions need to be addressed \cite{amaro2023astrophysics}: 1) What are the mechanisms that bring together two MBHs at kiloparsec (kpc) scales down to the scales where GW emission takes place at $\sim10^{-6} \mathrm{pc}?$ and 2) Are these mechanisms always efficient enough so that a galaxy merger ends up with a MBHB merger? 
 
 The mechanisms that bring an MBH pair close enough to become a binary and merge were first explored by Begelman et al \cite{begelman1980massive}. They highlighted three main stages of the evolution of the two MBHs: 1) Pairing, 2) binary hardening and 3) GW-driven coalescense. In this section we will describe these stages largely based on what can be found in \cite{amaro2023astrophysics}. 
 
@@ -120,33 +107,33 @@ After two galaxies merge, the process of pairing takes place where the two MBHs 
 \Vec{F}_{\mathrm{DF}} \propto -M^{2}_{\mathrm{BH}}\rho\mathcal{G}\Big(\frac{v}{\sigma}\Big)\mathrm{ln}\Lambda\frac{\Vec{v}}{v^{3}},
 \label{eq:dynamicalforce}
 \end{equation}
-where $v$ is the perturber velocity relative to the background, $\mathrm{ln}\Lambda\sim10$ is the coulomb logarithm, and the function $\mathcal{G}(x)$ with $x = v/\sigma$ depends on the underlying velocity distribution. When applying eq.~\eqref{eq:dynamicalforce} to the case of a MBH moving in a circular orbit of radius $r$ in the stellar background of a singular isothermal sphere ($\rho \propto \sigma^{2} r^{-2}$), the orbital decay of MBH occurs on a time scale:
+where $v$ is the perturber velocity relative to the background, $\mathrm{ln}\Lambda\sim10$ is the Coulomb logarithm, and the function $\mathcal{G}(x)$ with $x = v/\sigma$ depends on the underlying velocity distribution. When applying Eq.~\eqref{eq:dynamicalforce} to the case of a MBH moving in a circular orbit of radius $r$ in the stellar background of a singular isothermal sphere ($\rho \propto \sigma^{2} r^{-2}$), the orbital decay of MBH occurs on a time scale:
 \begin{equation}
-\tau_{\mathrm{DF}} \approx \frac{8~\mathrm{Gyr}}{\mathrm{ln}\Lambda} \Big(\frac{r}{\mathrm{kpc}} \Big)^{2} \frac{\sigma}{200~\mathrm{km/s}} \frac{10^7\mathrm{M}_{\odot}}{M_{\mathrm{BH}}}.
+\tau_{\mathrm{DF}} \approx \frac{8~\mathrm{Gyr}}{\mathrm{ln}\Lambda} \Big(\frac{r}{\mathrm{kpc}} \Big)^{2} \frac{\sigma}{200~\mathrm{km/s}} \frac{10^7~\mathrm{M}_{\odot}}{M_{\mathrm{BH}}}.
 \label{eq:dynamicaltimescale}
 \end{equation}
 
-For MBHs at kpc scale separations and $M_{\mathrm{MBH}} \sim 10^{6}~\mathrm{M}_{\odot}$ in a galaxy of $\sigma=100\mathrm{km/s}$, dynamical friction causes a rapid sinking of MBHs in the LISA band in less than a Hubble time.
+For MBHs at kpc scale separations and $M_{\mathrm{MBH}} \sim 10^{6}~\mathrm{M}_{\odot}$ in a galaxy of $\sigma=100~\mathrm{km/s}$, dynamical friction causes a rapid sinking of MBHs in the LISA band in less than a Hubble time.
 
 \subsubsection{Binary Hardening}
 
-After dynamical friction drives the orbital decay to pc separations, the two MBHs arrive to each others' sphere of influence (note) forming a binary. Further shrinking depends on the properties of the environment. Two classes of physical processes have been proposed for this: 1) Gas-poor stellar environments, and 2) environments with consistent reservoir of gas. Even though these two classes have been studied individually, they can both operate at the same time \cite{kelley2017massive,bortolas2021competing}.MBHBs in stellar environments experience further lose of orbital energy and angular momentum due to three-body encounters with individual stars. There is a transition point at which the self-gravity of the MBHs overcome the dragging froce of the individual stars, so that the binary orbital velocity exceeds the characteristic speed of the background. This is reached at the hard binary separation, $a_{\mathrm{h}}$ \cite{merritt2004massive}: 
+After dynamical friction drives the orbital decay to pc separations, the two MBHs arrive to each others' sphere of influence (note) forming a binary. Further shrinking depends on the properties of the environment. Two classes of physical processes have been proposed for this: 1) Gas-poor stellar environments, and 2) environments with consistent reservoir of gas. Even though these two classes have been studied individually, they can both operate at the same time \cite{kelley2017massive,bortolas2021competing}. MBHBs in stellar environments experience further lose of orbital energy and angular momentum due to three-body encounters with individual stars. There is a transition point at which the self-gravity of the MBHs overcome the dragging force of the individual stars, so that the binary orbital velocity exceeds the characteristic speed of the background. This is reached at the hard binary separation, $a_{\mathrm{h}}$ \cite{merritt2004massive}: 
 \begin{equation}
 a_{\mathrm{h}} \leq \frac{G\mu}{4\sigma^{2}}.
 \label{eq:hardbinarysep}
 \end{equation}
-where $\mu$ is the reduced mass of the binary and $\sigma$ the local velocity of the surrounding distribution. At this point, individual stars are ejected from the MBHB neighbour, decreasing its number density. Once the binary hardening regime is reached, the expected orbital shrinking rate is
+where $\mu$ is the reduced mass of the binary and $\sigma$ the local velocity of the surrounding distribution. At this point, individual stars are ejected from the MBHB neighbor, decreasing its number density. Once the binary hardening regime is reached, the expected orbital shrinking rate is
 \begin{equation}
 \frac{d}{dt} \bigg(\frac{1}{a} \bigg)=\frac{G\rho}{\sigma} H,
 \label{eq:shrinkrate}
 \end{equation}
-for a stellar populated neighbour with stellar density background $\rho$, velocity dispersion $\sigma$, binary keplerian semi-major axis $a$ and a numerical coefficient weakly dependent on the properties of the binary (mass, mass ratio, and eccentricity \cite{mikkola1992evolution,quinlan1996dynamical}) $H$. However, since the MBHB surrounding is depleted of stars within a typical stellar orbital period at the beginning of the hardening phase, the possibility of the MBHB stalling at pc scales has been put forward in both numerical \cite{makino2004evolution,berczik2005long} and theoretical \cite{begelman1980massive} grounds. This has been referred to as the final parsec problem.
+for a stellar populated neighbor with stellar density background $\rho$, velocity dispersion $\sigma$, binary Keplerian semi-major axis $a$ and a numerical coefficient weakly dependent on the properties of the binary (mass, mass ratio, and eccentricity \cite{mikkola1992evolution,quinlan1996dynamical}) $H$. However, since the MBHB surrounding is depleted of stars within a typical stellar orbital period at the beginning of the hardening phase, the possibility of the MBHB stalling at pc scales has been put forward in both numerical \cite{makino2004evolution,berczik2005long} and theoretical \cite{begelman1980massive} grounds. This has been referred to as the final parsec problem.
 		
 \subsubsection{GW emission}
 
 As the binary loses orbital energy and angular momentum through interaction with the environment, it eventually reaches the GW-driven stage. 
 
-The acceleration of each of the binary components can be expressed by the Newtonian acceleration plus Post-Newtonian corrections to include relativistic effects \cite{kupi2006dynamics,damour1981radiation},
+The acceleration of each of the binary components can be expressed by the Newtonian acceleration plus post-Newtonian corrections to include relativistic effects \cite{kupi2006dynamics,damour1981radiation},
 \begin{equation}
 \textbf{a}=\underbrace{\textbf{a}_{\mathrm{N}}}_{\mathrm{Newt.}}+\underbrace{\textbf{a}_{\mathrm{1PN}}+\textbf{a}_{\mathrm{2PN}}}_{\mathrm{periastron~shift}}+\underbrace{\textbf{a}_{\mathrm{2.5PN}}}_{\mathrm{grav. w}}+...,
 \label{eq:PNacceleration}
@@ -156,9 +143,9 @@ where the Newtonian acceleration $\textbf{a}_{\mathrm{N}}$ is computed consideri
 |\textbf{a}_{i\mathrm{PN}}| \propto \epsilon^{i}_{\mathrm{PN}}~\Big(\frac{v}{c}\Big)^{2i} \sim \Big(\frac{r_{g}}{R}\Big)^{i},
 \label{eq:PNepsilon}
 \end{equation}
-where $v$ and $R$ are the relative velocity and separation of the binary, $r_{g}=GM/c^{2}$ is the gravitational radius, $c$ is the speed of light in vacuum, $G$ is the gravitational constant, and $M$ the binary total mass. PN gravitational wave corrections are still small at $a\sim a_{\mathrm{h}}$, but they become important at  $a\sim a_{\mathrm{GW}}\sim0.01 \times a_\mathrm{h}$\cite{rantala2018formation,quinlan1996dynamical}, which is at $a_{\mathrm{GW}}\sim10^{-4}-10^{-3}$ for equal-mass binaries with individual MBH masses of $M_{\mathrm{MBH}}\sim10^{6}-10^{7} \mathrm{M}_{\odot}$ \cite{amaro2023astrophysics}.
+where $v$ and $R$ are the relative velocity and separation of the binary, $r_{g}=GM/c^{2}$ is the gravitational radius, $c$ is the speed of light in vacuum, $G$ is the gravitational constant, and $M$ the binary total mass. PN gravitational wave corrections are still small at $a\sim a_{\mathrm{h}}$, but they become important at  $a\sim a_{\mathrm{GW}}\sim0.01 \times a_\mathrm{h}$\cite{rantala2018formation,quinlan1996dynamical}, which is at $a_{\mathrm{GW}}\sim10^{-4}-10^{-3}$ for equal-mass binaries with individual MBH masses of $M_{\mathrm{MBH}}\sim10^{6}-10^{7}~\mathrm{M}_{\odot}$ \cite{amaro2023astrophysics}.
 
-The GW-driven evolution of the binary can be described by the seminal work of Peters \cite{peters1964gravitational}. The evolution of the keplerian parameters $a$, the semi-major axis of the orbit, and $e$, the eccentricity, can be tracked down when assuming a slow variation. This is the case when the orbital period scales as $t\sim(a/r_{g})^{3/2}$ and the radiation reaction time-scale scales as $t_{RR}~(a/r_{g})^{4}$. Noting that $a\gg r_{g}$ implies $t_{orb}\ll t_{RR}$, the orbit is Keplerian, and the paramters a and e vary slowly. The orbit average of the evolution of the binary's semi-major axis is described by \cite{peters1964gravitational}
+The GW-driven evolution of the binary can be described by the seminal work of Peters \cite{peters1964gravitational}. The evolution of the keplerian parameters $a$, the semi-major axis of the orbit, and $e$, the eccentricity, can be tracked down when assuming a slow variation. This is the case when the orbital period scales as $t\sim(a/r_{g})^{3/2}$ and the radiation reaction time-scale scales as $t_{\mathrm{RR}}~(a/r_{g})^{4}$. Noting that $a\gg r_{g}$ implies $t_{\mathrm{orb}}\ll t_{\mathrm{RR}}$, the orbit is Keplerian, and the paramters $a$ and $e$ vary slowly. The orbit average of the evolution of the binary's semi-major axis is described by \cite{peters1964gravitational}
 \begin{equation}
 \Big\langle \frac{da}{dt}\Big\rangle_{\mathrm{GW}} = -\frac{64}{5}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{3}(1-e^{2})^{7/2}}\Big(1+\frac{73}{24}e^{2}+\frac{37}{96}e^{4}\Big) = -\frac{64}{5}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{3}}f(e),
 \label{eq:dadt}
@@ -168,27 +155,28 @@ and the evolution of the eccentricity $e$ is expressed by
 \Big\langle \frac{de}{dt}\Big\rangle_{\mathrm{GW}} = -\frac{304}{15}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{4}(1-e^{2})^{5/2}}\Big(1+\frac{121}{304}e^{2}\Big),
 \label{eq:dedt}
 \end{equation}
-When considering PN coefficients up to order 3.5, or higher, the dynamics of the orbit is not constant anymore, but rather oscilate (reference). When including spins, they also participate on shaping the dynamics of the binaries (references) as well as the GWs emitted.
+When considering PN coefficients up to order 3.5, or higher, the dynamics of the orbit is not constant anymore, but rather oscillates (reference). When including spins, they also participate on shaping the dynamics of the binaries (references) as well as the GWs emitted.
 The time a binary takes to merge was by Peters \cite{peters1964gravitational}, but we include here the time-scale found in \cite{amaro2023astrophysics}, i.e.
 \begin{equation}
-t_{p} = \frac{5c^{5}(1+q)^{2}}{256G^{3}M^{3}q}\frac{a^{4}_{0}}{f(e_{0})}\approx0.32\frac{(1+q)^{2}}{qf(e_{0})}\bigg(\frac{a_{0}}{\mathrm{AU}}^{4}\bigg)\bigg(\frac{M}{10^{6}\mathrm{M}_{\odot}}\Big)^{-3}\mathrm{yr},
+t_{p} = \frac{5c^{5}(1+q)^{2}}{256G^{3}M^{3}q}\frac{a^{4}_{0}}{f(e_{0})}\approx0.32\frac{(1+q)^{2}}{qf(e_{0})}\bigg(\frac{a_{0}}{\mathrm{AU}}^{4}\bigg)\bigg(\frac{M}{10^{6}~\mathrm{M}_{\odot}}\Big)^{-3}\mathrm{yr},
 \label{eq:peterstimescale}
 \end{equation}
-Peters formula, eq.\eqref{eq:peterstimescale}, assumes orbit decay only through GW emission and Keplerian orbits, i.e. where $a$ and $e$ vary slowly. A corrected formula proposed was Zwick et al. \cite{zwick2020improved} which relaxes these assumptions while adding a new spin-dependent correction. We show here this corrected formula as found in \cite{amaro2023astrophysics},
+Peters formula, Eq.~\eqref{eq:peterstimescale}, assumes orbit decay only through GW emission and Keplerian orbits, i.e. where $a$ and $e$ vary slowly. Zwick et al. \cite{zwick2020improved} proposed a corrected formula in which these assumptions are relaxed while adding a new spin-dependent correction and has the form \cite{amaro2023astrophysics},
 \begin{equation}
-t_{\mathrm{PN}}(a_{0},e_{0},s_{1}) = \frac{5c^{5}(1+q)^{2}a^{4}}{256G^{3}M^{3}qf(e_{0})} R(e_{0})\mathrm{exp}\Bigg(\frac{2.8r_{S}}{p_{0}}+s_{1}\frac{0.3r_{S}}{p_{0}}+|s_{1}|^{3/2}\bigg(\frac{1.1r_{S}}{p_{0}}\bigg)^{5/2}\Bigg),
+t_{\mathrm{PN}}(a_{0},e_{0},s_{1}) = \frac{5c^{5}(1+q)^{2}a^{4}}{256G^{3}M^{3}qf(e_{0})} R(e_{0})\mathrm{exp}\Bigg[\frac{2.8r_{S}}{p_{0}}+s_{1}\frac{0.3r_{S}}{p_{0}}+|s_{1}|^{3/2}\bigg(\frac{1.1r_{S}}{p_{0}}\bigg)^{5/2}\Bigg],
 \label{eq:peterstimescalecorr}
 \end{equation}
 where $p_{0}=a_{0}(1-e_{0})$, $r_{\mathrm{S}}2G
 M/c^{2}$, $R(e_{0})=8^{(1-\sqrt{1-e_{0}})}$, and $s_{1}\equiv S_{1}\mathrm{cos}\theta$, with $S_{1}$ being the spin magnitude of the more massive MBH and $\theta$ the angle between the MBH spin vector and the orbital total angular momentum vector. 
 
 \subsubsection{MBH merger and GW recoil}
-When MBHB merges, there is a positive net linear momentum that is abruptly released in the form a recoil or a "kick" in the MBHB remnant \cite{bonnor1961transport,peres1962classical,bekenstein1973black}, reaching velocities as high as $\sim 5000 \mathrm{km/s}$. When the recoil velocity reaches $\sim1000 \mathrm{km/s}$, the MBHB remnant can be ejected from the host galaxy as this might exceed its escape velocity \cite{redmount1989gravitational,merritt2004consequences,gerosa2015missing}. There are implications for this phenomena: Since MBHB are ejected from the host galaxy, many galaxies would be MBH-less affecting the correlation between MBH and galaxy hosts, also the merger rates would be affected, and the formation of quasars with MBHs with masses $>10^{6}$ at high redshifts would be prevented \cite{haiman2004constraints,boylan2004core,sesana2007extreme,gualandris2008ejection}. 
-Trails of GW recoil could be accessible to electromagnetic (EM) observations through the shining of the gas surrounding the MBHB remnant, which in this case would shine as off-nuclear AGNs.
+When MBHB merges, there is a positive net linear momentum that is abruptly released in the form a recoil or a kick in the MBHB remnant \cite{bonnor1961transport,peres1962classical,bekenstein1973black}, reaching velocities as high as $\sim 5000 ~\mathrm{km/s}$. When the recoil velocity reaches $\sim1000 \mathrm{km/s}$, the MBHB remnant can be ejected from the host galaxy as this might exceed its escape velocity \cite{redmount1989gravitational,merritt2004consequences,gerosa2015missing}. There are implications for this phenomenon: Since MBHB are ejected from the host galaxy, many galaxies would be MBH-less, affecting the correlation between MBH and galaxy hosts. Also, the merger rates would be affected, preventing the formation of quasars with MBHs with masses $>10^{6}$ at high redshifts \cite{haiman2004constraints,boylan2004core,sesana2007extreme,gualandris2008ejection}. 
+Trails of GW recoil could be accessible to EM observations through the shining of the gas surrounding the MBHB remnant, which in this case would shine as off-nuclear AGNs.
 There are GW signatures of GW recoils such as a relative Doppler shift between inspiral and ringdown\cite{gerosa2016black}, different higher-order mode content\cite{calderon2018tracking}, statistical correlation with the spin properties\cite{varma2020extracting}. \cite{gerosa2016black,calderon2018tracking,varma2020extracting} agree that GW recoil signatures are at the reach of LISA.
 
 
 \subsection{Multimessenger observations of single MBHBs}
+\label{subsec:MMOsinMBHBs}
 
 Observations of MBHBs is a rich subject not only concerned to GW astronomy. Questions like, what happens before and after the GW emission phase? How can we corroborate GW observations of MBH coalescences?, what interpretations about the formation and evolution of MBHBs can be drawn from multimessenger observations?, are answered by means of GW and EM observations. In this section we will look at how GW and EM observations of MBHBs complement each other, and how GWs observations with LISA fit into the bigger landscape of multimessenger observations of MBHBs. We will pay special attention to the synergy between LISA and X-ray observatories Athena, AXIS, and Lynx. This section will be developed in two phases: Expected EM signatures of MBHBs 1) in the inspiral phase, and 2) in the late inspiral, merger phase.
 
@@ -196,20 +184,20 @@ Observations of MBHBs is a rich subject not only concerned to GW astronomy. Ques
 
 Understanding of pre-merger populations of MBHBs at sub-pc scales with EM observations is crucial for the optimal synergy of LISA and its contemporary EM facilities. They will inform us about the expected LISA merger rates and possibly about orbital parameter distributions at merger time. A key part on these observations is how close to the merger the EM observation is made. Formation and evolution channels of observed MBHBs by LISA, will be determined by the interpretations from EM observations. So, population samples which span a large range of MBHB orbital parameters will be needed in order to have the full picture of the evolution path of MBHBs.
 
-There is no EM observational evidence of MBH binaries with separation of one order parsec or smaller. Studies with hydrodynamical simulations have shown that the accretion rates on MBHB circumbinary discs is modulated by multiples of the orbital period \cite{haiman2009population}, \cite{macfadyen2008eccentric}, \cite{d2013accretion}. This means that the MBHBs with separations on its components on the sub-pc scale can be translated into $\mathcal{O}(yr)$ modulations in the quasar light-curve. However, the noise intrinsic to AGN can pose some challenges on this (reference). Unique signatures of MBHB that confirm periodic quasar candidates are relavistic Doppler boost and binary self-lensing models for periodic variability and flares \cite{d2015relativistic}, \cite{d2018periodic}, \cite{hu2020spikey}, \cite{charisi2018testing}.
+There is no EM observational evidence of MBH binaries with separation of one order parsec or smaller. Studies with hydrodynamical simulations have shown that the accretion rates on MBHB circumbinary discs is modulated by multiples of the orbital period \cite{haiman2009population,macfadyen2008eccentric,d2013accretion}. This means that the MBHBs with separations on its components on the sub-pc scale can be translated into $\mathcal{O}(yr)$ modulations in the quasar light-curve. However, the noise intrinsic to AGN can pose some challenges on this (reference). Unique signatures of MBHB that confirm periodic quasar candidates are relativistic Doppler boost and binary self-lensing models for periodic variability and flares \cite{d2015relativistic,d2018periodic,hu2020spikey,charisi2018testing}.
 
 Approaches from large optical spectroscopic surveys (reference):
 \begin{enumerate}
-    \item Large velocity differences between the narrow emission lines from the host galaxy, and broad emission lines from the surroundings of the black holes \cite{tsalmantza2011systematic}, \cite{eracleous2012large}, \cite{decarli2013nature}, \cite{liu2014constraining}, \cite{runnoe2015large}, \cite{runnoe2017large}.
-    \item A time varying shift of the broad emission lines due to the high velocities the black holes orbit each other \cite{ju2013search}, \cite{shen2013constraining}, \cite{wang2017searching}, \cite{guo2019constraining}.
-    \item Unusual ratios in the broad emission lines due to the tidal forces of one component black hole upon the other component of the candidate binary \cite{montuori2011search}, \cite{montuori2012search}.
+    \item Large velocity differences between the narrow emission lines from the host galaxy, and broad emission lines from the surroundings of the black holes \cite{tsalmantza2011systematic,eracleous2012large,liu2014constraining,runnoe2015large}.
+    \item A time varying shift of the broad emission lines due to the high velocities the black holes orbit each other \cite{ju2013search,wang2017searching,guo2019constraining}.
+    \item Unusual ratios in the broad emission lines due to the tidal forces of one component black hole upon the other component of the candidate binary \cite{montuori2011search,montuori2012search}.
 \end{enumerate}
 
-These strategies could help to determine the properties of the binary such as minimum mass, separation and mass ratio. If these approaches yield true MBHBs, then the properties of the binary, i.e.\ mass ratio, minimum mass, and separation can be obtained from the modelling of broad emission lines \cite{nguyen2016emission}, \cite{bon2016evidence}, \cite{nguyen2018emission}, \cite{nguyen2020emission}. However, these signatures are not unique to MBHBs, so follow-up and/or complementary observation techniques will be needed to confirm such observations.
+These strategies could help to determine the properties of the binary such as minimum mass, separation and mass ratio. If these approaches yield true MBHBs, then the properties of the binary, i.e.\ mass ratio, minimum mass, and separation can be obtained from the modelling of broad emission lines \cite{nguyen2016emission,bon2016evidence,nguyen2020emission}. However, these signatures are not unique to MBHBs, so follow-up and/or complementary observation techniques will be needed to confirm such observations.
 
 Since these techniques are biased, due to selection effects, to MBHBs with masses of $10^{6}$--$10^{7} M_{\odot}$, separations of $\geq0.1$ pc and redshifts of $z\geq1-2$, they only cover a subset of MBHBs which are progrenitors to binaries in the LISA band but which will not be detected by LISA due to the long coalescense time-scales involved.
 
-For MBHBs with smaller orbital separations compared to the ones involved in optical spectroscopic surveys, \cite{reynolds2015measuring} used the broad iron fluorecence emission lines observed at $\sim6.4 \text{keV}$ in X-rays in the accretion flow of many AGNs with masses of $~10^{6} M_{\odot}$. However, this observation is limited to AGN's at lower redshifts compared to LISA's targets, so high sensitivity, high redshift X-ray facilities, like Athena, will be suitable to take full advantage of this approach. 
+For MBHBs with smaller orbital separations compared to the ones involved in optical spectroscopic surveys, Reynolds~\cite{reynolds2015measuring} used the broad iron fluorecence emission lines observed at $\sim6.4 \text{keV}$ in X-rays in the accretion flow of many AGNs with masses of $~10^{6}~\mathrm{M}_{\odot}$. However, this observation is limited to AGN's at lower redshifts compared to LISA's targets, so high sensitivity, high redshift X-ray facilities, like Athena, will be suitable to take full advantage of this approach. 
 
 Tracking the actual orbits of MBHBs with EM facilities is also feasible. With the advances in the Very Long Base Interferometry (VLBI) at mm-wavelength, the approaches mentioned before for indirect observations could be complemented. Likewise, the Event Horizont Telescope (EHT, \cite{akiyama2019first}) has the angular resolution and sensitivity to track the orbits of MBHBs with separations of 0.01 pc at Gpc scales. Finally the next generation Very Large Array (ngVLA) will be able to track the orbits of MBHBs at sub-10 pc separation scales \cite{burke2018next}.
 
@@ -217,13 +205,14 @@ Tracking the actual orbits of MBHBs with EM facilities is also feasible. With th
 
 So far, there are large uncertainties in the EM light-curves, spectra of coalescing MBHBs and in the structure and properties of the environment around MBHBs. Around a MBHB, a circumbinary disc, and two mini disks surrounding each black hole. These mini-discs can emit large amounts of X-ray radiation.
 
-Orbital motion of the binaries can produce modulations in the X-ray emission and in the accretion rate, which can be in phase with the GW as observed by LISA. This can allow for the identification of the host galaxy \cite{haiman2017electromagnetic}, \cite{tang2018late}, \cite{dal2019detectability} and alert other observational facilities with sky localization information. 
+Orbital motion of the binaries can produce modulations in the X-ray emission and in the accretion rate, which can be in phase with the GW as observed by LISA. This can allow for the identification of the host galaxy \cite{haiman2017electromagnetic,tang2018late,dal2019detectability} and alert other observational facilities with sky localization information. 
  
-Dynamical GR simulation studies \cite{palenzuela2010dual}, \cite{moesta2012detectability} in the force-free limit have found that tenuous gas surrounds the binary, which produces jets on each binary component as inspiral approaches merger, representing another signature for late inspiral MBHBs. 
+Dynamical GR simulation studies \cite{palenzuela2010dual,moesta2012detectability} in the force-free limit have found that tenuous gas surrounds the binary, which produces jets on each binary component as inspiral approaches merger, representing another signature for late inspiral MBHBs. 
  
-Finally, there are several possible scenarios for the merger phase of coalescence, which is an active research subject. The GW recoil that imparts a kick upon both black holes might alter the accretion disc changing its spectrum and light-curve \cite{gold2014accretion}, \cite{khan2018disks}. Another possibility is the birth or rebrightening of a jet in the remnant BH. Both of these possibilities might be at EM observatories reach.
+Finally, there are several possible scenarios for the merger phase of coalescence, which is an active research subject. The GW recoil that imparts a kick upon both black holes might alter the accretion disc changing its spectrum and light-curve \cite{gold2014accretion,khan2018disks}. Another possibility is the birth or rebrightening of a jet in the remnant BH. Both of these possibilities might be at EM observatories reach.
 
 \subsection{Multimessenger of MBHB populations}
+\label{subsec:MultiMBHBpop}
 
 In order to understand the populations of MBHs in the universe, we need to survey MBHs from the early to the late universe, from low to higher masses, single or in binaries, in a multimessenger fashion. LISA's contribution to the efforts will be specific to binaries in the mass range between $10^{4}$ and $10^{9}$ by constraining masses, redshift and spins. Since different missions will give different insights about MBH physics and populations, synergy between LISA with EM facilities will be needed in order to take full advantage of every messenger. In this section we will delve into how GWs and EM facilities combine looking to address fundamental questions in astrophysics such as MBH formation and evolution, and how they are influenced by the galactic and large-scale environment. 
 
@@ -232,26 +221,26 @@ In order to understand the populations of MBHs in the universe, we need to surve
 By mid 2030's, the GW network that will be involved in observing MBHBs will be, on one hand, PTAs, whose targets are MBHBs with mass range of $10^{7}$-$10^{9} \text{M}_{\odot}$  on the local universe, ground-based GW observatories like Cosmic Explorer and Einstein Telescope (ET) which targets are black hole seed mergers in the mass range of $10^{2}-10^{3} \text{M}_{\odot}$, and LISA which will bridge the gap between these two ends targeting lighter MBHBs mass range of $10^{4}$-$10^{7} \text{M}_{\odot}$. 
 EM ground and space-based observations will complement GWs: ESA L2 mission Athena, NASA missions AXIS and LynX, and eROSITA will probe the accretion properties of AGN in X-rays. Dark Energy Spectroscopic Instrument (DESI), JWST, Nancy Grace Roman Space Telescope, Euclid in the optical and IR band will investigate galaxy hosts up to the highest redshifts. Next generation optical telescopes Extremely Large Telescope (ELT) and Thirty-Meter Telescope (TMT) will reveal the assembly of the first galaxies. Large-area photometric and spectroscopic surveys Rubin Observatory Legacy Survey of Space and Time (LSST), and Sloan Digital Sky Survey-V are expected to discover a treasure of binary candidates. Square Kilometre Array (SKA) radio interferometry will survey wide-area and deep radio sources.
 
-\textit{Synergy of LISA with EM facilities}\\
-LISA will be able to observe MBHB seeds of $10^{4}$-$10^{5}$ $\text{M}_{\odot}$ at high redshifts, opening the possibility of observing the dawn of MBHBs. However, this is out of reach for many of the current EM facilities. EM surveys that have given insights on low-mass MBHs have only been on dwarf galaxies in the local universe ($z\sim2$) with stellar mass $\text{M}_{\star} = 10^{7} - 10^{9.5} \text{M}_{\odot}$\cite{reines2015relations}, \cite{baldassare201550}, \cite{mezcua2016population}, \cite{mezcua2018intermediate}. Dwarf galaxies are of interest in the search for MBH seeds because, unlike massive galaxies which have experienced significant mass growth, dwarf galaxies have experienced less mass growth through cosmic ages \cite{habouzit2017blossoms}, giving more information about how their MBHs formed.  
-To be able to observe MBH seeds, EM and GWs need to be capable of reaching redshifts up to 10 \cite{valiante2018chasing}. According to theoretical models, such as spectral-synthesis, emission is produced from accreting gas around heavy seeds, a possible target to Athena, at $z<6$ and JWST at $z<15$ in the IR-mm and X-ray bands. Lighter BH seeds ($10^{4} \text{M}_{\odot}$) will be accessible with Lynx and AXIS, however, lighter BHs are more difficult to observe as their emission from accreted gas is weaker \cite{pacucci2015shining}, \cite{natarajan2017unveiling}, \cite{valiante2018chasing}, \cite{barrow2018observational}.
+\paragraph{Synergy of LISA with EM facilities}
+LISA will be able to observe MBHB seeds of $10^{4}-10^{5}~\mathrm{M}_{\odot}$ at high redshifts, opening the possibility of observing the dawn of MBHBs. However, this is out of reach for many of the current EM facilities. EM surveys that have given insights on low-mass MBHs have only been on dwarf galaxies in the local universe ($z\sim2$) with stellar mass $M_{\star} = 10^{7} - 10^{9.5}~\mathrm{M}_{\odot}$\cite{reines2015relations,baldassare201550,mezcua2016population,mezcua2018intermediate}. Dwarf galaxies are of interest in the search for MBH seeds because, unlike massive galaxies which have experienced significant mass growth, dwarf galaxies have experienced less mass growth through cosmic ages \cite{habouzit2017blossoms}, giving more information about how their MBHs formed.  
+To be able to observe MBH seeds, EM and GWs need to be capable of reaching redshifts up to 10 \cite{valiante2018chasing}. According to theoretical models, such as spectral-synthesis, emission is produced from accreting gas around heavy seeds, a possible target to Athena, at $z<6$ and JWST at $z<15$ in the IR-mm and X-ray bands. Lighter BH seeds ($10^{4}~\mathrm{M}_{\odot}$) will be accessible with Lynx and AXIS, however, lighter BHs are more difficult to observe as their emission from accreted gas is weaker \cite{pacucci2015shining,natarajan2017unveiling,valiante2018chasing,barrow2018observational}.
 
-\textit{The growth of MBHs}\\
-Understanding growth of MBHs from BH seeds to MBHs with masses $10^{8}$-$10^{10}$ requires EM observations of MBHs in different stages in the cosmic evolution. Rare bright high redshift quasars ($z\sim6$--$7$) \cite{mortlock2011luminous}, \cite{banados2016pan}, \cite{banados2018chandra}, \cite{matsuoka2019subaru}, \cite{yang2020poniua} will be accesible with future EM observatories and will complement LISA's view. The Nancy Grace Roman Space Telescope \cite{fan1903first} and the Euclid Space Telescope \cite{barnett2019euclid} will increase the detection of MBHs by tenfold the number of quasars at high redshifts in the near-IR. In the X-ray band, eROSITA will be able to detect 3 million AGN to study accretion history, studying the clustering properties of AGN of at least $z\sim2$, and identifying AGN sub-populations. Lynx and AXIS... 
+\paragraph{The growth of MBHs}
+Understanding growth of MBHs from BH seeds to MBHs with masses $10^{8}$-$10^{10}$ requires EM observations of MBHs in different stages in the cosmic evolution. Rare bright high redshift quasars ($z\sim6$--$7$) \cite{mortlock2011luminous}, \cite{banados2016pan}, \cite{banados2018chandra}, \cite{matsuoka2019subaru}, \cite{yang2020poniua} will be accesible with future EM observatories and will complement LISA's view. The Nancy Grace Roman Space Telescope \cite{fan1903first} and the Euclid Space Telescope \cite{barnett2019euclid} will increase the detection of MBHs by tenfold the number of quasars at high redshifts in the near-IR. In the X-ray band, eROSITA will be able to detect 3 million AGN to study accretion history, studying the clustering properties of AGN of at least $z\sim2$, and identifying AGN sub-populations.  
 
-\textit{The coevolution of MBHs and cosmic structures}\\
+\paragraph{The coevolution of MBHs and cosmic structures}
 One problem of interest in the MBH community is the co-evolution of MBHs with their host galaxies. This has been characterized by the correlations between the mass of the MBH and the mass of the stellar bulge and the stellar velocity dispersion. At larger scale, these correlations extend to the galaxy halo mass. LISA's contribution to addressing this problem will be through independent MBHB mass measurements so that these correlations, constrained so far mostly by EM biased mass measurements, are better calibrated. Some potential networks that will be available in the LISA era will be with the JWST, Euclid and Roman telescopes in the optical/IR which will constrain the stellar properties and the evolution of the host galaxies. In the X-ray band, telescopes like Athena, Lynx, AXIS will look at the feeding and feedback processes. In the Radio-mm band, facilities such as ALMA and SKA will provide information about relativistic jets, which is involved in the feeding and feedback processes and the co-evolution of galaxies and MBHBs.
 
 \subsubsection{Knowledge about MBHs with EM observations prior to LISA}
 
 Estimates for MBHB rates are still uncertain, ranging from a few to a few hundreds per year. Efforts in this direction have been made by combining EM and GWs facilities. Likewise, LISA will contribute to the effort by aiming at MBHBs with masses $<10^5$ at $z>5$ and more massive MBHBs with masses $>10^6$ at $z<3$. With this network, questions about MBH pairing mechanism after a galaxy merger, the role played by the gas in the coalescence process, and time scales of coalescence will be addressed.
 
-While LISA will explore the millihertz regime of MBHBs, PTAs are able to look at even lower frequencies, at the nanohertz band. PTAs monitor flucutactions in the time variation between pulses emitted from millisecond pulsars over long periods of time. When there is a correlation in the time variations detected among the pulsars in the array, and this correlation follows the quadrupole correlation signature, then a GW has been detected. The main targets of PTAs are MBHBs with masses of $10^8$--$10^10$ $M_{\odot}$ at $z\approx1$--$2$ and the stochastic GW background produced by the superposition of incoherent GW signals. The nanoGRav collaboration with a database of 12.5 years of 47 pulsars showed that a stochastic GW background is consistent with the predictions of a background produced by SMBHs \cite{arzoumanian2020nanograv}. However, there are other possible sources capable of producing this GW spectrum, such as cosmic strings. In this case, longer follow-up and larger pulsar arrays will be needed to confirm this observation. 
-Currently, GW background theoretical estimates yield large uncertainties, translating to different MBHB merger rates for similar GW background amplitudes. Merger rate and GW background amplitude depend on how often galaxies merge and form MBHBs and how fast binaries approach to sub-pc scales, in the GW emission phase. In this scenario, PTAs will be able to constrain the GW background amplitude and shape of the spectrum, giving information about their eccentricities and the binaries environment \cite{sesana2009gravitational}, \cite{taylor2017constraints}, \cite{kelley2017gravitational}, \cite{taylor2019supermassive}.
+While LISA will explore the millihertz regime of MBHBs, PTAs are able to look at even lower frequencies, at the nanohertz band. PTAs monitor flucutactions in the time variation between pulses emitted from millisecond pulsars over long periods of time. When there is a correlation in the time variations detected among the pulsars in the array, and this correlation follows the quadrupole correlation signature, then a GW has been detected. The main targets of PTAs are MBHBs with masses of $10^8--10^{10}~\mathrm{M}_{\odot}$ at $z\approx1-2$ and the stochastic GW background produced by the superposition of incoherent GW signals. The nanoGRav collaboration with a database of 12.5 years of 47 pulsars showed that a stochastic GW background is consistent with the predictions of a background produced by SMBHs \cite{arzoumanian2020nanograv}. However, there are other possible sources capable of producing this GW spectrum, such as cosmic strings. In this case, longer follow-up and larger pulsar arrays will be needed to confirm this observation. 
+Currently, GW background theoretical estimates yield large uncertainties, translating to different MBHB merger rates for similar GW background amplitudes. Merger rate and GW background amplitude depend on how often galaxies merge and form MBHBs and how fast binaries approach to sub-pc scales, in the GW emission phase. In this scenario, PTAs will be able to constrain the GW background amplitude and shape of the spectrum, giving information about their eccentricities and the binaries environment \cite{sesana2009gravitational,kelley2017gravitational,taylor2019supermassive}.
 Interplay of observations made by PTAs of higher-mass MBHBs in the local Universe, with those made by LISA of lower-mass MBHBs at high redshifts will allow population inferences to unveil the process involved in binary evolution following a galaxy merger \cite{begelman1980massive} which is tied to galaxy formation and evolution, fundamental questions in astrophysics.
 On the other hand, synergetic single observations of MBHB between PTAs and LISA will be possible as well. However, due to PTAs low sky-localization capabilities, localizing galaxy hosts will be challenging, so refinements in the strategies will be needed in order to seize the full potential of the PTAs-LISA network.
 
-There are prospects of detecting low-frequency GWs passing through the Milky Way galaxy with astrometry. By measuring the variability in the stars' positions consistent with a periodic pattern, low-frequency GWs can be detected. This will be possible with future mission Gaia, which will monitor the positions of billions os stars. Gaia will cover similar frequency range as PTAs, with higher sensitivity at the higher frequencies, around 300 nHz, reaching strains of order $\sim10^{-14}$ \cite{moore2017astrometric}. With these features, super massive black hole binaries with mass of $10^{8}$ will be at reach with Gaia, making a bridge on observational capabilities between PTAs and LISA.
+There are prospects of detecting low-frequency GWs passing through the Milky Way galaxy with astrometry. By measuring the variability in the stars' positions consistent with a periodic pattern, low-frequency GWs can be detected. This will be possible with future mission Gaia, which will monitor the positions of billions os stars. Gaia will cover similar frequency range as PTAs, with higher sensitivity at the higher frequencies, around 300 nHz, reaching strains of order $\sim10^{-14}$ \cite{moore2017astrometric}. With these features, MBHBs with mass of $10^{8}$ will be at reach with Gaia, making a bridge on observational capabilities between PTAs and LISA.
 
 The LSST of the Vera Rubin Observatory will perform time-domain observations of order one million of quasars, which will allow to perform detailed measurements of the periodic variability of these sources.
 
@@ -261,8 +250,10 @@ Radio emission of AGNs are another EM observable, and in the case of MBHBs these
 With radio facilities such as the Very Long Baseline Interferotmeter (VLBI) all around the globe, sky location precision up to mili-arcsec scales can be reached \cite{venturi2020vlbi20}. In the future, the Next Generation Very Large Array (ngVLA) and the Square Kilometer Array (SKA) will complement LISA's observations of MBHBs with high resolution and sensitivity. On the other hand, radio observations will be able to observe offset MBHs that result from gravitational recoil. Other features that will be available for radio observations will be the orbital motion of the candidate MBHBs \cite{bansal2017constraining}, \cite{burke2018next}, jet precession with X morphology \cite{horton2020markov} and AGN light curves with periodic variability due to orbital precession.
 
 \section{Space-based Gravitational Wave Detector LISA}
+\label{sec:LISA}
 
 \subsection{Configuration of the detector}
+\label{subsec:ConfigDet}
 
 The objective of observing MBHBs with LISA is to know their parameters such as mass and spins, so that astrophysical interpretation can be made and implications can be known. LISA relies on the same principle all laser interferometers are based on to detect tiny strains in spacetime produced by GWs from astrophysical sources: It measures passing GWs by measuring time-dependent length changes in the laserpath between two free-falling test masses.
 
@@ -297,20 +288,21 @@ The length change due to passing GWs between two test masses in one arm are spli
 
 
 \subsection{Laser Noise and Time-Delay Interferometry}
+\label{subsec:LaserTDI}
 
-LISA's arms are $\sim10^{6}$ kilometer long, and will experience fluctuations in their length due to orbital motion around the Sun, and to its cart-wheel motion, of the order of a few percent \cite{tinto2014time}. This induces a residual laser frequency when the lasers of two arms reach the photodetectors of destination, introducing what is known as \textit{laser frequency noise}. Equal-arm interferometers, but not parallel, like the ground-based GW detectors LIGO and Virgo don't experience this issue since the frequency residual in their lasers cancels out as the delay of both lasers are the same. Unequal-arm detectors such as LISA don't cancel these frequency differences so it needs to be accounted for. In this section, we will discuss why laser frequency noise cancelation is essential and how TDI addresses this issue. The content of this section is a summarized treatment of what can be found in \cite{tinto2014time}.
+LISA's arms are $\sim10^{6}$ kilometer long, and will experience fluctuations in their length due to orbital motion around the Sun, and to its cart-wheel motion, of the order of a few percent \cite{tinto2014time}. This induces a residual laser frequency when the lasers of two arms reach the photodetectors of destination, introducing what is known as \textit{laser frequency noise}. Equal-arm interferometers, but not parallel, like the ground-based GW detectors LIGO and Virgo do not experience this issue since the frequency residual in their lasers cancels out as the delay of both lasers are the same. Unequal-arm detectors such as LISA do not cancel these frequency differences so it needs to be accounted for. In this section, we will discuss why laser frequency noise cancellation is essential and how TDI addresses this issue. The content of this section is a summarized treatment of what can be found in \cite{tinto2014time}.
 
 Suppose an interferometer has non-parallel arms of length $L_{1}$ and $L_{2}$ where $L_{1} \neq L_{2}$. If a laser beam, with frequency fluctuations $C(t)$, is made to travel along each arm, there will be a difference in the frequency fluctuations of both lasers when they are read back in the photo detector at the source point. This is expressed by
 \begin{equation}
 \Delta C(t) = C(t - 2L_{1})-C(t-2L_{2}).
 \label{eq:freqfluctdiff}
 \end{equation}
-In the case of LISA, the difference in the fluctuations will be of order $\sim10^{-13}/\sqrt{Hz}$. Let's express eq. \eqref{eq:freqfluctdiff} in its frequency domain by means of a Fourier transform,
+In the case of LISA, the difference in the fluctuations will be of order $\sim10^{-13}/\sqrt{\mathrm{Hz}}$. Let's express eq. \eqref{eq:freqfluctdiff} in its frequency domain by means of a Fourier transform,
 \begin{equation}
 |\Tilde{\Delta C(f)}| \simeq |\Tilde{C}(f)|4\pi f|(L_1-L_2)|.
 \label{eq:freqfluctdiffFourier}
 \end{equation}
-Assuming a laser frequency of $10^{-3} \mathrm{Hz}$  and $|L_{1}-L_{2}| = 0.5~\mathrm{s}$, the uncanceled fluctuations from the laser are equal to $6.3 \times 10^{-16}/\sqrt{Hz}$ \cite{tinto2014time} If the expected sensitivity of LISA is $~10^{-20}/\sqrt{Hz}$, we can see that the laser frequency noise induced by the unequal arms needs to be canceled.
+Assuming a laser frequency of $10^{-3} \mathrm{Hz}$  and $|L_{1}-L_{2}| = 0.5~\mathrm{s}$, the uncanceled fluctuations from the laser are equal to $6.3 \times 10^{-16}/\sqrt{\mathrm{Hz}}$ \cite{tinto2014time} If the expected sensitivity of LISA is $~10^{-20}/\sqrt{\mathrm{Hz}}$, we can see that the laser frequency noise induced by the unequal arms needs to be canceled.
 
 The solution to this problem was proposed by Faller et al \cite{faller1984possible,faller1989antenna}. Suppose an unequal-arm interferometer has laser beams not interfering at a common point, but made to interfere with the incoming light from the laser at a photo detector, \ref{fig:UnequalArmsDet}. With this configuration, two Doppler measurements, $y_{1}(t)$ and $y_{2}(t)$, can be made and the task left to do is to find an algorithm to digitally cancel the laser frequency fluctuations from a new data combination. If $h_{1}(t)$ and $h_{2}(t)$ are the GW strain signals, $n_{1}(t)$ and $n_{2}(t)$ are the detector noises other than laser frequency noise, the Doppler observables in the frequency domain can be written as
 \begin{equation}
@@ -329,29 +321,29 @@ y_2(t) = C(t - 2L_2) - C(t) + h_2(t) + n_2(t).
     \label{fig:UnequalArmsDet}
 \end{figure}
 
-A procedure to calculate the laser frequency noise was suggested by \cite{faller1984possible}. If we take an infinitely long Fourier transform of the data $y_{1}$, the expression of $y_{1}$ in the frequency domain is,
+A procedure to calculate the laser frequency noise was suggested by Faller \textit{et al.} \cite{faller1984possible}. If we take an infinitely long Fourier transform of the data $y_{1}$, the expression of $y_{1}$ in the frequency domain is,
 \begin{equation}
 \tilde{y}_1(f) = \tilde{C}(f) \big[ e^{4\pi i f L_1} - 1 \big] + \tilde{h}_1(f) + \tilde{n}_1(f).
 \label{eq:freqdomainy1}
 \end{equation}
-Now, by relaxing the assumption of infinite-length Fourier transform and constraining it to finite-length Fourier transform, eq.\eqref{eq:freqdomainy1} takes the form
+Now, by relaxing the assumption of infinite-length Fourier transform and constraining it to finite-length Fourier transform, Eq.~\eqref{eq:freqdomainy1} takes the form
 \begin{equation}
 \tilde{y}^{T}_{1} \equiv \int y_1(t) e^{2\pi i f t} \, dt = \int y_1(t) H(t) e^{2\pi i f t} \, dt,
 \label{eq:freqdomainy1finite}
 \end{equation}
-However, in order to suppress the laser noise fluctuations below the LISA sensitivity, the integration time needed would amount to six months. A solution to this was proposed by \cite{tinto1999cancellation} which works in the time domain. By using the new data set, the difference of $y_{1}$ and $y_{2}$ from eq. \eqref{eq:dopplerdata1} and eq. \eqref{eq:dopplerdata2} is
+However, in order to suppress the laser noise fluctuations below the LISA sensitivity, the integration time needed would amount to six months. A solution to this was proposed by Tinto \& Armstrong~\cite{tinto1999cancellation} which works in the time domain. By using the new data set, the difference of $y_{1}$ and $y_{2}$ from Eq.~\eqref{eq:dopplerdata1} and Eq.~\eqref{eq:dopplerdata2} is
 \begin{equation}
 y_1(t) - y_2(t) = C(t - 2L_1) - C(t - 2L_2) + h_1(t) - h_2(t) + n_1(t) - n_2(t).
 \label{eq:y1y2_1}
 \end{equation}
-Using eqs. \eqref{eq:dopplerdata1},\eqref{eq:dopplerdata2} and \eqref{eq:y1y2_1}, we can write
+Using Eqs.~\eqref{eq:dopplerdata1},~\eqref{eq:dopplerdata2}, and~\eqref{eq:y1y2_1}, we can write
 \begin{align}
 y_1(t - 2L_2) - y_2(t - 2L_1) &= C(t - 2L_1) - C(t - 2L_2) + h_1(t - 2L_2) - h_2(t - 2L_1) \notag \\
 &\quad + n_1(t - 2L_2) - n_2(t - 2L_1).
 \label{eq:y1y2_2}
 \end{align}
 which is obtained from time-shifting the data $y_{1}$ by the round trip light time in arm 2, $y_{1}(t-L_{2})$, and subtract from it the data $y_{2}$ after it has been time-shifted by the round trip light time in arm 1.
-By subtracting eq. \eqref{eq:y1y2_1} from eq. \eqref{eq:y1y2_2} we generate new data that does not contain the laser frequency fluctuations $c(t)$:
+By subtracting Eq.~\eqref{eq:y1y2_1} from Eq.~\eqref{eq:y1y2_2} we generate new data that does not contain the laser frequency fluctuations $c(t)$:
 \begin{equation}
 X \equiv [y_1(t) - y_2(t)] - [y_1(t - 2L_2) - y_2(t - 2L_1)],
 \label{combinationX}
@@ -360,22 +352,25 @@ which encapsulates the concept of time-delay interferometry (TDI): Laser frequen
 
 
 \subsection{Additional Noise Sources}
+\label{subsec:AddNoiseSour}
 
-\textit{Acceleration Noise}
-
+\subsubsection{Acceleration Noise}
 As we mentioned in earlier sections, test masses and spacecrafts operate under a drag-free conditions, where the spacecrafts act as "shielding" for the test mass together with the Gravitational Reference System (GRS) to account for deviations from free-fall. There exist several noise sources for these deviations and can be attributed to both local and external disturbances \cite{colpiand2023lisa}. Moreover, these noise sources compare in strain magnitude to GW signals that could be detected, and are roughly at all frequencies below $4 \mathrm{mHz}$. At milihertz frequencies, Brownian force from residual gas impacts is the dominant noise. At lower frequencies, actuation voltages used to align test masses to the interferometer, stray electrostatic forces due to test mass charge and stray surface "patch" potentials. External coupled disturbances include magnetic forces on the test mass bulk due to the interplanetary field, forces of thermal origin relevant at and below $100~\mu\mathrm{Hz}$ lower band edge as well as fluctuations in the local gravitational field due to any motion or deformation in the spacecraft mass distribution.	
 
-\textit{Interferometer noise}
+\subsubsection{Interferometer noise}
 
 Noises intrinsic to the interferometer include \cite{colpiand2023lisa}: Shot noise which arise from the interferometric measurements where the low power received beam which carries the gravitational wave information, is beat against a local oscillator beam. Another source of noise is the optical path-length noise which include phase noise arising from the thermo-mechanics of the optical elements that comprise the optical system (telescope and interferometers). Control of this type of noise is done through careful design of the optical system and selection of components and coating, as well as by placing stringent requirements on the thermal stability of the optical system. The angular and lateral stability of the components of the optical system couples with misalignments in the optical system to produce spurious path-length changes.
 
 \section{Observations of MBHBs with LISA and Data Analysis}
+\label{sec:ObsMBHBsLISA}
 
 When MBHBs reach the GW emission stage, space-based GW observatories like LISA are expected to detect these GWs, to subsequently estimate the parameters of their sources, i.e. masses, spins, sky positions, and distances from Earth. In this chapter we will discuss the elements that are involved in the detection as well as in the parameter estimation. 
 
-To know when a GW has been detected we need a model for the expected signal, this model is called the waveform, and is compared with the data that the detector has obtained. A popular technique to perform this operation is the \textit{matched filtering} which uses the noise model of the detector, known as the Power Spectral Density (PSD), to weight the degree of match between the waveform and the data. The result of this process is the computation of the signal-to-noise ratio (SNR), a measure of the strength of the signal as detected by the detector. Once a signal has been detected with some level of confidence, parameter estimation of the source can be performed. GW makes extensive use of Bayesian statistics, which is based on estimating the probability distribution of the source true values, i.e. their true values and their uncertainties, based on the data and prior assumptions of the parameter values. Under some specific scenarios, approximations can be used to estimate the uncertainties that are computationally less expensive than Bayesian estimates, such as the Fisher Information Matrix, providing accurate results. In the next few sections, we will discuss all these concepts.
+To know when a GW has been detected we need a model for the expected signal, this model is called the waveform, and is compared with the data that the detector has obtained. A popular technique to perform this operation is the \textit{matched filtering} which uses the noise model of the detector, known as the power spectral density (PSD), to weight the degree of match between the waveform and the data. The result of this process is the computation of the signal-to-noise ratio (SNR), a measure of the strength of the signal as detected by the detector. Once a signal has been detected with some level of confidence, parameter estimation of the source can be performed. GW makes extensive use of Bayesian statistics, which is based on estimating the probability distribution of the source true values, i.e. their true values and their uncertainties, based on the data and prior assumptions of the parameter values. Under some specific scenarios, approximations can be used to estimate the uncertainties that are computationally less expensive than Bayesian estimates, such as the Fisher Information Matrix, providing accurate results. In the next few sections, we will discuss all these concepts.
 
 \subsection{Waveforms}
+\label{subsec:waveforms}
+
 After the advancements in numerical relativity (NR) in mid 2000's \cite{campanelli2006accurate,pretorius2005evolution,baker2006gravitational}
 regarding the modelling of gravitational wave signals, or gravitational waveforms, waveforms suited for data analysis applications were needed. While highly accurate, NR waveforms are known to be computationally very expensive to obtain since it involves solving the full highly non-linear Einstein's field equations, not very well suited for data analysis purposes. Phenomenological waveforms were developed for this necessity. They resemble approximately the waveforms generated through NR with the advantage of being less computationally expensive than the ones from NR. The requirements were (and still are) that the phenomenological waveforms, tuned up to NR waveforms, approximate the properties of the gravitational waves to its NR counterpart, ranging from the inspiral to the ringdown stage. The advantages of the phenomenological waveforms are, among others, that they are computationally efficient, and they cover a broad parameter space, so that they cover a wide range of data analysis applications. The GW community has developed the LALsuite \cite{veitch2015parameter}, a library with phenomenological waveforms for use on data analysis, and gave the family of waveforms the name of IMRPhenom.
 
@@ -392,9 +387,11 @@ The evolution of IMRPhenom waveforms range from the modelling of the dominant ha
         \item PhenomHM adds higher than $l=|m|=2$ harmonics.
         \item PhenomPv3 updates the single spin of PhenomP for a two spin prescription.
         \item PhenomPv3HM includes higher harmonics with twisting up precession approach.
-        \item PhenomXAS upgrades from PhenomD with improvements in the dominant harmonic.
-        \item Phenom XHM add higher harmonics to PhenomXAS, and, in turn, PhenomXPHM add spin precession.
-    \end{enumerate}
+        \end{enumerate}
+    \item PhenomXAS upgrades from PhenomD with improvements in the dominant harmonic.
+        \begin{enumerate}
+        \item Phenom XHM adds higher harmonics to PhenomXAS, and PhenomXPHM adds higher harmonics and spin precession.
+        \end{enumerate}
 \end{enumerate}
 
 Fourth generation models have been calibrated to non-precessing quasi-circular orbit NR. Precession has been included by using the twisting approximation \cite{afshordi2023waveform}: In the inspiral stage, the precession time scale is much smaller than the orbit time scale, so precession averages out over one orbital period, hence, being neglected in the total contribution of the signal, and non-precessing dynamics dominates the inspiral evolution. Then to map from non-precessing to precessing binaries, rotation of the orbital plane described by the Euler angles is used to resemble the precession of the binary. A shortcoming of the use of the twisting approximation is that the use of the stationary phase approximation (SPA) is not valid for the late inspiral, merger and ringdown stages. 
@@ -409,15 +406,16 @@ Challenges that phenom waveforms face, for comparable mass binaries:
 \end{enumerate}
 
 \subsection{Detector Noise PSD and Sensitivity curve}
+\label{subsec:PSD_Sensit}
 
 When carrying out observations of compact binary objects with LISA, there are several aspects that are needed to be accounted for such as the noise properties of the detector, the type of waveform that is used for the analysis, and the data analysis techniques. The outcome of the observations are the foundation for astrophysical interpretation about the nature of the sources, i.e.\ their formation mechanisms and evolution through cosmic ages, which in turn let us know about their populations in the local and early universe. In this section we will explore these aspects.
 
-In general, the sensitivity curve $S_n$ expresses the noise strength of the detector as a function of frequency, and the amplitude spectral density (ASD) of the sensitivity curve $\sqrt{S_n}$ shows the ability of the detector to detect spacetime distortions due to passing GWs. The ASD of the sensitivity curve, $\sqrt{S_n}$ is the curve that is typically shown when compared with GWs signal strains in a strain $vs$ frequency space, fig. \ref{fig:LISAcurve}. The sensitivity curve is obtained from noise power spectral density (PSD) and the detector response function $R(f)$ which relates the PSD of the signal itself to the PSD of the signal as recorded by the detector. The sensitivity curve can be expressed by \cite{robson2019construction},
+In general, the sensitivity curve $S_n$ expresses the noise strength of the detector as a function of frequency, and the amplitude spectral density (ASD) of the sensitivity curve $\sqrt{S_n}$ shows the ability of the detector to detect spacetime distortions due to passing GWs. The ASD of the sensitivity curve, $\sqrt{S_n}$ is the curve that is typically shown when compared with GWs signal strains in a strain $vs$ frequency space, fig. \ref{fig:LISAcurve}. The sensitivity curve is obtained from the PSD, $P_n(f)$, and the detector response function $R(f)$ which relates the PSD of the signal itself to the PSD of the signal as recorded by the detector. The sensitivity curve can be expressed by \cite{robson2019construction},
 \begin{equation}
 S_{n}(f) = \frac{10}{3L^{2}}\left[ P_{\mathrm{OMS}}(f) + \frac{4P_{\mathrm{acc}}(f)}{(2\pi f)^{4}}\right] \left[ 1 + \frac{6}{10}\left( \frac{f}{f_{\ast}}^{2} \right)\right] + S_{c}(f),
 \label{eq:psdLISA}
 \end{equation}
-where $L = 2.5~\mathrm{Gm}$ for LISA's arm length, and $f_{\ast} = c/(2 \pi L) = 19.09~\mathrm{mHz}$ and is called the transfer frequency. The noise sources that affect LISA are included in the terms $P_{\mathrm{OMS}}$, $P_{\mathrm{acc}}$ and $S_{c}$, which are the noise associated with the optical metrology system, the noise due to test masses acceleration fluctuations and the confusion noise that comes from unresolved sources in the galaxy, respectively. In the next lines we will show how to compute the sensitivity curve in eq. \eqref{eq:psdLISA}.  
+where $L = 2.5~\mathrm{Gm}$ for LISA's arm length, and $f_{\ast} = c/(2 \pi L) = 19.09~\mathrm{mHz}$ and is called the transfer frequency. The noise sources that affect LISA are included in the terms $P_{\mathrm{OMS}}$, $P_{\mathrm{acc}}$ and $S_{c}$, which are the noise associated with the optical metrology system, the noise due to test masses acceleration fluctuations and the confusion noise that comes from unresolved sources in the galaxy, respectively. In the next lines we will show how to compute the sensitivity curve in Eq.~\eqref{eq:psdLISA}.  
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Figures/LISA_ASDcurve.png}
@@ -434,7 +432,7 @@ where $P_{n}(f)$ is the noise PSD of the detector and is expressed as \cite{corn
 P_{n}(f) = \frac{P_{\mathrm{OMS}}}{L^{2}} + 2(1 + \text{cos}^2({f/f_{\ast}}))\frac{P_{\mathrm{acc}}}{(2\pi f)^{4}L^{2}},
 \label{eq:noiseLISA}
 \end{equation}
-and $\mathcal{R}(f)$ is the detector response function. $R(f)$ is obtained by combining the gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals $\Tilde{h}_{+}(f)$ and $\Tilde{h}_{\times}(f)$ using the expression, \cite{robson2019construction},
+and $\mathcal{R}(f)$ is the detector response function. $R(f)$ is obtained by combining the gravitational wave amplitude recorded by the detector, $\Tilde{h}(f)$ and the polarisations of the signals $\Tilde{h}_{+}(f)$ and $\Tilde{h}_{\times}(f)$ using the expression \cite{robson2019construction},
 \begin{equation}
 \Tilde{h}(f) = F^{+}(f) \Tilde{h}_{+}(f) + F^{\times}(f)\Tilde{h}_{\times}(f),
 \label{eq:strain_plus_crossLISA}
@@ -465,7 +463,7 @@ The transfer function is numerically computed in \cite{larson2000sensitivity} an
 LISA operates as a network of detectors instead as a single one, so there are multiple independent channels which combined give the total observational sensitivity. When $f < f_{\ast}$, channels $A$ and $E$ come into play, when $f > f_{\ast}$, channels $A$, $E$ and $T$ work together to yield the total SNR \cite{prince2002lisa}.
 Having defined $P_{n}$ and $\mathcal{R}(f)$, the general expression for $S_{n}$ is,
 \begin{equation}
-S_{n}(f) = \frac{10}{3L^{2}}\bigg( P_{\mathrm{OMS}}(f) + 2 (1 + \text{cos}^{2}(f/f_{\ast})\frac{P_{\mathrm{acc}}(f)}{(2\pi f)^{4}}\bigg)\bigg( 1 + \frac{6}{10}\big( \frac{f}{f_{\ast}}^{2} \big)\bigg) + S_{c}(f).
+S_{n}(f) = \frac{10}{3L^{2}}\bigg[ P_{\mathrm{OMS}}(f) + 2 (1 + \text{cos}^{2}(f/f_{\ast})\frac{P_{\mathrm{acc}}(f)}{(2\pi f)^{4}}\bigg]\bigg[ 1 + \frac{6}{10}\bigg( \frac{f}{f_{\ast}}^{2} \bigg)\bigg] + S_{c}(f).
 \label{eq:gralpsdLISA}
 \end{equation}
 The optical metrology system noise is expressed by $P_{\mathrm{OMS}}$ and has value of \cite{babak2021lisa},
@@ -478,7 +476,7 @@ and $P_{\mathrm{acc}}$ is the test mass acceleration noise,
 \sqrt{P_{\mathrm{acc}}(f)} = 3 \bigg[ \frac{\text{fm.s}^{-2}}{\sqrt{\text{Hz}}}\bigg] \sqrt{1 + \bigg( \frac{0.4\times10^{-3}}{f} \bigg)^{4}} \sqrt{1 + \bigg( \frac{f}{ 8\times10^{-3}} \bigg)^{4}}, 
 \label{eq:pacc}
 \end{equation}
-For the case where test mass acceleration noise dominates over the optical path noise, $\text{cos}^{2}(f/f_{\ast})$ approaches unity. In this case eq.\eqref{eq:gralpsdLISA}  takes the form of eq.\eqref{eq:psdLISA}. $S_{c}$ is the galactic confusion noise which accounts for the binaries that exist it the Milky Way galaxy and enter the LISA band as foreground noise. As the time of the mission progresses, $S_{c}$ diminishes following the expression, \cite{robson2019construction} 
+For the case where test mass acceleration noise dominates over the optical path noise, $\text{cos}^{2}(f/f_{\ast})$ approaches unity. In this case Eq.~\eqref{eq:gralpsdLISA}  takes the form of Eq.~\eqref{eq:psdLISA}. $S_{c}$ is the galactic confusion noise which accounts for the binaries that exist it the Milky Way galaxy and enter the LISA band as foreground noise. As the time of the mission progresses, $S_{c}$ diminishes following the expression, \cite{robson2019construction} 
 \begin{equation}
 S_{c}(f) = A f^{-7/3} e^{-f^{\alpha} + \beta f \sin(\kappa f)} \left[1 + \tanh(\gamma(f_{k} - f))\right] \,\text{Hz}^{-1}.
 \label{eq:galacticconfusionnoise}
@@ -486,15 +484,16 @@ S_{c}(f) = A f^{-7/3} e^{-f^{\alpha} + \beta f \sin(\kappa f)} \left[1 + \tanh(\
 where $\alpha$, $\beta$, $\kappa$, $\gamma$ and $f_{k}$ are fitting parameters where $f_{k}$ decreases with observation time and $\gamma$ increases with observation time, leading to a overall decrease of the galactic noise with observation time. 
 
 \subsection{Detection of GWs}
+\label{subsec:DetectionGWs}
 
 GW detection consists in computing 1) the probability of observing the data $d$ under the hypothesis that what's in the data is only noise $\mathcal{H}_0$, $p(d|\mathcal{H}_0)$, and 2) the probability of observing the data given the hypothesis that the data is comprised by noise and a GW signal $\mathcal{H}_1$, $p(d|\mathcal{H}_1)$. The likelihoods of observing the data under these two hypotheses are expressed by,
 \begin{equation}
-p(\mathbf{d}|\mathcal{H}_0) = p_0(\mathbf{d}) \quad \text{and} \quad p(\mathbf{d}|\mathcal{H}_1) = p_1(\mathbf{d})
+p(\mathbf{d}|\mathcal{H}_0) = p_0(\mathbf{d}) \quad \text{and} \quad p(\mathbf{d}|\mathcal{H}_1) = p_1(\mathbf{d}).
 \label{eq:hypotheses}
 \end{equation}
 The quantity of interest is the posterior probability of $\mathcal{H}_1$, which provides the probability distribution of $\mathcal{H}_1$ given the observed data. This is expressed by the Bayes' theorem  
 \begin{equation}
-p(\mathcal{H}_{1}|\mathbf{d}) = \frac{p(\mathcal{H}_1)p_{1}(\mathbf{d})}{p(\mathcal{H}_{0})p_{0}(\mathbf{d})+p(\mathcal{H}_{1})p_{1}(\mathbf{d})} =  \frac{p_{1}(\mathbf{d})}{p_{0}(\mathbf{d})}\bigg[\frac{p_{1}(\mathbf{d})}{p_{0}(\mathbf{d})}+\frac{p(\mathcal{H}_{0})}{p(\mathcal{H}_{1})}\bigg]^{-1}
+p(\mathcal{H}_{1}|\mathbf{d}) = \frac{p(\mathcal{H}_1)p_{1}(\mathbf{d})}{p(\mathcal{H}_{0})p_{0}(\mathbf{d})+p(\mathcal{H}_{1})p_{1}(\mathbf{d})} =  \frac{p_{1}(\mathbf{d})}{p_{0}(\mathbf{d})}\bigg[\frac{p_{1}(\mathbf{d})}{p_{0}(\mathbf{d})}+\frac{p(\mathcal{H}_{0})}{p(\mathcal{H}_{1})}\bigg]^{-1}.
 \label{eq:BayesH0H1}
 \end{equation}
 We define the likelihood ratio as
@@ -505,7 +504,7 @@ We define the likelihood ratio as
 where $\boldsymbol{\theta}$ are the parameters characterising the GW signal such as the signal amplitude $A$ observed by the detector, $\phi$ the phase of the signal, arrival time $t$ which is typically defined as the time at which the peak GW amplitude reaches the detector, and $\boldsymbol{\mu}$ which includes the masses of the sources and spins. 
 
 The posterior probability is monotonic in the likelihood ratio so $\Lambda (\mathbf{d}|\boldsymbol{\theta})$ is said to be the optimal test statistic. Instead of working with the likelihood ratio, we work with the log likelihood instead. If noise is assumed to be Gaussian, the log of the likelihood ratio is
-\begin{equation}    \mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = (\mathbf{d}|\mathbf{h}(\boldsymbol{\theta}))-\frac{1}{2}(\mathbf{h}(\boldsymbol{\theta})|\mathbf{h}(\boldsymbol{\theta}))
+\begin{equation}    \mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = (\mathbf{d}|\mathbf{h}(\boldsymbol{\theta}))-\frac{1}{2}(\mathbf{h}(\boldsymbol{\theta})|\mathbf{h}(\boldsymbol{\theta})),
 \label{eq:loglikelihoodratio}
 \end{equation}
 where the quantity $(\mathbf{d}|\mathbf{h}(\boldsymbol{\theta}))$ is known as the \textit{matched filter} and is expressed using the inner product defined by
@@ -513,28 +512,28 @@ where the quantity $(\mathbf{d}|\mathbf{h}(\boldsymbol{\theta}))$ is known as th
 (\boldsymbol{\mathrm{a}}|\boldsymbol{\mathrm{b}})= 2\int^{\infty}_{0}\frac{\tilde{a}(f)b^{*}(f)+\tilde{a}^{*}(f)b(f)}{S_{n}(f)}df.
 \label{eq:innerproduct}
 \end{equation}
-Since the parameters $\boldsymbol{\theta}$ are unknown on a matched-filter search for GWs, we are interested in obtaining the marginalised likelihood ratio, i.e. the likelihood ratio obtained by integrating over all the parameters. Since the log likelihood ratio varies linearly with the GW signal, the likelihood ratio itself will reach the peak at its maximum. This means that we can approximate the marginalised likelihood ratio by maximizing the likelihood ratio. This is as follows: We write the likelihood ratio as 
-\begin{equation}    \mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = -\frac{1}{2}(\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})|\mathbf{d}-\mathbf{h}(\boldsymbol{\theta}))+\frac{1}{2}(\mathbf{d}|\mathbf{d})
+Since the parameters $\boldsymbol{\theta}$ are unknown on a matched-filter search for GWs, we are interested in obtaining the marginalised likelihood ratio, i.e. the likelihood ratio obtained by integrating over all the parameters. Since the log likelihood ratio varies linearly with the GW signal, the likelihood ratio itself will reach the peak at its maximum. This means that we can approximate the marginalised likelihood ratio by maximizing the likelihood ratio: We write the likelihood ratio as 
+\begin{equation}    \mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = -\frac{1}{2}(\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})|\mathbf{d}-\mathbf{h}(\boldsymbol{\theta}))+\frac{1}{2}(\mathbf{d}|\mathbf{d}).
 \label{eq:loglikelihoodratio2}
 \end{equation}
 From this expression we see that the maximum likelihood ratio can be obtained by minimising the residual $\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})$. The observed GW strain can be expressed by
 \begin{equation}    
-\mathbf{h}(\boldsymbol{\theta}) = A \mathbf{p}(t,\boldsymbol{\mu}) \cos\phi + A \mathbf{q}(t,\boldsymbol{\mu}) \sin\phi
+\mathbf{h}(\boldsymbol{\theta}) = A \mathbf{p}(t,\boldsymbol{\mu}) \cos\phi + A \mathbf{q}(t,\boldsymbol{\mu}) \sin\phi,
 \label{eq:strainparameters}
 \end{equation}
-where $\mathbf{p}(t,\boldsymbol{\mu})$ and $\mathbf{q}(t,\boldsymbol{\mu})$ are in-phase (cosine) and quadrature-phase (sine) waveforms. To minimise the residual $\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})$ we follow the procedure found in \cite{abbott2020guide}. We combine \eqref{eq:loglikelihoodratio2} and \eqref{eq:strainparameters},
+where $\mathbf{p}(t,\boldsymbol{\mu})$ and $\mathbf{q}(t,\boldsymbol{\mu})$ are in-phase (cosine) and quadrature-phase (sine) waveforms. To minimise the residual $\mathbf{d}-\mathbf{h}(\boldsymbol{\theta})$ we follow the procedure found in \cite{abbott2020guide}. We combine Eqs.~\eqref{eq:loglikelihoodratio2} and \eqref{eq:strainparameters},
 \begin{equation}    
-\mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = A \rho (t,\boldsymbol{\mu}) \cos (\phi - \varphi) - \frac{1}{2}A^{2}
+\mathrm{log}\Lambda(\mathbf{d}|\boldsymbol{\theta})) = A \rho (t,\boldsymbol{\mu}) \cos (\phi - \varphi) - \frac{1}{2}A^{2},
 \label{eq:loglikelihoodratio3}
 \end{equation}
 where
 \begin{equation}    
-\varphi \equiv \mathrm{arctan}\frac{(\mathbf{d}|\mathbf{q}(t,\boldsymbol{\mu}))}{(\mathbf{d}|\mathbf{p}(t,\boldsymbol{\mu}))}
+\varphi \equiv \mathrm{arctan}\frac{(\mathbf{d}|\mathbf{q}(t,\boldsymbol{\mu}))}{(\mathbf{d}|\mathbf{p}(t,\boldsymbol{\mu}))},
 \label{eq:varphi}
 \end{equation}
 and
 \begin{equation}    
-\rho (t,\boldsymbol{\mu}) \equiv \sqrt{(\mathbf{d}|\mathbf{p}(t,\boldsymbol{\mu}))^{2}+(\mathbf{d}|\mathbf{q}(t,\boldsymbol{\mu}))^{2}}
+\rho (t,\boldsymbol{\mu}) \equiv \sqrt{(\mathbf{d}|\mathbf{p}(t,\boldsymbol{\mu}))^{2}+(\mathbf{d}|\mathbf{q}(t,\boldsymbol{\mu}))^{2}}.
 \label{eq:SNRtimeseries}
 \end{equation}
 The log-likelihood is maximal for amplitude $\tilde{A}=\rho$ and phase $\tilde{\phi} = \varphi$ with
@@ -544,6 +543,7 @@ The log-likelihood is maximal for amplitude $\tilde{A}=\rho$ and phase $\tilde{\
 \end{equation}
 
 \subsection{Parameter Estimation of GW Sources}
+\label{subsec:ParamEstGWs}
 
 To perform parameter estimation, as in the case of detection of GWs, we need to know the generic shape of the signal we are looking for as well as the noise structure. Moreover, GW signal are weak compared to the noise strenght yielding large uncertainties, and the prior assumptions of the parameters have an important impact on the reconstructured waveforms. Bayesian inference takes into account all these elements, making it suitable for parameter estimation of GWs.
 
@@ -552,7 +552,7 @@ Bayesian inference is encapsulated in the Bayes' theorem,
 p(\boldsymbol{\theta}|\mathbf{d},M,I) = p(\boldsymbol{\theta}|M,I)\frac{p(\mathbf{d}|\boldsymbol{\theta},M,I)}{p(\mathbf{d}|M,I)}
 \label{eq:Bayesianposterior}
 \end{equation}
-where $M$ is the waveform model dependent on the parameters $\boldsymbol{\theta}$, $I$ is the background information, $d$ is the data collected by the detector. In the left-hand side of equation \eqref{eq:Bayesianposterior} is the \textit{posterior probability density function} (PDF) of $\boldsymbol{\theta}$. On the right-hand side,  $p(\mathbf{d}|\boldsymbol{\theta},M,I)$ is the \textit{likelihood function}, and $p(\mathbf{d}|M,I)$ is \textit{the prior probability density function}. Also in the right-hand side of eq. \eqref{eq:Bayesianposterior} is the \textit{evidence} defined as,
+where $M$ is the waveform model dependent on the parameters $\boldsymbol{\theta}$, $I$ is the background information, $d$ is the data collected by the detector. In the left-hand side of Eq.~\eqref{eq:Bayesianposterior} is the \textit{posterior probability density function} (PDF) of $\boldsymbol{\theta}$. On the right-hand side,  $p(\mathbf{d}|\boldsymbol{\theta},M,I)$ is the \textit{likelihood function}, and $p(\mathbf{d}|M,I)$ is \textit{the prior probability density function}. Also in the right-hand side of eq.~\eqref{eq:Bayesianposterior} is the \textit{evidence} defined as,
 \begin{equation}    
 p(\boldsymbol{\theta}|M,I) = \int d\boldsymbol{\theta} p(\boldsymbol{\theta}|M,I) p(\mathbf{d}|\theta,M,I).
 \label{eq:evidence}
@@ -565,7 +565,7 @@ Prior distributions express the assumed functional form of the distributions for
 \begin{enumerate}
     \item the component masses $m_1$ and $m_2$;
     \item the spin vectors $\Vec{S}_{1}$ and $\Vec{S}_{2}$;
-    \item the polarisation angle $\psi$ and the angle $\theta_{jn}$ between the total angular momentum $\Vec{J}$ and the propagation direction of the gravitational wave $\hat{n}$;
+    \item the polarisation angle $\psi$ and the angle $\theta_{JN}$ between the total angular momentum $\Vec{J}$ and the propagation direction of the gravitational wave $\hat{n}$;
     \item the source luminosity distance $D_{L}$;
     \item the source right ascension $\alpha$ and declination $\delta$;
     \item a reference phase $\varphi_{0}$ and reference time $t_{0}$.
@@ -581,7 +581,7 @@ There exist many software programs or \textit{pipelines} in GW astronomy that ca
 \subsubsection{Posterior Distributions}
 \label{subsec:postdist}
 
-GW parameter estimation pipelines' output are posteriors in a multidimensional parameter space for all parameters. This means that these posteriors include the correlations between parameters as well as the posteriors for each parameter. An example of this is shown in fig. \ref{fig:ParEstcornerplot} where the $2-\mathrm{dimensional}$ \textit{joint} posterior for the component masses of a BHB has been computed, showing the correlations between the two parameters. The other two panels show $1-\mathrm{dimensional}$ \textit{marginalised} posteriors for each of the parameters.
+GW parameter estimation pipelines' output are posteriors in a multidimensional parameter space for all parameters. This means that these posteriors include the correlations between parameters as well as the posteriors for each parameter. An example of this is shown in fig. \ref{fig:ParEstcornerplot} where the $2-\mathrm{dimensional}$ \textit{joint} posterior for the component masses of a BBH has been computed, showing the correlations between the two parameters. The other two panels show $1-\mathrm{dimensional}$ \textit{marginalised} posteriors for each of the parameters.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/MBHB_corner_plot_m1m2.png}
@@ -610,7 +610,7 @@ p[\Tilde{\theta}|s,\text{detection}]=\mathcal{N} p^{(0)}(\Tilde{\theta}) e^{-\fr
 \label{eq:parameterprob}
 \end{equation}
 where $p^{(0)}$ is some prior information about the parameters' values, and $\mathcal{N}$ is a normalization constant.
-In order to find the best-fit parameter values $\hat{\theta}$ that best matches the true values $\Tilde{\theta}$, we need to maximize the likelihood in eq.~(\ref{eq:parameterprob}), i.e.\ take the derivative of the likelihood with respect to $\Tilde{\theta}$ and set it to zero,
+In order to find the best-fit parameter values $\hat{\theta}$ that best matches the true values $\Tilde{\theta}$, we need to maximize the likelihood in Eq.~\eqref{eq:parameterprob}, i.e.\ take the derivative of the likelihood with respect to $\Tilde{\theta}$ and set it to zero,
 \begin{equation}
 (h_{,i}(\hat{\theta}_{\text{ML}})|h_{,i}(\hat{\theta}_{\text{ML}}) - s) - [\text{ln}p^{(0)}]_{,i}(\hat{\theta}_{\text{ML}})= 0
 \label{eq:MLestcondition}
@@ -631,7 +631,7 @@ and,
 \label{eq:fisherinfmat}
 \end{equation}
 is the Fisher information matrix. 
-Eqs (\ref{eq:gaussnoise}) and (\ref{eq:expansiontheta}) define the PDF $p(\hat{\theta}|\Tilde{\theta})$. On the other hand, Cutler \& Flanagan \cite{cutler1994gravitational} define the frequentist variance-covariance matrix $\Sigma^{ij}_{FREQ}$ as,
+Eqs.~\eqref{eq:gaussnoise} and~\eqref{eq:expansiontheta} define the PDF $p(\hat{\theta}|\Tilde{\theta})$. On the other hand, Cutler \& Flanagan \cite{cutler1994gravitational} define the frequentist variance-covariance matrix $\Sigma^{ij}_{\mathrm{FREQ}}$ as,
 \begin{align}
     \Sigma^{ij}_{\text{FREQ}} &= \Sigma^{ij}_{\text{FREQ}}[\Tilde{\theta};\hat{\theta}(\cdot)] \notag \\
     &= \bigg\langle \big\{\hat{\theta}^{i}[h(\Tilde{\theta})+n]-\Tilde{\theta}^{i}\big\} 
@@ -643,7 +643,7 @@ Using the identity \cite{finn1992detection},
 \langle(n|g) (n|h)\rangle = (g|h)
 \label{eq:innerid}
 \end{equation}
-and eq.(\ref{eq:expansiontheta}), Cutler \& Flanagan obtain,
+and Eq.~\eqref{eq:expansiontheta}, Cutler \& Flanagan obtain,
 \begin{equation}
 \Sigma^{ij}_{\text{FREQ}}[\Tilde{\theta};\hat{\theta}_{\text{ML}}(\cdot)] = (\Gamma^{-1})^{ij} + {}^{(2)}\Sigma^{ij}
 \label{eq:covleadingorder}
@@ -653,12 +653,14 @@ At leading order,
 \boldsymbol{\Sigma} = \boldsymbol{\Gamma}^{-1} .
 \label{eq:vecscovfisher}
 \end{equation}
-We have arrived to the result that in the high SNR limit, the covariance matrix can be approximated to the Fisher matrix shown in eq.\eqref{eq:vecscovfisher}.
+We have arrived to the result that in the high SNR limit, the covariance matrix can be approximated to the Fisher matrix shown in Eq.~\eqref{eq:vecscovfisher}.
 
 \section{Simulations of MBHB LISA observations with GWFish}
 \label{sec:simLISAGWFish}
 
 \subsection{GWFish}
+\label{GWFish}
+
 Currently, the GW community is developing science cases and computational tools that will enable observations of GW sources with future GW observatories such as Einstein Telescope, Cosmic Explorer and space-based observatory LISA, as well as improving the current ground-based observatories like LIGO, LIGO India, Virgo and KAGRA. The development of infrastructure capable of simulating observational scenarios with future space-based observatory LISA is part of these science cases. In this section, we introduce GWFish, a software tool designed to simulate observations of compact binary systems, such as BHBs and BNSs, by modeling the detector's response to GW signals using various waveform models. The outcome of the simulations is the computation of the Fisher matrices and the estimation of the parameter uncertainties. This section begins with an overview of GWFish, followed by a discussion of how it computes waveform derivatives—the core process of Fisher analysis—how it incorporates the detector response, and how is configured to run simulations.
 
 \subsubsection{Overview}
@@ -666,7 +668,7 @@ Currently, the GW community is developing science cases and computational tools 
 
 GWFish is a simulation software intended for estimating parameter estimation uncertainties. It computes the Fisher matrix of a GW signal, Section~\ref{subsec:Fisherapprox}, which involves the derivatives of the waveform model with respect to the waveform parameters. With this information, the covariance matrix and the uncertainties can be obtained. This is performed with time domain GW models and frequency domain of detector network's  response. With this framework, it is possible to carry out parameter estimation studies where the position and orientation of the network of detectors changes with time, which has an important impact mainly in sky localization.
 
-Additionally, GWFish can perform multi-band simulated observations, where detectors among a network can observe the same astrophysical event in different frequencies, giving insight into different phenomena of the same source. This is possible since Fisher matrix uncertainties from different detectors can be added to the overall estimation irrespective of the frequency band that provided the signal information. This also applies to the time delay interferometry (TDI) (reference) used by detectors like LISA.
+Additionally, GWFish can perform multi-band simulated observations, where detectors among a network can observe the same astrophysical event in different frequencies, giving insight into different phenomena of the same source. This is possible since Fisher matrix uncertainties from different detectors can be added to the overall estimation irrespective of the frequency band that provided the signal information. This also applies to TDI (reference) used by detectors like LISA.
 
 The main challenges when estimating parameter estimation uncertainties involve the computation of the waveform derivatives and the inversion of the Fisher matrices. GWFish takes a hybrid approach for the waveform derivatives with both analytical and numerical differentiation, the latter tuned up to the waveform parameters to reduce numerical errors. 
 In this regard, one of the key aspects to obtain reliable results for the simulations was to tune up the derivative step sizes. Regarding the inversion of the Fisher matrices, in general, the main issue is that Fisher matrices are close to singular, meaning that the Fisher matrices' eigenvalues span a huge range, leading to signal-model degeneracies. To be able to estimate parameter uncertainties, at least of the parameters not involved in the degeneracy, one needs to deal with matrix singularity through techniques like singular value decomposition (SVD). 
@@ -729,12 +731,6 @@ t(f) = \frac{1}{2\pi} \frac{d \phi (f)}{d f}.
 In general, the early inspiral part of a binary system is the most important part for the detector motion simulation, so $\phi (f)$ can be approximated to lowest order.
 GWFish simulates LISA's response by considering the TDI interferometry; in this technique, the main building blocks are the readouts $y_{ij}$ of every spacecraft link $j \longleftarrow i$, and by applying a time delay, it reduces laser noise. Indeed, every spacecraft acts as the vertiex of a triangular network where each of them is a laser interferometer. Since the noise is correlated, the noise-correlated matrix needs to be diagonalised. This leads to three separate channels: $A$, $E$, and $T$ channels. GWFish simulates these three channels and also applies the breathing motion approximation where the fluctuations in the arm lengths of the detector over the curse of a year are neglected.
 
-\subsubsection{Setup}
-\label{subsec:gwfishsetup}
-
-GWFish requires setting up a range of parameters which describe the systems to be simulated, the response of the detector, the network of detectors, and details regarding the GW signal such as the waveform approximant, the SNR threshold... 
-
-
 \subsection{Transformation of variables}
 \label{subsec:transfvariables}
 
@@ -744,7 +740,7 @@ When estimating the PDF $p(X,Y|I)$ where $X$ and $Y$ are the constrained paramet
 \label{1dpdf}
 \end{equation}
 where the equality becomes exact in the limit $\delta X \rightarrow 0$.
-Now, we want to express $p(X|I)$ as a function of $p(Y|I)$. We can do so if $X$ and $Y$ are (monotonically) related through $Y=f(X)$, then $f(X)$ will map $X^{\ast}$ to $Y^{\ast}$ and $\delta X$ to $\delta Y$. If the range of $Y$, which spans $Y^{\ast} \pm \delta Y/2$, is equivalent to the range of $X$, then the area under the pdf $p(Y|I)$ should equal the probability expressed by eq. (\ref{1dpdf}). This requires that,
+Now, we want to express $p(X|I)$ as a function of $p(Y|I)$. We can do so if $X$ and $Y$ are (monotonically) related through $Y=f(X)$, then $f(X)$ will map $X^{\ast}$ to $Y^{\ast}$ and $\delta X$ to $\delta Y$. If the range of $Y$, which spans $Y^{\ast} \pm \delta Y/2$, is equivalent to the range of $X$, then the area under the pdf $p(Y|I)$ should equal the probability expressed by Eq.~\eqref{1dpdf}). This requires that,
 \begin{equation}
 \text{prob}(X = X^{\ast} |I)\delta X = \text{prob}(Y = Y^{\ast} |I)\delta Y,
 \label{probXequalsprobY}
@@ -755,7 +751,7 @@ This should be true for any value of X and Y, so we obtain the expression,
 \label{jacobian}
 \end{equation}
 where the term in the modulus brackets is the Jacobian and it is the absolute value of the derivatives which express a ratio of lengths whether the variations of X and Y are positive or negative. 
-In the multidimensional case, we can extend what we obtained in eq. (\ref{probXequalsprobY}) for $M$ parameters $\{X_{j},Y_{j}\}$,
+In the multidimensional case, we can extend what we obtained in Eq.~\eqref{probXequalsprobY} for $M$ parameters $\{X_{j},Y_{j}\}$,
 \begin{equation}
 \text{prob}(\{X_{j}\}|I)\delta X_{1} \delta X_{2}...\delta X_{M} = \text{prob}(\{Y_{j}\}|I) \delta^{M} \text{Vol}(\{Y_{j}\}),
 \label{multijacobian}
@@ -765,46 +761,59 @@ where the $M$-dimensional hypercube formed by $\{\delta X_{j}\}$ in the $X$-spac
 \delta^{M}\text{Vol}(\{Y_{j}\}) = \bigg| \frac{\partial(Y_{1},Y_{2},...,Y_{M})}{\partial(X_{1},X_{2},...,X_{M})} \bigg| \delta X_{1} \delta X_{2}...\delta X_{M},
 \label{multijacobian2}
 \end{equation}
-where the quantity in the modulus is the multidimensional Jacobian and is the determinant of the $M \times M$ matrix of the partial derivatives $\partial Y_{i}/\partial X_{j} $. The final expression for the M-dimensional multivariate transformation is,
+where the quantity in the modulus is the multidimensional Jacobian and is the determinant of the $M \times M$ matrix of the partial derivatives $\partial Y_{i}/\partial X_{j} $. The final expression for the $M$-dimensional multivariate transformation is,
 \begin{equation}
 \text{prob}(\{X_{j}\}|I) = \text{prob}(\{Y_{j}\}|I) \times \bigg| \frac{\partial(Y_{1},Y_{2},...,Y_{M})}{\partial(X_{1},X_{2},...,X_{M})} \bigg|,
 \label{multijacobian2}
 \end{equation}
-In our study we are interested in computing $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p{M}_\mathrm{total},q)$. We map $p(\mathcal{M},q)$ from $p(m_1,m_2)$ using the expression,
+In our study we are interested in computing $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M,q)$. We map $p(\mathcal{M},q)$ from $p(m_1,m_2)$ using the expression,
 \begin{equation}
 p(m_1,m_2)\bigg|\frac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)}\bigg|=p(\mathcal{M},q),
 \label{eq:m1m2tochirpMq}
 \end{equation}
-where $\big| \frac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)} \big|$ the Jacobian and is calculated as,
+where $\bigg| \dfrac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)} \bigg|$ is the Jacobian and is calculated as,
 \begin{equation}
 \begin{split}
 \bigg| \frac{\partial(m_1,m_2)}{\partial(\mathcal{M},q)} \bigg| &=
-\begin{vmatrix} \displaystyle
-     \frac{\partial m_1}{\partial\mathcal{M}} &
-     \frac{\partial m_1}{\partial q} \\ \\
-     \frac{\partial m_2}{\partial \mathcal{M}} & 
-     \frac{\partial m_2}{\partial q}   
+\begin{vmatrix} 
+     \displaystyle
+     \frac{\partial m_1}     
+     {\partial\mathcal{M}} &
+     \displaystyle
+     \frac{\partial m_1}     
+     {\partial q}
+     \\ \\
+     \displaystyle
+     \frac{\partial m_2}     
+     {\partial \mathcal{M}} & 
+     \displaystyle
+     \frac{\partial m_2}     
+     {\partial q}   
 \end{vmatrix} \\
-&= \frac{1}{5} \mathcal{M}\bigg[ \bigg( \frac{1}{q^{2}}+\frac{1}{q^{3}} \bigg)^{1/5} \frac{3 q^{2} + 2 q}{(q^{3} + q^{2})^{4/5}} + (q^{3} + q^{2})^{1/5} \frac{(\frac{2}{q^{3}} + \frac{3}{q^{4}})}{(\frac{1}{q^{2}} + \frac{1}{q^{3}})^{4/5}}\bigg].
+&= \frac{1}{5} \mathcal{M}\bigg[ \bigg( \frac{1}{q^{2}}+\frac{1}{q^{3}} \bigg)^{1/5} \frac{3 q^{2} + 2 q}{(q^{3} + q^{2})^{4/5}} + (q^{3} + q^{2})^{1/5} \frac{(2/q^{3} + 3/q^{4})}{(1/q^{2} + 1/q^{3})^{4/5}}\bigg].
 \label{eq:jacobianm1m2chirpMq}
 \end{split}
 \end{equation}
-We follow the same procedure to map $p(m_1,m_2)$ to $p(M_{total},q)$,
+We follow the same procedure to map $p(m_1,m_2)$ to $p(M,q)$,
 \begin{equation}
-p(m_1,m_2)\bigg|\frac{\partial(m_1,m_2)}{\partial(M_{total},q)}\bigg|=p(M_{total},q),
+p(m_1,m_2)\bigg|\frac{\partial(m_1,m_2)}{\partial(M,q)}\bigg|=p(M,q),
 \label{eq:m1m2toMtotalq}
 \end{equation}
 where
 \begin{equation}
 \begin{split}
-\bigg| \frac{\partial(m_1,m_2)}{\partial(M_{total},q)} \bigg| &=
+\bigg| \frac{\partial(m_1,m_2)}{\partial(M,q)} \bigg| &=
 \begin{vmatrix}
-     \frac{\partial m_1}{\partial\text{M}_{total}} &
+     \displaystyle
+     \frac{\partial m_1}{\partial M} &
+     \displaystyle
      \frac{\partial m_1}{\partial q} \\ \\
-     \frac{\partial m_2}{\partial \text{M}_{total}} & 
+     \displaystyle
+     \frac{\partial m_2}{\partial M} & 
+     \displaystyle
      \frac{\partial m_2}{\partial q}   
 \end{vmatrix} \\
-&= \frac{\text{M}_{total}}{1 + q} \bigg[ \frac{1}{1 + q} - \frac{q}{(1 + q)^{2}} \bigg] + \frac{1}{1 + \frac{1}{q}} \bigg[ \frac{M_{total}}{(1 + q)^{2}} \bigg] .
+&= \frac{M}{1 + q} \bigg[ \frac{1}{1 + q} - \frac{q}{(1 + q)^{2}} \bigg] + \frac{1}{1 + 1/q} \bigg[ \frac{M}{(1 + q)^{2}} \bigg] .
 \label{eq:jacobianm1m2toMtotalq}
 \end{split}
 \end{equation}
@@ -812,7 +821,7 @@ where
 \subsection{Simulations}
 \label{subsec:simulations}
 
-Our first study consists in constraining MBHB intrinsic parameters such as $m_1$, $m_2$, $\mathcal{M}$, $M_{\mathrm{total}}$ and $q$ through the computation of the PDFs $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M_{\mathrm{total}},q)$. The Gaussian PDF for the component masses $m_1$ and $m_2$ is,
+Our first study consists in constraining MBHB intrinsic parameters such as $m_1$, $m_2$, $\mathcal{M}$, $M$ and $q$ through the computation of the PDFs $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M,q)$. The Gaussian PDF for the component masses $m_1$ and $m_2$ is,
 \begin{equation}
 p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \exp \Big[-\frac{1}{2}\bigg( 
 \begin{bmatrix}     
@@ -839,9 +848,9 @@ p(m_1,m_2)= \frac{1}{{(2\pi)}^{\frac{1}{2}}\big|\Sigma\big|^{\frac{1}{2}}} \exp 
 \Big],
 \label{eq:gaussianm1m2}
 \end{equation}
-where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in Section~\ref{subsec:Fisherapprox}. Additionally, we want to study the orientations of the PDF contour plots, i.e. the uncertainties of each parameter pair, and how parameters are correlated.  We obtain $p(\mathcal{M},q)$ by using eqs. (\ref{eq:m1m2tochirpMq}), (\ref{eq:jacobianm1m2chirpMq}) and (\ref{eq:gaussianm1m2}), and $p(M_{total},q)$ by using eqs.~(\ref{eq:m1m2toMtotalq}), (\ref{eq:jacobianm1m2toMtotalq}) and (\ref{eq:gaussianm1m2}).
+where $m_1$ and $m_2$ are the component masses, $\Sigma$ is the variance-covariance matrix and $m^{inj}_1$ and $m^{inj}_{2}$ are the true injected values for the component masses. The pdf $p(m_1,m2)$ evaluated in the $(m_1,m2)$ space will give a 2D pdf ellipse contour plot which shows visually the uncertainties and the correlations of $(m_1,m_2)$. We assume working in the high SNR limit, so the variance-covariance matrix is the inverse of the Fisher matrix as explained in Section~\ref{subsec:Fisherapprox}. Additionally, we want to study the orientations of the PDF contour plots, i.e. the uncertainties of each parameter pair, and how parameters are correlated.  We obtain $p(\mathcal{M},q)$ by using Eqs.~\eqref{eq:m1m2tochirpMq}, \eqref{eq:jacobianm1m2chirpMq} and \eqref{eq:gaussianm1m2}), and $p(M,q)$ by using Eqs.~\eqref{eq:m1m2toMtotalq},~\eqref{eq:jacobianm1m2toMtotalq} and~\eqref{eq:gaussianm1m2}.
 
-One feature that we are going to delve into is the slope of these contour plots and the global behaviour these have across chirp mass. For each PDF contour plot, the slope is calculated from the quotient of the $y$ component and the $x$ component of the eigenvector of the major principal axis of the ellipse,
+One feature that we delved into is the orientation, or slope, of these contour plots and the global behavior these have across $\mathcal{M}$ space. For each PDF contour plot, the slope is calculated from the quotient of the $y$ component and the $x$ component of the eigenvector of the major principal axis of the ellipse,
 \begin{equation}
 \text{slope} \ p(\cdot , \cdot) = \frac{y}{x},
 \label{eq:slopepdfs}
@@ -864,7 +873,7 @@ where the major and minor principal axes eigenvectors, $e_{1}$ and $e_{2}$ respe
 \end{equation}
 where $\left[ \begin{smallmatrix} A & C \\ C & B \end{smallmatrix} \right]$ is the two-parameter Fisher matrix, and $\lambda$ are the eigenvalues associated to the eigenvectors $e_{1}$ and $e_{2}$. 
 
-To obtain the slopes of $p(\mathcal{M},q)$ we used a different approach: Since we obtained $p(\mathcal{M},q)$ from $p(m1,m2)$ with the jacobian transformation, eq. (\ref{eq:jacobianm1m2chirpMq}), we do not have its covariance matrix to compute the eigenvectors. We obtain the covariance matrix of $p(\mathcal{M},q)$ from the covariance matrix of $p(m_1,m_2)$ by means of the transformation,
+To obtain the slopes of $p(\mathcal{M},q)$ we used a different approach: Since we obtained $p(\mathcal{M},q)$ from $p(m1,m2)$ with the jacobian transformation, Eq.~\eqref{eq:jacobianm1m2chirpMq}, we do not have its covariance matrix to compute the eigenvectors. We obtain the covariance matrix of $p(\mathcal{M},q)$ from the covariance matrix of $p(m_1,m_2)$ by means of the transformation,
 \begin{equation}
 \mathbf{\Sigma}_{\mathcal{M}q} = \mathbf{J} \; \mathbf{\Sigma}_{m_{1} m_{2}} \; \mathbf{J}^{T},
 \label{eq:transfmchirpq_m1m2}
@@ -895,21 +904,25 @@ and $\mathbf{J}$ is the Jacobian matrix,
 \begin{equation}
 \mathbf{J} =
 \begin{bmatrix}
+    \displaystyle
      \frac{\partial \mathcal{M}}{\partial m_{1}} &
+     \displaystyle
      \frac{\partial \mathcal{M}}{\partial m_{2}} \\ \\
+     \displaystyle
      \frac{\partial q}{\partial m_{1}} & 
+     \displaystyle
      \frac{\partial q}{\partial m_{2}}.     
 \end{bmatrix},
 \label{jacobianmatrix}
 \end{equation}
-We verified the covariance matrix $\Sigma_{\mathcal{M},q}$ obtained with eq. ($\ref{eq:transfmchirpq_m1m2}$) by computing $p(\mathcal{M},q)$ assuming Gaussian behavior with covariance matrix given by eq. (\ref{eq:transfmchirpq_m1m2}). This is shown in Fig. \ref{pchirpMqtwoapproaches} on the right-hand side, and on the left-hand side, $p(\mathcal{M},q)$ computed using the Jacobian transformation, eq.(\ref{eq:m1m2tochirpMq}), with Jacobian determinant eq.(\ref{eq:jacobianm1m2chirpMq}).
+We verified the covariance matrix $\Sigma_{\mathcal{M},q}$ obtained with Eq.~\eqref{eq:transfmchirpq_m1m2} by computing $p(\mathcal{M},q)$ assuming Gaussian behavior with covariance matrix given by Eq.~\eqref{eq:transfmchirpq_m1m2}. This is shown in Fig.~\ref{pchirpMqtwoapproaches} on the right-hand side, and on the left-hand side, $p(\mathcal{M},q)$ computed using the Jacobian transformation, Eq.~\eqref{eq:m1m2tochirpMq}, with Jacobian determinant Eq.~\eqref{eq:jacobianm1m2chirpMq}.
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/p_Mc_q_subplot_normalized_jacobian_0.pdf}
-\caption{$p(\mathcal{M},q)$ computed via eq.(\ref{eq:m1m2tochirpMq}) using the Jacobian determinant, eq. (\ref{eq:jacobianm1m2chirpMq}), on the left-hand side, and using the Gaussian formula with covariance matrix of eq.(\ref{eq:transfmchirpq_m1m2}) on the right-hand side.}
+\caption{$p(\mathcal{M},q)$ computed via Eq.~\eqref{eq:m1m2tochirpMq} using the Jacobian determinant, Eq.~\eqref{eq:jacobianm1m2chirpMq}, on the left-hand side, and using the Gaussian formula with covariance matrix of Eq.~\eqref{eq:transfmchirpq_m1m2} on the right-hand side.}
 \label{pchirpMqtwoapproaches}
 \end{figure}
 
-It is of our interest to compare our results with the ones in the literature to test the performance of GWFish in simulating MBHB observations with LISA. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat~\textit{et al}. \cite{marsat2021exploring}. The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat~\textit{et al}. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish. In their study, Marsat~\textit{et al.} use the waveform XXX which includes higher harmonics. We used the waveform \texttt{IMRPhenomXPHM} which includes spin precession and higher harmonics.
+It is of our interest to compare our results with the ones in the literature to test the performance of GWFish in simulating MBHB observations with LISA. We performed a computation of $p(m_1,m_2)$ and compared our results with the results of Marsat~\textit{et al}. \cite{marsat2021exploring}. The used parameters and their values are shown in Table \ref{t:MBDvalues}. We use source-frame masses for the injection in GWFish. For the sky localisation parameters, Marsat~\textit{et al}. take these values in ecliptic coordinates, ecliptic longitude $\lambda$ and latitude $\beta$, with origin in the Solar System Barycenter (SSB). We converted these into equatorial coordinates in Earth's frame, Right Ascension $\alpha$ and Declination $\delta$, to be introduced in GWFish. In their study, Marsat~\textit{et al.} use the waveform \texttt{EOBNRv2HM} (reference) which includes higher harmonics. We used the waveform \texttt{IMRPhenomXPHM} which includes spin precession and higher harmonics.
 
 \begin{table}[!h]
 \centering
@@ -931,7 +944,7 @@ It is of our interest to compare our results with the ones in the literature to 
 	\hline
 	Inclination,  $\theta_{JN}$ (rad) & $1/3 \pi$\\
 	\hline	
-	Righ Ascension, $\alpha$ (rad)& 1.331 \\
+	Right Ascension, $\alpha$ (rad)& 1.331 \\
     \hline
     Declination, $\delta$ (rad)& 1.131\\
 	\hline	
@@ -947,74 +960,51 @@ It is of our interest to compare our results with the ones in the literature to 
 \label{t:MBDvalues}
 \end{table}
 
-In order to have a consistent setting for the comparison, we implement the PSD curve prescription provided in Marsat~\textit{et al} \cite{marsat2021exploring}. The noise spectral sensitivities for the TDI channels a, e, and t, $S^{a,e,t}_n(f)$, are
+The PSD noise curve used for the comparison was the default in GWFish. The noise spectral sensitivities for the TDI channels $a,~e,~\mathrm{and}~t$, $S^{a,e,t}_n(f)$, are
 \begin{subequations}
 \begin{align}
-S^{a}_n = S^{e}_n 
-&= \frac{P^{a,e}_n}{\mathcal{R}(f)},
+S^{a}_n(f) = S^{e}_n(f) 
+&= \frac{P^{a,e}_n(f)}{\mathcal{R}(f)},
 \label{redPSDa} \\
-S^{t}_n 
-&= \frac{P^{t}_n}{\mathcal{R}(f)},
+S^{t}_n(f) 
+&= \frac{P^{t}_n(f)}{\mathcal{R}(f)},
 \label{redPSDb}
 \end{align}
 \end{subequations}
 where,
 \begin{subequations}
 \begin{align}
-P^{a}_n = P^{e}_n 
-&= 2(3+2\text{cos}(2\pi fL)+ \text{cos}(4\pi fL))S^{\text{pm}}(f) \nonumber \\
-&\quad +(2+\text{cos}(2\pi fL))S^{\text{op}}(f)
+P^{a}_n(f) = P^{e}_n(f) 
+&= 16~\mathrm{sin}^{2}\Big(\frac{\pi f L}{c}\Big)\Big[3+2\text{cos}\Big(\frac{2\pi fL}{c}\Big)+ \mathrm{cos}\Big(\frac{4\pi fL}{c}\Big)\Big]S^{\mathrm{pm}}(f) \nonumber \\
+&\quad +8\mathrm{sin}^{2}\Big(\frac{\pi fL}{c}\Big)\Big[2+\mathrm{cos}\Big(\frac{2 \pi fL}{c}\Big)\Big]S^{\mathrm{op}}(f),
 \label{redPSDrespa} \\
-P^{t}_n 
-&= 4\text{sin}^{2}(2\pi fL)S^{\text{pm}}(f)+S^{\text{op}}(f),
+P^{t}_n(f)  
+&= \Big[2+4\mathrm{cos}^{2}\Big(\frac{2\pi fL}{c}\Big)\Big]\Big[4\mathrm{sin}^{2}\Big(\frac{\pi fL}{c}\Big)\Big]S^{\mathrm{op}}(f)S^{\mathrm{pm}}(f)\,
 \label{redPSDrespb}
 \end{align}
 \end{subequations}
-are the noise PSD for the $a$, $e$ and $t$ TDI observables, $\mathcal{R}(f)$ is the response function (to be defined in other section), and $S^{\text{op}}$ and $S^{\text{pm}}$ are the optical noise PSD and test-mass noise PSD respectively.
-The strain-like noise PSD $S^{a,e,t}_h(f)$ is,
+are the noise PSD for the $a$, $e$ and $t$ TDI observables, $\mathcal{R}(f)$ is the response or transfer function as defined in Eq.~\eqref{eq:transferfunction} in section~\ref{subsec:PSD_Sensit}, and $S^{\text{op}}(f)$ and $S^{\text{pm}}(f)$ are the optical noise PSD and test-mass noise PSD respectively.
+
+The characteristic noise PSD for the TDI channels $a, e, \mathrm{and} t$, $S^{a,e,t}_c(f)$ is
 \begin{equation}
-S^{a,e,t}_h(f) = \frac{S^{a,e,t}_n(f)}{(6\pi fL)^{2}},
-\label{strainnoisePSD}
-\end{equation}
-which is the noise spectral sensitivity with a rescaling factor to simplify comparisons and aid in sensitivity analysis.
-The characteristic noise PSD for the TDI channels a, e, and t, $S^{a,e,t}_c(f)$ is
-\begin{equation}
-S^{a,e,t}_c(f) = f S^{a,e,t}_h(f),
+S^{a,e,t}_c(f) = \sqrt{f S^{a,e,t}_n(f)},
 \label{eq:charPSD}
 \end{equation}
-and it is the strain-like noise PSD with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{psdcurves} shows the PSD curve used in our study as well as the PSD curve used in Marsat~\textit{et al}, noticing there is a slight difference between the one computed with eq.(\ref{eq:charPSD}) and the one shown in Marsat's paper.
+and it is the spectral sensitivity with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{fig:MarsatScnoiseGWFish} shows the $S_c$ used in our study as well as the $S_c$ curve used in Marsat~\textit{et al}. in red dots, noticing there is a difference between the one computed with Eq.~\eqref{eq:charPSD} and the one shown in Marsat's paper. Additionally, the waveform signal $h(f)$ with parameters from Table~\ref{t:MBDvalues} is included in Fig.~\ref{fig:MarsatScnoiseGWFish} for comparison.
 
 \begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{Figures/Sc_Curves_Marsat_GWFishPSD.pdf}
-\caption{Default sensitivity curve $S_c$ of GWFish shown on top of Marsat \textit{et al} $S_c$ curve in red dots.}
-\label{originalScGWFish}
+\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/Sc_Curves_XPHMSignal_GWFishFormula.pdf}
+\caption{Sensitivity curve $S_c$ using GWFish formula, Eq.~\eqref{eq:charPSD}, shown together with Marsat \textit{et al.} characteristic noise PSD in red dots and waveform signal with \texttt{IMRPhenomXPHM} with parameters from Table \ref{t:MBDvalues}.}
+\label{fig:MarsatScnoiseGWFish}
 \end{figure}
 
-\begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{Figures/Sc_Curves_Marsat_GWFishSoptSpm.pdf}
-\caption{Sensitivity curve $S_c$ using Marsat \textit{et al} eq. (58) with noise data from GWFish.}
-\label{MarsatScnoiseGWFish}
-\end{figure}
+To reproduce the results of Marsat in our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat~\textit{et al}. Since the paper does not explicitly show the detector position at the merger time, we set the merger time with the highest SNR obtained from a simulation spanning one orbit around the Sun. The SNR obtained at this merger time was $275$. Marsat \textit{et al.} SNR is $944.8$, see Table II in \cite{marsat2021exploring}. More of this is discussed in Section \ref{sec:discussion}.
+
+We used the study by Marsat~\textit{et al.} as a reference to guide and compare our results. A direct comparison of our result for $p(m_1,m_2)$ to the one obtained by Marsat~\textit{et al.} is shown in Fig.~\ref{fig:Marsatcomparison}. The results for $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M,q)$ are shown in Fig.~\ref{fig:PDFsMarsat}. We notice a difference in our result for $p(m_1,m_2)$ against the one obtained in Marsat~\textit{et al.} in Fig~\ref{fig:Marsatcomparison}. This is due to different prescriptions of the noise PSD in GWfish and in Marsat~\textit{et al}. Improvements in this respect can be done by using updated noise PSD curves in GWFish. More on this in Section \ref{sec:discussion}. On the other hand, the results for the PDFs, shown in Fig.~\ref{fig:PDFsMarsat}, are consistent with what is expected from the correlations of the involved parameters: Component masses $(m_1,m_2)$ are negatively correlated where one parameter increases as the other decreases for a fixed measured $M$. The PDF for $(\mathcal{M},q)$ shows positive correlation as expected. The positive correlation between $\mathcal{M}$ and $q$ is shown mathematically in Appendix B. The PDF for $(M,q)$ shows negative correlation. This is also expected for an MBHB with total mass $M=\mathcal{O}(10^6)$: Since the merger happens in the region of the sensitivity curve where the slope is positive, an increasing perturbation in $M$ shifts the signal to lower frequencies. In order to compensate this frequency decrease, the mass ratio $q$ must be decreased so that the higher harmonics associated with lower $q$s, or more unequal mass binaries, power back the signal to higher frequencies.
 
 \begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{Figures/Sc_Curves_MarsatSoptSpm.pdf}
-\caption{Sensitivity curve $S_c$ using Marsat \textit{et al}'s eq. (58b) with noise data from Marsat \textit{et al}. Noise due to white dwarfs is not considered our computation of the $S_c$ curve.}
-\label{ScMarsat}
-\end{figure}
-
-To reproduce the results of Marsat from our simulation, we need to consider the LISA detector position at the time the detection is made, the same detector position as in Marsat~\textit{et al}. Since the paper does not explicitly show the detector position at the merger time, we follow another way around: We set out the same SNR as in Marsat by running a simulation to compute the SNR for a range of geocentric merger times, and track the geocentric time which yields the SNR of interest. Figure \ref{snrgeocentric} shows the SNR versus geocentric time.
-
-\begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{Figures/SNR_GeocentTime.png}
-\caption{SNR versus geocentric time}
-\label{snrgeocentric}
-\end{figure}
-
-We used the study carried out by Marsat~\textit{et al}~\cite{marsat2021exploring} as a guide and to compare our results with. A direct comparison of our result for $p(m_1,m_2)$ to the one obtained by Marsat~\textit{et al} is shown in fig. ~\ref{fig:Marsatcomparison}. The results for $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M_{\mathrm{total}},q)$ are shown in fig~\ref{fig:PDFsMarsat}. 
-
-\begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/pm1m2_nospins_MarsatComparison.pdf}
-\caption{PDF contour plot of $p(m_1,m_2)$ computed by GWFish. The shape of the PDF contour plot of Marsat~\textit{et al} is shown in red dots for direct comparison with the one from GWFish.}
+\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/pm1m2_MarsatComparison_nospins_GWFish_SNR237.pdf}
+\caption{PDF contour plot of $p(m_1,m_2)$ computed by GWFish. The shape of the PDF contour plot of Marsat~\textit{et al.} is shown in red dots for direct comparison with the one from GWFish.}
 \label{fig:Marsatcomparison}
 \end{figure}
 
@@ -1022,8 +1012,7 @@ We used the study carried out by Marsat~\textit{et al}~\cite{marsat2021exploring
     \centering
     % First subfigure
     \begin{subfigure}[b]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepm1m2_PhenomXPHM_case1_allparameters_nospins_thesis.pdf}
+        \centering        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepm1m2_PhenomXPHM_case1_nospins_GWFish_SNR237.pdf}
         \caption{$p(m_1,m_2)$}
         \label{fig:pm1m2Marsat}
     \end{subfigure}
@@ -1031,25 +1020,23 @@ We used the study carried out by Marsat~\textit{et al}~\cite{marsat2021exploring
     % Second subfigure
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepMq_PhenomXPHM_geocentrictime_thesis.pdf}
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepMq_PhenomXPHM__nospins_GWFish_SNR237.pdf}
         \caption{$p(\mathcal{M},q)$}
         \label{fig:pMchirpqMarsat}
     \end{subfigure}
     % Third subfigure
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singleptotalMq_PhenomXPHM_geocentrictime_thesis.pdf}
-        \caption{$p(M_{\mathrm{total}},q)$}
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singleptotalMq_PhenomXPHM_nospins_GWFish_SNR237.pdf}
+        \caption{$p(M,q)$}
         \label{fig:pMtotalqMarsat}
     \end{subfigure}
     \hfill    
-    \caption{PDF contour plots for the observation of an MBHB with detector-frame masses of $m_1=1.5\times10^{6}~\mathrm{M}_{\odot}$ and $m_2=0.5\times10^{6}~\mathrm{M}_{\odot}$ for comparison with Marsat~\textit{et al}~\cite{marsat2021exploring}.}
+    \caption{PDF contour plots for the observation of an MBHB with detector-frame masses of $m_1=1.5\times10^{6}~\mathrm{M}_{\odot}$ and $m_2=0.5\times10^{6}~\mathrm{M}_{\odot}$ for comparison with Marsat~\textit{et al.}~\cite{marsat2021exploring}.}
     \label{fig:PDFsMarsat}
 \end{figure} 
 
-We notice a difference in our result for $p(m_1,m_2)$ against the one obtained in Marsat~\textit{et al} in fig~\ref{fig:Marsatcomparison}. This is due to different prescriptions of the noise PSD for $S_{\mathrm{opt}}$ and $S_{\mathrm{pm}}$ in GWFish and Marsat~\textit{et al}. Improvements in this respect can be done by using updated data for these noise PSD curves in GWFish. On the other hand, the results for the PDFs, shown in fig.~\ref{fig:PDFsMarsat}, are consistent with what is expected from the correlations of the involved parameters: Component masses $(m_1,m_2)$ are negatively correlated where one parameter increases as the other decreases for a fixed measured $M_{\mathrm{total}}$. The PDF for $(\mathcal{M},q)$ shows positive correlation as expected. The positive correlation between $\mathcal{M}$ and $q$ is shown mathematically in Appendix B. The PDF for $(M_{\mathrm{total}},q)$ shows negative correlation. This is also expected for an MBHB with total mass $M_{\mathrm{total}}=\mathcal{O}(10^6)$: Since the merger happens in the region of the sensitivity curve where the slope is positive, an increasing perturbation in $M_{\mathrm{total}}$ shifts the signal to lower frequencies. In order to compensate this frequency decrease, the mass ratio $q$ must be decreased so that the higher harmonics associated with lower $q$s, or more unequal mass binaries, power back the signal to higher frequencies.
-
-The slope plot shows a scattered behavior for $q=0.25$, i.e., the slopes across parameter space do not follow a clear and defined trend. One possible reason for this is that the Fisher matrices are not being computed correctly by GWFish. To explore this possibility, we tried other waveform models: \texttt{IMRPhenomPv2}, \texttt{IMRPhenomXAS}, \texttt{IMRPhenomD}, \texttt{IMRPhenomXP}. The test consisted in computing $\sigma^{2}_{m_1}$ and $\sigma^{2}_{m_2}$ directly from the inverse Fisher matrix of $(m_1,m_2)$ for different values of the derivative step size $\epsilon$. The results of these tests are shown in figures~\ref{fig:testXPHM},~\ref{fig:testD}, and~\ref{fig:testPv2}. 
+In order to perform simulations for a set of MBHB observations, we need to ensure that the waveform derivative computations are stable. We performed a series of tests by computing $\sigma^{2}_{m_1}$ and $\sigma^{2}_{m_2}$ directly from the inverse Fisher matrix of $(m_1,m_2)$ for different values of the derivative step size $\epsilon$ using the waveform models \texttt{IMRPhenomPv2}, \texttt{IMRPhenomXAS}, \texttt{IMRPhenomD}, \texttt{IMRPhenomXP}. The results of these tests are shown in Figs.~\ref{fig:testXPHM},~\ref{fig:testD}, and~\ref{fig:testPv2}. 
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/variancem1_PhenomXPHM_stepsize_spins.pdf}
@@ -1097,35 +1084,44 @@ The slope plot shows a scattered behavior for $q=0.25$, i.e., the slopes across 
 
 We can see that \texttt{IMRPhenomXPHM} yields scattered results for $\sigma^{2}_{m_1}$ for different values of $\epsilon$, showing an unstable performance on the derivative computations. On the other hand, waveforms \texttt{IMRPhenomD} which does not include spin precession nor higher harmonics, and \texttt{IMRPhenomPv2}, which includes spin precession and no higher harmonics, were more stable in their computations with $\epsilon$ values from $~1\times10^{-8}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomD} and $~3\times10^{-6}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomPv2}. We chose to change waveform from \texttt{IMRPhenomXPHM} to \texttt{IMRPhenomPv2}. 
 
-Now that we have the simulation software set up with a waveform, we can set a realistic parameter space which LISA is expected to observe with $M_{\mathrm{total}}$ in the range from $1\times10^{5}$ to $5\times10^{6}$ \cite{mangiagli2020observing}(add more refs). PDF contour plots for these are shown in figures~\ref{fig:q025Pv2realmass},~\ref{fig:q050Pv2realmass}, and~\ref{fig:q075Pv2realmass} and the slopes plots in figures~\ref{fig:slopespm1m2Pv2realmass},~\ref{fig:slopespMcqPv2realmass}, and~\ref{fig:slopespMtotalqPv2realmass}.
+Now that we have the simulation software set up with a waveform, we set a parameter space which LISA is expected to observe with $M$ in the range from $1\times10^{5}~\mathrm{M}_{\odot}$ to $1.7\times10^{6}~\mathrm{M}_{\odot}$ \cite{mangiagli2020observing}. The orientation parameters are set to default GWFish values. PDF contour plots for these are shown in Figs.~\ref{fig:q025Pv2realmass},~\ref{fig:q050Pv2realmass}, and~\ref{fig:q075Pv2realmass} and the slopes plots in Figs.~\ref{fig:slopespm1m2Pv2realmass},~\ref{fig:slopespchirpMqPv2realmass}, and~\ref{fig:slopesptotalMqPv2realmass}.
 
 \section{Results}
 \label{sec:results}
 
-Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$ range between $1\times10^5~\mathrm{M}_{\odot}$ and $5\times10^6~\mathrm{M}_{\odot}$, for $p(m_1,m_2)$ in figure~\ref{fig:slopespm1m2Pv2realmass} we can notice a varying trend in the slopes for all $q$s: A peak at lower $\mathcal{M}$ followed by a steep drop, and then a smooth transition to even more negative slopes. We can still see some scattering at higher $\mathcal{M}$ for $q=0.25$. Some general features of this plot is that lower values of $\mathcal{M}$ show slope values closer to zero compared to higher values of $\mathcal{M}$, and that lower $q$s show slopes values closer to zero than high $q$s in this low $\mathcal{M}$ region. If these slopes close to zero indicate weak correlation, then, this plot is in disagreement with the fact that component masses are weakly correlated in more equal mass binaries. At intermediate values of $\mathcal{M}$, on the other hand, $q=0.25$ shows more negative values of slope than $q=0.50$ and $0.75$, indicating weaker correlation of $m_1$ and $m_2$ for more equal masses as expected. At higher values of $\mathcal{M}$, $q=0.25$ shows weak correlation, and the slightly stronger correlation can be seen for $q=0.50$ compared to $q=0.75$. Regarding the slopes for $p(\mathcal{M},q)$, all $q$s show positive slope as expected. For $q=0.75$, the slope is relatively high in general which is not the expected. It has a peak a low $\mathcal{M}$ and drops gradually, indicating less correlation at higher $\mathcal{M}$. For $q=0.25$, the slope stays almost the same across parameter space closer to zero, indicating weak correlation, which is not the expected. The slopes plot of $p(M_{\mathrm{total}},q)$ shows a shift in slopes from positive to negative across parameter space. This has to do with the region on the sensitivity curve where the merger happens. Apparently, the shift from negative to positive slopes for all $q$s happens close to $7.5\times10^5~\mathrm{M}_{\odot}$. Binaries with $q=0.25$ seem closer to zero value slope and for $q=0.75$ with more positive and negative slopes.
+Results for the PDFs of a single MBHB observation are shown in Figs~\ref{fig:q025Pv2realmass},~\ref{fig:q050Pv2realmass}, and~\ref{fig:q075Pv2realmass} for $q=0.25,~0.50,~0.75$ respectively, for a binary system with $M=6.5\times10^5~\mathrm{M}_{\odot}$. The PDFs from this event shares much of the features seen in Fig. ~\ref{fig:PDFsMarsat} from the comparison with Marsat \textit{et al}. However, we notice a curved PDF ellipse for $p(\mathcal{M},q)$ that we will explain later in this section.
+
+The results for the PDF orientation analyses of the set of 50 events for a parameter space in the $M$ range between $1\times10^5~\mathrm{M}_{\odot}$ and $1.7\times10^6~\mathrm{M}_{\odot}$ are shown in Figs.~\ref{fig:slopespm1m2Pv2realmass},~\ref{fig:slopespchirpMqPv2realmass}, and~\ref{fig:slopesptotalMqPv2realmass}. It is worth mentioning that the parameter space considered initially a higher limit in total mass of $5\times10^{6}~\mathrm{M}_{\odot}$ but was reduced to $1.7\times10^{6}~\mathrm{M}_{\odot}$ because of issues in computing the Fisher matrices for total masses above $1.7\times10^{6}~\mathrm{M}_{\odot}$, where uncertainties were the same order of magnitude as the true values or even exceeding these by one order of magnitude.
+For  $p(m_1,m_2)$ in Fig.~\ref{fig:slopespm1m2Pv2realmass} we notice that the slopes for more unequal mass systems cover a wider range than for more equal masses, meaning that the uncertainty estimations are less stable for more unequal mass systems. This is expected since the waveform signal is dominated by $m_{1}$; the measurements of $m_{2}$ are more uncertain. This leads to more variation in the slopes across chirp mass. At lower masses, chirp mass, which is a combination of $m_{1}$ and $m_{2}$, dominates the evolution. In this regime, the slopes (and the correlations) are weak because $m_{1}$ dominates the evolution over $m_{2}$. This means that small changes in $m_{2}$ do not impact the waveform significantly. As the total mass increases, $m_{2}$ becomes more important, leading to stronger correlations. As mass ratio increases as in the cases for $q=0.50$ and $q=0.75$, there is less variation in the slopes across chirp mass, as both $m_{1}$ and $m_{2}$ have important contributions to the waveform signal. In this case, $m_{1}$ and $m_{2}$ are more correlated.
+
+Regarding the slopes of $p(\mathcal{M},q)$, after showing negative slopes at lower chirp mass, all mass ratios show positive slopes as the chirp mass increases, as expected. Higher chirp mass yield more similar results in the orientations of the PDF contour plots for all mass ratios and uncertainty measurements are more reliable for higher chirp mass. 
+
+The slopes plot of $p(M,q)$ shows mainly negative slopes. However, as the chirp mass increases, there is a shift from negative to positve slopes. This has to do with the region on the sensitivity curve where the merger occurs. On the other hand, largest changes in the uncertainty estimations occur for more equal systems, $q=0.75$ and smaller changes for more unequal systems. 
+
+Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can notice a curvature in the PDF ellipse. This means that the uncertainties' correlations between $\mathcal{M}$ and $q$ are non-linear. This effect can be seen more accentuated in Figs.~\ref{fig:curvedPDFs_q025}, ~\ref{fig:curvedPDFs_q050}, ~\ref{fig:curvedPDFs_q075}. for different values of $q$, each of them showing PDFs for different values of the total mass $M$. From these figures we can notice how the curvature increases with mass ratio and total mass. For lower masses, the Jacobian transformation from $(m_1,m_2)$ to $(\mathcal{M},q)$ can be considered valid for a range of mass ratios, but as the total mass and mass ratio increase, the transformation need to be reparametrized so that it maintains linearity \cite{cutler1994gravitational}.
 
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pm1m2_8_m1_720000.0_m2_180000.0.pdf}
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pm1m2_17_m1_524100.0_m2_131000.0.pdf}
         \caption{$p(m_1,m_2)$}
-        \label{fig:plot1}
+        \label{fig:pm1m2025}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pchirpMq_8_Mc_299719.15466467413_q_0.25.pdf}
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pchirpMq_17_Mc_218147.25540413498_q_0.2499522991795459.pdf}
         \caption{$p(\mathcal{M},q)$}
-        \label{fig:plot2}
+        \label{fig:pMcq025}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/ptotalMq_8.pdf}
-        \caption{$p(M_{\mathrm{total}},q)$}
-        \label{fig:plot1}
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/ptotalMq_17.pdf}
+        \caption{$p(M,q)$}
+        \label{fig:pMq025}
     \end{subfigure}    
-    \caption{PDFs for q=0.25 with \texttt{IMRPhenomPv2} for a real mass range.}
+    \caption{PDFs for a single MBHB observation with $q=0.25$ and $M=6.5\times10^5~\mathrm{M}_{\odot}$.}
     \label{fig:q025Pv2realmass}
 \end{figure}
 
@@ -1133,24 +1129,24 @@ Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pm1m2_6.pdf}
-        \caption{First plot}
-        \label{fig:plot1}
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pm1m2_17.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:pm1m2050}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pchirpMq_6.pdf}
-        \caption{Second plot}
-        \label{fig:plot2}
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pchirpMq_17.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:pMcq050}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/ptotalMq_6.pdf}
-        \caption{First plot}
-        \label{fig:plot1}
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/ptotalMq_17.pdf}
+        \caption{$p(M,q)$}
+        \label{fig:pMq050}
     \end{subfigure}    
-    \caption{PDFs for q=0.50 with \texttt{IMRPhenomPv2} for a real mass range.}
+    \caption{PDFs for a single MBHB observation with $q=0.50$ and $M=6.5\times10^5$.}
     \label{fig:q050Pv2realmass}
 \end{figure}
 
@@ -1158,24 +1154,24 @@ Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pm1m2_6.pdf}
-        \caption{First plot}
-        \label{fig:plot1}
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pm1m2_17.pdf}
+        \caption{$p(m_1,m_2)$}
+        \label{fig:pm1m2075}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pchirpMq_6.pdf}
-        \caption{Second plot}
-        \label{fig:plot2}
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pchirpMq_17.pdf}
+        \caption{$p(\mathcal{M},q)$}
+        \label{fig:pMcq075}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/ptotalMq_6.pdf}
-        \caption{First plot}
-        \label{fig:plot1}
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/ptotalMq_17.pdf}
+        \caption{$p(M,q)$}
+        \label{fig:pMq075}
     \end{subfigure}    
-    \caption{PDFs for q=0.75 with \texttt{IMRPhenomPv2} for a real mass range.}
+    \caption{PDFs for a single MBHB observation with $q=0.75$ and $M=6.5\times10^5$.}
     \label{fig:q075Pv2realmass}
 \end{figure}
 
@@ -1186,20 +1182,98 @@ Regarding the set of 50 events for a parameter space in the $M_{\mathrm{total}}$
 \end{figure}
 
 \begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_chirpMq_qs_Zoomin.pdf}
-\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} with real mass range.}
-\label{fig:slopespMcqPv2realmass}
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpMq_slope_chirpMq_zoomin.pdf}
+\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $1.7\times10^{6}~\mathrm{M}_{\odot}$.}
+\label{fig:slopespchirpMqPv2realmass}
 \end{figure}
 
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_totalMq_qs.pdf}
-\caption{Slopes for $p(M_{\mathrm{total}},q)$ with \texttt{IMRPhenomPv2} with real mass range.}
-\label{fig:slopespMtotalqPv2realmass}
+\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $1.7\times10^{6}~\mathrm{M}_{\odot}$.}
+\label{fig:slopesptotalMqPv2realmass}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_curvedPDFs/pchirpMq_10_Mc_142042.90150697014_q_0.2500293083235639.pdf}        \caption{$M=4.26\times10^5~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq025_10}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_curvedPDFs/pchirpMq_30_Mc_359514.7904557554_q_0.24997105476438577.pdf}        \caption{$M=1.07\times10^6~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq025_30}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q025_curvedPDFs/pchirpMq_49_Mc_566136.1810332733_q_0.25.pdf}       \caption{$M=1.70\times10^5~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq025_49}
+    \end{subfigure}    
+    \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.25$ for different values of $M$.}
+    \label{fig:curvedPDFs_q025}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_10.pdf}        \caption{$M=4.26\times10^5~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq050_10}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_30.pdf}        \caption{$M=1.07\times10^6~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq050_30}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_49.pdf}        \caption{$M=1.70\times10^5~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq050_49}
+    \end{subfigure}    
+    \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.50$ for different values of $M$.}
+    \label{fig:curvedPDFs_q050}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_curvedPDFs/pchirpMq_10.pdf}        \caption{$M=4.26\times10^5~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq075_10}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_30.pdf}        \caption{$M=1.07\times10^6~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq075_30}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs_q075_curvedPDFs/pchirpMq_49.pdf}        \caption{$M=1.70\times10^5~\mathrm{M}_{\odot}$}
+        \label{fig:curvedq075_49}
+    \end{subfigure}    
+    \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.75$ for different values of $M$.}
+    \label{fig:curvedPDFs_q075}
 \end{figure}
 
 \section{Discussion}
+\label{sec:discussion}
+
+As we noticed from Fig.~\ref{fig:Marsatcomparison}, our result for $p(m_1,m_2)$ does not match exactly Marsat \textit{et al.} results. This is because of the prescriptions of the PSD noise formulas. Indeed, Marsat \textit{et al.} includes a formula for the PSD, see Eq. $33$ in their paper, and after comparing performances of GWFish and Marsat formulas, we chose GWFish's. It is important to emphasize that the GWFish version used in this work is 1.0.0. A more recent version includes updated PSD noise curves with updated noises for the optical metrology system, $S_{\mathrm{opt}}$, and for the test masses, $S_{\mathrm{pm}}$ so it would be worth considering using updated formulas for future work.
+Regarding the simulations of the set of 50 observations, we decreased the original $M$ upper limit from $6\times10^6~\mathrm{M}_{\odot}$ to $1.7\times10^6~\mathrm{M}_{\odot}$. $M$ with values above $1.7\times10^6~\mathrm{M}_{\odot}$ yield uncertainties of the order of magnitude as the true injected value for $m_1$ and $m_2$ so we discarded that regime from our simulations.
 
 \section{Conclusions}
+\label{sec:conclusions}
+
+In this work we explored the capabilities of LISA of observing MBHBs using simulated observations with software GWFish. The first step in this process was to simulate a single observation with intrinsic and extrinsic parameter values given in Marsat~\textit{et al} \cite{marsat2021exploring}. The results of these simulations were the Fisher matrices, which contain the variances and covariances of the parameters involved in the simulation, from which the uncertainties are extracted. For the comparison with Marsat~\textit{et al.}, we computed the PDFs $p(m_1,m_2)$, $p(\mathcal{M},q)$ and $p(M,q)$. The results for $p(m_1,m_2)$ show a disagreement which are explained by different prescriptions of the PSD noise of the detector in GWFish and in Marsat~\textit{et al.}, however, we suspect additional inconsistencies in the integration process for computing the SNR. This can be seen in figs. x and x where two waveform signals are plotted, together with the characteristic noise PSD used, and the SNR obtained in each case in the legend box. To our consideration, the SNR obtained in both cases is too low. The results for $p(\mathcal{M},q)$ and $p(M,q)$, on the other hand, agree with what is expected about the correlations between these parameters. Regarding the study of the set of 50 MBHB observations, the results for the PDF agree with what is expected about the correlations between these parameters, however, the parameter space covered in this, $1\times10^5~\mathrm{M}_{\odot}$ to $1.7\times10^6~\mathrm{M}_{\odot}$, set was selected to be much narrower than the observation window of LISA which is $10^4~\mathrm{M}_{\odot}$ to $10^7~\mathrm{M}_{\odot}$. This is due to the Fisher matrices yield uncertainties, with same orders of magnitude as the true values, and even one order of magnitude higher. 
+
+\section{Future work}
+\label{sec:futurework}
+
+The original objective of the present work was to set out the statistical tools to carry out population studies of MBHBs with LISA. To do this, these tools need to be robust. A sensible follow-up is to look into the newer versions of GWFish and corroborate the addition of sensible PSD curves and robust prescriptions for the SNR integrations to ensure sensible results, which were the areas where we identified room for improvement. With these elements in place, then GWFish can be the starting point for simulating MBHB observations where the Fisher matrices as outputs are used for computing hyperparameters and merger rates, quantities associated with population inference.
 
 \appendix
 \section{Derivation of analytical derivatives of $\Tilde{h}(\theta^{j},f)$}
@@ -1210,7 +1284,7 @@ To derive these expressions, we express the waveform as,
 \Tilde{h}(\theta^{j}, f) = \mathcal{A}(f)e^{i\varphi(f)},
 \label{waveformAphase}
 \end{equation}
-where $\mathcal{A}(f)$ is the amplitude, and $\varphi$ is the phase of the waveform. The derivation of eq. \eqref{phasederiv} is as follows:
+where $\mathcal{A}(f)$ is the amplitude, and $\varphi$ is the phase of the waveform. The derivation of Eq. \eqref{phasederiv} is as follows:
 \begin{equation}
     \begin{aligned}
         \frac{\partial \Tilde{h}(\theta^{j},f)}{\partial \varphi_{c}} &= \frac{\partial \mathcal{A}(f)e^{i\varphi(f)}}{\partial \varphi_{c}} \\
@@ -1220,12 +1294,12 @@ where $\mathcal{A}(f)$ is the amplitude, and $\varphi$ is the phase of the wavef
     \end{aligned}
 \label{phasederiv2}
 \end{equation}
-where the last \textit{minus} sign accounts for the convention that an increase in phase in the frequency domain shifts the waveform backwards in the time domain\footnote{An intuitive explanation of this is when considering a simple sinusoidal wave $h(t)=A \mathrm{cos}(\omega t+\phi)$. If $\phi=0$, the wave starts at $t=0$ with $\mathrm{cos}(0)=1$. If $\phi$ increases, say, $\pi/2$, the wave now starts at $\mathrm{cos}(\pi/2)=0$. This means the waveform has been shifted to the left. This is why increasing $\phi$ shifts the waveform backward (earlier in time).}. To derive eq. \eqref{lumdistderiv} we use the relation,
+where the last \textit{minus} sign accounts for the convention that an increase in phase in the frequency domain shifts the waveform backwards in the time domain\footnote{An intuitive explanation of this is when considering a simple sinusoidal wave $h(t)=A \mathrm{cos}(\omega t+\phi)$. If $\phi=0$, the wave starts at $t=0$ with $\mathrm{cos}(0)=1$. If $\phi$ increases, say, $\pi/2$, the wave now starts at $\mathrm{cos}(\pi/2)=0$. This means the waveform has been shifted to the left. This is why increasing $\phi$ shifts the waveform backward (earlier in time).}. To derive Eq. \eqref{lumdistderiv} we use the relation,
 \begin{equation}
 \mathcal{A}(f) \propto \frac{1}{d_L}, 
 \label{eq:A_lumdist}
 \end{equation}
-where the amplitude of the waveform is inversely proportional to the luminosity distance to the source is stated. The derivation of eq. \eqref{lumdistderiv} is then,
+where the amplitude of the waveform is inversely proportional to the luminosity distance to the source is stated. The derivation of Eq. \eqref{lumdistderiv} is then,
 \begin{equation}
     \begin{aligned}
         \frac{\partial \Tilde{h}(\theta^{j},f)}{\partial d_L} &= e^{i\varphi(f)} \frac{\partial \mathcal{A}(f)}{\partial d_L} \\
@@ -1235,11 +1309,11 @@ where the amplitude of the waveform is inversely proportional to the luminosity 
     \end{aligned}
 \label{lumdistderiv2}
 \end{equation}
-To derive eq. \eqref{timecderiv} we invoke the dependence of the phase on the merger time:
+To derive Eq.~\eqref{timecderiv} we invoke the dependence of the phase on the merger time:
 \begin{equation}
     \varphi(f)=\varphi_{0}(f)-2\pi ft_c,
 \end{equation}
-where the term $-2\pi ft_c$ comes from the fact that shifting the signal in time corresponds to a linear phase shift in the frequency domain. The derivation of eq. \eqref{timecderiv} proceeds as follows:
+where the term $-2\pi ft_c$ comes from the fact that shifting the signal in time corresponds to a linear phase shift in the frequency domain. The derivation of Eq.~\eqref{timecderiv} proceeds as follows:
 
 \begin{equation}
 \frac{\partial \tilde{h}(\theta^{j},f)}{\partial t_m} = \frac{\partial}{\partial t_m} \left[ A(f) e^{i (\varphi_0(f) - 2\pi f t_m)} \right]
