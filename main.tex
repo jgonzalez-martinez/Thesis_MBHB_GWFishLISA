@@ -19,6 +19,20 @@
 \author{José Carlos González Martínez}
 \date{May 2025}
 
+
+% ----- Float placement helpers -----
+\usepackage[section]{placeins} % \FloatBarrier and per-section barriers
+\usepackage{flafter} % dont place floats before their definition
+\usepackage{float} % provides [H] placement option
+% More permissive float placement
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.90}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}
+% ------------------------------------------
 \begin{document}
 \input{titlepage}
 
@@ -276,12 +290,14 @@ The length change due to passing GWs between two test masses in one arm are spli
     \label{fig:LISAobs}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[htbp]
     \centering    \includegraphics[width=0.8\textwidth]{Figures/schematicLISA.png}
     \caption{Simplified schematic view of the LISA constellation. In green boxes are the lasers, yellow boxes indicate the test masses, and the blue dots show the location of the interferometric measurements. The arrows represent the six active laser links. Picture taken from \cite{colpi2024lisa}.}
     \label{fig:LISAdetail}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[htbp]
     \centering    \includegraphics[width=0.8\textwidth]{Figures/onearmLISA.png}
     \caption{Simplified schematic view of the measurement of one arm. As mentioned in the text, there are three partitions in the measurement: test mass to spacecraft, spacecraft to spacecraft, and finally test mass to spacecraft. Picture taken from \cite{colpi2024lisa}.}
@@ -994,6 +1010,7 @@ We used the study by Marsat~\textit{et al.} as a reference to guide and compare 
 \label{fig:Marsatcomparison}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[ht]
     \centering
     % First subfigure
@@ -1030,12 +1047,14 @@ In order to perform simulations for a set of MBHB observations, we need to ensur
 \label{fig:testXPHM}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_PhenomD.pdf}
 \caption{Plot to show the stability of the waveform derivatives with \texttt{IMRPhenomD}. We can see a semi-plateau from $\sim10^{-6}$ to $3\times10^{-5}$ meaning that in that range, the Fisher matrices converge.}
 \label{fig:testPhenomD}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.70\textwidth}
@@ -1098,6 +1117,7 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \label{fig:q025Pv2realmass}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -1123,6 +1143,7 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \label{fig:q050Pv2realmass}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -1148,24 +1169,28 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \label{fig:q075Pv2realmass}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_m1m2_qs.pdf}
 \caption{Plot of slopes of $p(m_1,m_2)$ with \texttt{IMRPhenomPv2} with real mass range.}
 \label{fig:slopespm1m2Pv2realmass}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpMq_slope_chirpMq_zoomin.pdf}
 \caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $1.7\times10^{6}~\mathrm{M}_{\odot}$.}
 \label{fig:slopespchirpMqPv2realmass}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[htbp]
 \includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_totalMq_qs.pdf}
 \caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $1.7\times10^{6}~\mathrm{M}_{\odot}$.}
 \label{fig:slopesptotalMqPv2realmass}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -1188,6 +1213,7 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \label{fig:curvedPDFs_q025}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -1210,6 +1236,7 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \label{fig:curvedPDFs_q050}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -1231,6 +1258,107 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.75$ for different values of $M$.}
     \label{fig:curvedPDFs_q075}
 \end{figure}
+
+\section{Population Inference of Massive Black Hole Binaries}
+\label{sec:popMBHBs}
+
+Single GW observations of MBHBs provide insight into the physics of individual systems, i.e. the frequency and phase evolution of the binaries, uncertainties, correlations between parameters and degeneracies, detector response to GW signals, and so on. However, a deeper understanding of their formation and evolution can only be achieved by analysing ensembles of events at the population level. Population inference consists in estimating the (hyper)-parameters that characterise the statistical distributions of masses, spins, redshifts, and merger rates across an ensemble of MBHB observations.
+
+In the context of LISA, population inference of MBHBs is possible since LISA is expected to observe MBHB for a range of redshifts, from the local universe up to the early Universe, where galaxies first formed. The observed number of mergers will be then compared with parametric and non-parametric population models which condense information about the MBH formation and evolution channels. The main approach to carry out this analysis is through hierarchical Bayesian framework. 
+
+\noindent\rule{\linewidth}{0.1pt}
+
+\textit{Modelling approaches}. As we have stated previously, there is strong evidence that MBHs and galaxies co-evolve. Approaches to follow this co-evolution include cosmological simulations, theoretical models, and phenomenological models. Cosmological simulations can be carried out in two fashions: Grid-based Eulerian simulations, and particle-based hydrodynamical simulations (Smoothed Particle Hydrodynamics, SPH). While cosmological simulations give a robust track of the evolution of MBHs and their host galaxies, they are computationally expensive. On the theoretical side, there exist analytical and semi-analytical models. Theoretical models are limited in their reach as far as the physics that is included in the modelling. Semi-analytical models provide simple enough prescriptions, tunable up to a few parameters, while being computationally affordable. Phenomenological models consist in models that fit observations. In this work, we are interested in this type of models.
+
+\subsection{Parametric models}
+\label{subsec:parametricmodels}
+
+\subsubsection{Merger rate}
+\label{subsubsec:mergerrates}
+
+We use the expressions from Wang et al. (2016) \cite{wang2022forecast}:
+
+\begin{align}
+R_{\text{pop III}}(z) &=
+\begin{cases}
+2.11\, z, & 0 \le z \le 9,\\[2pt]
+-1.8\, z + 35.2, & 9 < z \le 19,
+\end{cases} \\[6pt]
+R_{\mathrm{Q3d}}(z) &=
+\begin{cases}
+0.43\, z, & 0 \le z \le 3.5,\\[2pt]
+-0.18\, z + 2.12, & 3.5 < z \le 12,
+\end{cases} \\[6pt]
+R_{\mathrm{Q3nod}}(z) &=
+\begin{cases}
+1.67\, z, & 0 \le z \le 6,\\[2pt]
+-0.69\, z + 14.62, & 6 < z \le 19.
+\end{cases}
+\end{align}
+
+These expressions are plotted in Figure~\ref{fig:mergerrates_Wang2016}.
+
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Parametric_forms/merger_rates_populations.pdf}
+\caption{}
+\label{fig:mergerrates_Wang2016}
+\end{figure}
+
+\subsubsection{Mass distribution}
+\label{subsubsec:massdistribution}
+
+We use a broken power law distribution for our primary mass.
+
+\begin{align}
+p(m_1 \mid \alpha_1,\alpha_2,m_{\min},m_b,m_{\max})
+&\propto
+\begin{cases}
+ m_1^{-\alpha_1}, & m_{\min} \le m_1 < m_b,\\[6pt]
+ m_1^{-\alpha_2}, & m_b \le m_1 \le m_{\max}.
+\end{cases}
+\end{align}
+
+The broken power law distribution is shown in Fig.~\ref{fig:p_m_brokenPwl}.
+
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Parametric_forms/p_m1_brokenPwl.pdf}
+\caption{}
+\label{fig:p_m_brokenPwl}
+\end{figure}
+
+\subsubsection{Redshift distribution}
+\label{subsubsec:redshiftdistribution}
+
+The redshift distribution for the popIII model is shown in Fig.~\ref{fig:p_z_popIII}.
+
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Parametric_forms/p_z_popIII.pdf}
+\caption{}
+\label{fig:p_z_popIII}
+\end{figure}
+
+The redshift distribution for the Q3d model is shown in Fig.~\ref{fig:p_z_Q3d}.
+
+\FloatBarrier
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Parametric_forms/p_z_Q3d.pdf}
+\caption{}
+\label{fig:p_z_Q3d}
+\end{figure}
+
+The redshift distribution for the Q3nod model is shown in Fig.~\ref{fig:p_z_Q3nod}.
+
+\FloatBarrier
+\begin{figure}[htbp]
+\includegraphics[width=.7\textwidth]{Parametric_forms/p_z_Q3nod.pdf}
+\caption{}
+\label{fig:p_z_Q3nod}
+\end{figure}
+
+
+
+
+
 
 \section{Discussion}
 \label{sec:discussion}
