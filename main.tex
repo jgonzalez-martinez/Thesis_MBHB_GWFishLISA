@@ -995,8 +995,8 @@ S^{a,e,t}_c(f) = \sqrt{f S^{a,e,t}_n(f)},
 and it is the spectral sensitivity with a rescaling factor so that it is expressed in a common framework to assess LISA's performance of detection capabilities. Figure \ref{fig:MarsatScnoiseGWFish} shows the $S_c$ used in our study as well as the $S_c$ curve used in Marsat~\textit{et al}. in red dots, noticing there is a difference between the one computed with Eq.~\eqref{eq:charPSD} and the one shown in Marsat's paper. Additionally, the waveform signal $h(f)$ with parameters from Table~\ref{t:MBDvalues} is included in Fig.~\ref{fig:MarsatScnoiseGWFish} for comparison.
 
 \begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/Sc_Curves_XPHMSignal_GWFishFormula.pdf}
-\caption{Sensitivity curve $S_c$ using GWFish formula, Eq.~\eqref{eq:charPSD}, shown together with Marsat \textit{et al.} characteristic noise PSD in red dots and waveform signal with \texttt{IMRPhenomXPHM} with parameters from Table \ref{t:MBDvalues}.}
+\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/Sc_Curves_Marsat_GWFish.pdf}
+\caption{Sensitivity curve $S_c$ using GWFish formula, Eq.~\eqref{eq:charPSD}, shown together with Marsat \textit{et al.} characteristic noise PSD in red dots.}
 \label{fig:MarsatScnoiseGWFish}
 \end{figure}
 
@@ -1005,7 +1005,7 @@ To reproduce the results of Marsat in our simulation, we need to consider the LI
 We used the study by Marsat~\textit{et al.} as a reference to guide and compare our results. A direct comparison of our result for $p(m_1,m_2)$ to the one obtained by Marsat~\textit{et al.} is shown in Fig.~\ref{fig:Marsatcomparison}. The results for $p(m_1,m_2)$, $p(\mathcal{M},q)$, and $p(M,q)$ are shown in Fig.~\ref{fig:PDFsMarsat}. We notice a difference in our result for $p(m_1,m_2)$ against the one obtained in Marsat~\textit{et al.} in Fig~\ref{fig:Marsatcomparison}. This is due to different prescriptions of the noise PSD in GWfish and in Marsat~\textit{et al}. Improvements in this respect can be done by using updated noise PSD curves in GWFish. More on this in Section \ref{sec:discussion}. On the other hand, the results for the PDFs, shown in Fig.~\ref{fig:PDFsMarsat}, are consistent with what is expected from the correlations of the involved parameters: Component masses $(m_1,m_2)$ are negatively correlated where one parameter increases as the other decreases for a fixed measured $M$. The PDF for $(\mathcal{M},q)$ shows positive correlation as expected: As the mass ratio increases, the total mass of the system dominates, yielding higher chirp mass. On the contrary, as the mass ratio decreases, the secondary mass starts to dominate, yielding lower overall chirp mass. The PDF for $(M,q)$ shows negative correlation. This is also expected for an MBHB with total mass $M=\mathcal{O}(10^6)$: Since the merger happens in the region of the sensitivity curve where the slope is positive, an increasing perturbation in $M$ shifts the signal to lower frequencies. In order to compensate this frequency decrease, the mass ratio $q$ must be decreased so that the higher harmonics associated with lower $q$s, or more unequal mass binaries, power back the signal to higher frequencies.
 
 \begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{figs_Marsat_comparison/pm1m2_MarsatComparison_nospins_GWFish_SNR237.pdf}
+\includegraphics[width=.99\textwidth]{figs_Marsat_comparison/singlepm1m2_Marsatetal.pdf}
 \caption{PDF contour plot of $p(m_1,m_2)$ computed by GWFish. The shape of the PDF contour plot of Marsat~\textit{et al.} is shown in red dots for direct comparison with the one from GWFish.}
 \label{fig:Marsatcomparison}
 \end{figure}
@@ -1015,7 +1015,7 @@ We used the study by Marsat~\textit{et al.} as a reference to guide and compare 
     \centering
     % First subfigure
     \begin{subfigure}[b]{0.45\textwidth}
-        \centering        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepm1m2_PhenomXPHM_case1_nospins_GWFish_SNR237.pdf}
+        \centering        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepm1m2_PhenomXPHM_case1_allparameters_nospin.pdf}
         \caption{$p(m_1,m_2)$}
         \label{fig:pm1m2Marsat}
     \end{subfigure}
@@ -1023,14 +1023,14 @@ We used the study by Marsat~\textit{et al.} as a reference to guide and compare 
     % Second subfigure
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepMq_PhenomXPHM__nospins_GWFish_SNR237.pdf}
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singlepMq_PhenomXPHM__nospins_Marsat.pdf}
         \caption{$p(\mathcal{M},q)$}
         \label{fig:pMchirpqMarsat}
     \end{subfigure}
     % Third subfigure
     \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singleptotalMq_PhenomXPHM_nospins_GWFish_SNR237.pdf}
+        \includegraphics[width=\textwidth]{figs_Marsat_comparison/singleptotalMq_PhenomXPHM_nospins_Marsat.pdf}
         \caption{$p(M,q)$}
         \label{fig:pMtotalqMarsat}
     \end{subfigure}
@@ -1041,38 +1041,63 @@ We used the study by Marsat~\textit{et al.} as a reference to guide and compare 
 
 In order to perform simulations for a set of MBHB observations, we need to ensure that the waveform derivative computations are stable. We performed a series of tests by computing $\sigma^{2}_{m_1}$ and $\sigma^{2}_{m_2}$ directly from the inverse Fisher matrix of $(m_1,m_2)$ for different values of the derivative step size $\epsilon$ using the waveform models \texttt{IMRPhenomXPHM}, \texttt{IMRPhenomD}, and \texttt{IMRPhenomPv2}. The results of these tests are shown in Figs.~\ref{fig:testXPHM},~\ref{fig:testPhenomD}, and~\ref{fig:testPv2}. 
 
-\begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_XPHM.pdf}
-\caption{Plot to show the stability of the waveform derivatives with \texttt{IMRPhenomXPHM}. The results for $\sigma^2_{m_1}$ are scattered across $\epsilon$ meaning that there is no convergence in the results.}
-\label{fig:testXPHM}
-\end{figure}
-
 \FloatBarrier
-\begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_PhenomD.pdf}
-\caption{Plot to show the stability of the waveform derivatives with \texttt{IMRPhenomD}. We can see a semi-plateau from $\sim10^{-6}$ to $3\times10^{-5}$ meaning that in that range, the Fisher matrices converge.}
-\label{fig:testPhenomD}
-\end{figure}
-
-\FloatBarrier
-\begin{figure}
+\begin{figure}[ht]
     \centering
-    \begin{subfigure}{0.70\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_chirp1e6_q075_PhenomPv2.pdf}
-        \caption{$\sigma^{2}_{m_1}$ \textit{vs} $\epsilon$ for PhenomPv2}
-        \label{fig:testPv2m1}
+    % First subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_80points_Mtotal1600000.0_q0.25_IMRPhenomXPHM.pdf}
+        \caption{$q=0.25$}
+        \label{fig:pm1m2Marsat}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.70\textwidth}
+    % Second subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Figures/covariancem1m2_stepsize_spins02_tilts14_chirp1e6_q075_PhenomPv2.pdf}
-        \caption{$\sigma_{m_1,m_2}$ \textit{vs} $\epsilon$ for PhenomPv2}
-        \label{fig:testPv2m2}
-    \end{subfigure}    
-    \caption{Plot to show the stability of the waveform derivatives with \texttt{IMRPhenomPv2}. We can see a plateau from $\sim10^{-6}$ to $3\times10^{-5}$ meaning that the Fisher matrices converge in that range.}
-    \label{fig:testPv2}
-\end{figure}
+        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_60points_Mtotal5000000.0_q0.5_IMRPhenomXPHM.pdf}
+        \caption{$q=0.50$}
+        \label{fig:pMchirpqMarsat}
+    \end{subfigure}
+    % Third subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_60points_Mtotal4700000.0_q0.75_IMRPhenomXPHM.pdf}
+        \caption{$q=0.75$}
+        \label{fig:pMtotalqMarsat}
+    \end{subfigure}
+    \hfill    
+    \caption{Plot to show the stability of the waveform derivatives with \texttt{IMRPhenomXPHM}. The results for $\sigma^2_{m_1}$ are scattered across $\epsilon$ where there is no convergence in the results. Stable derivative computations are in regions of $\epsilon$ which resemble a plateau.}
+    \label{fig:testXPHM}
+\end{figure} 
+
+\FloatBarrier
+\begin{figure}[ht]
+    \centering
+    % First subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_60points_Mtotal1600000.0_q0.25_IMRPhenomPv2.pdf}
+        \caption{$q=0.25$}
+        \label{}
+    \end{subfigure}
+    \hfill
+    % Second subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_60points_Mtotal5000000.0_q0.5_IMRPhenomPv2.pdf}
+        \caption{$q=0.50$}
+        \label{}
+    \end{subfigure}
+    % Third subfigure
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/variancem1_stepsize_spins02_tilts14_60points_Mtotal4700000.0_q0.75_IMRPhenomPv2.pdf}
+        \caption{$q=0.75$}
+        \label{}
+    \end{subfigure}
+    \hfill    
+    \caption{Plot to show the stability of the waveform derivatives with \texttt{PhenomPv2}. The results for $\sigma^2_{m_1}$ converge across $\epsilon$ where there is a plateau.}
+    \label{fig:testPhenomPv2}
+\end{figure} 
 
 We can see that \texttt{IMRPhenomXPHM} yields scattered results for $\sigma^{2}_{m_1}$ for different values of $\epsilon$, showing an unstable performance on the derivative computations. On the other hand, waveforms \texttt{IMRPhenomD} which does not include spin precession nor higher harmonics, and \texttt{IMRPhenomPv2}, which includes spin precession and no higher harmonics, were more stable in their computations with $\epsilon$ values from $~1\times10^{-8}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomD} and $~3\times10^{-6}$ to $~3\times10^{-5}$ for \texttt{IMRPhenomPv2}. We chose to change waveform from \texttt{IMRPhenomXPHM} to \texttt{IMRPhenomPv2}. 
 
@@ -1092,125 +1117,143 @@ The slopes plot of $p(M,q)$ shows mainly negative slopes. However, as the chirp 
 
 Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can notice a curvature in the PDF ellipse. This means that the uncertainties' correlations between $\mathcal{M}$ and $q$ are non-linear. This effect can be seen more accentuated in Figs.~\ref{fig:curvedPDFs_q025}, ~\ref{fig:curvedPDFs_q050}, ~\ref{fig:curvedPDFs_q075}. for different values of $q$, each of them showing PDFs for different values of the total mass $M$. From these figures we can notice how the curvature increases with mass ratio and total mass. For lower masses, the Jacobian transformation from $(m_1,m_2)$ to $(\mathcal{M},q)$ can be considered valid for a range of mass ratios, but as the total mass and mass ratio increase, the transformation need to be reparametrized so that it maintains linearity \cite{cutler1994gravitational}.
 
+\FloatBarrier
 \begin{figure}
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.65\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pm1m2_17_m1_524100.0_m2_131000.0.pdf}
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pm1m2_40_m1_3280000.0_m2_820000.0.pdf}
         \caption{$p(m_1,m_2)$}
         \label{fig:pm1m2025}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pchirpMq_17_Mc_218147.25540413498_q_0.2499522991795459.pdf}
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/pchirpMq_40_Mc_1365387.260139071_q_0.25.pdf}
         \caption{$p(\mathcal{M},q)$}
         \label{fig:pMcq025}
     \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/ptotalMq_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q025_PhenomPv2_realmass/ptotalMq_40.pdf}
         \caption{$p(M,q)$}
         \label{fig:pMq025}
     \end{subfigure}    
-    \caption{PDFs for a single MBHB observation with $q=0.25$ and $M=6.5\times10^5~\mathrm{M}_{\odot}$.}
+    \caption{PDFs for a single MBHB observation with $q=0.25$ and $M=4.1\times10^6~\mathrm{M}_{\odot}$.}
     \label{fig:q025Pv2realmass}
 \end{figure}
 
 \FloatBarrier
 \begin{figure}
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.60\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pm1m2_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pm1m2_40.pdf}
         \caption{$p(m_1,m_2)$}
         \label{fig:pm1m2050}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pchirpMq_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/pchirpMq_40.pdf}
         \caption{$p(\mathcal{M},q)$}
         \label{fig:pMcq050}
     \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/ptotalMq_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q050_PhenomPv2_realmass/ptotalMq_40.pdf}
         \caption{$p(M,q)$}
         \label{fig:pMq050}
     \end{subfigure}    
-    \caption{PDFs for a single MBHB observation with $q=0.50$ and $M=6.5\times10^5$.}
+    \caption{PDFs for a single MBHB observation with $q=0.50$ and $M=4.1\times10^6~\mathrm{M}_{\odot}$.}
     \label{fig:q050Pv2realmass}
 \end{figure}
 
 \FloatBarrier
 \begin{figure}
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pm1m2_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pm1m2_40.pdf}
         \caption{$p(m_1,m_2)$}
         \label{fig:pm1m2075}
     \end{subfigure}
     \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pchirpMq_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/pchirpMq_40.pdf}
         \caption{$p(\mathcal{M},q)$}
         \label{fig:pMcq075}
     \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.50\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/ptotalMq_17.pdf}
+        \includegraphics[width=\textwidth]{figs_q075_PhenomPv2_realmass/ptotalMq_40.pdf}
         \caption{$p(M,q)$}
         \label{fig:pMq075}
     \end{subfigure}    
-    \caption{PDFs for a single MBHB observation with $q=0.75$ and $M=6.5\times10^5$.}
+    \caption{PDFs for a single MBHB observation with $q=0.75$ and $M=4.1\times10^6~\mathrm{M}_{\odot}$.}
     \label{fig:q075Pv2realmass}
 \end{figure}
 
+\noindent\rule{\linewidth}{0.1pt}
+
+To interpret the results of Fig.~\ref{fig:slopespm1m2Pv2realmass}, we first identify which stage of the coalescence dominates the information content—inspiral or merger–ringdown. We quantify this by computing the matched-filter SNR accumulated up to a high-frequency cutoff $f^{\mathrm{insp}}_\mathrm{max}=4f_{\mathrm{ISCO}}$, used here as a proxy for the end of the inspiral, and comparing it with the SNR obtained over the full IMR frequency range. Fig.~\ref{fig:TaylorF2_cutoff_f_isco} shows the strain spectra with this cutoff overlaid on the detector noise PSD. The merger–ringdown contribution is then isolated via the difference $\rho_{MRD}=\rho_{full}-\rho_{insp}$. For the events considered, the inspiral provides the majority of the total SNR.
+
+Because the inspiral phase dominates the coalescence, we re-ran the 50-event simulation using the PhenomPv2 waveform truncated at $4f_{\mathrm{ISCO}}$(thereby suppressing merger–ringdown power). The results (Fig. XXX) show no oscillatory structure in the slopes, supporting the conclusion that the previously observed ripples are generated in the merger–ringdown phase.
+
+% Here are slopes plots using PhenomPv2
+
 \FloatBarrier
 \begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_m1m2_qs.pdf}
-\caption{Plot of slopes of $p(m_1,m_2)$ with \texttt{IMRPhenomPv2} with real mass range.}
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/pm1m2_slope_chirpM_PhenomPv2.pdf}
+\caption{Plot of slopes of $p(m_1,m_2)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $2.15\times10^{6}~\mathrm{M}_{\odot}$.}
 \label{fig:slopespm1m2Pv2realmass}
 \end{figure}
 
 \FloatBarrier
 \begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpMq_slope_chirpMq_zoomin.pdf}
-\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $1.7\times10^{6}~\mathrm{M}_{\odot}$.}
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/pMchirpq_slope_chirpM_PhenomPv2.pdf}
+\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $2.15\times10^{6}~\mathrm{M}_{\odot}$.}
 \label{fig:slopespchirpMqPv2realmass}
 \end{figure}
 
 \FloatBarrier
 \begin{figure}[htbp]
-\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/chirpM_slope_totalMq_qs.pdf}
-\caption{Plot of slopes of $p(\mathcal{M},q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $1.7\times10^{6}~\mathrm{M}_{\odot}$.}
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/pMq_slope_chirpM_PhenomPv2.pdf}
+\caption{Plot of slopes of $p(M,q)$ with \texttt{IMRPhenomPv2} for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $2.15\times10^{6}~\mathrm{M}_{\odot}$.}
 \label{fig:slopesptotalMqPv2realmass}
 \end{figure}
 
+% Here is the plot for TaylorF2 with higher order PN terms
+\FloatBarrier
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_TaylorF2/pm1m2_slope_chirpM_TaylorF2_8PN.pdf}
+\caption{Plot of slopes of $p(m_1,m_2)$ with \texttt{TaylorF2} with 3.5PN term for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $2.15\times10^{6}~\mathrm{M}_{\odot}$.}
+\label{fig:slopes_pm1m2_TF2_8PN}
+\end{figure}
+
+% Here are the plots of the signals using TaylorF2 and PhenomPv2 with cut-offs at f_isco, with PSDs.
 \FloatBarrier
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_curvedPDFs/pchirpMq_10_Mc_142042.90150697014_q_0.2500293083235639.pdf}        \caption{$M=4.26\times10^5~\mathrm{M}_{\odot}$}
-        \label{fig:curvedq025_10}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/TF2_PSD_m1_171428.6_m2_128571.4_event2.pdf}        \caption{$M=3\times10^5~\mathrm{M}_{\odot}.$}
+        \label{fig:TaylorF2_fiscoM30_5}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_curvedPDFs/pchirpMq_30_Mc_359514.7904557554_q_0.24997105476438577.pdf}        \caption{$M=1.07\times10^6~\mathrm{M}_{\odot}$}
-        \label{fig:curvedq025_30}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/TF2_PSD_m1_1200000.0_m2_900000.0_event20.pdf}        \caption{$M=2.1\times10^6~\mathrm{M}_{\odot}.$}
+        \label{fig:TaylorF2_fiscoM21_6}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q025_curvedPDFs/pchirpMq_49_Mc_566136.1810332733_q_0.25.pdf}       \caption{$M=1.70\times10^5~\mathrm{M}_{\odot}$}
-        \label{fig:curvedq025_49}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/TF2_PSD_m1_2628571.0_m2_1971429.0_event45.pdf}       \caption{$M=4.6\times10^6~\mathrm{M}_{\odot}.$}
+        \label{fig:TaylorF2_fiscoM46_6}
     \end{subfigure}    
-    \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.25$ for different values of $M$.}
-    \label{fig:curvedPDFs_q025}
+    \caption{MBHB signals using the TaylorF2 waveform for 3 of the 50 events, shown with the detector noise PSD. The red vertical line marks the cutoff at $4f_{ISCO}$, approximating the end of the inspiral. Panels (a), (b), and (c) correspond to low-, intermediate-, and high-mass samples, respectively.}
+    \label{fig:TaylorF2_cutoff_f_isco}
 \end{figure}
 
 \FloatBarrier
@@ -1218,22 +1261,22 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_10.pdf}        \caption{$M=4.26\times10^5~\mathrm{M}_{\odot}$}
-        \label{fig:curvedq050_10}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/Pv2_PSD_m1_171428.6_m2_128571.4_event2.pdf}        \caption{$M=3\times10^5~\mathrm{M}_{\odot}$}
+        \label{}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_30.pdf}        \caption{$M=1.07\times10^6~\mathrm{M}_{\odot}$}
-        \label{fig:curvedq050_30}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/Pv2_PSD_m1_1200000.0_m2_900000.0_event20.pdf}        \caption{$M=2.1\times10^6~\mathrm{M}_{\odot}$}
+        \label{}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_49.pdf}        \caption{$M=1.70\times10^5~\mathrm{M}_{\odot}$}
-        \label{fig:curvedq050_49}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/Pv2_PSD_m1_2628571.0_m2_1971429.0_event45.pdf}        \caption{$M=4.6\times10^6~\mathrm{M}_{\odot}$}
+        \label{}
     \end{subfigure}    
-    \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.50$ for different values of $M$.}
-    \label{fig:curvedPDFs_q050}
+    \caption{MBHB signals using the PhenomPv2 waveform for 3 of the 50 events, shown with the detector noise PSD. The red vertical line marks $4f_{ISCO}$, used here as a marker for the end of the inspiral; no cutoff is applied. Panels (a), (b), and (c) correspond to low-, intermediate-, and high-mass samples, respectively.}
+    \label{fig:fig:PhenomPv2_nocutoff_f_isco}
 \end{figure}
 
 \FloatBarrier
@@ -1241,22 +1284,31 @@ Going back to the $p(\mathcal{M},q)$ PDF in Fig.~\ref{fig:pMcq075} where one can
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_curvedPDFs/pchirpMq_10.pdf}        \caption{$M=4.26\times10^5~\mathrm{M}_{\odot}$}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/Pv2_PSD_cutoff_m1_171428.6_m2_128571.4_event2.pdf}        \caption{$M=3\times10^5~\mathrm{M}_{\odot}$}
         \label{fig:curvedq075_10}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q050_curvedPDFs/pchirpMq_30.pdf}        \caption{$M=1.07\times10^6~\mathrm{M}_{\odot}$}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/Pv2_PSD_cutoff_m1_1200000.0_m2_900000.0_event20.pdf}        \caption{$M=2.1\times10^6~\mathrm{M}_{\odot}$}
         \label{fig:curvedq075_30}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figs_q075_curvedPDFs/pchirpMq_49.pdf}        \caption{$M=1.70\times10^5~\mathrm{M}_{\odot}$}
+        \includegraphics[width=\textwidth]{figs_slopes_realMasses_TaylorF2/Pv2_PSD_cutoff_m1_2628571.0_m2_1971429.0_event45.pdf}        \caption{$M=4.6\times10^6~\mathrm{M}_{\odot}$}
         \label{fig:curvedq075_49}
     \end{subfigure}    
-    \caption{Contour plots of $p(\mathcal{M},q)$ for a single MBHB observation with $q=0.75$ for different values of $M$.}
-    \label{fig:curvedPDFs_q075}
+    \caption{MBHB signals using the PhenomPv2 waveform for 3 of the 50 events, shown with the detector noise PSD. The red vertical line marks the cutoff at $4f_{ISCO}$, approximating the end of the inspiral. Panels (a), (b), and (c) correspond to low-, intermediate-, and high-mass samples, respectively.}
+    \label{fig:PhenomPv2_cutoff_f_isco}
+\end{figure}
+
+% Here is the plot for PhenomPv2 with cut-off at 4 f_isco
+
+\FloatBarrier
+\begin{figure}[htbp]
+\includegraphics[width=.8\textwidth]{figs_slopes_realMasses_PhenomPv2/pm1m2_slope_PhenomPv2_cutoff_fisco.pdf}
+\caption{Plot of slopes of $p(m_1,m_2)$ with \texttt{PhenomPv2} with cut-off at $4f_{ISCO}$ for a set of 50 observations of MBHBs with masses between $1\times10^{5}~\mathrm{M}_{\odot}$ and $2.15\times10^{6}~\mathrm{M}_{\odot}$.}
+\label{fig:slopes_pm1m2_Pv2_cutoff}
 \end{figure}
 
 \section{Population Inference of Massive Black Hole Binaries}
