@@ -13,6 +13,7 @@
 \usepackage{tabularx}
 \usepackage{threeparttable}
 \usepackage{array} % for \newcolumntype
+\usepackage{caption}
 
 \usepackage{titlesec}
 
@@ -1331,18 +1332,17 @@ As discussed in Section~\ref{}, MBHs may originate from multiple scenarios, incl
 
 Within models that incorporate light and/or heavy seeds, three classes of physical mechanisms are commonly invoked: 1) delays between DM halo mergers and galaxy mergers, and between galaxy mergers and the MBH-MBH merger~\cite{antonini2015coevolution,antonini2015imprint}; 2) AGN and supernova feedback, which regulate gas supply, and MBH growth~\cite{barausse2020massive,barausse2012evolution,barausse2014erratum}; and 3) three- and four-body interactions, which can promote mergers by efficiently extracting energy and angular momentum from the inner binary~\cite{bonetti2016post,bonetti2018post}.
 
-In this work we adopt three benchmark population models: a light-seed PopIII scenario, and two heavy-seed Q3 scenarios. The Q3 models are considered in two variants to isolate the impact of galaxy-MBH merger delays:~\textit{Q3d}, which includes a delay between the merger of the host galaxies and the coalescence of their MBHs, and \textit{Q3nod}, which neglects this delay. Although these models rely on simplified astrophysical prescriptions, they are widely used benchmarks in the literature, and provide a controlled set of scenarios for assessing LISA's observational capabilities. 
+In this work, we adopt three benchmark population models: a light-seed PopIII scenario, and two heavy-seed Q3 scenarios. The Q3 models are considered in two variants to isolate the impact of galaxy-MBH merger delays:~\textit{Q3d}, which includes a delay between the merger of the host galaxies and the coalescence of their MBHs, and \textit{Q3nod}, which neglects this delay. Although these models rely on simplified astrophysical prescriptions, they are widely used benchmarks in the literature, and provide a controlled set of scenarios for assessing LISA's observational capabilities. 
 
 \FloatBarrier
 \subsection{Parametric Forms}
 \label{subsec:parametricforms}
 
-As we have stated previously, there is strong evidence that MBHs and galaxies co-evolve. Approaches to follow this co-evolution include cosmological simulations, theoretical models, and phenomenological models. Cosmological simulations can be carried out in two fashions: Grid-based Eulerian simulations, and particle-based hydrodynamical simulations (Smoothed Particle Hydrodynamics, SPH). While cosmological simulations give a robust track of the evolution of MBHs and their host galaxies, they are computationally expensive. On the theoretical side, there exist analytical and semi-analytical models. Theoretical models are limited in their reach as far as the physics that is included in the modelling. Semi-analytical models provide simple enough prescriptions, tunable up to a few parameters, while being computationally affordable. Phenomenological, or parametric, models consist of models that fit observations or the predictions on numerical simulations. In this work, we use parametric models because they are flexible and allow us to fit the results of semi-analytical modes without requiring us to model explicitly the physical mechanisms that generate the corresponding distributions, and because they can be sampled quickly and at low computational cost.
+As discussed above, there is strong evidence that MBHs and galaxies co-evolve. Approaches to study this co-evolution include cosmological simulations, theoretical, and phenomenological models. Cosmological simulations can be carried out in two fashions: grid-based Eulerian simulations~\cite{teyssier2002cosmological}, and particle-based hydrodynamical simulations (Smoothed Particle Hydrodynamics, SPH)~\cite{lucy1977numerical,gingold1977smoothed}. While cosmological simulations give a robust track of the evolution of MBHs and their host galaxies, they are computationally expensive. On the theoretical side, there exist analytical and semi-analytical models. Theoretical models are limited in their reach as far as the physics that is included in the modelling. Semi-analytical models provide simple enough prescriptions, tunable up to a few parameters, while being computationally affordable. Phenomenological models, often represented by parametric forms, consist of models that fit observations or the predictions of numerical simulations. In this work, we use phenomenological parametric models because they are flexible and allow us to fit the results of semi-analytical models without requiring us to model explicitly the physical mechanisms that generate the corresponding distributions, and because they can be sampled quickly and at low computational cost.
 
-We use parametric forms for the merger rate of MBHBs, $R(z)$, and for a set of binary parameters: source-frame total mass $M = m_{1} + m_{2}$, redshift $z$, spin magnitudes $a_1$ and $a_2$, and mass ratio $q~(=m_2/m_1)$. We are using the results from the semi-analytical simulations of Barausse \textit{et al}.\ (2023, B23)~\cite{barausse2023implications}, and fit our parametric models to the results of B23.
-
+We use parametric forms for the merger rate of MBHBs, $R(z)$, and for a set of binary parameters: source-frame total mass $M = m_{1} + m_{2}$, redshift $z$, spin magnitudes $a_1$ and $a_2$, and mass ratio $q = m_2/m_1$. 
 \FloatBarrier
-\subsubsection{Merger rates}
+\subsubsection{Intrinsic merger rates}
 \label{subsubsec:mergerrates}
 
 \paragraph{}
@@ -1363,7 +1363,7 @@ and,
 \end{equation}
 where $dV_c/dz$ is the comoving volume element, $\mathcal{R}(z)$ is the merger rate density, and $1/(1 + z)$ converts to observer frame. The merger rate density $\mathcal{R}(z)$ is an intrinsic, local quantity that reflects the number of mergers per comoving volume, per comoving time, and depends on the astrophysical model. On the other hand, the merger rate $R(z)$ is the global number of mergers that happen in the Universe per unit detector-frame time.
 
-In this work we use fitted expressions for the merger rates from \cite{wang2022forecast}, which are piecewise approximations for the merger rates from \cite{klein2016science} in their Fig. 3. These expressions are
+In this work, we use fitted expressions for the merger rates from Wang \textit{et al}. (2022; W22)~\cite{wang2022forecast}, which are piecewise approximations for the merger rates from Klein \textit{et al}.\ (2016; K16)~\cite{klein2016science} in their Fig. 3. These expressions are
 
 \begin{subequations}
 \label{eq:mergerrates_wang}
@@ -1392,23 +1392,17 @@ R_{\mathrm{Q3nod}}(z) &=
 
 where $R_{\text{pop III}}(z)$, $R_{\mathrm{Q3d}}(z)$, and $R_{\mathrm{Q3nod}}(z)$ correspond to the merger rates assuming the binaries formed from popIII, Q3d, and Q3nod MBH seeds, section~\ref{subsec:astro_models}.
 
-After a potential detection of a stochastic GW background by PTA observatories EPTA, InPTA, NANOGrav, PPTA, and CPTA in 2023, constrains in the merger rates of MBHBs have been possible. We normalised the expressions from Wang \textit{et al}.\ to the results for the merger rates from Barausse \textit{et al}.\ \cite{barausse2023implications}, which takes into account these constraints, Fig.~\ref{fig:mergerrates_wang_barausse}. To normalise our merger rates, eqs.~\eqref{eq:mergerrates_wang}, we used the expression in Barausse \textit{et al}.\ for the merger rate as a function of redshift, which is
+It has been shown that cosmological simulations lack resolution in high-mass dark matter halos at high redshifts~\cite{klein2016science}. This underestimates the number of MBHB mergers in the Universe. In their study, K16 linearly extrapolated their results from low to high redshifts to compensate for the lack of resolved high-mass halos at high redshifts. The number of mergers they obtained is shown in Table~\ref{tab:intrinsic_mergerrates_literature}.
+
+After a potential detection of a stochastic GW background by PTA observatories EPTA, InPTA, NANOGrav, PPTA, and CPTA in 2023, constrains in the merger rates of MBHBs have been possible. We can use this new information to update the expressions from W22 and K16, as they are now out of date. We do this by normalising them to the results for the merger rates from Barausse \textit{et al}.\ (2023, B23)~\cite{barausse2023implications}, which takes these constraints into account, Fig.~\ref{fig:mergerrates_wang_barausse}. Within their semi-analytical model, B23 compute the merger rate per unit redshift with the expression,
 \begin{equation}
 \frac{d^{2}N}{dz\,dt}
 =
-\frac{4\pi\,c}{d z}
-\sum_{z_i \in [\,z-d z/2,\; z+d z/2\,]} \frac{W_{\mathrm{PS}}D_L(z_i)^{2}}{(1+z_i)^{2}},
+\frac{4\pi\,c}{\Delta z}
+\sum_{N \in \Delta z} \frac{W_{\mathrm{PS}}D_L^{2}(z)}{(1+z)^{2}},
 \label{eq:merger_rate_perredshift}
 \end{equation}
-where $W_{\mathrm{PS}}$ is the comoving number density of dark matter halos at $z=0$ divided by the merger-tree realisations in that mass bin, and $D_L(z_i)^{2}/(1 + z_i)^2$ is the comoving distance squared, which multiplied by $4\pi/c$ gives the area of a comoving spherical shell at $z_i$. The merger rate can then be obtained by integrating over redshift,
-\begin{equation}
-\frac{dN}{dt}
-=
-\int \frac{d^{2}N}{dz\,dt}\,dz.
-\label{eq:total_mergerrate}
-\end{equation}
-
-The results for the intrinsic merger rates for our three population models are shown in Table~\ref{table:intrinsic_merger_rate}.
+where $W_{\mathrm{PS}}$ is the comoving number density of dark matter halos at $z=0$ divided by the merger-tree realisations in that mass bin, and $D_L^{2}(z)/(1 + z)^2$ is the comoving distance squared, which multiplied by $4\pi/c$ gives the area of a comoving spherical shell at $z$. The merger rate of B23 is then obtained with eqs.~\eqref{eq:mergerrate} and~\eqref{eq:merger_rate_perredshift}, and we normalise our merger rates, eqs.~\eqref{eq:mergerrates_wang}, to match the ones of B23. The results of the intrinsic merger rates for our three population models are shown in Table~\ref{table:intrinsic_merger_rate}.
 
 \FloatBarrier
 \begin{table}[t]
@@ -1429,24 +1423,6 @@ Q3nod  & 661 & 164.34 \\
 \label{table:intrinsic_merger_rate}
 \end{table}
 
-It has been shown that cosmological simulations lack resolution in high-mass dark matter halos at high redshifts~\cite{klein2016science}. This underestimates the number of MBHB mergers in the Universe. In their study, Klein \textit{et al}.\ linearly extrapolated their results at low redshifts, to higher redshifts to compensate for the lack of resolved high-mass halos at high redshifts. The number of mergers they obtained are shown in Table~\ref{table:intrinsic_merger_rate_klein}.
-
-\FloatBarrier
-\begin{table}[t]
-\centering
-\caption{Intrinsic MBHB merger rates (events yr$^{-1}$ over cosmic history) for the Klein \textit{et al}.~\cite{klein2016science}\ population models. Extrapolated rates correct for under-resolved high-mass halos.}
-\begin{tabular}{lrrl}
-\hline
-Model & Simulated & Extrapolated \\
-\hline
-popIII & 175.36 & 332.65 \\
-Q3d    &   8.18 & 14.06 \\
-Q3nod  & 121.80 & 240.96 \\
-\hline
-\end{tabular}
-\label{table:intrinsic_merger_rate_klein}
-\end{table}
-
 \FloatBarrier
 \begin{table}[t]
 \centering
@@ -1459,13 +1435,19 @@ Seed class & Model / assumption & Rate [yr$^{-1}$] & Notes / Reference \\
 LS & Model-delayed         & $223.39$ & Bonetti \textit{et al}.\ (2019). \\
 LS & Model-stalled         & $21.40$  & Bonetti \textit{et al}.\ (2019). \\
 LS & popIII        & $690.9$ & Mangiagli \textit{et al}. (2022).\\
-LS & popIII        & $352.58$ & Barausse \textit{et al}. (2023). Used to normalise Eqs.~\ref{eq:mergerrates_wang}.\\
+LS & popIII        & $352.58$ & Barausse \textit{et al}. (2023). Used to normalise Eqs.~\eqref{eq:mergerrates_wang}.\\
+LS & popIII        & $175.36$ & Klein \textit{et al}. (2016). Simulated.\\
+LS & popIII        & $332.65$ & Klein \textit{et al}. (2016). Extrapolated rates to correct under-resolved high-mass halos. \\
 HS & Model-delayed         & $22.96$  & Bonetti \textit{et al}.\ (2019). \\
 HS & Model-stalled         & $10.93$  & Bonetti \textit{et al}.\ (2019). \\
 HS & Q3d        & $30.7$ & Mangiagli \textit{et al}.\ (2022).\\
+HS & Q3d        & $18.38$ & Barausse \textit{et al}.\ (2023). Used to normalise Eqs.~\eqref{eq:mergerrates_wang}.\\
+HS & Q3d        & $8.18$ & Klein \textit{et al}.\ (2016). Simulated.\\
+HS & Q3d        & $14.06$ & Klein \textit{et al}.\ (2016). Extrapolated rates to correct under-resolved high-mass halos.\\
 HS & Q3nod        & $475.5$ & Mangiagli \textit{et al}.\ (2022).\\
-HS & Q3d        & $18.38$ & Barausse \textit{et al}.\ (2023). Used to normalise Eqs.~\ref{eq:mergerrates_wang}.\\
 HS & Q3nod        & $164.34$ & Barausse \textit{et al}.\ (2023). Used to normalise Eqs.~\ref{eq:mergerrates_wang}.\\
+HS & Q3nod        & $121.80$ & Klein \textit{et al}.\ (2016). Simulated.\\
+HS & Q3nod        & $240.96$ & Klein \textit{et al}.\ (2016). Extrapolated rates to correct under-resolved high-mass halos.\\
 \bottomrule
 \end{tabular}
 \label{tab:intrinsic_mergerrates_literature}
@@ -1478,20 +1460,18 @@ HS & Q3nod        & $164.34$ & Barausse \textit{et al}.\ (2023). Used to normali
 \label{fig:mergerrates_wang_barausse}
 \end{figure}
 
-Detected merger rates incorporate the detector limitations to observe MBHBs, usually at the higher redshift end.
-
 \FloatBarrier
 \subsubsection{Source-frame Total Mass}
 \label{subsubsec:paramcomponentmasses}
 
 \paragraph{}
- For $M$, we use the expressions
+We fit the population distribution for the source-frame total mass $M$ of the popIII model obtained by B23 with a power-law form,
 \begin{align}
 p(M \mid \alpha,M_{\min},M_{\max})_{\mathrm{popIII}}
-&= A~M^{-\alpha},
+&= A~M^{\alpha}, & M_{\min} \le M \le M_{\mathrm{max}},
 \label{eq:mass_distr_popIII}
 \end{align}
-
+While for both Q3d and Q3nod models, we fit a broken power-law,
 \begin{align}
 p(M \mid \alpha_1,\alpha_2,M_{\min},M_{\mathrm{break}},M_{\max})_{\mathrm{Q3d,Q3nod}}
 =
@@ -1504,13 +1484,13 @@ p(M \mid \alpha_1,\alpha_2,M_{\min},M_{\mathrm{break}},M_{\max})_{\mathrm{Q3d,Q3
 
 where $\alpha$, $\alpha_1$, and $\alpha_2$ are the hyper-parameters that define the slopes of the mass distributions for $M$, and $A$, $A_1$, and $A_2$ are the normalisation factors. 
 
-The continuity condition of Eq.~\ref{eq:mass_distr_Q3} is
+The continuity condition of Eq.~\eqref{eq:mass_distr_Q3} is
 
 \begin{equation}
 A_2 = A_1 \cdot M_{\mathrm{break}}^{\alpha_2 - \alpha_1},
 \label{eq:continuity_cond}
 \end{equation}
-%
+
 and $A_1$ is calculated from
 
 \begin{equation}
@@ -1521,10 +1501,10 @@ A_1 \bigg[
 \bigg] = 1.
 \label{eq:normalisation_cond}
 \end{equation}
-The broken power-law distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pM_popmodels}.
 
-\FloatBarrier
-\begin{figure}
+The population distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pM_popmodels}.
+
+\begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -1550,24 +1530,50 @@ The broken power-law distributions for the popIII, Q3d, and Q3nod population mod
     \label{fig:pM_popmodels}
 \end{figure}
 
+\begin{table}[t]
+\captionsetup{font=footnotesize}
+\centering
+\caption{Hyper-parameters and their values used in the parametric forms to match the results of B23. These hyper-parameters were used in the parametric forms to generate a catalogue of intrinsic MBHB mergers.}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand\arraystretch{1.12}
+\begin{tabular}{@{} l p{5.6cm} c c c @{}}
+\toprule
+Parameter & Description & PopIII & Q3d & Q3nod \\
+\midrule
+$M_{\min}$ & Minimum source-frame total mass ($\mathrm{M}_{\odot}$). & $1\times10^{3}$ & $1\times10^{4}$ & $1\times10^{4}$ \\
+$M_{\max}$ & Maximum source-frame total mass ($\mathrm{M}_{\odot}$). & $1\times10^{8}$ & $2\times10^{8}$ & $2\times10^{8}$ \\
+$M_{\mathrm{break}}$ & Powerlaw break source-frame total mass ($\mathrm{M}_{\odot}$). & -- & $1\times10^{6}$ & $3\times10^{5}$ \\
+$\alpha$ & Powerlaw index for source-frame total mass of the popIII model. & $-1.30$ & -- & -- \\
+$\alpha_{1}$, $\alpha_{2}$ & Powerlaw indexes for source-frame total mass of the Q3d and Q3nod models. & -- & $-0.20$,$-1.75$ & $-0.20$,$-1.90$ \\
+$\alpha_{a}$, $\beta_{a}$ & Shape parameters of the beta distribution for the spins. & $400,2$ & $400,2$ & $400,2$ \\
+$q_{\min}$ & Minimum mass ratio & 0.1 & 0.1 & 0.1 \\
+$q_{\max}$ & Maximum mass ratio & 1.0 & 1.0 & 1.0 \\
+$q_{\mathrm{break}}$ & Powerlaw break for the mass ratio for the popIII model. & 0.88 & -- & -- \\
+$\alpha_{q}$ & Powerlaw index for the mass ratio of the Q3nod model. & -- & -- & $-0.60$ \\
+$\alpha_{q,1}$, $\alpha_{q,2}$ & Powerlaw indexes for the mass ratio of the popIII model. & $0.80,-0.14$ & -- & -- \\
+\bottomrule
+\end{tabular}
+\label{tab:hyper-parameters_values}
+\end{table}
+
 \FloatBarrier
 \subsubsection{Redshift}
 \label{subsubsec:paramredshift}
 
-\FloatBarrier
 \paragraph{}
 We model the redshift distribution using the merger rate per unit redshift,
 
 \begin{align}
 p(z) =
-\frac{1}{\mathcal{N}} \frac{d N}{d z},
+\frac{1}{\mathcal{N}} \frac{d N}{dtdz},
 \label{eq:redshift_distr}
 \end{align}
 
-where $\mathcal{N}=\int_{z_{min}}^{z_{max}}\frac{dN}{dz}dz$ is the normalisation factor. The redshift distribution for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pz_popmodels}.
+where $\mathcal{N}=\int_{z_{min}}^{z_{max}}\frac{dN}{dtdz}dz$ is the normalisation factor. The redshift distribution for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pz_popmodels}.
 
-\FloatBarrier
-\begin{figure}
+%\FloatBarrier
+\begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -1596,12 +1602,19 @@ where $\mathcal{N}=\int_{z_{min}}^{z_{max}}\frac{dN}{dz}dz$ is the normalisation
 \subsubsection{Spins}
 \label{subsubsec:paramspins}
 
-\FloatBarrier
+%\FloatBarrier
 \paragraph{}
-The beta distribution for spins is shown in Fig.~\ref{fig:pa_popmodels}.
+We fit B23's population distributions for the spin magnitudes of both primary and secondary binary components, $a_1$ and $a_2$, with a beta distribution~\cite{wysocki2019reconstructing} for the three astrophysical models,
+\begin{align}
+p(a|\alpha_a,\beta_a) =
+\mathrm{Beta} (\alpha_a, \beta_a),
+\label{eq:spin_distr}
+\end{align}
 
-\FloatBarrier
-\begin{figure}
+We chose the beta distribution because spins' span is $(0,1)$, and follows closely the distribution obtained in B23. The spin distributions are shown in Fig.~\ref{fig:pa_popmodels}.
+
+%\FloatBarrier
+\begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -1630,12 +1643,34 @@ The beta distribution for spins is shown in Fig.~\ref{fig:pa_popmodels}.
 \subsubsection{Mass ratio}
 \label{subsubsec:parammassratio}
 
-\FloatBarrier
+%\FloatBarrier
 \paragraph{}
-We model the mass ratio with a uniform distribution, Fig.~\ref{fig:p_q_uniform}.
+We model the mass ratio distribution for the Q3d model with a uniform distribution,
+\begin{align}
+p(q \mid q_{\min},q_{\max})_{\mathrm{Q3d}}
+&= \frac{1}{q_{\max}-q_{\min}}, & q_{\min} \le q \le q_{\max},
+\label{eq:massratio_Q3d}
+\end{align}
+whilst for the Q3nod model we use a power-law, 
+\begin{align}
+p(q \mid \alpha_{q},q_{\min},q_{\max})_{\mathrm{Q3nod}}
+&= A~q^{\alpha_{q}}, & q_{\min} \le q \le q_{\mathrm{max}},
+\label{eq:mass_ratio_Q3nod}
+\end{align}
+and a broken power-law for the popIII model, 
+\begin{align}
+p(q \mid \alpha_{q,1},\alpha_{q,2},q_{\min},q_{\mathrm{break}},q_{\max})_{\mathrm{popIII}}
+&=
+\begin{cases}
+ A_{1}~q^{\alpha_{q,1}}, & q_{\min} \le q \le q_{\mathrm{break}},\\[6pt]
+ A_{2}~q^{\alpha_{q,2}}, & q_{\mathrm{break}} < q \le q_{\max}.
+\end{cases}
+\label{eq:mass_ratio_popIII}
+\end{align}
+The hyper-parameter values are shown in Table~\ref{tab:hyper-parameters_values}, and the distributions in Fig.~\ref{fig:pq_popmodels}.
 
-\FloatBarrier
-\begin{figure}
+%\FloatBarrier
+\begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth}
         \centering
@@ -1775,6 +1810,8 @@ We model the mass ratio with a uniform distribution, Fig.~\ref{fig:p_q_uniform}.
 \FloatBarrier
 \subsection{Synthetic catalogs of detected MBHB mergers}
 \label{subsec:synth_catalogs_det_mbhbs}
+
+Detected merger rates incorporate the detector limitations to observe MBHBs, usually at the higher redshift end.
 
 \FloatBarrier
 \begin{figure}
