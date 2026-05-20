@@ -1468,41 +1468,26 @@ HS & Q3nod        & $240.96$ & Klein \textit{et al}.\ (2016). Extrapolated rates
 We fit the population distribution for the source-frame total mass $M$ of the popIII model obtained by B23 with a power-law form,
 \begin{align}
 p(M \mid \alpha,M_{\min},M_{\max})_{\mathrm{popIII}}
-&= A~M^{\alpha}, & M_{\min} \le M \le M_{\mathrm{max}},
+\propto 
+\begin{cases}
+M^{\alpha} & M_{\min} \le M \le M_{\mathrm{max}}\\
+0 & \mathrm{otherwise},
+\end{cases}
 \label{eq:mass_distr_popIII}
 \end{align}
-While for both Q3d and Q3nod models, we fit a broken power-law,
+while for both Q3d and Q3nod models, we fit a broken power-law,
 \begin{align}
 p(M \mid \alpha_1,\alpha_2,M_{\min},M_{\mathrm{break}},M_{\max})_{\mathrm{Q3d,Q3nod}}
-=
+\propto
 \begin{cases}
- A_{1}~M^{\alpha_1}, & M_{\min} \le M \le M_{\mathrm{break}},\\[6pt]
- A_{2}~M^{\alpha_2}, & M_{\mathrm{break}} < M \le M_{\max},
+M^{\alpha_1} & M_{\min} \le M \le M_{\mathrm{break}}\\[6pt]
+M^{\alpha_2} & M_{\mathrm{break}} < M \le M_{\max}\\
+0 & \mathrm{otherwise},
 \end{cases}
 \label{eq:mass_distr_Q3}
 \end{align}
 
-where $\alpha$, $\alpha_1$, and $\alpha_2$ are the hyper-parameters that define the slopes of the mass distributions for $M$, and $A$, $A_1$, and $A_2$ are the normalisation factors. 
-
-The continuity condition of Eq.~\eqref{eq:mass_distr_Q3} is
-
-\begin{equation}
-A_2 = A_1 \cdot M_{\mathrm{break}}^{\alpha_2 - \alpha_1},
-\label{eq:continuity_cond}
-\end{equation}
-
-and $A_1$ is calculated from
-
-\begin{equation}
-A_1 \bigg[
-  \frac{M_{\mathrm{break}}^{1 - \alpha_1} - M_{\min}^{1 - \alpha_1}}{1 - \alpha_1}
-  + M_{\mathrm{break}}^{\alpha_1 - \alpha_2}
-    \frac{M_{\max}^{1 - \alpha_2} - M_{\mathrm{break}}^{1 - \alpha_2}}{1 - \alpha_2}
-\bigg] = 1.
-\label{eq:normalisation_cond}
-\end{equation}
-
-The population distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pM_popmodels}.
+where $\alpha$, $\alpha_1$, and $\alpha_2$ are the hyper-parameters that define the slopes of the mass distributions for $M$. The population distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pM_popmodels}.
 
 \begin{figure}[h]
     \centering
@@ -1648,22 +1633,31 @@ We chose the beta distribution because spins' span is $(0,1)$, and follows close
 We model the mass ratio distribution for the Q3d model with a uniform distribution,
 \begin{align}
 p(q \mid q_{\min},q_{\max})_{\mathrm{Q3d}}
-&= \frac{1}{q_{\max}-q_{\min}}, & q_{\min} \le q \le q_{\max},
+&=
+\begin{cases}
+\frac{1}{q_{\max}-q_{\min}} & q_{\min} \le q \le q_{\max}\\
+0 & \mathrm{otherwise},
+\end{cases}
 \label{eq:massratio_Q3d}
 \end{align}
 whilst for the Q3nod model we use a power-law, 
 \begin{align}
 p(q \mid \alpha_{q},q_{\min},q_{\max})_{\mathrm{Q3nod}}
-&= A~q^{\alpha_{q}}, & q_{\min} \le q \le q_{\mathrm{max}},
+\propto
+\begin{cases}
+q^{\alpha_{q}} & q_{\min} \le q \le q_{\mathrm{max}}\\
+0 & \mathrm{otherwise}
+\end{cases}
 \label{eq:mass_ratio_Q3nod}
 \end{align}
 and a broken power-law for the popIII model, 
 \begin{align}
 p(q \mid \alpha_{q,1},\alpha_{q,2},q_{\min},q_{\mathrm{break}},q_{\max})_{\mathrm{popIII}}
-&=
+\propto
 \begin{cases}
- A_{1}~q^{\alpha_{q,1}}, & q_{\min} \le q \le q_{\mathrm{break}},\\[6pt]
- A_{2}~q^{\alpha_{q,2}}, & q_{\mathrm{break}} < q \le q_{\max}.
+q^{\alpha_{q,1}} & q_{\min} \le q \le q_{\mathrm{break}}\\[6pt]
+q^{\alpha_{q,2}} & q_{\mathrm{break}} < q \le q_{\max}\\
+0 & \mathrm{otherwise}.
 \end{cases}
 \label{eq:mass_ratio_popIII}
 \end{align}
