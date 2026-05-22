@@ -1341,9 +1341,12 @@ In this work, we adopt three benchmark population models: a light-seed PopIII sc
 As discussed above, there is strong evidence that MBHs and galaxies co-evolve. Approaches to study this co-evolution include cosmological simulations, theoretical, and phenomenological models. Cosmological simulations can be carried out in two fashions: grid-based Eulerian simulations~\cite{teyssier2002cosmological}, and particle-based hydrodynamical simulations (Smoothed Particle Hydrodynamics, SPH)~\cite{lucy1977numerical,gingold1977smoothed}. While cosmological simulations give a robust track of the evolution of MBHs and their host galaxies, they are computationally expensive. On the theoretical side, there exist analytical and semi-analytical models. Theoretical models are limited in their reach as far as the physics that is included in the modelling. Semi-analytical models provide simple enough prescriptions, tunable up to a few parameters, while being computationally affordable. Phenomenological models, often represented by parametric forms, consist of models that fit observations or the predictions of numerical simulations. In this work, we use phenomenological parametric models because they are flexible and allow us to fit the results of semi-analytical models without requiring us to model explicitly the physical mechanisms that generate the corresponding distributions, and because they can be sampled quickly and at low computational cost.
 
 We use parametric forms for the merger rate of MBHBs, $R(z)$, and for a set of binary parameters: source-frame total mass $M = m_{1} + m_{2}$, redshift $z$, spin magnitudes $a_1$ and $a_2$, and mass ratio $q = m_2/m_1$. 
-\FloatBarrier
-\subsubsection{Intrinsic merger rates}
-\label{subsubsec:mergerrates}
+\\
+%\FloatBarrier
+%\subsubsection{Intrinsic merger rates}
+%\label{subsubsec:mergerrates}
+
+\noindent\textit{Intrinsic Merger Rates}
 
 \paragraph{}
 We define the intrinsic merger rate~$R(z)$ as the number of mergers $N$ that happen in the Universe, per unit time $t$ and unit redshift $z$, integrated over redshift $z$,
@@ -1394,7 +1397,9 @@ where $R_{\text{pop III}}(z)$, $R_{\mathrm{Q3d}}(z)$, and $R_{\mathrm{Q3nod}}(z)
 
 It has been shown that cosmological simulations lack resolution in high-mass dark matter halos at high redshifts~\cite{klein2016science}. This underestimates the number of MBHB mergers in the Universe. In their study, K16 linearly extrapolated their results from low to high redshifts to compensate for the lack of resolved high-mass halos at high redshifts. The number of mergers they obtained is shown in Table~\ref{tab:intrinsic_mergerrates_literature}.
 
-After a potential detection of a stochastic GW background by PTA observatories EPTA, InPTA, NANOGrav, PPTA, and CPTA in 2023, constrains in the merger rates of MBHBs have been possible. We can use this new information to update the expressions from W22 and K16, as they are now out of date. We do this by normalising them to the results for the merger rates from Barausse \textit{et al}.\ (2023, B23)~\cite{barausse2023implications}, which takes these constraints into account, Fig.~\ref{fig:mergerrates_wang_barausse}. Within their semi-analytical model, B23 compute the merger rate per unit redshift with the expression,
+After a potential detection of a stochastic GW background by PTA observatories EPTA, InPTA, NANOGrav, PPTA, and CPTA in 2023, constrains in the merger rates of MBHBs have been possible. We can use this new information to update the expressions from W22 and K16, as they are now out of date. We do this by normalising them to the results for the merger rates from Barausse \textit{et al}.\ (2023, B23)~\cite{barausse2023implications}, which takes these constraints into account. 
+
+Within their semi-analytical model, B23 compute the merger rate per unit redshift with the expression,
 \begin{equation}
 \frac{d^{2}N}{dz\,dt}
 =
@@ -1402,31 +1407,63 @@ After a potential detection of a stochastic GW background by PTA observatories E
 \sum_{N \in \Delta z} \frac{W_{\mathrm{PS}}D_L^{2}(z)}{(1+z)^{2}},
 \label{eq:merger_rate_perredshift}
 \end{equation}
-where $W_{\mathrm{PS}}$ is the comoving number density of dark matter halos at $z=0$ divided by the merger-tree realisations in that mass bin, and $D_L^{2}(z)/(1 + z)^2$ is the comoving distance squared, which multiplied by $4\pi/c$ gives the area of a comoving spherical shell at $z$. The merger rate of B23 is then obtained with eqs.~\eqref{eq:mergerrate} and~\eqref{eq:merger_rate_perredshift}, and we normalise our merger rates, eqs.~\eqref{eq:mergerrates_wang}, to match the ones of B23. The results of the intrinsic merger rates for our three population models are shown in Table~\ref{table:intrinsic_merger_rate}.
+where $W_{\mathrm{PS}}$ is the comoving number density of dark matter halos at $z=0$ divided by the merger-tree realisations in that mass bin, and $D_L^{2}(z)/(1 + z)^2$ is the comoving distance squared, which multiplied by $4\pi/c$ gives the area of a comoving spherical shell at $z$. The merger rate of B23 is then obtained with eqs.~\eqref{eq:mergerrate} and~\eqref{eq:merger_rate_perredshift}, and we normalise our merger rates, eqs.~\eqref{eq:mergerrates_wang}, to match the ones of B23. 
+
+We treat MBHB mergers as a Poisson process and use the redshift-dependent merger rate
+$\mathrm{d}\dot N/\mathrm{d}z$ (per unit redshift and per unit observer time) to define the expected
+number of events over a mission duration $T$. The expected number of intrinsic mergers is
+\begin{equation}
+\mu(T)=T\int_{0}^{z_{\max}} \frac{\mathrm{d}\dot N}{\mathrm{d}z}\,\mathrm{d}z,
+\label{eq:expected_mu_poisson}
+\end{equation}
+and the probability of observing $N$ mergers in time $T$ is given by the Poisson distribution
+\begin{equation}
+P(N\mid \mu)=\frac{\mu^{N}e^{-\mu}}{N!}.
+\label{eq:poisson}
+\end{equation}
+We then draw $N$ from Eq.~\eqref{eq:poisson} for a LISA-like mission duration of $T=4$ years.
+
+The merger rate evolution with redshift, and the results of the merger rates for our three population models are shown in Fig.~\ref{fig:mergerrates_wang_barausse}, and in Table~\ref{table:intrinsic_merger_rate}, respectively.
 
 \FloatBarrier
-\begin{table}[t]
+\begin{figure}[htbp]
 \centering
-\caption{Mergers during a \textbf{4-year} mission.}
+\includegraphics[width=.7\textwidth]{Parametric_forms/merger_rates_barausse2023_populations.pdf}
+\caption{Merger rates $R(z)$ from Wang \textit{et al}.\ (2021) normalised to the intrinsic merger rates from Barausse \textit{et al}.\ (2023).}
+\label{fig:mergerrates_wang_barausse}
+\end{figure}
+
+\begin{table}[t]
+\captionsetup{font=footnotesize}
+\centering
+\caption{Mergers during a \textbf{4-year} mission. The rate $R(z)$ includes the Poisson counting uncertainty, $\sigma_{R(z)}=\sqrt{N}/T$.}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \label{tab:intrinsic_mergers_4yr}
 \begin{threeparttable}
 \begin{tabular}{l S[table-format=5.0] S[table-format=3.2]}
 \toprule
-\textbf{Model} & {Total mergers $N_{\rm intr}$ (4 yr)} & {Rate $\mathcal{R}$ (yr$^{-1}$)} \\
+\textbf{Model} & {Total mergers $N_{\rm intr}$ (4 yr)} & {Rate $R(z)$ (yr$^{-1}$)} \\
 \midrule
-popIII & 1343 & 352.58 \\
-Q3d    & 82 & 18.38 \\
-Q3nod  & 661 & 164.34 \\
+popIII & 1343 & 335.7 $\pm$ 9.2 \\
+Q3d    & 82 & 20.5 $\pm$ 2.3 \\
+Q3nod  & 661 & 164.3 $\pm$ 6.4\\
 \bottomrule
 \end{tabular}
 \end{threeparttable}
 \label{table:intrinsic_merger_rate}
 \end{table}
 
-\FloatBarrier
-\begin{table}[t]
+From Fig.~\ref{fig:mergerrates_wang_barausse}, we notice several differences among the three merger rate evolution curves. The popIII and Q3nod models can retain high rates up to $z\approx8$, after which the rate drops. As K16 points out, Q3nod represent an optimistic merger scenario. The Q3d model, on the other hand, includes delays between the mergers of the host galaxies and those of the MBHs, which shifts MBHB coalescences to later cosmic times (lower redshifts). Consequently, at $z>12$, the predicted number of mergers is almost negligible.
+
+There are many studies in the literature that predict the intrinsic MBHB merger rates over a LISA-mission timespan of four years. Some of these predictions are presented in Table~\ref{tab:intrinsic_mergerrates_literature}. Although these studies use broadly similar benchmark MBH formation and evolution scenarios, i.e. light seeds from popIII remnants and heavy seeds from the collapse of protogalactic disks into supermassive stars, their prescriptions for the physical mechanisms that drive binaries from parsec to subparsec separations differ. Klein~\textit{et al.} incorporate physical mechanisms such as dynamical friction, stellar hardening, gas-driven migration, and multiple-body interactions through an effective delay prescription, whereas Bonetti~\textit{et al.} model these mechanisms more explicitly, finding that triple encounters can contribute a non-negligible fraction of the intrinsic mergers across cosmic time. Mangliagli~\textit{et al.} models the intrinsic merger rate in the context of multimessenger counterparts forecasting using the same family of physical mechanisms (gas-rich versus gas-poor environments, stellar hardening, gas torques, and multi-body encounters), but they do not attempt to assess the efficiency of these mechanisms in detail, as this is beyond their scope. Finally, Barausse~\textit{et al.} use PTA constraints to calibrate semi-analytical models of galaxy-MBH coevolution, arguing that PTA data favours efficient MBHB coalescence after galaxy mergers; however, they also emphasize that sub-grid physics and modelling assumptions remain key limiting factors for rate predictions. 
+\\
+\begin{table}[!htbp]
+\captionsetup{font=footnotesize}
 \centering
 \caption{Intrinsic MBHB merger rates for light (LS) and heavy (HS) seeds from the literature.}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \renewcommand\arraystretch{1.12}
 \begin{tabular}{@{} l l r p{7.2cm} @{}}
 \toprule
@@ -1453,16 +1490,8 @@ HS & Q3nod        & $240.96$ & Klein \textit{et al}.\ (2016). Extrapolated rates
 \label{tab:intrinsic_mergerrates_literature}
 \end{table}
 
-\FloatBarrier
-\begin{figure}[htbp]
-\includegraphics[width=.7\textwidth]{Parametric_forms/merger_rates_barausse2023_populations.pdf}
-\caption{Merger rates $R(z)$ from Wang \textit{et al}.\ (2021) normalised to the intrinsic merger rates from Barausse \textit{et al}.\ (2023).}
-\label{fig:mergerrates_wang_barausse}
-\end{figure}
-
-\FloatBarrier
-\subsubsection{Source-frame Total Mass}
-\label{subsubsec:paramcomponentmasses}
+%\FloatBarrier
+\noindent\textit{Source-frame Total Mass}
 
 \paragraph{}
 We fit the population distribution for the source-frame total mass $M$ of the popIII model obtained by B23 with a power-law form,
@@ -1486,36 +1515,61 @@ M^{\alpha_2} & M_{\mathrm{break}} < M \le M_{\max}\\
 \end{cases}
 \label{eq:mass_distr_Q3}
 \end{align}
-
-where $\alpha$, $\alpha_1$, and $\alpha_2$ are the hyper-parameters that define the slopes of the mass distributions for $M$. The population distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pM_popmodels}.
-
-\begin{figure}[h]
+where $\alpha$, $\alpha_1$, and $\alpha_2$ are the hyper-parameter values that define the slopes of the mass distributions for $M$. The hyperparameters, their values, and population distributions for the popIII, Q3d, and Q3nod population models are shown in Table~\ref{tab:hyper-parameters_values} and Fig.~\ref{fig:row_pM}, respectively.
+\\
+\FloatBarrier
+\begin{figure}[t]
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    % Row (a): p(M) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_M_Q3d_B23_weighted.pdf}        
-        \caption{$p(M)$ for Q3d model.}
-        \label{fig:p_M_Q3d}
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{Q3d}\end{minipage}\hfill
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{Q3nod}\end{minipage}\hfill
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{PopIII}\end{minipage}
+        \vspace{3pt}
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_M_Q3d_B23_weighted.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_M_Q3nod_B23_weighted.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_M_popIII_B23_weighted.pdf}
+        \caption{$p(M)$ for the three population models.}
+        \label{fig:row_pM}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (b): p(z) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_M_Q3nod_B23_weighted.pdf}        
-        \caption{$p(M)$ for model Q3nod.}
-        \label{fig:p_M_Q3nod}
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_z_Q3d_B23_weighted.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_z_Q3nod_barausse_weighted.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_z_popIII_W21_B23_weighted.pdf}
+        \caption{$p(z)$ computed from the merger-rate model of Wang \textit{et al}.\ (2021), normalised to the intrinsic merger rates of Barausse \textit{et al}.\ (2023).}
+        \label{fig:row_pz}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (c): p(a)
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_M_popIII_B23_weighted.pdf}        
-        \caption{$p(M)$ for model popIII.}
-        \label{fig:p_M_popIII}
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_a_beta_Q3d.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_a_beta_Q3nod.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_a_beta_popIII.pdf}
+        \caption{$p(a)$ for the three population models.}
+        \label{fig:row_pa}
     \end{subfigure}
-    \caption{$p(M)$ for the three different population models.}
-    \label{fig:pM_popmodels}
+    \vspace{6pt}
+    % Row (d): p(q)
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_q_Q3d_B23_uniform.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_q_Q3nod_B23_weighted.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{Parametric_forms/p_q_popIII_B23_power_law.pdf}
+        \caption{$p(q)$ for the three population models.}
+        \label{fig:row_pq}
+    \end{subfigure}
+    % Global caption
+    \caption{Population distributions for the three MBHB astrophysical models.}
+    \label{fig:parametric_forms}
 \end{figure}
 
-\begin{table}[t]
+%\FloatBarrier
+\begin{table}[!htbp]
 \captionsetup{font=footnotesize}
 \centering
 \caption{Hyper-parameters and their values used in the parametric forms to match the results of B23. These hyper-parameters were used in the parametric forms to generate a catalogue of intrinsic MBHB mergers.}
@@ -1528,23 +1582,22 @@ Parameter & Description & PopIII & Q3d & Q3nod \\
 \midrule
 $M_{\min}$ & Minimum source-frame total mass ($\mathrm{M}_{\odot}$). & $1\times10^{3}$ & $1\times10^{4}$ & $1\times10^{4}$ \\
 $M_{\max}$ & Maximum source-frame total mass ($\mathrm{M}_{\odot}$). & $1\times10^{8}$ & $2\times10^{8}$ & $2\times10^{8}$ \\
-$M_{\mathrm{break}}$ & Powerlaw break source-frame total mass ($\mathrm{M}_{\odot}$). & -- & $1\times10^{6}$ & $3\times10^{5}$ \\
-$\alpha$ & Powerlaw index for source-frame total mass of the popIII model. & $-1.30$ & -- & -- \\
-$\alpha_{1}$, $\alpha_{2}$ & Powerlaw indexes for source-frame total mass of the Q3d and Q3nod models. & -- & $-0.20$,$-1.75$ & $-0.20$,$-1.90$ \\
+$M_{\mathrm{break}}$ & Power-law break source-frame total mass ($\mathrm{M}_{\odot}$). & -- & $1\times10^{6}$ & $3\times10^{5}$ \\
+$\alpha$ & Power-law index for source-frame total mass of the popIII model. & $-1.30$ & -- & -- \\
+$\alpha_{1}$, $\alpha_{2}$ & Power-law indices for source-frame total mass of the Q3d and Q3nod models. & -- & $-0.20$,$-1.75$ & $-0.20$,$-1.90$ \\
 $\alpha_{a}$, $\beta_{a}$ & Shape parameters of the beta distribution for the spins. & $400,2$ & $400,2$ & $400,2$ \\
 $q_{\min}$ & Minimum mass ratio & 0.1 & 0.1 & 0.1 \\
 $q_{\max}$ & Maximum mass ratio & 1.0 & 1.0 & 1.0 \\
-$q_{\mathrm{break}}$ & Powerlaw break for the mass ratio for the popIII model. & 0.88 & -- & -- \\
-$\alpha_{q}$ & Powerlaw index for the mass ratio of the Q3nod model. & -- & -- & $-0.60$ \\
-$\alpha_{q,1}$, $\alpha_{q,2}$ & Powerlaw indexes for the mass ratio of the popIII model. & $0.80,-0.14$ & -- & -- \\
+$q_{\mathrm{break}}$ & Power-law break for the mass ratio for the popIII model. & 0.88 & -- & -- \\
+$\alpha_{q}$ & Power-law index for the mass ratio of the Q3nod model. & -- & -- & $-0.60$ \\
+$\alpha_{q,1}$, $\alpha_{q,2}$ & Power-law indices for the mass ratio of the popIII model. & $0.80,-0.14$ & -- & -- \\
 \bottomrule
 \end{tabular}
 \label{tab:hyper-parameters_values}
 \end{table}
 
 \FloatBarrier
-\subsubsection{Redshift}
-\label{subsubsec:paramredshift}
+\noindent\textit{Redshift}
 
 \paragraph{}
 We model the redshift distribution using the merger rate per unit redshift,
@@ -1555,39 +1608,11 @@ p(z) =
 \label{eq:redshift_distr}
 \end{align}
 
-where $\mathcal{N}=\int_{z_{min}}^{z_{max}}\frac{dN}{dtdz}dz$ is the normalisation factor. The redshift distribution for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:pz_popmodels}.
+where $\mathcal{N}=\int_{z_{min}}^{z_{max}}\frac{dN}{dtdz}dz$ is the normalisation factor. The redshift distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:row_pz}.
+\\
 
-%\FloatBarrier
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_z_Q3d_B23_weighted.pdf}       
-        \caption{$p(z)$ using Q3d model}
-        \label{fig:p_z_Q3d_barausse}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_z_Q3nod_barausse_weighted.pdf}        
-        \caption{$p(z)$ using Q3nod model}
-        \label{fig:p_z_Q3nod_barausse}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_z_popIII_W21_B23_weighted.pdf}        
-        \caption{$p(z)$ using popIII model}
-        \label{fig:p_z_popIII_barausse}
-    \end{subfigure}    
-    \caption{$p(z)$ computed from the merger rates from Wang \textit{et al}.\ (2021) normalised to the intrinsic merger rates from Barausse \textit{et al}.\ (2023)}
-    \label{fig:pz_popmodels}
-\end{figure}
+\noindent\textit{Spins}
 
-\FloatBarrier
-\subsubsection{Spins}
-\label{subsubsec:paramspins}
-
-%\FloatBarrier
 \paragraph{}
 We fit B23's population distributions for the spin magnitudes of both primary and secondary binary components, $a_1$ and $a_2$, with a beta distribution~\cite{wysocki2019reconstructing} for the three astrophysical models,
 \begin{align}
@@ -1596,39 +1621,11 @@ p(a|\alpha_a,\beta_a) =
 \label{eq:spin_distr}
 \end{align}
 
-We chose the beta distribution because spins' span is $(0,1)$, and follows closely the distribution obtained in B23. The spin distributions are shown in Fig.~\ref{fig:pa_popmodels}.
+We chose the beta distribution because spins' span is $(0,1)$, and follows closely the distribution obtained in B23. The spin distributions for the three astrophysical models are shown in Fig.~\ref{fig:row_pa}.
+\\
 
-%\FloatBarrier
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_a_beta_Q3d.pdf}        
-        \caption{$p(a)$ using Q3d model}
-        \label{fig:p_a_Q3d}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_a_beta_Q3nod.pdf}        
-        \caption{$p(a)$ using Q3nod model}
-        \label{fig:p_a_Q3nod_barausse}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_a_beta_popIII.pdf}        
-        \caption{$p(a)$ using popIII model}
-        \label{fig:p_a_popIII_barausse}
-    \end{subfigure}    
-    \caption{$p(a)$ for the three different population models.}
-    \label{fig:pa_popmodels}
-\end{figure}
+\noindent\textit{Mass ratio}
 
-\FloatBarrier
-\subsubsection{Mass ratio}
-\label{subsubsec:parammassratio}
-
-%\FloatBarrier
 \paragraph{}
 We model the mass ratio distribution for the Q3d model with a uniform distribution,
 \begin{align}
@@ -1646,7 +1643,7 @@ p(q \mid \alpha_{q},q_{\min},q_{\max})_{\mathrm{Q3nod}}
 \propto
 \begin{cases}
 q^{\alpha_{q}} & q_{\min} \le q \le q_{\mathrm{max}}\\
-0 & \mathrm{otherwise}
+0 & \mathrm{otherwise},
 \end{cases}
 \label{eq:mass_ratio_Q3nod}
 \end{align}
@@ -1661,145 +1658,64 @@ q^{\alpha_{q,2}} & q_{\mathrm{break}} < q \le q_{\max}\\
 \end{cases}
 \label{eq:mass_ratio_popIII}
 \end{align}
-The hyper-parameter values are shown in Table~\ref{tab:hyper-parameters_values}, and the distributions in Fig.~\ref{fig:pq_popmodels}.
-
-%\FloatBarrier
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_q_Q3d_B23_uniform.pdf}        
-        \caption{$p(q)$ using Q3d model}
-        \label{fig:p_q_Q3d}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_q_Q3nod_B23_weighted.pdf}        
-        \caption{$p(q)$ using Q3nod model}
-        \label{fig:p_q_Q3nod_barausse}
-    \end{subfigure}
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Parametric_forms/p_q_popIII_B23_power_law.pdf}        
-        \caption{$p(q)$ using popIII model}
-        \label{fig:p_q_popIII_B23}
-    \end{subfigure}    
-    \caption{$p(q)$ for the three different population models.}
-    \label{fig:pq_popmodels}
-\end{figure}
+The mass ratio distributions for the three astrophysical models are shown in Fig.~\ref{fig:row_pq}.
 
 \FloatBarrier
-\subsection{Synthetic catalogs of cosmic MBHB mergers}
+\subsection{Synthetic catalogues of cosmic MBHB mergers}
 \label{subsec:synth_catalogs_intrinsic_mbhbs}
 
-% Plots of the Q3d population 
+Using the total number of mergers over a LISA-like mission duration inferred from the redshift-dependent merger rate, together with the parametric forms for the source-frame total mass, redshift, spins, and mass ratio, we generate a source catalogue whose parameter distributions are shown in Figure~\ref{fig:catalog_distributions_grid}. 
 
 \FloatBarrier
-\begin{figure}
+\begin{figure}[t]
     \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_M_Q3d_catalog_sourceM.pdf}  
-        \caption{}
-        \label{fig:p_M_Q3d}
+    % Row (a): p(M) 
+    \begin{subfigure}[t]{\textwidth}
+        \centering        
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{Q3d}\end{minipage}\hfill
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{Q3nod}\end{minipage}\hfill
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{PopIII}\end{minipage}
+        \vspace{3pt}
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_M_Q3d_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_M_Q3nod_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_M_popIII_catalog_sourceM.pdf}
+        \caption{Source-frame total mass distributions, $p(M)$, from the synthetic catalogues.}
+        \label{fig:row_catalog_pM}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (b): p(z)
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_z_Q3d_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_z_Q3}
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_z_Q3d_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_z_Q3nod_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_z_popIII_catalog_sourceM.pdf}
+        \caption{Redshift distributions, $p(z)$, from the synthetic catalogues.}
+        \label{fig:row_catalog_pz}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (c): p(a) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_a_Q3d_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_a_Q3}
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_a_Q3d_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_a_Q3nod_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_a_popIII_catalog_sourceM.pdf}
+        \caption{Spin distributions, $p(a)$, from the synthetic catalogues.}
+        \label{fig:row_catalog_pa}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (d): p(q) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_q_Q3d_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_q_Q3}
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_q_Q3d_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_q_Q3nod_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalogs_intrinsic_mergers/p_q_popIII_catalog_sourceM.pdf}
+        \caption{Mass ratio distributions, $p(q)$, from the synthetic catalogues.}
+        \label{fig:row_catalog_pq}
     \end{subfigure}
-    \caption{Distributions of mergers from the synthetic catalog of the Q3d model with true parameter values drawn from the parametric models.}
-    \label{fig:p_Q3d}
-\end{figure}   
-
-% Plots of the Q3nod population 
-
-\FloatBarrier
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_M_Q3nod_catalog_sourceM.pdf}  
-        \caption{}
-        \label{fig:p_M_Q3nod}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_z_Q3nod_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_z_Q3nod}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_a_Q3nod_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_a_Q3nod}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_q_Q3nod_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_q_Q3nod}
-    \end{subfigure}
-    \caption{Distributions of mergers from the synthetic catalog of the Q3nod model with true parameter values drawn from the parametric models.}
-    \label{fig:p_Q3nod}
-\end{figure}  
-
-% Plots of the popIII population 
-
-\FloatBarrier
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_M_popIII_catalog_sourceM.pdf}  
-        \caption{}
-        \label{fig:p_M_popIII}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_z_popIII_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_z_popIII}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_a_popIII_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_a_popIII}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalogs_intrinsic_mergers/p_q_popIII_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_q_popIII}
-    \end{subfigure}
-    \caption{Distributions of mergers from the synthetic catalog of the popIII model with true parameter values drawn from the parametric models.}
-    \label{fig:p_popIII}
-\end{figure} 
+    % Global caption 
+    \caption{Distributions of intrinsic mergers from the synthetic catalogues generated from the parametric models. Columns correspond to the three astrophysical models, Q3d, Q3nod, and PopIII. Rows show, from top to bottom, the source-frame total mass distribution $p(M)$, redshift distribution $p(z)$, spin distribution $p(a)$, and mass ratio distribution $p(q)$.}
+    \label{fig:catalog_distributions_grid}
+\end{figure}
 
 \FloatBarrier
 \subsection{Synthetic catalogs of detected MBHB mergers}
@@ -1808,106 +1724,55 @@ The hyper-parameter values are shown in Table~\ref{tab:hyper-parameters_values},
 Detected merger rates incorporate the detector limitations to observe MBHBs, usually at the higher redshift end.
 
 \FloatBarrier
-\begin{figure}
+\begin{figure}[t]
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    % Row (a): p(M) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_M_popIII_noisy_catalog_sourceM.pdf}  
-        \caption{}
-        \label{fig:p_M_popIIInoisy}
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{PopIII}\end{minipage}\hfill
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{Q3d}\end{minipage}\hfill
+        \begin{minipage}[t]{0.32\textwidth}\centering\textbf{Q3nod}\end{minipage}
+        \vspace{3pt}
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_M_popIII_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_M_Q3d_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_M_Q3nod_noisy_catalog_sourceM.pdf}
+        \caption{Source-frame total mass distributions, $p(M)$, from the detected synthetic catalogues.}
+        \label{fig:row_detected_pM}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (b): p(z) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_z_popIII_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_z_popIIInoisy}
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_z_popIII_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_z_Q3d_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_z_Q3nod_noisy_catalog_sourceM.pdf}
+        \caption{Redshift distributions, $p(z)$, from the detected synthetic catalogues.}
+        \label{fig:row_detected_pz}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (c): p(a) 
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_a_popIII_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_a_popIIInoisy}
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_a_popIII_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_a_Q3d_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_a_Q3nod_noisy_catalog_sourceM.pdf}
+        \caption{Spin distributions, $p(a)$, from the detected synthetic catalogues.}
+        \label{fig:row_detected_pa}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
+    \vspace{6pt}
+    % Row (d): p(q)
+    \begin{subfigure}[t]{\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_q_popIII_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_q_popIIInoisy}
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_q_popIII_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_q_Q3d_noisy_catalog_sourceM.pdf}\hfill
+        \includegraphics[width=0.32\textwidth]{catalog_detected_mergers/p_q_Q3nod_noisy_catalog_sourceM.pdf}
+        \caption{Mass ratio distributions, $p(q)$, from the detected synthetic catalogues.}
+        \label{fig:row_detected_pq}
     \end{subfigure}
-    \caption{Distributions of mergers from the synthetic catalog of the popIII population model with true parameter values with added Gaussian noise to simulate a detected signal.}
-    \label{fig:p_popIIInoisy}
-\end{figure} 
-
-\FloatBarrier
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_M_Q3d_noisy_catalog_sourceM.pdf}  
-        \caption{}
-        \label{fig:p_M_Q3dnoisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_z_Q3d_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_z_Q3noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_a_Q3d_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_a_Q3noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_q_Q3d_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_q_Q3noisy}
-    \end{subfigure}
-    \caption{Distributions of mergers from the synthetic catalog of the Q3d population model with true parameter values with added Gaussian noise to simulate a detected signal.}
-    \label{fig:p_Q3dnoisy}
-\end{figure} 
-
-\FloatBarrier
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_M_Q3nod_noisy_catalog_sourceM.pdf}  
-        \caption{}
-        \label{fig:p_M_Q3nodnoisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_z_Q3nod_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_z_Q3nodnoisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_a_Q3nod_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_a_Q3nodnoisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{catalog_detected_mergers/p_q_Q3nod_noisy_catalog_sourceM.pdf} 
-        \caption{}
-        \label{fig:p_q_Q3nodnoisy}
-    \end{subfigure}
-    \caption{Distributions of mergers from the synthetic catalog of the Q3nod population model with true parameter values with added Gaussian noise to simulate a detected signal.}
-    \label{fig:p_Q3nodnoisy}
-\end{figure} 
+    % Global caption 
+    \caption{Distributions of mergers from the synthetic detected catalogues generated by adding Gaussian noise to the true parameter values in order to simulate measurement uncertainties. Columns correspond to the three astrophysical models, PopIII, Q3d, and Q3nod. Rows show, from top to bottom, the source-frame total mass distribution $p(M)$, redshift distribution $p(z)$, spin distribution $p(a)$, and mass ratio distribution $p(q)$.}
+    \label{fig:detected_catalog_distributions_grid}
+\end{figure}
 
 We consider \textit{detected mergers}, binaries that coalesce within the mission's timespan (4 yrs) that produce $\rho>12$. Our counts are shown in Table~\ref{table:detected_merger_rates}. In the case of the light-seed population model popIII, we have $1119$ detected mergers for a 4-year mission, $\approx279$ detections per year. This count is positioned above the results found in the literature, Table~\ref{tab:detected_mergerrates_literature}. The most relatable studies from Table~\ref{tab:detected_mergerrates_literature} with ours are the ones from Klein \textit{et al}.\ (2016), and Barausse \textit{et al}.\ (2023), where they predict lower detections than us, $\sim357$ for a 5-year mission ($\sim71$ detections per year), and $\sim339$ for a 4-year-mission ($\sim84$ detections per year), respectively. This gives us $\sim3.5$ times more detections per year. Regarding the heavy-seeds population models, for Q3d we predict $\sim20$ detections per year, where as Klein \textit{et al}.\ and Barausse \textit{et al}.\ predict $\sim8$ and $\sim18$ per year, respectively. For the Q3nod model, we predict $\sim153$ detections per year, whereas Klein \textit{et al}.\ and Barausse \textit{et al}.\ predict $\sim121$ and $\sim164$ detections per year.
 
