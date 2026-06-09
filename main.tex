@@ -91,17 +91,20 @@ The content of the present work is as follows. In chapter 2, we will introduce t
 \section{Astrophysics of Massive Black Holes and Massive Black Hole Binaries}
 \label{sec:MBHBTheoObs}
 
-Massive black hole binaries (MBHBs) provide a direct window into the coevolution of galaxies and their central black holes, and into the assembly of massive black holes (MBHs) through accretion and mergers \cite{kormendy2013coevolution,volonteri2010formation,begelman1980massive,klein2016science}. Despite this importance, key aspects of their astrophysical origin remain uncertain. On large scales, we still lack a complete understanding of how two MBHs formed in a galaxy merger are brought together from kiloparsec separations to parsec scales where a bound binary forms, and subsequently into the GW-driven regime leading to coalescence. At earlier times, uncertainties in MBH seeding, whether seeds originate from Population III (Pop III) remnants, runaway stellar collisions in dense clusters, direct collapse of supermassive stars (SMS), or primordial black holes, propagate into predictions for MBH demographics and MBHB merger rates.
+Massive black hole binaries (MBHBs) provide a direct window into the coevolution of galaxies and their central black holes \cite{kormendy2013coevolution}, and into the assembly of massive black holes (MBHs) through accretion and mergers \cite{volonteri2010formation}. Despite this importance, key aspects of their astrophysical origin remain uncertain\cite{volonteri2021origins,klein2016science,barausse2023implications}. On large scales, we still lack a complete understanding of how two MBHs formed in a galaxy merger are brought together from kiloparsec separations to parsec scales where a bound binary forms, and subsequently into the GW-driven regime leading to coalescence\cite{colpi2014massive}. At earlier times, uncertainties in MBH seeding, whether seeds originate from Population III (Pop III) remnants, runaway stellar collisions in dense clusters, direct collapse of supermassive stars (SMS), or primordial black holes, propagate into predictions for MBH demographics and MBHB merger rates\cite{volonteri2021origins,klein2016science,barausse2023implications}.
 
 This chapter reviews the physical processes that shape MBH and MBHB populations across cosmic time. We first summarise leading MBH seed formation scenarios and the subsequent growth pathways through gas accretion and mergers. We then follow the post-galaxy-merger evolution of MBHBs from dynamical friction to hardening by stars and/or gas, and finally to GW-driven inspiral and merger; the stage targeted by LISA. Throughout, we highlight the ingredients that most strongly affect merger rate predictions and the binary parameters that LISA will measure.
 
 \subsection{Massive Black Hole Formation and Evolution}
 \label{sec:MBHFormEv}
 
-Understanding how MBHs form and grow is central to understanding galaxy evolution, and it sets the initial conditions for MBHB formation and GW emission. In this section, we review the main proposed seeding mechanisms: PopIII remnants, dense star-cluster dynamics, direct collapse (SMS), and primordial black holes, followed by the dominant growth mechanisms, namely gas accretion and mergers. We then discuss the empirical and theoretical links between MBHs and their host galaxies, including scaling relations and their possible evolution with redshift.
+Understanding how MBHs form and grow is central to galaxy evolution, and it sets the initial conditions for MBHB formation and GW emission, since binaries can inherit features from their formation environment. In this section, we review the main proposed formation mechanisms: PopIII remnants, dense star-cluster dynamics, direct collapse of SMS, and primordial black holes, followed by the dominant growth mechanisms, namely gas accretion and mergers. We then discuss the empirical and theoretical links between MBHs and their host galaxies, including scaling relations and their possible evolution with redshift.
 
 \subsubsection{Massive black hole seeds}
 \label{subsec:MBHseeds}
+
+\paragraph{}
+While it is known that most galaxies contain an MBH, it is uncertain where these MBHs originate. The initial black holes, that grow to become MBHs, are known as seeds. There are a variety of proposed seed sources, each with their own range of seed properties. The seed formation scenarios are often grouped into two broad families by mass scale: light seeds, typically of $10$--$10^3\mathrm{M}_{\odot}$, and heavy seeds $10^4$--$10^5\mathrm{M}_{\odot}$. In the following paragraphs, we summarise the main hypothesis for the origin of both light and heavy MBH seeds. 
 
 \paragraph{Pop III stars.}
 One of the scenarios for MBH seed origins is when they form from Pop III stars, the first-generation of stars hypothesized to have formed in the cosmic dawn \cite{abel2002formation,bromm2002formation,o2007population}. Pop III stars formed in dark matter minihalos of masses $\sim10^5$--$10^6~\mathrm{M}_{\odot}$ where gas cooled down through $\text{H}_{2}$ cooling to approximately $200~\mathrm{K}$~\cite{abel2002formation}. Since the environment is metal-free, further cooling is inefficient, and fragmentation into low-mass clumps is suppressed. As a result, the characteristic fragment mass is larger, leading to the formation of more massive Pop III stars with an initial mass function (IMF) skewed toward higher masses compared to present-day star formation~\cite{turk2009formation, clark2011gravitational}. The maximum stellar mass may reach $\sim300~\mathrm{M}_{\odot}$ \cite{mehta2026growth}, although the upper-mass cutoff remains uncertain. In this picture, MBH seeds with masses of $10$--$10^3~\mathrm{M}_{\odot}$ could form \cite{hirano2014one}. 
@@ -109,7 +112,7 @@ One of the scenarios for MBH seed origins is when they form from Pop III stars, 
 The most massive Pop III stars are expected to collapse directly into BHs, retaining a large fraction of their progenitor mass due to weak stellar winds and associated with metal-free stars. Less massive Pop III stars instead collapse and explode as supernovae, producing a BH seed, while simultaneously metal-enriching the surroundings, leading the way to Population II star formation in the later universe \cite{o2015probing,xu2016late}. These two scenarios lead to the first generation of BHs from Pop III stars, which might be the progenitors of the seeds of later MBHs \cite{madau2001massive,hirano2014one}. This poses the question, relevant for investigations with LISA, of whether these light seeds from Pop III stars can grow up to be the MBHs observed today at high redshifts, and the merger predictions that LISA is expected to observe.
 
 \paragraph{Direct collapse.}
-Another scenario for MBH seed formation is the direct-collapse (DC) model. This model involves supermassive stars (SMSs) which are thought to be primordial protostars with $\sim10^{5} \mathrm{M}_{\odot}$, that form under special conditions enabling very rapid accretion, with average rate of $>0.1~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$, much larger than in the Pop III scenario $<0.04~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{sakurai2016supermassive}. One possible condition to achieve such high accretion rates is a UV-radiation-driven collapse \cite{chon2016cosmological,regan2017rapid}, in which radiation emitted by nearby galaxies destroys the $\mathrm{H}_{2}$ molecules of the gas cloud via photodissociation. If the cloud is hosted by a dark matter halo with $T_{\mathrm{vir}} \geq 8000~\mathrm{K}$, (often referred to as atomic-cooling halos \cite{tanaka2009assembly}), the gas collapses nearly isothermically at $T \approx 8000~\mathrm{K}$ via atomic hydrogen cooling, inducing accretion rates higher than $>0.1~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$. If such acccretion is sustained for a few million years, it can lead to an SMS with $\sim10^{5} \mathrm{M}_{\odot}$; however, whether these conditions are generally achievable remains uncertain \cite{amaro2023astrophysics}. Another possible pathway for SMS formation is shock-heating the gas (rather than photo-dissociation of $\mathrm{H}_{2}$) through collisions of cold accretion flows in the first galaxies \cite{inayoshi2012supermassive}. In this scenario, efficient collisional dissociation suppresses $\mathrm{H}_{2}$ cooling, preventing the gas from cooling below several thousand kelvin. This enables monolithic collapse that can result in an SMS. Finally, collisions of massive protogalaxies can trigger SMS formation via the direct collapse of billions of solar masses of gas within a nuclear region smaller than a parsec, with gas inflow rates exceeding $1000 ~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{mayer2010direct, mayer2015direct}. Direct-collapse models suggest that this mechanism can yield more massive MBHs $(>10^7 ~\mathrm{M}_{\odot})$ than in the case of atomic cooling halos \cite{haemmerle2021maximum}. 
+Another scenario for MBH seed formation is the direct-collapse (DC) model. This model involves supermassive stars (SMSs) which are thought to be primordial protostars with $\sim10^{5} \mathrm{M}_{\odot}$, that form under special conditions enabling very rapid accretion, with average rate of $>0.1~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$, much larger than in the Pop III scenario $<0.04~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{sakurai2016supermassive}. One possible condition to achieve such high accretion rates is a UV-radiation-driven collapse \cite{chon2016cosmological,regan2017rapid}, in which radiation emitted by nearby galaxies destroys the $\mathrm{H}_{2}$ molecules of the gas cloud via photodissociation. If the cloud is hosted by a dark matter halo with $T_{\mathrm{vir}} \geq 8000~\mathrm{K}$, (often referred to as atomic-cooling halos \cite{tanaka2009assembly}), the gas collapses nearly isothermically at $T \approx 8000~\mathrm{K}$ via atomic hydrogen cooling, inducing accretion rates higher than $>0.1~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$. If such accretion is sustained for a few million years, it can lead to an SMS with $\sim10^{5} \mathrm{M}_{\odot}$; however, whether these conditions are generally achievable remains uncertain \cite{amaro2023astrophysics}. Another possible pathway for SMS formation is shock-heating the gas (rather than photo-dissociation of $\mathrm{H}_{2}$) through collisions of cold accretion flows in the first galaxies \cite{inayoshi2012supermassive}. In this scenario, efficient collisional dissociation suppresses $\mathrm{H}_{2}$ cooling, preventing the gas from cooling below several thousand kelvin. This enables monolithic collapse that can result in an SMS. Finally, collisions of massive protogalaxies can trigger SMS formation via the direct collapse of billions of solar masses of gas within a nuclear region smaller than a parsec, with gas inflow rates exceeding $1000 ~\mathrm{M}_{\odot}~\mathrm{yr}^{-1}$ \cite{mayer2010direct, mayer2015direct}. Direct-collapse models suggest that this mechanism can yield more massive MBHs $(>10^7 ~\mathrm{M}_{\odot})$ than in the case of atomic cooling halos \cite{haemmerle2021maximum}. 
 
 \paragraph{Stellar clusters.}
 Another scenario for MBH seed formation is inside stellar clusters. MBH seeds of $10^{2}$--$10^{4}~\mathrm{M}_{\odot}$ can form in stellar clusters of $>10^{5} \text{M}_{\odot}$ through dynamical interactions \cite{omukai2008can, devecchi2009formation, reinoso2018collisions}, where massive stars can segregate to the cluster center via dynamical friction, resulting in very massive stars with masses $10^{2}$--$10^{3}~\mathrm{M}_{\odot}$ \cite{zwart2002runaway,portegies2004formation, gurkan2004formation,freitag2006runaway}. Another possibility for the formation of MBH seeds in stellar clusters is through runaway mergers of stellar-mass BHs, provided that their natal velocity kicks are sufficiently low, or that they are embedded in a dense gaseous halo \cite{belczynski2002comprehensive} so that the remnants remain bound to the cluster. One requirement for this scenario is that the velocity of the BH remnant due to the GW recoil, i.e., the kick imparted to the merger remnant by anisotropic emission of GWs~\cite{campanelli2007large}, is smaller than the escape velocity of the system, so that a significant fraction is retained within the cluster \cite{holley2008gravitational, davies2011supermassive, miller2012upper, sesana2014linking}. It may be possible to grow stellar-mass BHs inside stellar clusters through additional mechanisms, such as accretion of interstellar gas in massive clusters~\cite{leigh2013gas, natarajan2021new} and growth of $\sim100~\mathrm{M}_{\odot}$ through tidal capture and disruption of stars in dense star clusters. In this scenario BHs of $10^{2}$--$10^{3}~\mathrm{M}_{\odot}$ can grow as massive as $10^{5}~\mathrm{M}_{\odot}$ \cite{rosswog2009tidal, macleod2016optical, sakurai2019growth}.
@@ -121,47 +124,49 @@ Signatures of primordial overdensities produced during inflation can confirm the
 
 \subsubsection{Massive black hole growth}
 
-\paragraph{MBH light seeds} 
-There are two hurdles for Pop III MBH light seeds for growing up as massive as the quasars we observe at $z\sim6$--$7$ \cite{amaro2023astrophysics}: 1) If the seeds do not form at the center of the galaxies, they need to reach it efficiently, and 2) The process of accretion of gas needs to be efficient, with accretion rates reaching Eddington rates, or even super-Eddington rates. These accretion rates would require more complex mechanisms of accretion and energy transport, with the caveat that they would imply high radiative feedback from the accretion flow, decreasing the efficiency of accretion.
+\paragraph{}
+Following the formation of seeds, they need to grow to match the observations of MBHs at high redshift. How MBHs grow is currently uncertain. In particular, light seeds face more difficulties to grow from $\sim10^{2}$--$10^{3}~\mathrm{M}_{\odot}$ at a sustained and efficient accretion rate, to reach the $\sim10^{6}$--$10^{9}~\mathrm{M}_{\odot}$ observed in high-redshift quasars, compared to heavy seeds, where they begin their lives at $\sim10^{5}$--$10^{6}~\mathrm{M}_{\odot}$, and therefore require less growth to reach the same mass range. In the following paragraphs, we review the main proposed mechanisms for MBH growth. 
 
-Recent JWST spectroscopy is now beginning to directly probe these early growth phases, revealing accreting BH candidates at redshifts $z>4$ and providing initial constraints on BH masses and Eddington ratios \cite{larson2023ceers,maiolino2024small,harikane2023jwst}.
-Reaching such high accretion rates likely requires non-standard inflow and energy-transport mechanisms, but the associated radiative feedback can in turn suppress inflow and reduce the net growth efficiency.
+\paragraph{MBH light seeds} 
+There are two hurdles for Pop III MBH light seeds for growing up as massive as the quasars we observe at $z\sim6$--$7$ \cite{amaro2023astrophysics}: 1) If the seeds do not form at the center of the galaxies, they need to reach it efficiently, and 2) the process of accretion of gas needs to be efficient, with accretion rates reaching Eddington rates, or even super-Eddington rates. These accretion rates would require more complex mechanisms of accretion and energy transport compared to the ones involved in the conventional spherically symmetric accretion flow, with the caveat that they would imply high radiative feedback from the accretion flow, decreasing the efficiency of accretion.
 
 There is numerical and theoretical support for light seeds struggling to achieve efficient high accretion \cite{omukai2002upper,oh2003fossil,whalen2004radiation}. Smith \textit{et al}.\ \cite{smith2018growth} investigated the growth of more than 15,000 light seeds using the Renaissance simulations, and found that they do not grow more than $10\%$ in a time span of $300~\mathrm{Myr}$. By using a cosmological, data-constrained semi-analytical model, Valiante \textit{et al}.\ \cite{valiante2016first} showed that light seeds struggle to have significant growth. This could mean that light seeds require special growth conditions such as sustained high-duty-cycle accretion (potentially near or super-Eddington), efficient gas delivery to the nucleus, and/or dense nuclear environments that allow rapid growth despite feedback. 
 
 \paragraph{Accretion versus MBH mergers}
-Most MBHs are thought to gain the bulk of their mass through gas accretion, as inferred from the integrated AGN luminosity density and its consistency with the local MBH mass function \cite{soltan1982masses,merloni2008synthesis,inayoshi2020assembly,weinberger2025accretion}. AGN demographics further suggest an anti-hierarchical (downsizing) trend, in which the most massive MBHs experience their peak accretion activity at earlier cosmic times than lower-mass systems \cite{merloni2008synthesis}.
+Most MBHs are thought to gain the bulk of their mass through gas accretion, as inferred from the integrated AGN luminosity density and its consistency with the local MBH mass function \cite{soltan1982masses,merloni2008synthesis,inayoshi2020assembly,weinberger2025accretion}. Recent JWST spectroscopy is now beginning to directly probe these early growth phases, revealing accreting BH candidates at redshifts $z>4$ and providing initial constraints on BH masses and Eddington ratios \cite{larson2023ceers,maiolino2024small,harikane2023jwst}.
+Reaching such high accretion rates likely requires non-standard inflow and energy-transport mechanisms, but the associated radiative feedback can in turn suppress inflow and reduce the net growth efficiency. Ref.\cite{pacucci2026little} provides evidence of super-Eddington accretion rates of heavy MBH seeds from Direct Collapse (DC).
 
 Mergers can nevertheless play an important role in MBH assembly, particularly in regimes where accretion is inefficient or intermittent. In low-mass systems ($\sim10^{4}$--$10^{5}~\mathrm{M}_{\odot}$) at high redshift, hierarchical growth through MBH mergers can contribute significantly in some models \cite{dayal2019hierarchical,piana2021mass}, while at later times, mergers may also contribute to the build-up of the most massive MBHs and to the evolution of the high-mass end of the mass function \cite{pacucci2020separating}. Two conditions that favour merger-driven growth are 1) A high number density of MBHs, which increases the probability of pairing and coalescence, and 2) gas-poor environments, in which sustained accretion is less efficient \cite{amaro2023astrophysics}.
 
 \subsubsection{Massive Black Holes and Galaxy Coevolution}
 
 \paragraph{}
-Because MBHs co-evolve with their host galaxies, they provide key insights into galaxy formation and evolution. The demography of local galaxies suggests that the properties of MBHs are correlated with those of the host galaxy. Specifically, the mass of the MBH can be correlated empirically with the velocity dispersion of the stellar environment in the bulge of the host galaxy, and with the mass of the galaxy bulge \cite{ferrarese2000fundamental,tremaine2002slope,kormendy2013coevolution}.  However, there are large uncertainties regarding the validity of these correlations at high redshift, and if they evolve with cosmic time \cite{volonteri2012formation,kormendy2013coevolution}.
+Because MBHs co-evolve with their host galaxies, they provide key insights into galaxy formation and evolution. The demography of local galaxies suggests that the properties of MBHs are correlated with those of the host galaxy\cite{ferrarese2000fundamental}. Specifically, the mass of the MBH can be correlated empirically with the velocity dispersion of the stellar environment in the bulge of the host galaxy, and with the mass of the galaxy bulge \cite{kormendy2013coevolution,matt2023impact}. However, there are large uncertainties regarding the validity of these correlations at high redshift, and if they evolve with cosmic time \cite{volonteri2012formation,kormendy2013coevolution}.
 
-Satisfying MBH--host galaxy correlations depends on the MBH seed models. For lighter seeds formed from Pop III stars, MBHs lie below the MBH--galaxy correlation, whereas, heavy seeds formed from direct collapse, MBHs are more massive than the correlations predict \cite{volonteri2012formation}. However, the correlations can be fulfilled at all times if accretion is continuous in major mergers, i.e.\ mergers of galaxies with comparable mass.
+Satisfying MBH--host galaxy correlations depends on the MBH seed models. For lighter seeds formed from Pop III stars, MBHs tend to lie below the MBH--galaxy correlation, whereas for heavy seeds formed from direct collapse, MBHs are more massive than the correlations predict \cite{volonteri2012formation,cammelli2025formation}. However, the persistence of these offsets depends on the subsequent accretion and feedback prescriptions.
 
-Analyses of the correlations raised three interconnected questions regarding the relationship between dark matter, baryonic matter and MBHs and their importance for understanding the formation and evolution of MBHs in a cosmological context \cite{booth2011towards}. In the next paragraphs, we will explore these questions based on what can be found in \cite{volonteri2012formation,reines2015relations,burkert2010correlation}. 
+Analyses of the correlations raised three interconnected questions regarding the relationship between dark matter, baryonic matter and MBHs and their importance for understanding the formation and evolution of MBHs in a cosmological context \cite{booth2011towards}. In the next paragraphs, we will explore these questions based on what can be found in \cite{volonteri2012formation,reines2015relations,marsden2020case}. 
 
-1. What galaxy property do MBHs correlate with? Some correlations have been proposed, such as the luminosity, mass, velocity dispersion of the bulge to the binding energy of the galaxy, the number of globular clusters, and the total mass of the dark matter halo, and questions about whether the mass of the MBH is correlated to the bulge component of the galaxy, or to the entirety of the galaxy \cite{kormendy2011supermassive,reines2015relations,burkert2010correlation}. The correlations of the MBH to the bulge are tighter, suggesting the same mechanisms of bulge assembly were the same for MBH growth. In this respect, bulge formation is associated with episodes of galaxy mergers, but at the same time, these mergers are constrained by the dark matter distribution, which sets the depth of the potential well of the galaxy and its ability to retain gas. The dark matter distribution is, therefore, what determines the MBH growth, along with the dynamics of the gas and stars \cite{volonteri2011important}. 
+1. What galaxy property do MBHs correlate with? Some correlations have been proposed, such as the luminosity, mass, velocity dispersion of the bulge to the binding energy of the galaxy, the number of globular clusters, and the total mass of the dark matter halo, and questions about whether the mass of the MBH is correlated to the bulge component of the galaxy, or to the entirety of the galaxy \cite{kormendy2011supermassive,marsden2020case,mountrichas2026black}. In general, correlations tied to the bulge (e.g.\ $M_\bullet$--$\sigma$ and $M_\bullet$--$M_{\rm bulge}$) are tighter compared to those defined using global galaxy properties, although the relative tightness of different relations remains sensitive to sample selection and measurement systematics\cite{marsden2020case}. 
 
 2. Is the correlation regulated by the galaxy or by the MBH? There are divided opinions on what regulates the correlation. The MBH-regulated hypothesis argues that MBHs regulate their host galaxies through feedback from the active galactic nuclei. In this scenario, when reaching a limiting mass and luminosity, the MBH sweeps away the surrounding gas, regulating star formation and MBH growth \cite{silk1998quasars,murray2005maximum}. On the other hand, the galaxy-regulated hypothesis argues that the galaxy regulates the amount of gas that trickles to the MBH~\cite{hopkins2010massive,angles2017gravitational}. Hence, the role of MBH mergers on the MBH and bulge growth is still an open question, as is the issue of whether feeding or feedback sets the link between MBH and its host galaxy. 
 
-3. When is the correlation established? There are three possibilities 1) MBHs grow symbiotically with host galaxy, 2) MBH dominate the process, 3) the galaxy grew first, and the MBH adjusted to the host. When fixing the galaxy properties, MBHs in distant active galactic nuclei seemed "overmassive" \cite{merloni2009cosmic}, suggesting that MBH establishes the correlation.
+3. When is the correlation established? There are three possibilities 1) MBHs grow symbiotically with host galaxy, 2) MBH dominate the process, 3) the galaxy grew first, and the MBH adjusted to the host. At high redshift, several JWST studies find systems with BHs that appear overmassive relative to their hosts when compared to local $M_{\mathrm{BH}}$--$M_{\star}$ \cite{juodvzbalis2024dormant}. However the interpretation is sensitive to selection effects and measurement systematics.
 
 Addressing these questions, therefore, requires combining improved EM constraints on host galaxies and accretion with independent probes of MBH masses and growth histories across cosmic time.
 
 \subsection{Massive Black Hole Binaries}
 \label{subsec:MBHBs}
 
-Observational evidence supports the idea of MBHs being in the centre of most galaxies \cite{kormendy2013coevolution}. There is also evidence that a growth channel of galaxies is through episodes of mergers \cite{fakhouri2010merger,o2021emerge}. This points to the conclusion that there should exist populations of MBH binaries (MBHBs) in the Universe and that their mergers could be detected through their emission of GWs by LISA \cite{klein2016science,dayal2019hierarchical,chen2020dynamical}.
+In addition to the evidence for single MBHs in the centres of galaxies\cite{kormendy2013coevolution}, there is also evidence that a growth channel of galaxies is through episodes of mergers \cite{fakhouri2010merger,o2021emerge}. This points to the conclusion that there should exist populations of MBH binaries (MBHBs) in the Universe and that their mergers could be detected through their emission of GWs by LISA \cite{klein2016science,dayal2019hierarchical,chen2020dynamical}.
 
-So far, our knowledge of MBHBs has largely come from EM observations, cosmological simulations, and theoretical tools, but there are still some missing pieces of the puzzle of their formation and evolution that remain uncertain. Low-frequency GW observations will add a new, complementary probe: PTAs are already constraining the nanohertz stochastic background from the most massive binaries, while LISA will detect individual MBHB coalescences in the millihertz band and measure their parameters precisely. Together, PTAs and LISA will help address these gaps by constraining MBH seeding and growth across cosmic time, and by testing how efficiently binaries are driven from galaxy scales into the GW-driven regime. In this context, two key questions arise \cite{amaro2023astrophysics}: 1) What are the mechanisms that bring together two MBHs at kiloparsec scales down to the separation where GW emission drives the evolution at $\sim10^{-5} \mathrm{pc}?$ and 2) Are these mechanisms always efficient enough so that a galaxy merger ends up with a MBHB merger? 
+So far, our knowledge of MBHBs has largely come from EM observations, cosmological simulations, and theoretical tools, but there are still some missing pieces of the puzzle of their formation and evolution that remain uncertain\cite{krause2025evidence,barausse2023implications}. Low-frequency GW observations will add a new, complementary probe: PTAs are already constraining the nanohertz stochastic background from the most massive binaries\cite{agazie2023nanograv}, while LISA will detect individual MBHB coalescences in the millihertz band and measure their parameters precisely. Together, PTAs and LISA will help address these gaps by constraining MBH seeding and growth across cosmic time\cite{barausse2023implications,steinle2023implications}, and by testing how efficiently binaries are driven from galaxy scales into the GW-driven regime\cite{barausse2020massive}. In this context, two key questions arise \cite{amaro2023astrophysics}: 1) What are the mechanisms that bring together two MBHs at kiloparsec scales down to the separation where GW emission drives the evolution at $\sim10^{-5} \mathrm{pc}?$ and 2) Are these mechanisms always efficient enough so that a galaxy merger ends up with an MBHB merger? 
 
 The mechanisms that bring an MBH pair close enough to become a binary and merge were first explored by Begelman \textit{et al}.\ \cite{begelman1980massive}. They highlighted three main stages of the evolution of the two MBHs: 1) Pairing, 2) binary hardening, and 3) GW-driven coalescence. In this section, we will describe these stages largely based on what can be found in \cite{amaro2023astrophysics}. 
 
 \subsubsection{Dynamical friction at kpc scales}
 
+\paragraph{}
 After two galaxies merge, the process of pairing takes place where the two MBHs experience a drag force with the background of stars, gas and dark matter, losing orbital energy and angular momentum until they form a binary. Chandrasekhar \cite{chandrasekhar1943dynamical} derived the expression for the force acting on a perturbing body, in this case a MBH with mass $M$, due to a background medium, in this case the background of stars, gas and dark matter. Under the assumption of an infinite homogeneous medium with density $\rho$, if the background is characterized by an isotropic Maxwellian velocity distribution with velocity dispersion $\sigma$, the force acting on the perturbing body is,
 \begin{equation}
 \Vec{F}_{\mathrm{DF}} \propto -M^{2}\rho\mathcal{G}\left(\frac{v}{\sigma}\right)\ln\Lambda\frac{\Vec{v}}{v^{3}},
@@ -177,6 +182,7 @@ For MBHs at kiloparsec scale separations and $M_{\mathrm{MBH}} \sim 10^{6}~\math
 
 \subsubsection{Binary Hardening}
 
+\paragraph{}
 After dynamical friction drives the orbital decay to parsec separations, the two MBHs arrive to each others' spheres of influence forming a binary. Further shrinking depends critically on the properties of the environment surrounding the MBHB. Two classes of physical processes have been proposed for this: 1) those that operate on gas-poor stellar environments, and 2) those that operate under a consistent reservoir of gas. There is no a hard limit where these two mechanisms exclude each other, and they can both operate at the same time\cite{kelley2017massive,bortolas2021competing}. MBHBs in stellar environments undergo further loss of orbital energy and angular momentum due to three-body encounters with individual stars. There is a transition point at which the self-gravity of the MBHs overcome the dragging force of the individual stars, so that the binary orbital velocity exceeds the characteristic speed of the background. This is reached at the hard binary separation, $a_{\mathrm{h}}$ \cite{merritt2004massive}: 
 \begin{equation}
 a_{\mathrm{h}} \leq \frac{G\mu}{4\sigma^{2}}.
@@ -187,10 +193,11 @@ where $\mu$ is the reduced mass of the binary and $\sigma$ the local velocity di
 \frac{d}{dt} \left(\frac{1}{a} \right)=\frac{G\rho}{\sigma} H,
 \label{eq:shrinkrate}
 \end{equation}
-for a stellar populated neighbourhood with stellar density background $\rho$, binary Keplerian semi-major axis $a$, and $H\approx15$--$20$, a numerical coefficient weakly dependent on the properties of the binary (mass, mass ratio, and eccentricity \cite{mikkola1992evolution,quinlan1996dynamical}). However, since the MBHB's surroundings is depleted of stars within a typical stellar orbital period at the beginning of the hardening phase, the possibility of the MBHB stalling at parsec scales has been put forward in both numerical \cite{makino2004evolution,berczik2005long} and theoretical \cite{begelman1980massive} grounds. This has been referred to as the \textit{final parsec problem}. However, there is evidence that the final-parsec problem arises only in perfectly spherical, idealized galaxies \cite{gualandris2017collisionless}. In reality, galaxy mergers can produce triaxial remnants, which torque stellar orbits and continuously repopulate the loss cone. In this scenario, the stellar environment continues to extract energy and angular momentum from the MBHB.
+for a stellar populated neighbourhood with stellar density background $\rho$, binary Keplerian semi-major axis $a$, and $H\approx15$--$20$, a numerical coefficient weakly dependent on the properties of the binary (mass, mass ratio, and eccentricity \cite{mikkola1992evolution,quinlan1996dynamical}). However, since the MBHB's surroundings is depleted of stars within a typical stellar orbital period at the beginning of the hardening phase, the possibility of the MBHB stalling at parsec scales has been put forward in both numerical \cite{makino2004evolution,berczik2005long} and theoretical \cite{begelman1980massive} grounds. This has been referred to as the \textit{final parsec problem}. However, there is evidence that the final-parsec problem arises only in perfectly spherical, idealized galaxies \cite{gualandris2017collisionless}. In reality, galaxy mergers can produce triaxial remnants, which torque stellar orbits and continuously repopulate the loss cone\cite{frank1976effects}, i.e. the region in stellar phase space of low-angular-momentum orbits that interact with the central MBHB. In this scenario, the stellar environment continues to extract energy and angular momentum from the MBHB via three-body encounters.
 		
 \subsubsection{GW emission}
 
+\paragraph{}
 As the binary loses orbital energy and angular momentum through interaction with the environment, it eventually reaches the GW-driven stage. 
 
 The acceleration of each of the binary components can be expressed by the Newtonian acceleration plus post-Newtonian corrections to include relativistic effects \cite{kupi2006dynamics,damour1981radiation},
@@ -212,25 +219,26 @@ The GW-driven evolution of the binary can be described by the seminal work of Pe
 \end{equation} 
 and the evolution of the eccentricity $e$ is expressed by
 \begin{equation}
-\left\langle \frac{de}{dt}\right\rangle_{\mathrm{GW}} = -\frac{304}{15}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{4}(1-e^{2})^{5/2}}\left(1+\frac{121}{304}e^{2}\right),
+\left\langle \frac{de}{dt}\right\rangle_{\mathrm{GW}} = -\frac{304}{15}\frac{G^{3}m_{1}m_{2}M}{c^{5}a^{4}(1-e^{2})^{5/2}}\left(1+\frac{121}{304}e^{2}\right).
 \label{eq:dedt}
 \end{equation}
-When considering PN coefficients up to order 3.5, or higher, the Keplerian variables of the orbit are not constant anymore, but rather oscillate \cite{will2014confrontation,mannerkoski2019gravitational,memmesheimer2004third}. When including spins, both magnitude and direction shape the dynamics of the binaries as well as the GWs emitted.
-The time a binary takes to merge was derived by Peters \cite{peters1964gravitational}, and its functional form is \cite{amaro2023astrophysics}, i.e.,
+The time a binary takes to merge was derived by Peters \cite{peters1964gravitational}, and its functional form is \cite{amaro2023astrophysics}, 
 \begin{equation}
 t_{\mathrm{Peters}} \propto\frac{(1+q)^{2}}{q}\frac{a^{4}_{0}}{M^{3}}\frac{1}{f(e_{0})},
 \label{eq:peterstimescale}
 \end{equation}
 
-Peters formula, Eq.~\eqref{eq:peterstimescale}, assumes orbit decay, Keplerian orbits, and orbital decay only through GW emission, i.e.\ where $a$ and $e$ vary slowly. Zwick \textit{et al}.\ \cite{zwick2020improved} proposed a corrected formula in which these assumptions are relaxed while adding a new spin-dependent correction and has the functional form \cite{amaro2023astrophysics},
+Peters formula, Eq.~\eqref{eq:peterstimescale}, assumes orbit decay, Keplerian orbits, and orbital decay only through quadrupolar GW emission at the lowest order PN expansion, i.e.\ where $a$ and $e$ vary slowly. When considering PN coefficients up to order 3.5, or higher, the Keplerian variables of the orbit are not constant anymore, but rather oscillate \cite{will2014confrontation,mannerkoski2019gravitational,memmesheimer2004third}. When including spins, both magnitude and direction shape the dynamics of the binaries as well as the GWs emitted. Zwick \textit{et al}.\ \cite{zwick2020improved} proposed a corrected formula while adding a new spin-dependent correction and has the functional form \cite{amaro2023astrophysics},
 \begin{equation}
 t_{\mathrm{PN}} \propto t_{\mathrm{Peters}}(a_{0},e_{0},M,q)~R(e_{0})\mathrm{exp}\left[\Phi\left(\frac{r_{S}}{p_{0}},s_{1}\right)\right],
 \label{eq:peterstimescalecorr}
 \end{equation}
 where $p_{0}=a_{0}(1-e_{0})$, $r_{\mathrm{S}}=2G
-M/c^{2}$, $R(e_{0})=8^{(1-\sqrt{1-e_{0}})}$, and $s_{1}\equiv S_{1}\cos\theta$, with $S_{1}$ being the spin magnitude of the more massive MBH and $\theta$ the angle between the MBH spin vector and the orbital total angular momentum vector. This formula refines the inspiral time-scale which have impact on merger-rate estimates.
+M/c^{2}$, $R(e_{0})=8^{(1-\sqrt{1-e_{0}})}$, and $s_{1}\equiv S_{1}\cos\theta$, with $S_{1}$ being the spin magnitude of the more massive MBH and $\theta$ the angle between the MBH spin vector and the orbital total angular momentum vector. Incorporating more accurate GW-emission time-scales into LISA studies will improve forecasts of MBHB orbital evolution and merger rates.
 
 \subsubsection{MBH merger and GW recoil}
+
+\paragraph{}
 When an MBHB merges, the emission of GWs can be asymmetrical due to either unequal masses or asymmetric spins, carrying away linear momentum. By conservation of momentum, a recoil or kick is imparted to the MBHB remnant \cite{bonnor1961transport,peres1962classical,bekenstein1973black}, reaching velocities as high as $\sim 5000 ~\mathrm{km/s}$. When the recoil velocity reaches $\sim1000 \mathrm{km/s}$, the MBHB remnant can be ejected from the host galaxy as this might exceed its escape velocity \cite{redmount1989gravitational,merritt2004consequences,gerosa2015missing}. There are implications for this phenomenon: If the MBHB remnants are ejected from the host galaxy, many galaxies would have off-center MBHs, or be MBH-less, affecting correlations between MBH and galaxy hosts, or preventing the formation of quasars with MBHs with masses $>10^{6}$ at high redshifts \cite{haiman2004constraints,boylan2004core,sesana2007extreme,gualandris2008ejection}. 
 GW recoil can have signatures that can be observed by EM observatories to identify MBH mergers in a multimessenger fashion. Some of these signatures can be the glow of the gas surrounding the MBHB remnant, which in this case would glow as off-nuclear AGNs.
 There are GW signatures of GW recoils such as a relative Doppler shift between inspiral and ringdown\cite{gerosa2016black}, different higher-order mode content\cite{calderon2018tracking}, statistical correlation with the spin properties \cite{varma2020extracting} which can be at reach of LISA.
@@ -244,7 +252,7 @@ Observations of MBHBs is a rich subject not only concerned to GW astronomy. Ques
 \subsubsection{EM signatures of MBHBs in the inspiral phase}
 
 \paragraph{}
-Understanding the pre-merger populations of MBHBs at sub-parsec scales through EM observations is crucial for maximising the synergy between LISA and contemporaneous EM facilities. They will inform us about the expected LISA merger rates and possibly about orbital parameter distributions at merger time. A key part on these observations is the time before coalescence, because the EM signatures and the GW information content, such as the EM brightness and sky localisation, vary as the binary approaches the coalescence \cite{mangiagli2020observing,mangiagli2022massive}. The formation and evolutionary mechanisms of MBHBs detected by LISA will be primarly constrained by the GW data, while EM observations, when available, can provide complementary information on the host galaxy and environment, enabling a more complete physical interpretation. Consequently, population samples spanning a wide range of MBHB orbital parameters will be needed to build a comprehensive picture of MBHB evolution.
+Understanding the pre-merger populations of MBHBs at sub-parsec scales through EM observations is crucial for maximising the synergy between LISA and contemporaneous EM facilities. They will inform us about the expected LISA merger rates and possibly about orbital parameter distributions at merger time. A key part on these observations is the time before coalescence, because the EM signatures and the GW information content, such as the EM brightness and sky localisation, vary as the binary approaches the coalescence \cite{mangiagli2020observing,mangiagli2022massive}. The formation and evolutionary mechanisms of MBHBs detected by LISA will be primarily constrained by the GW data, while EM observations, when available, can provide complementary information on the host galaxy and environment, enabling a more complete physical interpretation. Consequently, population samples spanning a wide range of MBHB orbital parameters will be needed to build a comprehensive picture of MBHB evolution.
 
 To date, there is no unambiguous EM confirmation of MBH binaries with separation of one order parsec or smaller \cite{krause2025evidence,bogdanovic2022electromagnetic}. Studies with hydrodynamical simulations have shown that the accretion rates on MBHB circumbinary discs is modulated by multiples of the orbital period \cite{haiman2009population,macfadyen2008eccentric,d2013accretion}. This means that the MBHBs with separations on its components on the sub-parsec scale can be translated into $\mathcal{O}(\mathrm{yr})$ modulations in the quasar light-curve. However, the stochastic processes associated to AGN light curves, known as "red noise", can mimic genuine periodic brightness oscillations, posing challenges for this approach. \cite{vaughan2016false}. Unique signatures of MBHB that can confirm periodic quasar candidates are relativistic Doppler boost and binary self-lensing models for periodic variability and flares \cite{d2015relativistic,d2018periodic,hu2020spikey,charisi2018testing}. Amaro-Seoane \textit{et al}.\ \cite{amaro2023astrophysics} list a series of signatures that large spectroscopic surveys search for: 
 \begin{enumerate}
@@ -254,16 +262,16 @@ To date, there is no unambiguous EM confirmation of MBH binaries with separation
 \end{enumerate}
 These signatures could help to determine the properties of the binary such as minimum mass, separation and mass ratio, if these systems are, indeed, MBHBs \cite{nguyen2016emission,bon2016evidence,nguyen2020emission}. However, these signatures are not unique to MBHBs, so follow-up and/or complementary observation techniques will be needed to confirm such observations. However, these signatures are not unique to MBHBs, so follow-up and/or complementary observation techniques will be needed to confirm such observations. One caveat of these EM signatures is that they are generally biased, due to selection effects these signatures are observed through EM spectroscopic surveys, these are generally biased, due to selection effects, to MBHBs with masses of $10^{6}$--$10^{7}~\mathrm{M}_{\odot}$, separations of $\geq0.1$~pc and redshifts of $z\geq1$--$2$ \cite{pflueger2018likelihood,xin2021ultra,nguyen2016emission}. This means that they only cover a subset of MBHBs, which are progenitors to binaries in the LISA band but which will not be detected by LISA due to the long coalescence time-scales involved.
 
-For MBHBs with smaller orbital separations compared to the ones involved in optical spectroscopic surveys, Reynolds~\cite{reynolds2015measuring,reynolds2021observational} used the broad iron fluorescence emission lines observed at $\sim6.4~\text{keV}$ in X-rays in the accretion flow of many AGNs with masses of $~10^{6}~\mathrm{M}_{\odot}$. However, this observation is limited to AGNs at lower redshifts ($z<0.1$) compared to LISA's targets, so high sensitivity, high redshift X-ray facilities,  like ESA's NewAthena~\cite{cruise2025newathena}, will be suitable to take full advantage of this approach. 
+For MBHBs with smaller orbital separations compared to the ones involved in optical spectroscopic surveys, the broad iron fluorescence emission lines, as observed at around $6.4~\text{keV}$ in X-rays in the accretion flow of many AGNs with masses of $~10^{6}~\mathrm{M}_{\odot}$, can be used to trace the relative motion of the two MBHs (see \cite{reynolds2015measuring} for a review). However, the most robust observations are concentrated at low redshift\cite{severgnini2018swift,mckernan2015detection}, so high-sensitivity, high-redshift X-ray facilities,  like ESA's NewAthena~\cite{cruise2025newathena}, will be suitable to take full advantage of this approach.  
 
 Tracking the actual orbits of MBHBs with EM facilities is also feasible. With the advances in Very Long Base Interferometry (VLBI) at millimetre-wavelengths, the approaches mentioned before for indirect observations could be complemented. For example, the Event Horizon Telescope (EHT, \cite{akiyama2019first}) has the angular resolution and sensitivity to track the orbits of MBHBs with separations of 0.01 pc at Gpc scales~\cite{amaro2023astrophysics}. Finally, the next generation Very Large Array (ngVLA) will be able to track the orbits of MBHBs at sub-10 pc separation scales \cite{burke2018next}.
 
-So far, we have seen that a range of EM diagnostics (e.g., photometric periodicity, spectroscopic line offsets and drifts, X-ray reflection features, and high-resolution radio imaging) can in principle identify MBHB candidates during the inspiral and constrain aspects of their masses, separations, and environments. However, none of these signatures is uniquely attributable to binaries, and current searches are affected by selection effects and limited redshift reach, so robust confirmation generally requires long-term monitoring and complementary observations across multiple bands. As LISA approaches operations, these EM approaches will be most powerful when used to build well-characterised candidate samples and to develop follow-up strategies that can be triggered by LISA’s improving sky localisation and time-to-merger information.
+So far, we have seen that a range of EM diagnostics (e.g., photometric periodicity, spectroscopic line offsets and drifts, X-ray reflection features, and high-resolution radio imaging) can, in principle, identify MBHB candidates during the inspiral and constrain aspects of their masses, separations, and environments. However, none of these signatures is uniquely attributable to binaries, and current searches are affected by selection effects and limited redshift reach, so robust confirmation generally requires long-term monitoring and complementary observations across multiple bands. As LISA approaches operations, these EM approaches will be most powerful when used to build well-characterised candidate samples and to develop follow-up strategies that can be triggered by LISA’s improving sky localisation and time-to-merger information\cite{mangiagli2022massive,bogdanovic2022electromagnetic}.
 
 \subsubsection{Expected EM counterparts in the late-inspiral and merger phases}
 
 \paragraph{}
-Although multimessenger astronomy with GWs will revolutionise our current MBH paradigm, substantial uncertainties remain in the predicted EM counterparts of MBHBs, such as their light curves and spectra, and in the structure and properties of the environment surrounding MBHBs.
+While LISA will provide robust measurements of MBHB parameters such as masses and spins, substantial uncertainties remain in the predicted EM counterparts of MBHBs, such as their light curves and spectra, and in the structure and properties of the environment surrounding MBHBs\cite{mangiagli2022massive,bogdanovic2022electromagnetic}.
 
 One promising EM signature arises during the late-inspiral of an MBHB, when a circumbinary disc, and two mini discs surrounding each BH can form. These mini-discs are expected to emit large amounts of X-ray radiation~\cite{haiman2017electromagnetic}. Orbital motion of the binaries can produce modulations in the X-ray emission and in the accretion rate, which might be phase-coherent (or nearly so) with the LISA GW signal. Such modulations can help refine the sky localisation, and hence the host galaxy identification, provided by LISA observations~\cite{tang2018late,dal2019detectability}.
 
@@ -277,7 +285,7 @@ There are several possible scenarios for EM signatures during the merger phase o
 \label{subsubsec:MultiMFacilities}
 
 \paragraph{}
-To understand the populations of MBHs in the Universe, we need to survey MBHs across cosmic time, from early to late Universe, over a wide range of masses, and in both isolated and binary systems. Indeed, GW observations by themselves, particularly with LISA, will provide direct and precise constraints on MBHBs in the range of $10^{4}~\mathrm{M}_{\odot}$ and $10^{9}~\mathrm{M}_{\odot}$, including their masses, redshift, and spins~\cite{amaro2017laser}. Where EM information is available, it can complement and refine these GW constraints by probing the host galaxy and the surrounding environment, thereby enabling a more complete physical interpretation and strengthening population studies.
+To understand the populations of MBHs in the Universe, we need to survey MBHs across cosmic time, from early to late Universe, over a wide range of masses, and in both isolated and binary systems.  Indeed, LISA will provide direct and precise constraints on MBHBs in the range of $10^{4}~\mathrm{M}_{\odot}$ and $10^{9}~\mathrm{M}_{\odot}$, including their masses, spins, and luminosity distance~\cite{amaro2017laser}. Where EM information is available, it can complement and refine these GW constraints by probing the host galaxy and the surrounding environment, thereby enabling a more complete physical interpretation and strengthening population studies.
 
 In this section, we discuss how GW and EM observations can be combined to address fundamental questions in astrophysics, such as MBH formation and evolution and their dependence on the galactic and large-scale environment.
 
@@ -285,24 +293,24 @@ In this section, we discuss how GW and EM observations can be combined to addres
 
 By mid 2030's, constraining the MBHB population will rely on a complementary set of GW observatories that probe different mass and frequency regimes. PTAs~\cite{burke2019astrophysics}) will target the nanohertz band, primarily targeting the stochastic GW background and MBHB in the range of  $10^{7}~\mathrm{M}_{\odot}$--$10^{9} ~\mathrm{M}_{\odot}$ in the local Universe. LISA will observe the milihertz band and provide precise measurements of binary parameters (masses, spins, luminosity distance) for MBHBs with masses between $10^{4}~\mathrm{M}_{\odot}$--$10^{7}~\mathrm{M}_{\odot}$ out to high redshift ($\sim160$). At higher frequencies, third-generation ground-based observatories, e.g., the Einstein Telescope (ET;~\cite{gair2011exploring}) and Cosmic Explorer (CE;~\cite{hall2022cosmic}), will extend GW observations to MBH seed mergers in the mass range of $10^{2}~\mathrm{M}_{\odot}$--$10^{3}~\mathrm{M}_{\odot}$, providing complementary constraints on the low-mass end of MBH assembly.
 
-EM observations are particularly valuable where GW measurements alone are insufficient, for example, for the identification of host galaxies and redshift, as well as constraints on the accretion state and circumbinary. Sensitive X-ray missions (e.g., ESA's NewAthena;\cite{cruise2025newathena}, NASA missions AXIS;~\cite{reynolds2023overview}, and LynX;~\cite{gaskin2019lynx}, and eROSITA\footnote{eROSITA’s all-sky survey (eRASS) was originally planned as an eight-pass ($\sim$4 year) programme, but science operations were suspended on 26 February 2022 and have not resumed as of this writing.};~\cite{predehl2021erosita}) will probe the accretion properties of AGN. Wide-field optical/infrared surveys, e.g., Dark Energy Spectroscopic Instrument (DESI;~\cite{aghamousa2016desi}), Nancy Grace Roman Space Telescope~\cite{akeson2019wide}, Rubin Observatory Legacy Survey of Space and Time (LSST;~\cite{ivezic2019lsst}), and Sloan Digital Sky Survey-V (SDSS-V~\cite{kollmeier2026sloan}), will carry out demographic studies, and selection of MBHB candidates, whereas targeted, deep optical/infrared follow-up, e.g., the James Webb Space Telescope (JWST;~\cite{gardner2006james}), the Extremely Large Telescope (ELT;~\cite{padovani2023extremely}) and Thirty-Meter Telescope (TMT;~\cite{skidmore2015thirty}), will characterise galaxy hosts up to the highest redshifts and probe the assembly of the first galaxies. High-resolution radio interferometry, e.g., Square Kilometre Array (SKA;~\cite{deane2015multiple}), can provide spatially resolved constraints on dual nuclei and jets. Together, these capabilities will enable a more complete interpretation of MBHB formation and evolution across cosmic time. 
+EM observations are particularly valuable where GW measurements alone are insufficient, for example, for the identification of host galaxies and redshift, as well as constraints on the accretion state and circumbinary. Sensitive X-ray missions (e.g., ESA's NewAthena;\cite{cruise2025newathena}, NASA missions AXIS;~\cite{reynolds2023overview}, and LynX;~\cite{gaskin2019lynx}) will probe the accretion properties of AGN. Wide-field optical/infrared surveys, e.g., Dark Energy Spectroscopic Instrument (DESI;~\cite{aghamousa2016desi}), Nancy Grace Roman Space Telescope~\cite{akeson2019wide}, Rubin Observatory Legacy Survey of Space and Time (LSST;~\cite{ivezic2019lsst}), and Sloan Digital Sky Survey-V (SDSS-V~\cite{kollmeier2026sloan}), will carry out demographic studies, and selection of MBHB candidates, whereas targeted, deep optical/infrared follow-up, e.g., the James Webb Space Telescope (JWST;~\cite{gardner2006james}), the Extremely Large Telescope (ELT;~\cite{padovani2023extremely}) and Thirty-Meter Telescope (TMT;~\cite{skidmore2015thirty}), will characterise galaxy hosts up to the highest redshifts and probe the assembly of the first galaxies. High-resolution radio interferometry, e.g., Square Kilometre Array (SKA;~\cite{deane2015multiple}), can provide spatially resolved constraints on dual nuclei and jets. Together, these capabilities will enable a more complete interpretation of MBHB formation and evolution across cosmic time. 
 
 \paragraph{Synergy of LISA with EM facilities to Answer Open Questions in MBH Astrophysics}
 
 \paragraph{\normalfont\textit{MBH seeds.}}
-LISA will be able to observe MBH seeds of $10^{4}~\mathrm{M}_{\odot}$--$10^{5}~\mathrm{M}_{\odot}$ out to redshifts $\sim20$ \cite{amaro2017laser}, opening the possibility of observing the dawn of MBHBs. However, this is beyond the reach for many of the current EM facilities. Existing EM constrains on low-mass MBH formation largely come from searches on nearby dwarf galaxies, with stellar masses $M_{\star} = 10^{7}~\mathrm{M}_{\odot}$--$10^{9.5}~\mathrm{M}_{\odot}$\cite{reines2015relations,baldassare201550,mezcua2016population,mezcua2018intermediate}. Unlike massive galaxies, dwarf galaxies are expected to have undergone less growth through mergers and accretion over cosmic time, and may therefore retain more "memory" of their initial MBH formation mechanism \cite{habouzit2017blossoms}. To directly constrain MBH seeding with EM observations, surveys must reach at least $z\gtrsim10$~\cite{valiante2018chasing}. Theoretical models of accreting heavy seeds predict detectable emission that could be accessible to future facilities, for example, in X-rays with NewAthena for $z\lesssim6$ and in the infrared with JWST out to $z\lesssim15$. Detecting light seeds is more challenging because their accretion-powered emission is intrinsically weaker, but next-generation X-ray missions such as Lynx and AXIS may extend sensitivity into this regime~\cite{pacucci2015shining,natarajan2017unveiling,valiante2018chasing,barrow2018observational}.
+LISA will be able to observe MBH seeds of $10^{4}~\mathrm{M}_{\odot}$--$10^{5}~\mathrm{M}_{\odot}$ out to redshifts $\sim20$ \cite{amaro2017laser}, opening the possibility of observing the dawn of MBHBs. However, this is beyond the reach of many of the current EM facilities. Existing EM constrains on low-mass MBH formation largely come from searches on nearby dwarf galaxies, with stellar masses $M_{\star} = 10^{7}~\mathrm{M}_{\odot}$--$10^{9.5}~\mathrm{M}_{\odot}$\cite{reines2015relations,baldassare201550,mezcua2016population,mezcua2018intermediate}. Unlike massive galaxies, dwarf galaxies are expected to have undergone less growth through mergers and accretion over cosmic time, and may therefore retain more memory of their initial MBH formation mechanism \cite{habouzit2017blossoms}. To directly constrain MBH seeding with EM observations, surveys must reach at least $z\gtrsim10$~\cite{valiante2018chasing}. Theoretical models of accreting heavy seeds predict detectable emission that could be accessible to future facilities, for example, in X-rays with NewAthena for $z\lesssim6$ and in the infrared with JWST out to $z\lesssim15$. Detecting light seeds is more challenging because their accretion-powered emission is intrinsically weaker, but next-generation X-ray missions such as Lynx and AXIS may extend sensitivity into this regime~\cite{pacucci2015shining,natarajan2017unveiling,valiante2018chasing,barrow2018observational}.
 
 \paragraph{\normalfont\textit{The growth of MBHs.}}
-Understanding growth of MBHs from BH seeds to MBHs with masses $10^{8}~\mathrm{M}_{\odot}$--$10^{10}~\mathrm{M}_{\odot}$ requires EM observations of MBHs in different stages in the cosmic evolution. Rare bright high redshift quasars ($z\sim6$--$7$) \cite{banados2018chandra,matsuoka2019subaru,yang2020poniua} will be accessible with future EM observatories and will complement LISA's view. The Nancy Grace Roman Space Telescope \cite{fan1903first} and the Euclid Space Telescope \cite{barnett2019euclid} will increase the detection of MBHs by tenfold the number of quasars at high redshifts in the near-infrared. In the X-ray band, eROSITA will be able to detect 3 million AGN to study accretion history, studying the clustering properties of AGN of at least $z\sim2$, and identifying AGN sub-populations.  
+Understanding growth of MBHs from BH seeds to MBHs with masses $10^{8}~\mathrm{M}_{\odot}$--$10^{10}~\mathrm{M}_{\odot}$ requires EM observations of MBHs in different stages in the cosmic evolution. Rare bright high redshift quasars ($z\sim6$--$7$) \cite{banados2018chandra,matsuoka2019subaru,yang2020poniua} will be accessible with future EM observatories and will complement LISA's view. The Nancy Grace Roman Space Telescope \cite{fan1903first} and the Euclid Space Telescope \cite{barnett2019euclid} will increase the detection of MBHs by tenfold the number of quasars at high redshifts in the near-infrared. 
 
 \paragraph{\normalfont\textit{The coevolution of MBHs and cosmic structures.}}
 One problem of interest in the MBH community is the co-evolution of MBHs with their host galaxies. This has been characterized by the correlations between the mass of the MBH and the mass of the stellar bulge and the stellar velocity dispersion. At larger scale, these correlations extend to the galaxy halo mass. LISA's contribution to addressing this problem will be through independent MBHB mass measurements so that these correlations, constrained so far mostly by EM-biased mass measurements, are better calibrated. Some potential networks that will be available in the LISA era will be with the JWST, Euclid and Roman telescopes in the optical/infrared which will constrain the stellar properties and the evolution of the host galaxies. In the X-ray band, telescopes like Athena, Lynx, AXIS will look at the feeding and feedback processes. In the Radio-mm band, facilities such as ALMA and SKA will provide information about relativistic jets, which is involved in the feeding and feedback processes and the co-evolution of galaxies and MBHBs.
 
-\paragraph{Current knowledge about MBHs with current and future missions.}
+\paragraph{Current knowledge about MBHBs with current and future missions.}
 
-While LISA will probe MBHBs in the millihertz band, PTAs target GWs at much lower frequencies, in the nanohertz regime. PTAs search for GWs by monitoring millisecond pulsars over many years and measuring deviations ("timing residuals") from the expected pulse arrival times. A detection is made when a common signal is present across many pulsars, and the cross-correlations between their timing residuals follow the characteristic quadrupolar correlation signature~\cite{hellings1983upper} expected for a GW background. The main targets of PTAs are a stochastic GW background, generated by the superposition of many unresolved MBHB signals, and potentially, individually resolvable MBHBs with masses of $10^8$--$10^{10}~\mathrm{M}_{\odot}$ at low redshift ($z \lesssim 1.5$)~\cite{sesana2010measuring}. 
+While LISA will probe MBHBs in the millihertz band, PTAs target GWs at much lower frequencies, in the nanohertz regime. PTAs search for GWs by monitoring millisecond pulsars over many years and measuring deviations ("timing residuals") from the expected pulse arrival times\cite{burke2019astrophysics}. A detection is made when a common signal is present across many pulsars, and the cross-correlations between their timing residuals follow the characteristic quadrupolar correlation signature~\cite{hellings1983upper} expected for a GW background. The main targets of PTAs are a stochastic GW background, generated by the superposition of many unresolved MBHB signals, and potentially, individually resolvable MBHBs with masses of $10^8$--$10^{10}~\mathrm{M}_{\odot}$ at low redshift ($z \lesssim 1.5$)~\cite{sesana2010measuring}. 
 
-Independent PTA collaborations (NANOGrav\cite{arzoumanian2020nanograv}, EPTA/InPTA\cite{antoniadis2023second}, PPTA\cite{reardon2023search}, and CPTA\cite{xu2023searching}) reported potential evidence for a stochastic background consistent with expectations from a population of MBHBs. However, other sources, such as cosmic strings~\cite{ellis2021cosmic}, could also produce a similar spectrum. In this case, longer baselines and larger PTAs will be needed to distinguish between scenarios and strengthen interpretation.
+Independent PTA collaborations (NANOGrav\cite{arzoumanian2020nanograv}, EPTA/InPTA\cite{antoniadis2023second}, PPTA\cite{reardon2023search}, CPTA\cite{xu2023searching}), and MPTA\cite{miles2025meerkat} reported potential evidence for a stochastic background consistent with expectations from a population of MBHBs. However, other sources, such as cosmic strings~\cite{ellis2021cosmic}, could also produce a similar spectrum. In this case, longer baselines and larger PTAs will be needed to distinguish between scenarios and strengthen interpretation.
 
 Currently, theoretical predictions in binary evolution yield large uncertainties, so models with similar GW background amplitudes can imply very different MBHB merger rates. Both the merger rate and the background amplitude depend on how frequently galaxies merge and form MBHBs, and on how efficiently binaries are driven to sub-parsec separations where GW emission dominates. Before LISA's launch, PTAs are expected to constrain the background amplitude and its spectral shape, providing information on binary eccentricities and environment \cite{sesana2009gravitational,kelley2017gravitational,taylor2019supermassive}.
 
@@ -335,7 +343,7 @@ Broadly speaking, LISA relies on two key elements~\cite{prince2011lisa}: 1) Prec
 
 Figure~\ref{fig:LISAobs} shows the LISA constellation trailing the Earth in a heliocentric orbit. The LISA design has three key elements: 1) Three spacecraft follow similar heliocentric orbits, phased so that they remain approximately $120^\circ$ apart~\cite{dhurandhar2005fundamentals}; 
 2) together they form a nearly equilateral triangular constellation; and 3) the constellation undergoes a slow cartwheel-like rotation as it orbits the Sun. A spacecraft at each vertex houses two freely falling test masses and the associated measurement system  Fig.~\ref{fig:LISAdetail}. Gravitational waves are sensed by monitoring time-dependent changes in the optical path length between test masses along the interferometric links.
-In LISA, the effective path-length variation induced by a passing GW along a given arm is reconstructed by combining several phase measurements. The inter-spacecraft laser link provides a measurement of the optical path between the two spacecraft (more precisely, between their optical benches), while local interferometers measure the displacement of each test mass relative to its spacecraft. By combining the inter-spacecraft and local test-mass measurements, one obtains the time-dependent change in separation between the two test masses at the ends of the arm. Each measurement contributes noise, and these contributions for the core of LISA's noise budget, ultimately setting the detector sensititivy curve~\cite{prince2011lisa}.
+In LISA, the effective path-length variation induced by a passing GW along a given arm is reconstructed by combining several phase measurements. The inter-spacecraft laser link provides a measurement of the optical path between the two spacecraft (more precisely, between their optical benches), while local interferometers measure the displacement of each test mass relative to its spacecraft. By combining the inter-spacecraft and local test-mass measurements, one obtains the time-dependent change in separation between the two test masses at the ends of the arm. Each measurement contributes noise, and these contributions for the core of LISA's noise budget, ultimately setting the detector sensitivity curve~\cite{prince2011lisa}.
 \begin{figure}[htbp]
     \centering    \includegraphics[width=0.5\textwidth]{Figures/LISAobs.png}
     \caption{LISA orbits the Sun trailing the Earth at a angle of $20^\circ$ with it's plane tilted $60^\circ$ relative to the plane of the ecliptic. Picture taken from \cite{prince2011lisa}.}
@@ -356,7 +364,7 @@ In LISA, the effective path-length variation induced by a passing GW along a giv
     \label{fig:LISAarm}
 \end{figure}
 
-Each LISA spacecraft contains two test masses (one associated with each interferometric arm) enclosed within an electrostatic housing. The test masses act as the nearly free-falling reference bodies, while the spacecraft provides shielding from non-gravitational disturbances such as solar radiation pressure. To keep the spacecraft centered on the test masses, LISA measures the relative spacecraft-test-mass displacement with sensors and uses micro-thrusters to apply forces to the spacecraft. 
+Each LISA spacecraft contains two test masses (one associated with each interferometric arm) enclosed within an electrostatic housing. The test masses act as the nearly free-falling reference bodies, while the spacecraft provides shielding from non-gravitational disturbances such as solar radiation pressure. To keep the spacecraft centred on the test masses, LISA measures the relative spacecraft-test-mass displacement with sensors and uses micro-thrusters to apply forces to the spacecraft. 
 
 Unlike a classical Michelson interferometer, LISA cannot rely on a single laser beam reflected from a distant mirror and returned along the same path because the arm lengths are millions of kilometres. Instead, LISA uses a transponder (phase-locked) scheme~\cite{prince2011lisa}: One spacecraft sends a laser beam to a remote spacecraft, where the incoming light is used to phase-lock a local laser, which is then retransmitted back along the link. By comparing the phases of the transmitted and received beams (together with local test-mass measurements), one infers time-dependent optical path-length variations, including those induced by passing GWs.
 
@@ -1340,33 +1348,37 @@ In this work, we adopt three benchmark population models: a light-seed PopIII sc
 
 As discussed above, there is strong evidence that MBHs and galaxies co-evolve. Approaches to study this co-evolution include cosmological simulations, theoretical, and phenomenological models. Cosmological simulations can be carried out in two fashions: grid-based Eulerian simulations~\cite{teyssier2002cosmological}, and particle-based hydrodynamical simulations (Smoothed Particle Hydrodynamics, SPH)~\cite{lucy1977numerical,gingold1977smoothed}. While cosmological simulations give a robust track of the evolution of MBHs and their host galaxies, they are computationally expensive. On the theoretical side, there exist analytical and semi-analytical models. Theoretical models are limited in their reach as far as the physics that is included in the modelling. Semi-analytical models provide simple enough prescriptions, tunable up to a few parameters, while being computationally affordable. Phenomenological models, often represented by parametric forms, consist of models that fit observations or the predictions of numerical simulations. In this work, we use phenomenological parametric models because they are flexible and allow us to fit the results of semi-analytical models without requiring us to model explicitly the physical mechanisms that generate the corresponding distributions, and because they can be sampled quickly and at low computational cost.
 
-We use parametric forms for the merger rate of MBHBs, $R(z)$, and for a set of binary parameters: source-frame total mass $M = m_{1} + m_{2}$, redshift $z$, spin magnitudes $a_1$ and $a_2$, and mass ratio $q = m_2/m_1$. 
+We use parametric forms for the redshift-dependent merger rate of MBHBs, $R(z)$, and for a set of binary parameters: source-frame total mass $M = m_{1} + m_{2}$, redshift $z$, spin magnitudes $a_1$ and $a_2$, and mass ratio $q = m_2/m_1$. 
 \\
-%\FloatBarrier
-%\subsubsection{Intrinsic merger rates}
-%\label{subsubsec:mergerrates}
 
 \noindent\textit{Intrinsic Merger Rates}
 
 \paragraph{}
-We define the intrinsic merger rate~$R(z)$ as the number of mergers $N$ that happen in the Universe, per unit time $t$ and unit redshift $z$, integrated over redshift $z$,
+We define the intrinsic merger rate~$\lambda$ as the number of mergers $N$ that happen in the Universe per unit time, 
 \begin{equation}
-  R(z)
+  \lambda
   \;=\;
-  \int \frac{d^2 N}{dtdz}dz,
+  \int  R(z)dz,
   \label{eq:mergerrate}
 \end{equation}
 and,
 \begin{equation}
-  \frac{d^2 N}{dtdz}
+  R(z)
+  \;=\;
+  \frac{\mathrm{d}\dot N}{\mathrm{d}z},
+  \label{eq:redshift_dept_mergerrate_1}
+\end{equation}
+
+\begin{equation}
+  \frac{\mathrm{d}\dot N}{\mathrm{d}z}
   \;=\;
   \frac{dV_c}{dz}\,\frac{1}{1+z}\;
   \mathcal{R}(z),
-  \label{eq:mergerrate}
+  \label{eq:redshift_dept_mergerrate_2}
 \end{equation}
-where $dV_c/dz$ is the comoving volume element, $\mathcal{R}(z)$ is the merger rate density, and $1/(1 + z)$ converts to observer frame. The merger rate density $\mathcal{R}(z)$ is an intrinsic, local quantity that reflects the number of mergers per comoving volume, per comoving time, and depends on the astrophysical model. On the other hand, the merger rate $R(z)$ is the global number of mergers that happen in the Universe per unit detector-frame time.
+where $dV_c/dz$ is the comoving volume element, $\mathcal{R}(z)$ is the redshift-dependent merger rate density, and $1/(1 + z)$ converts to observer frame. The redshift-dependent merger rate density $\mathcal{R}(z)$ is an intrinsic, local quantity that reflects the number of mergers per comoving volume, per comoving time, and depends on the astrophysical model. On the other hand, the redshift-dependent merger rate $R(z)$ is the global number of mergers that happen in the Universe per unit redshift per unit detector-frame time.
 
-In this work, we use fitted expressions for the merger rates from Wang \textit{et al}. (2022; W22)~\cite{wang2022forecast}, which are piecewise approximations for the merger rates from Klein \textit{et al}.\ (2016; K16)~\cite{klein2016science} in their Fig. 3. These expressions are
+In this work, we use fitted expressions for the redshift-dependent merger rate from Wang \textit{et al}. (2022; W22)~\cite{wang2022forecast}, which are piecewise approximations for the merger rates from Klein \textit{et al}.\ (2016; K16)~\cite{klein2016science} in their Fig. 3. These expressions are
 
 \begin{subequations}
 \label{eq:mergerrates_wang}
@@ -1399,9 +1411,9 @@ It has been shown that cosmological simulations lack resolution in high-mass dar
 
 After a potential detection of a stochastic GW background by PTA observatories EPTA, InPTA, NANOGrav, PPTA, and CPTA in 2023, constrains in the merger rates of MBHBs have been possible. We can use this new information to update the expressions from W22 and K16, as they are now out of date. We do this by normalising them to the results for the merger rates from Barausse \textit{et al}.\ (2023, B23)~\cite{barausse2023implications}, which takes these constraints into account. 
 
-Within their semi-analytical model, B23 compute the merger rate per unit redshift with the expression,
+Within their semi-analytical model, B23 compute the redshift-dependent merger rate with the expression,
 \begin{equation}
-\frac{d^{2}N}{dz\,dt}
+R(z)
 =
 \frac{4\pi\,c}{\Delta z}
 \sum_{N \in \Delta z} \frac{W_{\mathrm{PS}}D_L^{2}(z)}{(1+z)^{2}},
@@ -1410,10 +1422,10 @@ Within their semi-analytical model, B23 compute the merger rate per unit redshif
 where $W_{\mathrm{PS}}$ is the comoving number density of dark matter halos at $z=0$ divided by the merger-tree realisations in that mass bin, and $D_L^{2}(z)/(1 + z)^2$ is the comoving distance squared, which multiplied by $4\pi/c$ gives the area of a comoving spherical shell at $z$. The merger rate of B23 is then obtained with eqs.~\eqref{eq:mergerrate} and~\eqref{eq:merger_rate_perredshift}, and we normalise our merger rates, eqs.~\eqref{eq:mergerrates_wang}, to match the ones of B23. 
 
 We treat MBHB mergers as a Poisson process and use the redshift-dependent merger rate
-$\mathrm{d}\dot N/\mathrm{d}z$ (per unit redshift and per unit observer time) to define the expected
+$R(z)$ to define the expected
 number of events over a mission duration $T$. The expected number of intrinsic mergers is
 \begin{equation}
-\mu(T)=T\int_{0}^{z_{\max}} \frac{\mathrm{d}\dot N}{\mathrm{d}z}\,\mathrm{d}z,
+\mu(T)=T\int_{0}^{z_{\max}} R(z)\,\mathrm{d}z,
 \label{eq:expected_mu_poisson}
 \end{equation}
 and the probability of observing $N$ mergers in time $T$ is given by the Poisson distribution
@@ -1423,7 +1435,7 @@ P(N\mid \mu)=\frac{\mu^{N}e^{-\mu}}{N!}.
 \end{equation}
 We then draw $N$ from Eq.~\eqref{eq:poisson} for a LISA-like mission duration of $T=4$ years.
 
-The merger rate evolution with redshift, and the results of the merger rates for our three population models are shown in Fig.~\ref{fig:mergerrates_wang_barausse}, and in Table~\ref{table:intrinsic_merger_rate}, respectively.
+The redshift-dependent merger rate, and the merger counts for our three population models are shown in Fig.~\ref{fig:mergerrates_wang_barausse}, and in Table~\ref{table:intrinsic_merger_rate}, respectively.
 
 \FloatBarrier
 \begin{figure}[htbp]
@@ -1436,14 +1448,14 @@ The merger rate evolution with redshift, and the results of the merger rates for
 \begin{table}[t]
 \captionsetup{font=footnotesize}
 \centering
-\caption{Mergers during a \textbf{4-year} mission. The rate $R(z)$ includes the Poisson counting uncertainty, $\sigma_{R(z)}=\sqrt{N}/T$.}
+\caption{Mergers during a \textbf{4-year} mission. The rate $\lambda$ includes the Poisson counting uncertainty, $\sigma_{\lambda}=\sqrt{N}/T$.}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
 \label{tab:intrinsic_mergers_4yr}
 \begin{threeparttable}
 \begin{tabular}{l S[table-format=5.0] S[table-format=3.2]}
 \toprule
-\textbf{Model} & {Total mergers $N_{\rm intr}$ (4 yr)} & {Rate $R(z)$ (yr$^{-1}$)} \\
+\textbf{Model} & {Total mergers $N_{\rm intr}$ (4 yr)} & {Rate $\lambda$ (yr$^{-1}$)} \\
 \midrule
 popIII & 1343 & 335.7 $\pm$ 9.2 \\
 Q3d    & 82 & 20.5 $\pm$ 2.3 \\
@@ -1600,15 +1612,15 @@ $\alpha_{q,1}$, $\alpha_{q,2}$ & Power-law indices for the mass ratio of the pop
 \noindent\textit{Redshift}
 
 \paragraph{}
-We model the redshift distribution using the merger rate per unit redshift,
+We model the redshift distribution using the redshift-dependent merger rate,
 
 \begin{align}
 p(z) =
-\frac{1}{\mathcal{N}} \frac{d N}{dtdz},
+\frac{1}{\mathcal{N}}~R(z),
 \label{eq:redshift_distr}
 \end{align}
 
-where $\mathcal{N}=\int_{z_{min}}^{z_{max}}\frac{dN}{dtdz}dz$ is the normalisation factor. The redshift distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:row_pz}.
+where $\mathcal{N}=\int_{z_{min}}^{z_{max}}R(z)dz$ is the normalisation factor. The redshift distributions for the popIII, Q3d, and Q3nod population models are shown in Fig.~\ref{fig:row_pz}.
 \\
 
 \noindent\textit{Spins}
@@ -1664,7 +1676,31 @@ The mass ratio distributions for the three astrophysical models are shown in Fig
 \subsection{Synthetic catalogues of cosmic MBHB mergers}
 \label{subsec:synth_catalogs_intrinsic_mbhbs}
 
-Using the total number of mergers over a LISA-like mission duration inferred from the redshift-dependent merger rate, together with the parametric forms for the source-frame total mass, redshift, spins, and mass ratio, we generate a source catalogue whose parameter distributions are shown in Figure~\ref{fig:catalog_distributions_grid}. 
+Using the total number of mergers over a LISA-like mission duration inferred from the redshift-dependent merger rate, together with the parametric forms for the source-frame total mass, redshift, spins, and mass ratio, we generate a source catalogue whose parameter distributions are shown in Figure~\ref{fig:catalog_distributions_grid}. The values adopted for the remaining binary parameters, such as phase, polarisation, inclination, right ascension, declination, tilt angles $\mathrm{tilt}_1$ and $\mathrm{tilt}_2$, and merger time, are listed in Table ~\ref{tab:values_remparameters}. We then run a series of simulations with GWFish to compute the SNR and Fisher matrices for each event in the catalogue. We use the IMRPhenomPv2 waveform model, which includes the inspiral-merger-ringdown phases and accounts for spin-precession. Finally, we use the outputs of these simulations to build a catalogue of Fisher matrices and construct a corresponding catalogue of detected mergers.
+
+\begin{table}[!htbp]
+\captionsetup{font=footnotesize}
+\centering
+\caption{Angular parameters and geocentric coalescence time (and their adopted distributions) used to generate a catalogue of cosmic MBHB mergers.}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand\arraystretch{1.12}
+\begin{tabular}{@{} l p{10.6cm} c @{}}
+\toprule
+Parameter & Description & Value \\
+\midrule
+$\theta_{JN}$ & Angle between the total angular momentum vector of the binary system and the observation line of sight. & $U(0,\pi)$ \\
+$\Psi$ & Polarisation angle & $U(0,\pi)$ \\
+$\phi$ & Phase & $U(0,2\pi)$ \\
+$\mathrm{RA}$ & Right Ascension & $U(0,2\pi)$ \\
+$\mathrm{dec}$ & Declination & $U(-\pi/2,\pi/2)$ \\
+$\mathrm{tilt}_{1}$ & Spin tilt of the primary component mass & $U(0,\pi)$ \\
+$\mathrm{tilt}_{2}$ & Spin tilt of the secondary component mass & $U(0,\pi)$ \\
+$t$ & Geocentric coalescence time & $U(0,t_{max})$ \\
+\bottomrule
+\end{tabular}
+\label{tab:values_remparameters}
+\end{table}
 
 \FloatBarrier
 \begin{figure}[t]
@@ -1718,12 +1754,66 @@ Using the total number of mergers over a LISA-like mission duration inferred fro
 \end{figure}
 
 \FloatBarrier
-\subsection{Synthetic catalogs of detected MBHB mergers}
+\subsection{Synthetic catalogues of detected MBHB mergers}
 \label{subsec:synth_catalogs_det_mbhbs}
 
-Detected merger rates incorporate the detector limitations to observe MBHBs, usually at the higher redshift end.
+To construct a catalogue of detected MBHB mergers, we must account for the impact of noise on the idealised signals. Since we are working in the high-SNR regime, we can approximate the measurement uncertainties with a multivariate Gaussian with covariance given by the inverse Fisher matrix. For each source in our Fisher matrix catalogue (Sec.~\ref {subsec:synth_catalogs_intrinsic_mbhbs}), we draw a random sample from this distribution to obtain a noise-perturbed parameter vector $\theta'$, and use $\theta'$ for a new GWFish run. We then recompute the SNR and Fisher matrix for these noise-perturbed injections, producing a catalogue of Fisher matrices that incorporates the effect of instrumental noise into the signal. We use this catalogue to construct a catalogue of $\textit{detected mergers}$.
 
-\FloatBarrier
+We consider detected mergers, binaries that coalesce within the mission's timespan (4 yrs) that produce an $\mathrm{SNR}>12$. Our counts and the population distributions are shown in Table~\ref{table:detected_merger_rates} and Fig.~\ref{fig:detected_catalog_distributions_grid}, respectively. In the case of the light-seed population model popIII, we have $179$ detected mergers for a 4-year mission, around $45$ detections per year. This count is positioned below the results found in the literature, Table~\ref{tab:detected_mergerrates_literature}. The most relatable studies from Table~\ref{tab:detected_mergerrates_literature} with ours are the ones from Klein \textit{et al}.\, and Barausse \textit{et al}.\, where they predict higher detections than us, $357$ for a 5-year mission (around $71$ detections per year), and $339$ for a 4-year-mission (around $84$ detections per year), respectively. We obtain fewer detections because our SNR threshold is higher than those adopted in K16 and B23. Regarding the heavy-seeds population models, for Q3d we predict $52$ detections for a 4-year mission, that is around $13$ detections per year,  whereas Klein \textit{et al}.\ and Barausse \textit{et al}.\ predict $8$ and $18$ per year, respectively. For the Q3nod model, we predict $646$ for a 4-year mission (around $161$ detections per year), whereas Klein \textit{et al}.\ and Barausse \textit{et al}.\ predict $121$ and $164$ detections per year, respectively.
+
+%\FloatBarrier
+\begin{table}[t]
+\captionsetup{font=footnotesize}
+\centering
+\caption{Detected mergers during a \textbf{4-year} mission (threshold $\rho_{\mathrm{thr}}=12$). }
+\footnotesize
+\label{tab:intrinsic_mergers_4yr}
+\begin{threeparttable}
+\begin{tabular}{l S[table-format=5.0] S[table-format=3.2]}
+\toprule
+\textbf{Model} & {Total mergers $N_{\rm det}$ (4 yr)} & {Rate $\lambda_{\mathrm{det}}$ (yr$^{-1}$)} \\
+\midrule
+popIII & 179 & 44.8 \\
+Q3d    & 52 & 13 \\
+Q3nod  & 646 & 161.5 \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\label{table:detected_merger_rates}
+\end{table}
+
+%\FloatBarrier
+\begin{table}[t]
+\captionsetup{font=footnotesize}
+\centering
+\caption{Predicted merger rates of detected MBHBs for light (LS) and heavy (HS) seeds from the literature.}
+\footnotesize
+\renewcommand\arraystretch{1.12}
+\begin{tabular}{@{} l l S[table-format=5.0] S[table-format=3.2] p{6.2cm} @{}}
+\toprule
+Seed class & Model / assumption & {Total mergers} & {Rate~(yr$^{-1}$)} & Notes / Reference \\
+\midrule
+LS & popIII         & 357.9 & 71.6 & Klein \textit{et al}.\ (2016). For an optimistic acceleration-noise level, arm length of 2 million km, mission duration of 5 years, and 6 laser links. $\mathrm{SNR}>8$.\\
+LS &  popIII        & 339 & 84.8 & Barausse \textit{et al}.\ (2023). Assuming infinite resolution in models/simulations. \\
+LS &  popIII        & 129.3 & 32.3 & Mangiagli \textit{et al}.\ (2022). Events with $\rho>10$. \\
+LS & SN feedback-delays         & 16 & 4 & Barausse \textit{et al}.\ (2020). \\
+LS & No SN feedback-delays         & 146 & 36.5 & Barausse \textit{et al}.\ (2020). \\
+LS &          & & 75 & Bonetti \textit{et al}.\ (2020). \\
+HS & Q3d         & 40.8 & 8.2  & Klein \textit{et al}.\ (2016). For an optimistic acceleration-noise level, arm length of 2 million km, mission duration of 5 years, and 6 laser links. $\mathrm{SNR}>8$.\\
+HS &  Q3d        & 74 & 18.5 & Barausse \textit{et al}.\ (2023). Assuming infinite resolution in models/simulations.\\
+HS &  Q3d        & 30.4 & 7.6 & Mangiagli \textit{et al}.\ (2022). Events with $\rho>10$. \\
+HS & Q3nod        & 609.4 & 152.4 & Klein \textit{et al}.\ (2016). For an optimistic acceleration-noise level, arm length of 2 million km, mission duration of 5 years, and 6 laser links. $\mathrm{SNR}>8$.\\
+HS &  Q3nod        & 656 & 164 & Barausse \textit{et al}.\ (2023). Assuming infinite resolution in models/simulations.\\
+HS &  Q3nod        & 471.1 & 117 & Mangiagli \textit{et al}.\ (2022). Events with $\rho>10$. \\
+HS & No SN feedback-delays         & 10 & 2.5 & Barausse \textit{et al}.\ (2020). \\
+HS & No SN feedback-nodelays         & 1288 & 322 & Barausse \textit{et al}.\ (2020). \\
+HS &          & & 25 & Bonetti \textit{et al}.\ (2020). \\
+\bottomrule
+\end{tabular}
+\label{tab:detected_mergerrates_literature}
+\end{table}
+
+%\FloatBarrier
 \begin{figure}[t]
     \centering
     % Row (a): p(M) 
@@ -1770,115 +1860,39 @@ Detected merger rates incorporate the detector limitations to observe MBHBs, usu
         \label{fig:row_detected_pq}
     \end{subfigure}
     % Global caption 
-    \caption{Distributions of mergers from the synthetic detected catalogues generated by adding Gaussian noise to the true parameter values in order to simulate measurement uncertainties. Columns correspond to the three astrophysical models, PopIII, Q3d, and Q3nod. Rows show, from top to bottom, the source-frame total mass distribution $p(M)$, redshift distribution $p(z)$, spin distribution $p(a)$, and mass ratio distribution $p(q)$.}
+    \caption{Distributions of mergers from the synthetic detected catalogues generated by adding Gaussian noise to the true parameter values. Columns correspond to the three astrophysical models, PopIII, Q3d, and Q3nod. Rows show, from top to bottom, the source-frame total mass distribution $p(M)$, redshift distribution $p(z)$, spin distribution $p(a)$, and mass ratio distribution $p(q)$.}
     \label{fig:detected_catalog_distributions_grid}
 \end{figure}
 
-We consider \textit{detected mergers}, binaries that coalesce within the mission's timespan (4 yrs) that produce $\rho>12$. Our counts are shown in Table~\ref{table:detected_merger_rates}. In the case of the light-seed population model popIII, we have $1119$ detected mergers for a 4-year mission, $\approx279$ detections per year. This count is positioned above the results found in the literature, Table~\ref{tab:detected_mergerrates_literature}. The most relatable studies from Table~\ref{tab:detected_mergerrates_literature} with ours are the ones from Klein \textit{et al}.\ (2016), and Barausse \textit{et al}.\ (2023), where they predict lower detections than us, $\sim357$ for a 5-year mission ($\sim71$ detections per year), and $\sim339$ for a 4-year-mission ($\sim84$ detections per year), respectively. This gives us $\sim3.5$ times more detections per year. Regarding the heavy-seeds population models, for Q3d we predict $\sim20$ detections per year, where as Klein \textit{et al}.\ and Barausse \textit{et al}.\ predict $\sim8$ and $\sim18$ per year, respectively. For the Q3nod model, we predict $\sim153$ detections per year, whereas Klein \textit{et al}.\ and Barausse \textit{et al}.\ predict $\sim121$ and $\sim164$ detections per year.
+The differences between our predictions and those in the literature might be explained by several factors. First, in our implementation, the intrinsic merger rate is modelled as a function of redshift only, $\mathrm{d}\dot N/\mathrm{d}z$. This means that correlations between total mass and redshift are not captured explicitly. By normalising $\mathrm{d}\dot N/\mathrm{d}z$ to the rates of B23 we reproduce the correct marginal redshift distribution (and therefore the correct event counts), but a fully self-consistent prediction would require a mass-dependent rate $\mathrm{d}\dot N/\mathrm{d}z\mathrm{d}M$ (or equivalently a conditional mass distribution $p(M|z)$). Second, different approaches to generating the catalogue of sources. We drew samples from parametric models, Sec.~\ref{subsec:parametricforms}, with bounded values as justified by the literature. This means that our catalogues are fundamentally different from the sources studied by Klein \textit{et al}.\ which come from semi-analytical models of galaxy/MBH formation. Third, Klein \textit{et al}.\ considers the eLISA-era design with different "\textit{NiAjMkl}" families: different arm lengths, 4 and 6 detector links, mission lifetimes, and different noise prescriptions. On the other hand, our study uses the final LISA baseline, i.e. 2.5 Gm arms with 6 links, and a 4-year nominal mission. There are differences in the detector's sensitivity/response too. We use GWFish's updated PSD curve, Eqs.~\ref{redPSDrespa} and \ref{redPSDrespb}, along with updated acceleration, system metrology, and galactic foreground noises. A fourth source of difference is the waveform models. We used the spin-precessing waveform IMRPhenomPv2, which models the inspiral, merger, and ringdown phases. Klein \textit{et al}.\ used inspiral-only precessing waveforms, and rescaled their Fisher matrices to account for the effect of the merger-ringdown. A fifth cause of difference is the counted mergers occurring within the mission.  Several studies consider a signal detected when its SNR is higher than a threshold while they are still in the inspiral phase and not coalescing within the mission time span. In our case, we count detected coalescences as they merge within the mission time span. 
 
-The differences observed in our predictions with the ones in the literature might be explained by several causes. First, our intrinsic merger rates are higher than Klein \textit{et al}.'s by $\sim6\%$. This alone rises our detection rate at least by the same amount. We used Barausse \textit{et al}.\ values to normalise our intrinsic merger rates per redshift, so in principle they should agree. Second, different approaches to generate the catalog of sources. We drew samples from parametric models, Sec.~\ref{subsec:parametricmodels}, with bounded values as justified by the literature. This means that our catalogs are fundamentally different from the sources studied by Klein \textit{et al}.\ which come from semi-analytical models of galaxy/MBH formation. Third, Klein \textit{et al}.\ considers the eLISA-era design with different "\textit{NiAjMkl}" families: different arms lengths, 4 and 6 detector links, mission lifetimes, and different noise prescriptions. On the other hand, our study uses the final LISA baseline, i.e. 2.5 Gm arms with 6 links, and 4-year nominal mission. There are differences in the detector's sensitivity/response too. We use GWFish's updated PSD curve, Eqs.~\ref{redPSDrespa} and \ref{redPSDrespb}, along with updated acceleration, system metrology, and galactic foreground noises. A fourth source of difference are the waveform models. We used the spin-precessing waveform IMRPhenomPv2 which models the inspiral, merger, and ringdown phases. Klein \textit{et al}.\ used inspiral-only precessing waveforms, and rescaled their Fisher matrices to account for the effect of the merger-ringdown. A fifth cause of difference is the counted mergers occuring within the mission.  Several studies, consider signal detected when its SNR is higher than a threshold while they are still in the inspiral phase and not coalescing within the mission time span. In our case, we count detected coalescences as they merge within the mission time span. 
-
-\FloatBarrier
-\begin{table}[t]
-\centering
-\caption{Detected mergers during a \textbf{4-year} mission (threshold $\rho_{\mathrm{thr}}=12$). }
-\label{tab:intrinsic_mergers_4yr}
-\begin{threeparttable}
-\begin{tabular}{l S[table-format=5.0] S[table-format=3.2]}
-\toprule
-\textbf{Model} & {Total mergers $N_{\rm det}$ (4 yr)} & {Rate $\mathcal{R}_{\mathrm{det}}$ (yr$^{-1}$)} \\
-\midrule
-popIII & 1119 & 279.75 \\
-Q3d    & 81 & 20.5 \\
-Q3nod  & 613 & 153.25 \\
-\bottomrule
-\end{tabular}
-\end{threeparttable}
-\label{table:detected_merger_rates}
-\end{table}
-
-\FloatBarrier
-\begin{table}[t]
-\centering
-\caption{Predicted merger rates of detected MBHBs for light (LS) and heavy (HS) seeds from the literature.}
-\renewcommand\arraystretch{1.12}
-\begin{tabular}{@{} l l r p{7.2cm} @{}}
-\toprule
-Seed class & Model / assumption & Rate & Notes / Reference \\
-\midrule
-LS & popIII         & $357.9/5\mathrm{yrs}$ & Klein \textit{et al}.\ (2016). For an optimistic acceleration-noise level, arm length of 2 million km, mission duration of 5 years, and 6 laser links. $\mathrm{SNR}>8$.\\
-LS &  popIII        & $339/4\mathrm{yrs} $ & Barausse \textit{et al}.\ (2023). Assuming infinite resolution in models/simulations. \\
-LS &  popIII        & $129.3/4\mathrm{yrs} $ & Mangiagli \textit{et al}.\ (2022). Events with $\rho>10$. \\
-LS & SN feedback-delays         & $16/4\mathrm{yrs}$ & Barausse \textit{et al}.\ (2020). \\
-LS & No SN feedback-delays         & $146/4\mathrm{yrs}$ & Barausse \textit{et al}.\ (2020). \\
-LS &          & $\approx75/\mathrm{yr}$ & Bonetti \textit{et al}.\ (2020). \\
-HS & Q3d         & $40.8/5\mathrm{yrs}$  & Klein \textit{et al}.\ (2016). For an optimistic acceleration-noise level, arm length of 2 million km, mission duration of 5 years, and 6 laser links. $\mathrm{SNR}>8$.\\
-HS &  Q3d        & $74/4\mathrm{yrs} $ & Barausse \textit{et al}.\ (2023). Assuming infinite resolution in models/simulations.\\
-HS &  Q3d        & $30.4/4\mathrm{yrs} $ & Mangiagli \textit{et al}.\ (2022). Events with $\rho>10$. \\
-HS & Q3nod        & $609.4/5\mathrm{yrs}$ & Klein \textit{et al}.\ (2016). For an optimistic acceleration-noise level, arm length of 2 million km, mission duration of 5 years, and 6 laser links. $\mathrm{SNR}>8$.\\
-HS &  Q3nod        & $656/4\mathrm{yrs} $ & Barausse \textit{et al}.\ (2023). Assuming infinite resolution in models/simulations.\\
-HS &  Q3nod        & $471.1/4\mathrm{yrs} $ & Mangiagli \textit{et al}.\ (2022). Events with $\rho>10$. \\
-HS & No SN feedback-delays         & $10/4\mathrm{yrs}$ & Barausse \textit{et al}.\ (2020). \\
-HS & No SN feedback-nodelays         & $1288/4\mathrm{yrs}$ & Barausse \textit{et al}.\ (2020). \\
-HS &          & $\approx25~/~\mathrm{yr}$ & Bonetti \textit{et al}.\ (2020). \\
-\bottomrule
-\end{tabular}
-\label{tab:detected_mergerrates_literature}
-\end{table}
-
-\FloatBarrier
+%\FloatBarrier
 \begin{figure}[htbp]
-\includegraphics[width=.9\textwidth]{Parametric_forms/waterfall_plot_MBHBs_aveangs.pdf}
-\caption{Contour lines of constant SNR from MBHBs with source-frame total masses between $10^3$ to $10^7~\mathrm{M}_{\odot}$.}
+\includegraphics[width=.9\textwidth]{Parametric_forms/waterfall_plot_MBHBs_anglesbank_PhenomD_N600_Nsamp10_fmin104_df105_M3_9_z160.pdf}
+\caption{Sky-averaged SNR contours for MBHBs as a function of source-frame total mass $M_{\mathrm{tot}}$ and redshift $z$. The dotted curve marks the detection threshold $(\mathrm{SNR} = 12)$.}
 \label{fig:waterfall_plot}
 \end{figure}
 
-\FloatBarrier
-\subsection{Results}
+%\FloatBarrier
+\subsection{Results and Discussion}
 \label{subsec:popresults}
 
-\FloatBarrier
-Fig.~\ref{fig:uncertainties_plot} shows fractional uncertainties of the component masses $m_1$ and $m_2$, and luminosity distance $d_{L}$, absolute uncertainty for spin magnitudes $a_1$ and $a_2$ for the set of detected mergers for the three population models. Each violin plot has dashed horizontal lines which are the median (central line) and quantiles (0.005 and 0.995) of the distribution.
-Regarding the fractional uncertainties of $m_1$ and $m_2$, we notice that the median in the three scenarios lies between $10^2$ and $10^3$ fractional uncertainty. This is expected, and aligns with the LISA Science Investigations (SI 2.1) on constraining component masses of MBHBs at percentage-level\cite{colpi2024lisa}. The popIII and Q3nod scenarios are shifted slightly towards higher uncertainties compared to Q3d which is consistent as popIII produces weaker signals than Q3d/Q3nod. For events near the threshold SNR or the ones that present non-Gaussian behaviour, the uncertainty measurements can be rather optimistic, so our results can be considered as a Cramer-Rao lower-bound uncertainties\cite{cutler1994gravitational}. This level of precision is required to distinguish whether a merger lies in the regime associated with light or heavy seeding scenarios\cite{klein2016science}. 
-Uncertainties on the spin magnitudes $a_1$ and $a_2$ concentrate on the tens-of-percent precision for the three scenarios, where $a_1$ is better constrained than $a_2$. Results in \cite{colpi2024lisa} for systems with component masses of $10^5$ to $10^7$ at $z=2$ with high SNRs ($\sim10^3$) report spin uncertaintes at percentage level. Our systems yield lower SNR and higher redhisft, so larger uncertainties are expected.
-Luminosity distance fractional uncertainties are tens-of-percentage level, higher than those reported in \cite{colpi2024lisa}. This is expected due to amplitude degeneracies with inclination and polarisation, and correlations with sky location. Including higher harmonics improve sly location and distance\cite{klein2016science}. Observations with this level of precision can be informative if they are combined with electromagnetic counterparts to yield precision cosmology constraints like $H_{0}$ at percentage level\cite{mangiagli2020observing}.
+%\FloatBarrier
+The capabilities of LISA to observe MBHBs can be assessed quantitatively using 1) the population parameter distributions of the intrinsic and detected mergers together with a SNR contour ("waterfall") plot, and 2) plots of fractional and absolute parameter uncertainties for each astrophysical model. 
+
+Fig.\ref{fig:waterfall_plot} shows LISA's detection horizon in the $(M_\mathrm{tot},z)$ plane, with the dotted curve indicating our detection threshold $(\mathrm{SNR} = 12)$. Combining this contour with our parametric ranges ($0\le z \le 19~\mathrm{and}~10^{3} \le M_{\mathrm{tot}}/M_{\odot} \le 10^{8}$), we see that detectability is highest for systems in an intermediate mass range, while binaries that are much lighter or much heavier are more likely to fall below threshold. This is consistent with our results of the intrinsic and detected population distributions which follow very similar trends, indicate that most of our intrinsic mergers already lie within LISA's detectable region and that selection effects are therefore weak for the portion of the parameter space populated by our models.
+
+Regarding measurement precision, Fig.~\ref{fig:uncertainties_plot} shows the fractional uncertainties of the component masses $m_1$ and $m_2$, and luminosity distance $d_{L}$, as well as the absolute uncertainties on the spin magnitudes $a_1$ and $a_2$ for the set of detected mergers for the three population models. In each violin plot, the dashed horizontal lines indicate the median (central line) and 0.5th and 99.5th percentiles of the distribution.
+Regarding the fractional uncertainties of $m_1$ and $m_2$, we notice that the median in the three scenarios lies between $10^{-2}$ and $10^{-3}$ fractional uncertainty. This is expected, and aligns with the LISA Science Investigations (SI 2.1) on constraining component masses of MBHBs at percentage-level\cite{colpi2024lisa}. The popIII and Q3nod scenarios are shifted slightly towards higher uncertainties of order $10^{-2}$ compared to Q3d, which is consistent as popIII produces weaker signals than Q3d/Q3nod. For events near the threshold SNR, the uncertainty measurements can be rather optimistic, so our results can be considered as a Cramer-Rao lower-bound uncertainties\cite{cutler1994gravitational}. This level of precision is required to distinguish whether a merger lies in the regime associated with light or heavy seeding scenarios\cite{klein2016science}. 
+The absolute uncertainties on the spin magnitudes $a_1$ and $a_2$ concentrate on the tens-of-percent precision for the three scenarios, where $a_1$ is better constrained than $a_2$. Results in \cite{colpi2024lisa} for systems with component masses of $10^5\mathrm{M}_{\odot}$ to $10^7\mathrm{M}_{\odot}$ at $z=2$ with high SNRs ($\sim10^3$) report spin uncertainties at the percentage level. Our systems yield lower SNR and higher redshift, so larger uncertainties are expected.
+Luminosity distance fractional uncertainties are tens-of-percentage level, higher than those reported in \cite{colpi2024lisa}. This is expected due to amplitude degeneracies with inclination and polarisation, and correlations with sky location; including higher harmonics can help break these degeneracies and improve both sky location and distance\cite{klein2016science}.
 
 \FloatBarrier
 \begin{figure}[htbp]
 \includegraphics[width=1.0\textwidth]{Parametric_forms/violin_uncertainties_seaborn.pdf}
-\caption{Uncertainties for component masses, spins, and luminosity distance.}
+\caption{Fractional and absolute parameter uncertainties for detected MBHB mergers. Violin plots show the distributions of $\Delta m_{1}/m_{1}$, $\Delta m_{2}/m_{2}$, $\Delta {d_{L}}/d_{L}$ ,and the absolute spin uncertainties $\Delta a_{1}$ and$\Delta a_{2}$ for the popIII, Q3d, and Q3nod population models. Dashed lines indicate the median and the $0.5\mathrm{th}$ and $99.5\mathrm{th}$ percentiles.}
 \label{fig:uncertainties_plot}
 \end{figure}
-
-
-\section{Discussion}
-\label{sec:discussion}
-
-The results we obtained in Chapter 6 for the uncertainty analyses provide us with insights about the capabilities of Fisher matrices to analyse MBHB observations with LISA. In this chapter, we will discuss the reliability, limitations, and implications of these findings, particularly focusing on the behaviour of the PDFs for the parameters of interest.
-
-\paragraph{Comparison with other studies}
-In our first simulation, we aimed to reproduce the results of Marsat \textit{et al}.\ \cite{marsat2021exploring} by using the Fisher matrix formalism. While we broadly reproduce their results, there were still differences due to the choice of PSD prescriptions. Indeed, Marsat \textit{et al}.\ used a different prescription, whereas we opted for GWFish's implementation in version 1.0.0. As newer versions of GWfish include updated noise models, adopting these updates could enhance agreement in future work.
-
-\paragraph{Observed parameter correlations}
-The results for the comparison with Marsat \textit{et al}.\ and the global PDF orientation analysis of the set of MBHB observations yielded consistent trends with what we expected:
-\begin{enumerate}
-    \item The PDF $p(m_1,m_2)$ showed negative correlation, where a trade-off between component masses was present for a fixed $M$ and $\mathcal{M}$.
-    \item The PDFs $p(\mathcal{M},q)$ and $p(M,q)$ reveal more complex behaviours. At lower $M$, the correlations between parameters were consistent with the physics of the binaries. However, the shape of the ellipses started to exhibit a curvature at higher $M$ and $q$. This indicates non-linear behaviour of the PDFs after transforming the variables from $(m_1,m_2)$ to $(\mathcal{M},q)$ and may require reparametrization to ensure validity of the Fisher approximation.
-\end{enumerate}
-
-\paragraph{Parameter space constraints}
-The initial parameter space upper limit was reduced from $M=5\times10^6~\mathrm{M}_{\odot}$ to $M=1.7\times10^6~\mathrm{M}_{\odot}$ due to numerical issues in the Fisher matrix computations with GWFish. At the higher mass end, the uncertainties became comparable or larger than the injected true values, invalidating the Fisher matrix approach and the linear signal approximation.
-
-\paragraph{Waveforms derivatives}
-We noticed a difference in Fisher matrix convergence among multiple waveforms. \texttt{IMRPhenomXPHM}, while including higher harmonics and spin-precession, exhibited scattering in the results for $\sigma^{2}_{m_1}$, indicating numerical instability in the derivative computations. More stable performance was obtained using \texttt{IMRPhenomPv2}, which includes spin-precession, but not higher harmonics. This shows a potential trade-off between waveform complexity and greater physical content, and the numerical challenges that can be introduced for Fisher matrix computations.
-
-\paragraph{Implications for population studies}
-The main objective of this work was to set the statistical framework to perform hierarchical inference of MBHB populations with LISA. This can be achieved for a narrow parameter space, where the results are sensible and trustworthy. However, some aspects need to be addressed to extend this parameter space to the expected for observations of MBHBs with LISA:
-\begin{enumerate}
-    \item Incorporate updated PSD prescriptions for GWFish.
-    \item Expand the parameter space while mitigating the instability of Fisher matrices.
-    \item Implement a hybrid approach with Fisher matrices and Full Bayesian methods where regions of parameter space seem problematic.
-\end{enumerate}
 
 \section{Future Work}
 \label{sec:futurework}
